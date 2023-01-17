@@ -13,101 +13,155 @@ html {
   padding: 0;
 }
 
-.background {
-  background-image: url("images/background.jpg");
-  height: 250px;
-  width: 300px;
-  position: relative;
-  overflow: hidden;
-}
-
-.logo {
-  background-image: url("images/logo.png");
-  height: 250px;
-  width: 300px;
-  position: absolute;
-}
-
-.model {
-  background-image: url("images/model.png");
-  height: 250px;
-  width: 300px;
-  position: absolute;
-}
-
-.walk,
-.one,
-.two,
-.three,
-.four {
+.bon_voyage {
   font-family: "Anton", sans-serif;
   color: white;
-  text-transform: uppercase;
-  font-size: 4.2rem;
-}
-
-.one {
-  left: 132px;
+  font-size: 1rem;
   position: absolute;
+  top: 30px;
+  left: 35px;
+  z-index: 50;
+  letter-spacing: 0.02rem;
 }
 
-.two {
-  left: 180px;
-  position: absolute;
-}
-
-.three {
-  left: 215px;
-  position: absolute;
-}
-
-.four {
-  left: 244px;
-  position: absolute;
-}
-
-.text {
-  font-family: "Josefin Sans", sans-serif;
-}
-
-.everywhere {
-  color: white;
-  font-size: 1.1em;
-  position: absolute;
-  left: 182px;
-  top: 90px;
-  letter-spacing: 0.03rem;
-}
-
-.brand {
-  color: black;
-  font-size: 1.2em;
-  position: absolute;
-  left: 138px;
-  top: 118px;
-  letter-spacing: 0.03rem;
-  text-align: right;
-  line-height: 1.3rem;
-}
-
-.show {
-  color: black;
-  font-size: 1.1em;
-  position: absolute;
-  left: 178px;
-  top: 170px;
-  letter-spacing: 0.03rem;
-  background-color: white;
-  text-align: center;
-  padding: 0.5rem 0.4rem 0.3rem 0.4rem;
-  border-radius: 0.6rem;
-}
-
-.logo2 {
-  background-image: url("images/logo2.png");
+.background {
+  border: 1px solid grey;
+  position: relative;
   height: 250px;
   width: 300px;
+  overflow: hidden;
+}
+.map {
+  width: 100%;
   position: absolute;
+  top: 60px;
+  z-index: 10;
+}
+
+.plane {
+  position: absolute;
+  top: 12px;
+  z-index: 40;
+  left: 10px;
+  width: 90%;
+}
+
+.landscape_full {
+  position: absolute;
+  height: 250px;
+  width: 300px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.landscape_light {
+  position: absolute;
+  height: 250px;
+  width: 300px;
+  overflow: hidden;
+  z-index: 20;
+}
+
+.circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0.5;
+  z-index: 30;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 30;
+}
+
+.circle0 {
+  left: 88px;
+  bottom: 24px;
+  width: 130px;
+  height: 130px;
+  z-index: 40;
+}
+
+.people {
+  position: absolute;
+  bottom: 30px;
+  left: 90px;
+  z-index: 40;
+  width: 44%;
+}
+
+.circle1 {
+  right: 10px;
+  bottom: -10px;
+  z-index: 40;
+}
+
+.suitcase {
+  position: absolute;
+  bottom: 0px;
+  left: 218px;
+  z-index: 50;
+  width: 25%;
+}
+
+.circle2 {
+  left: 10px;
+  top: 20px;
+  z-index: 40;
+}
+
+.tickets {
+  position: absolute;
+  top: 24px;
+  left: 12px;
+  z-index: 20;
+  width: 23%;
+  z-index: 50;
+}
+
+.circle3 {
+  right: 21px;
+  top: 19px;
+  z-index: 40;
+}
+
+.camera {
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  z-index: 20;
+  width: 28%;
+  z-index: 50;
+}
+
+.circle4 {
+  left: 10px;
+  bottom: 11px;
+  z-index: 40;
+}
+
+.passport {
+  position: absolute;
+  bottom: 16px;
+  left: 13px;
+  z-index: 20;
+  width: 21%;
+  z-index: 50;
+}
+
+.circle5 {
+  left: 110px;
+  top: 3px;
+  z-index: 40;
+}
+
+.money {
+  position: absolute;
+  top: 6px;
+  right: 120px;
+  z-index: 20;
+  width: 23%;
+  z-index: 50;
 }
 
 .btn {

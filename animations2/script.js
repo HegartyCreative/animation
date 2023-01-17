@@ -3,97 +3,110 @@ let selectAll = (e) => document.querySelectoAll(e);
 
 let pause = select("#pause");
 
-let animation = gsap.timeline({
+let travel = gsap.timeline({
   onComplete: () => (pause.innerHTML = "Play"),
 });
-animation.pause();
+// travel.pause();
 
-animation
+travel.fromTo(
+  ".map",
+  { scale: 0, opacity: 0 },
+  {
+    scale: 1,
+    opacity: 1,
+    ease: Bounce.easeOut,
+    transformOrigin: "center center",
+  }
+);
 
-  .fromTo(
-    ".logo",
-    { opacity: 1 },
-    { opacity: 0, duration: 1, ease: "power2.out" },
-    "+=1"
-  )
-  .fromTo(
-    ".model",
-    { x: 80, opacity: 0, scale: 0.6 },
-    { x: 0, opacity: 1, duration: 1.5, scale: 1, ease: "power2.out" }
-  )
-  .fromTo(
-    ".one",
-    { x: 35, opacity: 0 },
-    { x: 0, opacity: 1, duration: 2, ease: "power4.out" },
-    "-=1"
-  )
-  .fromTo(
-    ".four",
-    { x: -29, opacity: 0 },
-    { x: 0, opacity: 1, duration: 2, ease: "power4.out" },
-    "<"
-  )
-  .fromTo(
-    ".two",
-    { y: -29, opacity: 0 },
-    { y: 0, opacity: 1, duration: 2, ease: "power4.out" },
-    "<"
-  )
-  .fromTo(
-    ".three",
-    { y: 29, opacity: 0 },
-    { y: 0, opacity: 1, duration: 2, ease: "power4.out" },
-    "<"
-  )
+travel.fromTo(".landscape_full", { left: -320 }, { left: 0 });
 
-  .fromTo(
-    ".everywhere",
-    { y: -15, opacity: 0 },
-    { y: 0, opacity: 1, duration: 1, ease: "power4.out" },
-    "-=1.5"
-  )
+travel.fromTo(".plane", { left: -320 }, { left: 10 });
 
-  .fromTo(
-    ".brand",
-    { y: -15, opacity: 0 },
-    { y: 0, opacity: 1, duration: 1, ease: "power4.out" },
-    "-=0.75"
-  )
+travel.fromTo(".bon_voyage", { opacity: 0 }, { opacity: 1 });
 
-  .fromTo(
-    ".show",
-    { opacity: 0 },
-    { opacity: 1, duration: 0.5, ease: "power4.out" },
-    "-=0.5"
-  )
+travel.fromTo(".landscape_light", { top: -300 }, { top: 0 });
 
-  .to(
-    ".brand",
-    {
-      opacity: 0,
-    },
-    "+=2.0"
-  )
+travel.fromTo(
+  ".circle0",
+  { scale: 0, transformOrigin: "bottom bottom" },
+  { scale: 1, duration: 0.25 }
+);
+travel.fromTo(
+  ".people",
+  { scale: 0 },
+  { scale: 1, ease: Bounce.easeOut, transformOrigin: "bottom center" },
+  "-=0.25"
+);
 
-  .to(
-    ".show",
-    {
-      y: -40,
-      duration: 0.5,
-    },
-    "<"
-  )
+travel.to(".plane", { opacity: 0 }, "<");
 
-  .fromTo(
-    ".logo2",
-    { opacity: 0 },
-    { opacity: 1, duration: 1, ease: "power4.out" }
-  );
+travel.to(".bon_voyage", { opacity: 0 }, "<");
+
+travel.fromTo(
+  ".circle1",
+  { scale: 0, transformOrigin: "bottom center" },
+  { scale: 1, duration: 0.25 }
+);
+travel.fromTo(
+  ".suitcase",
+  { scale: 0 },
+  { scale: 1, ease: Bounce.easeOut, transformOrigin: "bottom center" },
+  "-=0.25"
+);
+
+travel.fromTo(
+  ".circle2",
+  { scale: 0, transformOrigin: "center center" },
+  { scale: 1, duration: 0.25 }
+);
+travel.fromTo(
+  ".tickets",
+  { scale: 0 },
+  { scale: 1, ease: Bounce.easeOut, transformOrigin: "center center" },
+  "-=0.25"
+);
+
+travel.fromTo(
+  ".circle3",
+  { scale: 0, transformOrigin: "center center" },
+  { scale: 1, duration: 0.25 }
+);
+travel.fromTo(
+  ".camera",
+  { scale: 0 },
+  { scale: 1, ease: Bounce.easeOut, transformOrigin: "center center" },
+  "-=0.25"
+);
+
+travel.fromTo(
+  ".circle4",
+  { scale: 0, transformOrigin: "center center" },
+  { scale: 1, duration: 0.25 }
+);
+travel.fromTo(
+  ".passport",
+  { scale: 0 },
+  { scale: 1, ease: Bounce.easeOut, transformOrigin: "center center" },
+  "-=0.25"
+);
+
+travel.fromTo(
+  ".circle5",
+  { scale: 0, transformOrigin: "center center" },
+  { scale: 1, duration: 0.25 }
+);
+travel.fromTo(
+  ".money",
+  { scale: 0 },
+  { scale: 1, ease: Bounce.easeOut, transformOrigin: "bottom center" },
+  "-=0.25"
+);
 
 pause.addEventListener("click", () => {
-  animation.paused(!animation.paused());
-  if (animation.progress() == 1) {
-    animation.restart();
+  travel.paused(!travel.paused());
+  if (travel.progress() == 1) {
+    travel.restart();
   }
-  pause.innerHTML = animation.paused() ? "Play" : "Pause";
+  pause.innerHTML = travel.paused() ? "Play" : "Pause";
 });
