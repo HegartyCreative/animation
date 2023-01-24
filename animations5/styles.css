@@ -16,29 +16,50 @@ html {
   position: relative;
   height: 250px;
   width: 300px;
-  background-color: rgb(212, 224, 245);
+  overflow: hidden;
 }
 
-.background_left {
-  position: relative;
-  height: 250px;
-  width: 300px;
-  z-index: 10;
-}
-
-.background_right {
-  position: relative;
+.background_full {
+  position: absolute;
   height: 250px;
   width: 300px;
   z-index: 0;
+  top: 0;
+  left: 0;
+}
+
+.background_left {
+  position: absolute;
+  height: 250px;
+  width: 300px;
+  z-index: 90;
+  top: 0;
+  left: 0;
+}
+
+.background_right {
+  position: absolute;
+  height: 250px;
+  width: 300px;
+  top: 0;
+  left: 260px;
+  z-index: 70;
+}
+
+.image_right {
+  position: absolute;
+  height: 250px;
+  width: 300px;
+  top: 0;
+  z-index: 50;
 }
 
 .logo {
   position: absolute;
   top: 10px;
-  left: 42px;
+  left: 45px;
   width: 10%;
-  z-index: 20;
+  z-index: 100;
 }
 
 h1 {
@@ -49,6 +70,22 @@ h1 {
   right: 20px;
   color: black;
   text-transform: uppercase;
+  z-index: 100;
+  font-weight: 500;
+  opacity: 0;
+}
+
+.main_heading {
+  text-align: right;
+  position: absolute;
+  font-size: 1.1rem;
+  top: 80px;
+  right: 20px;
+  color: white;
+  text-transform: uppercase;
+  z-index: 60;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 7px;
 }
 
 h2 {
@@ -60,29 +97,34 @@ h2 {
   color: #3b8dc1;
   font-weight: 500;
   letter-spacing: 0.05rem;
+  z-index: 100;
+  opacity: 0;
 }
+
+/* Bills */
 
 .ground1 {
   position: absolute;
-  top: 87px;
+  top: 90px;
   left: 153px;
   font-size: 0.4rem;
   letter-spacing: 0.05rem;
   font-weight: 400;
   color: black;
-  z-index: 20;
+  z-index: 90;
   opacity: 0;
 }
 
-.line1 {
-  width: 82px;
-  height: 0;
-  border: 0.6px solid #3b8dc1;
+/* .line1 {
+  background-color: #3b8dc1;
+  width: 80px;
+  height: 1px;
   position: absolute;
   top: 98px;
   left: 153px;
-  z-index: 20;
-}
+  z-index: 90;
+  opacity: 0;
+} */
 
 .mask1 {
   width: 85px;
@@ -91,7 +133,8 @@ h2 {
   position: absolute;
   top: 80px;
   left: 152px;
-  z-index: 10;
+  z-index: 80;
+  opacity: 0;
 }
 
 .team1 {
@@ -102,7 +145,8 @@ h2 {
   letter-spacing: 0.05rem;
   font-weight: 500;
   color: black;
-  z-index: 0;
+  z-index: 70;
+  opacity: 0;
 }
 
 .bills {
@@ -110,35 +154,55 @@ h2 {
   top: 90px;
   left: 93px;
   width: 17%;
+  z-index: 70;
 }
 
-.ground2 {
+/* Titans */
+
+.ground_1 {
   position: absolute;
-  top: 145px;
+  top: 148px;
   left: 163px;
   font-size: 0.4rem;
   letter-spacing: 0.05rem;
   font-weight: 400;
   color: black;
+  z-index: 90;
+  opacity: 0;
 }
 
-.line2 {
-  width: 82px;
-  height: 0;
-  border: 0.6px solid #3b8dc1;
+/* .line2 {
+  background-color: #3b8dc1;
+  width: 115px;
+  height: 1px;
   position: absolute;
-  top: 157px;
+  top: 156px;
   left: 163px;
+  z-index: 90;
+  opacity: 0;
+} */
+
+.mask2 {
+  width: 126px;
+  height: 20px;
+  background-color: rgb(212, 224, 245);
+  position: absolute;
+  top: 137px;
+  left: 160px;
+  z-index: 80;
+  opacity: 0;
 }
 
 .team2 {
   position: absolute;
-  top: 160px;
+  top: 159px;
   left: 163px;
   font-size: 0.65rem;
   letter-spacing: 0.05rem;
   font-weight: 500;
   color: black;
+  z-index: 70;
+  opacity: 0;
 }
 
 .titans {
@@ -146,25 +210,43 @@ h2 {
   top: 141px;
   left: 99px;
   width: 18%;
+  z-index: 70;
 }
 
-.ground3 {
+/* Jags */
+
+.ground2 {
   position: absolute;
-  top: 204px;
+  top: 207px;
   left: 175px;
   font-size: 0.4rem;
   letter-spacing: 0.05rem;
   font-weight: 400;
   color: black;
+  z-index: 40;
+  opacity: 0;
+  z-index: 90;
 }
-
-.line3 {
-  width: 76px;
-  height: 0;
-  border: 0.6px solid #3b8dc1;
+/* .line3 {
+  background-color: #3b8dc1;
+  width: 113px;
+  height: 1px;
   position: absolute;
   top: 215px;
   left: 175px;
+  z-index: 90;
+  opacity: 0;
+} */
+
+.mask3 {
+  width: 126px;
+  height: 20px;
+  background-color: rgb(212, 224, 245);
+  position: absolute;
+  top: 200px;
+  left: 170px;
+  z-index: 80;
+  opacity: 0;
 }
 
 .team3 {
@@ -175,6 +257,8 @@ h2 {
   letter-spacing: 0.05rem;
   font-weight: 500;
   color: black;
+  z-index: 70;
+  opacity: 0;
 }
 
 .jags {
@@ -182,6 +266,7 @@ h2 {
   top: 201px;
   left: 120px;
   width: 15%;
+  z-index: 70;
 }
 
 /* Code below for the button */

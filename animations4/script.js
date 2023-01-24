@@ -33,7 +33,14 @@ music.fromTo("h1", { x: -290 }, { x: 0, ease: "power.out" });
 music.fromTo(
   ".checked",
   { opacity: 0, y: 5, scale: 0 },
-  { opacity: 1, scale: 1, y: 0, stagger: 0.05, ease: "bounce.out" },
+  {
+    opacity: 1,
+    scale: 1.2,
+    y: 0,
+    stagger: 0.05,
+    ease: "bounce.out",
+    duration: 0.75,
+  },
   "=-0.75"
 );
 

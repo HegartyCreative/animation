@@ -67,23 +67,6 @@ animation
     "-=0.5"
   )
 
-  .to(
-    ".brand",
-    {
-      opacity: 0,
-    },
-    "+=2.0"
-  )
-
-  .to(
-    ".show",
-    {
-      y: -40,
-      duration: 0.5,
-    },
-    "<"
-  )
-
   .fromTo(
     ".logo2",
     { opacity: 0 },

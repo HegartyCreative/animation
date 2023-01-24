@@ -18,8 +18,7 @@ travel.fromTo(
   {
     scale: 1,
     opacity: 1,
-    ease: Bounce.easeOut,
-    transformOrigin: "center center",
+    ease: "Power4.out",
   }
 );
 
@@ -29,8 +28,7 @@ travel.fromTo(
   {
     scale: 1,
     opacity: 1,
-    ease: Bounce.easeOut,
-    transformOrigin: "center center",
+    ease: "Power4.out",
   },
   "=-0.25"
 );
@@ -40,8 +38,7 @@ travel.fromTo(
   { opacity: 0 },
   {
     opacity: 1,
-    ease: Power4.easeOut,
-    transformOrigin: "center center",
+    ease: "Power4.out",
   }
 );
 
@@ -59,8 +56,7 @@ travel.fromTo(
   {
     scale: 1,
     opacity: 1,
-    ease: Power4.easeOut,
-    transformOrigin: "center center",
+    ease: "Power4.out",
   }
 );
 
@@ -70,7 +66,7 @@ travel.fromTo(
   {
     scale: 1,
     opacity: 1,
-    ease: Bounce.easeOut,
+    ease: "Bounce.out",
     transformOrigin: "center center",
   },
   "=+0.05"
@@ -82,7 +78,7 @@ travel.fromTo(
   {
     scale: 1,
     opacity: 1,
-    ease: Bounce.easeOut,
+    ease: "Bounce.out",
     transformOrigin: "center center",
   },
   "=+0.05"
@@ -94,7 +90,7 @@ travel.fromTo(
   {
     scale: 1,
     opacity: 1,
-    ease: Bounce.easeOut,
+    ease: "Bounce.out",
     transformOrigin: "center center",
   },
   "=+0.05"
@@ -106,7 +102,7 @@ travel.fromTo(
   {
     scale: 1,
     opacity: 1,
-    ease: Bounce.easeOut,
+    ease: "Bounce.out",
     transformOrigin: "center center",
   },
   "=+0.05"
@@ -118,7 +114,7 @@ travel.fromTo(
   {
     scale: 1,
     opacity: 1,
-    ease: Bounce.easeOut,
+    ease: "Bounce.out",
     transformOrigin: "center center",
   },
   "=+0.05"
@@ -130,7 +126,7 @@ travel.fromTo(
   {
     scale: 1,
     opacity: 1,
-    ease: Bounce.easeOut,
+    ease: "Bounce.out",
     transformOrigin: "center center",
   },
   "=+0.05"

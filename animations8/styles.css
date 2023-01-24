@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Sen&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Sen", sans-serif;
+  color: rgba(255, 255, 0, 1);
+}
+
+.background {
+  height: 250px;
+  width: 300px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.start {
+  height: 250px;
+  width: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+/* .overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.9);
+  opacity: 0.5;
+} */
+
+.bars {
+  background-color: yellow;
+  height: 250px;
+  width: 60px;
+  top: 0;
+  position: absolute;
+}
+
+.web {
+  font-size: 2rem;
+  z-index: 100;
+}
+
+.web1 {
+  position: absolute;
+  top: 90px;
+  left: 39px;
+  color: black;
+}
+
+.web2 {
+  position: absolute;
+  top: 120px;
+  left: 110px;
+  color: black;
+}
+
+.video {
+  width: 300px;
+  height: 250px;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+p {
+  letter-spacing: 0.2rem;
+}
+
+.bar1 {
+  left: 0;
+}
+
+.bar2 {
+  left: 60px;
+}
+
+.bar3 {
+  left: 120px;
+}
+
+.bar4 {
+  left: 180px;
+}
+
+.bar5 {
+  left: 240px;
+}
+
+.contact {
+  position: absolute;
+  letter-spacing: 0.1rem;
+  z-index: 10;
+}
+
+.name {
+  top: 70px;
+  left: 20px;
+  font-size: 1.4rem;
+}
+
+.telephone {
+  top: 105px;
+  left: 20px;
+  font-size: 0.9rem;
+  opacity: 0;
+}
+
+.portfolio {
+  top: 127px;
+  left: 20px;
+  font-size: 0.9rem;
+  opacity: 0;
+}
+
+.anim {
+  top: 150px;
+  left: 20px;
+  font-size: 0.9rem;
+  opacity: 0;
+}
+
+/* Button code */
+
+.btn {
+  height: 30px;
+  width: 60px;
+  background-color: rgb(0, 0, 0);
+  position: fixed;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  left: 10px;
+  z-index: 100;
+  color: white;
+  box-shadow: none;
+  border: none;
+  font-size: 15px;
+  border: 1px solid black;
+}
+
+.btn:hover {
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+}
+
+#pause {
+  left: 10px;
+  top: 260px;
+}
