@@ -3,188 +3,58 @@ let selectAll = (e) => document.querySelectoAll(e);
 
 let pause = select("#pause");
 
-let travel = gsap.timeline({
+let music = gsap.timeline({
   onComplete: () => (pause.innerHTML = "Play"),
 });
-travel.pause();
+music.pause();
 
-travel.to(".start", { opacity: 1 });
-
-travel.fromTo(
-  ".logo",
-  { opacity: 0, scale: 0 },
-  {
-    opacity: 1,
-    scale: 1,
-    duration: 1,
-    delay: 2,
-    transformOrigin: "center center",
-    ease: Power4.easeOut,
-  }
+music.fromTo(
+  "h2",
+  { opacity: 1 },
+  { opacity: 0, ease: "power.out(4)" },
+  "=+0.4"
 );
 
-travel.to(".start", { opacity: 0 }, "<");
-
-travel.fromTo(
-  ".visit",
-  { opacity: 0, scale: 0 },
-  {
-    opacity: 1,
-    scale: 1,
-    delay: 1,
-    transformOrigin: "center center",
-    ease: Power4.easeOut,
-  }
+music.fromTo(
+  ".main",
+  { opacity: 0 },
+  { opacity: 1, ease: "power.out(4)" },
+  "=+0.4"
+);
+music.fromTo(
+  "h3",
+  { opacity: 0, y: 5 },
+  { opacity: 1, y: 0, duration: 0.25, ease: "power.out" },
+  "=+0.05"
 );
 
-travel.to(".logo", { opacity: 0 }, "<");
+music.fromTo("h1", { x: -290 }, { x: 0, ease: "power.out" });
 
-travel.to(".circle", { opacity: 1 });
-travel.fromTo(
-  ".umbrella",
-  { opacity: 0, scale: 0 },
+music.fromTo(
+  ".checked",
+  { opacity: 0, y: 5, scale: 0 },
   {
     opacity: 1,
-    scale: 1,
-    duration: 0.45,
-    transformOrigin: "bottom bottom",
-    ease: Bounce.easeOut,
+    scale: 1.2,
+    y: 0,
+    stagger: 0.1,
+    ease: "back.out(5)",
+    duration: 0.5,
   },
-  "=-0.3"
-);
-travel.fromTo(
-  ".shell",
-  { opacity: 0, scale: 0 },
-  {
-    opacity: 1,
-    scale: 1,
-    duration: 0.45,
-    transformOrigin: "bottom bottom",
-    ease: Bounce.easeOut,
-  },
-  "=-0.3"
-);
-travel.fromTo(
-  ".cocktail1",
-  { opacity: 0, scale: 0 },
-  {
-    opacity: 1,
-    scale: 1,
-    duration: 0.45,
-    transformOrigin: "bottom bottom",
-    ease: Bounce.easeOut,
-  },
-  "=-0.3"
+  "=-0.75"
 );
 
-travel.fromTo(
-  ".fries",
-  { opacity: 0, scale: 0 },
-  {
-    opacity: 1,
-    scale: 1,
-    duration: 0.45,
-    transformOrigin: "bottom bottom",
-    ease: Bounce.easeOut,
-  },
-  "=-0.3"
-);
-
-travel.fromTo(
-  ".ball",
-  { opacity: 0, scale: 0 },
-  {
-    opacity: 1,
-    scale: 1,
-    duration: 0.45,
-    transformOrigin: "bottom bottom",
-    ease: Bounce.easeOut,
-  },
-  "=-0.3"
-);
-
-travel.fromTo(
-  ".sandals",
-  { opacity: 0, scale: 0 },
-  {
-    opacity: 1,
-    scale: 1,
-    duration: 0.45,
-    transformOrigin: "bottom bottom",
-    ease: Bounce.easeOut,
-  },
-  "=-0.3"
-);
-
-travel.fromTo(
-  ".chair",
-  { opacity: 0, scale: 0 },
-  {
-    opacity: 1,
-    scale: 1,
-    duration: 0.45,
-    transformOrigin: "bottom bottom",
-    ease: Bounce.easeOut,
-  },
-  "=-0.3"
-);
-
-travel.fromTo(
-  ".ring",
-  { opacity: 0, scale: 0 },
-  {
-    opacity: 1,
-    scale: 1,
-    duration: 0.45,
-    transformOrigin: "bottom bottom",
-    ease: Bounce.easeOut,
-  },
-  "=-0.3"
-);
-
-travel.fromTo(
-  ".burger",
-  { opacity: 0, scale: 0 },
-  {
-    opacity: 1,
-    scale: 1,
-    duration: 0.45,
-    transformOrigin: "bottom bottom",
-    ease: Bounce.easeOut,
-  },
-  "=-0.3"
-);
-
-travel.fromTo(
-  ".lotion",
-  { opacity: 0, scale: 0 },
-  {
-    opacity: 1,
-    scale: 1,
-    duration: 0.45,
-    transformOrigin: "bottom bottom",
-    ease: Bounce.easeOut,
-  },
-  "=-0.3"
-);
-
-travel.fromTo(
-  ".icecream",
-  { opacity: 0, scale: 0 },
-  {
-    opacity: 1,
-    scale: 1,
-    duration: 0.45,
-    transformOrigin: "bottom bottom",
-    ease: Bounce.easeOut,
-  },
-  "=-0.3"
+music.fromTo(
+  "h4, h5",
+  { y: 50 },
+  { y: 0, ease: "power.out", duration: 0.25 },
+  "=-0.75"
 );
 
 pause.addEventListener("click", () => {
-  travel.paused(!travel.paused());
-  if (travel.progress() == 1) {
-    travel.restart();
+  music.paused(!music.paused());
+  if (music.progress() == 1) {
+    music.restart();
   }
-  pause.innerHTML = travel.paused() ? "Play" : "Pause";
+  pause.innerHTML = music.paused() ? "Play" : "Pause";
 });

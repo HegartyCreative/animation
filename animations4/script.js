@@ -3,58 +3,66 @@ let selectAll = (e) => document.querySelectoAll(e);
 
 let pause = select("#pause");
 
-let music = gsap.timeline({
+let travel = gsap.timeline({
   onComplete: () => (pause.innerHTML = "Play"),
 });
-music.pause();
+travel.pause();
+travel.to(".child1", {
+  scale: 1.1,
+  duration: 7,
+  transformOrigin: "50% 100%",
+  ease: "none",
+});
+travel.fromTo(".quote1", { opacity: 0 }, { opacity: 1 }, "=-6");
+travel.fromTo(".source1", { opacity: 0 }, { opacity: 1 }, "=-5");
+travel.to("child1, .quote1, .source1", { opacity: 0, duration: 0 });
 
-music.fromTo(
-  "h2",
-  { opacity: 1 },
-  { opacity: 0, ease: "power.out(4)" },
-  "=+0.4"
-);
-
-music.fromTo(
-  ".main",
-  { opacity: 0 },
-  { opacity: 1, ease: "power.out(4)" },
-  "=+0.4"
-);
-music.fromTo(
-  "h3",
-  { opacity: 0, y: 5 },
-  { opacity: 1, y: 0, duration: 0.25, ease: "power.out" },
-  "=+0.05"
-);
-
-music.fromTo("h1", { x: -290 }, { x: 0, ease: "power.out" });
-
-music.fromTo(
-  ".checked",
-  { opacity: 0, y: 5, scale: 0 },
+travel.fromTo(
+  ".child2",
+  {
+    opacity: 0,
+  },
   {
     opacity: 1,
-    scale: 1.2,
-    y: 0,
-    stagger: 0.05,
-    ease: "bounce.out",
-    duration: 0.75,
-  },
-  "=-0.75"
+    duration: 0.25,
+  }
 );
+travel.fromTo(
+  ".child2",
+  { scale: 1 },
+  { scale: 1.1, duration: 8, transformOrigin: "50% 100%", ease: "none" },
+  "=-1"
+);
+travel.fromTo(".quote2", { opacity: 0 }, { opacity: 1 }, "=-6");
+travel.fromTo(".source2", { opacity: 0 }, { opacity: 1 }, "=-5");
+travel.to("child2, .quote2, .source2", { opacity: 0, duration: 0 });
 
-music.fromTo(
-  "h4, h5",
-  { y: 50 },
-  { y: 0, ease: "power.out", duration: 0.25 },
-  "=-0.75"
+travel.fromTo(
+  ".child3",
+  {
+    opacity: 0,
+  },
+  {
+    opacity: 1,
+    duration: 0.25,
+  }
 );
+travel.fromTo(
+  ".child3",
+  { scale: 1 },
+  { scale: 1.1, duration: 8, transformOrigin: "50% 100%", ease: "none" },
+  "=-1"
+);
+travel.fromTo(".quote3", { opacity: 0 }, { opacity: 1 }, "=-6");
+travel.fromTo(".source3", { opacity: 0 }, { opacity: 1 }, "=-5");
+travel.to(".parent1, .parent2, .parent3", { opacity: 0 });
+
+travel.to(".end", { opacity: 1 });
 
 pause.addEventListener("click", () => {
-  music.paused(!music.paused());
-  if (music.progress() == 1) {
-    music.restart();
+  travel.paused(!travel.paused());
+  if (travel.progress() == 1) {
+    travel.restart();
   }
-  pause.innerHTML = music.paused() ? "Play" : "Pause";
+  pause.innerHTML = travel.paused() ? "Play" : "Pause";
 });

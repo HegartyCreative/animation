@@ -3,80 +3,44 @@ let selectAll = (e) => document.querySelectoAll(e);
 
 let pause = select("#pause");
 
-let animation = gsap.timeline({
+let nfl = gsap.timeline({
   onComplete: () => (pause.innerHTML = "Play"),
 });
-animation.pause();
+nfl.pause();
 
-animation
+nfl.to(".background_full", { opacity: 1 });
+nfl.to(
+  ".background_right",
+  { x: -260, ease: "power2.out", duration: 0.25 },
+  "=+1"
+);
+nfl.to(".mask1, .mask2, .mask3", { opacity: 1 }, "<");
+nfl.to("h1, h2", { opacity: 1 });
+nfl.to(".team1, .team2, .team3", { opacity: 1 });
 
-  .fromTo(
-    ".logo",
-    { opacity: 1 },
-    { opacity: 0, duration: 1, ease: "power2.out" },
-    "+=1"
-  )
-  .fromTo(
-    ".model",
-    { x: 80, opacity: 0, scale: 0.6 },
-    { x: 0, opacity: 1, duration: 1.5, scale: 1, ease: "power2.out" }
-  )
-  .fromTo(
-    ".one",
-    { x: 35, opacity: 0 },
-    { x: 0, opacity: 1, duration: 2, ease: "power4.out" },
-    "-=1"
-  )
-  .fromTo(
-    ".four",
-    { x: -29, opacity: 0 },
-    { x: 0, opacity: 1, duration: 2, ease: "power4.out" },
-    "<"
-  )
-  .fromTo(
-    ".two",
-    { y: -29, opacity: 0 },
-    { y: 0, opacity: 1, duration: 2, ease: "power4.out" },
-    "<"
-  )
-  .fromTo(
-    ".three",
-    { y: 29, opacity: 0 },
-    { y: 0, opacity: 1, duration: 2, ease: "power4.out" },
-    "<"
-  )
+nfl.fromTo(
+  ".logo",
+  { scale: 0, opacity: 0 },
+  { scale: 1.3, ease: "bounce.out", opacity: 1 },
+  "=-0.5"
+);
 
-  .fromTo(
-    ".everywhere",
-    { y: -15, opacity: 0 },
-    { y: 0, opacity: 1, duration: 1, ease: "power4.out" },
-    "-=1.5"
-  )
+nfl.from(".bills", { x: -90, ease: "power2.out", duration: 0.25 });
+nfl.to(".ground1", { opacity: 1 });
+nfl.from(".team1", { y: -18, ease: "back.out(2)", duration: 0.25 }, "=-0.05");
 
-  .fromTo(
-    ".brand",
-    { y: -15, opacity: 0 },
-    { y: 0, opacity: 1, duration: 1, ease: "power4.out" },
-    "-=0.75"
-  )
+nfl.from(".titans", { x: -90, ease: "power2.out", duration: 0.25 });
+nfl.to(".ground_1", { opacity: 1 });
+nfl.from(".team2", { y: -18, ease: "back.out(2)", duration: 0.25 }, "=-0.05");
 
-  .fromTo(
-    ".show",
-    { opacity: 0 },
-    { opacity: 1, duration: 0.5, ease: "power4.out" },
-    "-=0.5"
-  )
-
-  .fromTo(
-    ".logo2",
-    { opacity: 0 },
-    { opacity: 1, duration: 1, ease: "power4.out" }
-  );
+nfl.from(".jags", { x: -90, ease: "power2.out", duration: 0.25 });
+nfl.to(".ground2", { opacity: 1 });
+nfl.from(".team3", { y: -18, ease: "back.out(2)", duration: 0.25 }, "=-0.05");
 
 pause.addEventListener("click", () => {
-  animation.paused(!animation.paused());
-  if (animation.progress() == 1) {
-    animation.restart();
+  nfl.paused(!nfl.paused());
+  if (nfl.progress() == 1) {
+    nfl.restart();
   }
-  pause.innerHTML = animation.paused() ? "Play" : "Pause";
+  pause.innerHTML = nfl.paused() ? "Play" : "Pause";
 });

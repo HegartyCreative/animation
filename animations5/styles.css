@@ -1,8 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,700&display=swap");
 
 html {
   box-sizing: border-box;
-  font-family: "Orbitron", sans-serif;
+}
+
+body {
+  font-family: "Bodoni Moda", serif;
 }
 
 *,
@@ -12,261 +15,242 @@ html {
   margin: 0;
   padding: 0;
 }
+
 .container {
   position: relative;
   height: 250px;
   width: 300px;
+  background-color: white;
+  border: 1px solid #697666;
   overflow: hidden;
 }
 
-.background_full {
-  position: absolute;
+.background {
+  position: relative;
   height: 250px;
   width: 300px;
+  background-color: #697666;
   z-index: 0;
-  top: 0;
-  left: 0;
 }
 
-.background_left {
+.logo1 {
   position: absolute;
-  height: 250px;
-  width: 300px;
-  z-index: 90;
-  top: 0;
-  left: 0;
+  left: 30%;
+  top: 40%;
+  width: 40%;
+  opacity: 1;
 }
 
-.background_right {
-  position: absolute;
+/* Image One */
+
+.One {
   height: 250px;
   width: 300px;
-  top: 0;
-  left: 260px;
-  z-index: 70;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 5;
 }
 
-.image_right {
+.line1 {
   position: absolute;
+  top: 207px;
+  left: 111px;
+  width: 90px;
+  height: 2px;
+  background-color: #ff6731;
+  rotate: -15deg;
+  opacity: 0;
+  z-index: 30;
+}
+
+.one_text_full {
+  position: absolute;
+  left: 116px;
+  top: 185px;
+  color: #ff6731;
+  z-index: 10;
+  font-size: 30px;
+  letter-spacing: 0.1rem;
+  font-weight: 400;
+  opacity: 0;
+}
+
+.one_text_discount {
+  position: absolute;
+  left: 116px;
+  top: 185px;
+  color: #ff6731;
+  z-index: 10;
+  font-size: 30px;
+  letter-spacing: 0.1rem;
+  font-weight: 400;
+  opacity: 0;
+}
+
+/* Image Two */
+
+.Two {
   height: 250px;
   width: 300px;
-  top: 0;
-  z-index: 50;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 10;
+}
+
+.line2 {
+  position: absolute;
+  top: 207px;
+  left: 109px;
+  width: 90px;
+  height: 2px;
+  background-color: #ff6731;
+  rotate: -15deg;
+  opacity: 0;
+  z-index: 30;
+}
+
+.two_text_full {
+  position: absolute;
+  left: 112px;
+  top: 185px;
+  color: #ff6731;
+  z-index: 10;
+  font-size: 30px;
+  letter-spacing: 0.1rem;
+  font-weight: 400;
+  opacity: 0;
+}
+
+.two_text_discount {
+  position: absolute;
+  left: 112px;
+  top: 185px;
+  color: #ff6731;
+  z-index: 10;
+  font-size: 30px;
+  letter-spacing: 0.1rem;
+  font-weight: 400;
+  opacity: 0;
+}
+
+/* Image Three */
+
+.Three {
+  height: 250px;
+  width: 300px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 10;
+}
+
+.line3 {
+  position: absolute;
+  top: 207px;
+  left: 111px;
+  width: 90px;
+  height: 2px;
+  background-color: #ff6731;
+  rotate: -15deg;
+  opacity: 0;
+  z-index: 30;
+}
+
+.three_text_full {
+  position: absolute;
+  left: 116px;
+  top: 185px;
+  color: #ff6731;
+  z-index: 10;
+  font-size: 30px;
+  letter-spacing: 0.1rem;
+  font-weight: 400;
+  opacity: 0;
+}
+
+.three_text_discount {
+  position: absolute;
+  left: 116px;
+  top: 185px;
+  color: #ff6731;
+  z-index: 10;
+  font-size: 30px;
+  letter-spacing: 0.1rem;
+  font-weight: 400;
+  opacity: 0;
+}
+
+/* Image Four */
+
+.Four {
+  height: 250px;
+  width: 300px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 10;
+}
+
+.line4 {
+  position: absolute;
+  top: 207px;
+  left: 111px;
+  width: 90px;
+  height: 2px;
+  background-color: #ff6731;
+  rotate: -15deg;
+  opacity: 0;
+  z-index: 30;
+}
+
+.four_text_full {
+  position: absolute;
+  left: 116px;
+  top: 185px;
+  color: #ff6731;
+  z-index: 10;
+  font-size: 30px;
+  letter-spacing: 0.1rem;
+  font-weight: 400;
+  opacity: 0;
 }
 
 .logo {
   position: absolute;
-  top: 10px;
-  left: 45px;
-  width: 10%;
-  z-index: 100;
+  left: 10%;
+  top: 30%;
+  width: 80%;
+  opacity: 1;
 }
 
-h1 {
-  text-align: right;
+.four_text_discount {
   position: absolute;
-  font-size: 1.1rem;
-  top: 10px;
-  right: 20px;
-  color: black;
-  text-transform: uppercase;
-  z-index: 100;
-  font-weight: 500;
-  opacity: 0;
-}
-
-.main_heading {
-  text-align: right;
-  position: absolute;
-  font-size: 1.1rem;
-  top: 80px;
-  right: 20px;
-  color: white;
-  text-transform: uppercase;
-  z-index: 60;
-  background-color: rgba(0, 0, 0, 0.75);
-  padding: 7px;
-}
-
-h2 {
-  text-align: right;
-  position: absolute;
-  font-size: 0.5rem;
-  top: 55px;
-  right: 20px;
-  color: #3b8dc1;
-  font-weight: 500;
-  letter-spacing: 0.05rem;
-  z-index: 100;
-  opacity: 0;
-}
-
-/* Bills */
-
-.ground1 {
-  position: absolute;
-  top: 90px;
-  left: 153px;
-  font-size: 0.4rem;
-  letter-spacing: 0.05rem;
+  left: 116px;
+  top: 185px;
+  color: #ff6731;
+  z-index: 10;
+  font-size: 30px;
+  letter-spacing: 0.1rem;
   font-weight: 400;
-  color: black;
-  z-index: 90;
   opacity: 0;
 }
 
-/* .line1 {
-  background-color: #3b8dc1;
-  width: 80px;
-  height: 1px;
+.logo2 {
   position: absolute;
-  top: 98px;
-  left: 153px;
-  z-index: 90;
-  opacity: 0;
-} */
-
-.mask1 {
-  width: 85px;
-  height: 20px;
-  background-color: rgb(212, 224, 245);
-  position: absolute;
-  top: 80px;
-  left: 152px;
-  z-index: 80;
+  left: 30%;
+  top: 75%;
+  width: 40%;
   opacity: 0;
 }
 
-.team1 {
+.cta {
   position: absolute;
-  top: 101px;
-  left: 153px;
-  font-size: 0.65rem;
-  letter-spacing: 0.05rem;
-  font-weight: 500;
-  color: black;
-  z-index: 70;
+  left: 30%;
+  top: 15%;
+  width: 40%;
   opacity: 0;
-}
-
-.bills {
-  position: absolute;
-  top: 90px;
-  left: 93px;
-  width: 17%;
-  z-index: 70;
-}
-
-/* Titans */
-
-.ground_1 {
-  position: absolute;
-  top: 148px;
-  left: 163px;
-  font-size: 0.4rem;
-  letter-spacing: 0.05rem;
-  font-weight: 400;
-  color: black;
-  z-index: 90;
-  opacity: 0;
-}
-
-/* .line2 {
-  background-color: #3b8dc1;
-  width: 115px;
-  height: 1px;
-  position: absolute;
-  top: 156px;
-  left: 163px;
-  z-index: 90;
-  opacity: 0;
-} */
-
-.mask2 {
-  width: 126px;
-  height: 20px;
-  background-color: rgb(212, 224, 245);
-  position: absolute;
-  top: 137px;
-  left: 160px;
-  z-index: 80;
-  opacity: 0;
-}
-
-.team2 {
-  position: absolute;
-  top: 159px;
-  left: 163px;
-  font-size: 0.65rem;
-  letter-spacing: 0.05rem;
-  font-weight: 500;
-  color: black;
-  z-index: 70;
-  opacity: 0;
-}
-
-.titans {
-  position: absolute;
-  top: 141px;
-  left: 99px;
-  width: 18%;
-  z-index: 70;
-}
-
-/* Jags */
-
-.ground2 {
-  position: absolute;
-  top: 207px;
-  left: 175px;
-  font-size: 0.4rem;
-  letter-spacing: 0.05rem;
-  font-weight: 400;
-  color: black;
-  z-index: 40;
-  opacity: 0;
-  z-index: 90;
-}
-/* .line3 {
-  background-color: #3b8dc1;
-  width: 113px;
-  height: 1px;
-  position: absolute;
-  top: 215px;
-  left: 175px;
-  z-index: 90;
-  opacity: 0;
-} */
-
-.mask3 {
-  width: 126px;
-  height: 20px;
-  background-color: rgb(212, 224, 245);
-  position: absolute;
-  top: 200px;
-  left: 170px;
-  z-index: 80;
-  opacity: 0;
-}
-
-.team3 {
-  position: absolute;
-  top: 218px;
-  left: 175px;
-  font-size: 0.65rem;
-  letter-spacing: 0.05rem;
-  font-weight: 500;
-  color: black;
-  z-index: 70;
-  opacity: 0;
-}
-
-.jags {
-  position: absolute;
-  top: 201px;
-  left: 120px;
-  width: 15%;
-  z-index: 70;
 }
 
 /* Code below for the button */

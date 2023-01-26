@@ -1,63 +1,88 @@
 let select = (e) => document.querySelector(e);
 let selectAll = (e) => document.querySelectoAll(e);
 
+let movie = document.getElementById("theVideo");
+
 let pause = select("#pause");
 
-let travel = gsap.timeline({
+let animation = gsap.timeline({
   onComplete: () => (pause.innerHTML = "Play"),
 });
-travel.pause();
-travel.to(".child1", { scale: 1.1, duration: 7, transformOrigin: "50% 100%" });
-travel.fromTo(".quote1", { opacity: 0 }, { opacity: 1 }, "=-6");
-travel.fromTo(".source1", { opacity: 0 }, { opacity: 1 }, "=-5");
-travel.to("child1, .quote1, .source1", { opacity: 0, duration: 0 });
+animation.pause();
 
-travel.fromTo(
-  ".child2",
+animation.to(".start", { opacity: 0, duration: 0 });
+
+animation.fromTo(
+  ".web1",
   {
+    y: -10,
     opacity: 0,
   },
   {
+    y: 0,
     opacity: 1,
-    duration: 0.25,
-  }
+    duration: 1,
+    ease: "back.out(2)",
+  },
+  "=+1"
 );
-travel.fromTo(
-  ".child2",
-  { scale: 1 },
-  { scale: 1.1, duration: 8, transformOrigin: "50% 100%" },
-  "=-1"
-);
-travel.fromTo(".quote2", { opacity: 0 }, { opacity: 1 }, "=-6");
-travel.fromTo(".source2", { opacity: 0 }, { opacity: 1 }, "=-5");
-travel.to("child2, .quote2, .source2", { opacity: 0, duration: 0 });
 
-travel.fromTo(
-  ".child3",
+animation.fromTo(
+  ".web2",
   {
+    y: -10,
     opacity: 0,
   },
   {
+    y: 0,
     opacity: 1,
-    duration: 0.25,
-  }
+    duration: 1,
+    ease: "back.out(2)",
+  },
+  "=-0.25"
 );
-travel.fromTo(
-  ".child3",
-  { scale: 1 },
-  { scale: 1.1, duration: 8, transformOrigin: "50% 100%" },
-  "=-1"
-);
-travel.fromTo(".quote3", { opacity: 0 }, { opacity: 1 }, "=-6");
-travel.fromTo(".source3", { opacity: 0 }, { opacity: 1 }, "=-5");
-travel.to(".parent1, .parent2, .parent3", { opacity: 0 });
 
-travel.to(".end", { opacity: 1 });
+animation.to(".web", { opacity: 0, duration: 0.25 }, "=+0.5");
+
+animation.to(
+  ".bars",
+  {
+    y: 250,
+    duration: 0.5,
+    stagger: 0.2,
+    ease: "power4.out",
+  },
+  "=+0.02"
+);
+
+animation.from(".name", { x: -185, ease: "back.out(0.5)", duration: 0.75 });
+animation.to(".telephone", { opacity: 1 }, "=+0.5");
+animation.to(".portfolio", { opacity: 1 }, "=+0.5");
+animation.to(".anim", { opacity: 1 }, "=+0.5");
+
+animation.to(
+  ".bars",
+  {
+    y: 0,
+    duration: 0.5,
+    stagger: 0.2,
+    ease: "power4.out",
+  },
+  "=+1.5"
+);
+
+animation.to(".name", { opacity: 1 });
+animation.to(".telephone", { opacity: 1 }, "<");
+animation.to(".portfolio", { opacity: 1 }, "<");
+animation.to(".anim", { opacity: 1 }, "<");
+
+// Button code
 
 pause.addEventListener("click", () => {
-  travel.paused(!travel.paused());
-  if (travel.progress() == 1) {
-    travel.restart();
+  movie.play();
+  animation.paused(!animation.paused());
+  if (animation.progress() == 1) {
+    animation.restart();
   }
-  pause.innerHTML = travel.paused() ? "Play" : "Pause";
+  pause.innerHTML = animation.paused() ? "Play" : "Pause";
 });

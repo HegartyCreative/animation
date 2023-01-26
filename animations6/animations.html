@@ -2,38 +2,33 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Animation2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" name="format-detection" content="telephone=no" />
+    <title>Animation1</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="container">
-      <img src="images/logo.png" alt="British Airways logo" class="logo">
-      <div class="parent1">
-        <img class="child1"src="images/venice1.jpg" alt="">
-        <p class="quote1">Venice is like eating an entire box <br>of chocolate liqueurs in one go</p>
-        <p class="source1">Truman Capote</p>
-      </div>
-      <div class="parent2">
-        <img class="child2"src="images/venice2.jpg" alt="">
-        <p class="quote2">Venice...A splendour <br>of miscellaneous spirits</p>
-        <p class="source2">John Ruskin</p>
-      </div>
-      <div class="parent3">
-        <img class="child3"src="images/venice3.jpg" alt="">
-        <p class="quote3">Venice is eternity itself</p>
-        <p class="source3">Joseph Brodsky</p>
-      </div>
-        <p class="end end_title">London City To Venice</p>
-        <p class="end end_para">Europe's more local when you can<br>check in 20 mins before you fly</p>
-        <p class="end end_btn">Book now</p>
+    <div class="wrapper">
+      <div class="container">
         
-
-    
-
-        
-       
-        <button id="pause" class="btn">Play</button>
+        <div class="background">
+          <img src="images/start.jpg" alt="MacBook" class="start">
+          <div class="overlay"></div>
+          <video webkit-playsinline playsinline width="300" height="250" id="theVideo" preload="preload" class="video"> <source src='images/Sequence_01.mp4' type="video/mp4"></source>
+          </video> 
+          <p class="web web1">digital</p>
+          <p class="web web2">creative</p>
+          <div class="bars bar1"></div>
+          <div class="bars bar2"></div>
+          <div class="bars bar3"></div>
+          <div class="bars bar4"></div>
+          <div class="bars bar5"></div>
+          <h1 class="name contact">sean hegarty</h1>
+          <h2 class="telephone contact"><span editable="true" style="color: #FFFFFF;">&zwj;07855 456521</span></h2>
+          <h3 class="portfolio contact">hegartycreative.com</h3>
+          <h3 class="anim contact">hegartyanimations.com</h3>
+          <div class="h1_background"></div>
+          <button id="pause" class="btn">Play</button>
+        </div>
       </div>
     </div>
 

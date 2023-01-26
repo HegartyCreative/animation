@@ -1,9 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700&display=swap");
+
+*[x-apple-data-detectors],  /* iOS */
+    .x-gmail-data-detectors,    /* Gmail */
+    .x-gmail-data-detectors *,
+    .aBn {
+  border-bottom: 0 !important;
+  cursor: default !important;
+  color: inherit !important;
+  text-decoration: none !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+}
 
 html {
   box-sizing: border-box;
-  font-family: "Gill Sans", sans-serif;
 }
 
 *,
@@ -14,152 +26,141 @@ html {
   padding: 0;
 }
 
-.container {
-  border: 1px solid grey;
-  position: relative;
+body {
+  font-family: "Open Sans", sans-serif;
+  color: white;
+}
+
+.background {
   height: 250px;
   width: 300px;
+  position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.logo {
-  width: 40%;
-  position: absolute;
-  right: 10px;
-  top: 10px;
-}
-
-.parent1 {
-  position: absolute;
-  width: 280px;
-  height: 180px;
-  top: 40px;
-  left: 10px;
-  overflow: hidden;
-}
-
-.child1 {
-  height: 180px;
-  overflow: hidden;
+.start {
+  height: 250px;
+  width: 300px;
   position: absolute;
   top: 0;
-  width: 280px;
+  left: 0;
+  z-index: 100;
+}
+
+.bars {
+  background: #f12711; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #f5af19,
+    #f12711
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #f5af19,
+    #f12711
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  height: 250px;
+  width: 60px;
+  top: 0;
+  position: absolute;
+}
+
+.web {
+  font-size: 2rem;
+  z-index: 100;
+}
+
+.web1 {
+  position: absolute;
+  top: 90px;
+  left: 39px;
+  color: white;
+}
+
+.web2 {
+  position: absolute;
+  top: 120px;
+  left: 110px;
+  color: white;
+}
+
+.video {
+  width: 300px;
+  height: 250px;
+  top: 0;
+  left: 0;
+  position: absolute;
 }
 
 p {
-  color: white;
+  letter-spacing: 0.2rem;
+}
+
+.bar1 {
+  left: 0;
+}
+
+.bar2 {
+  left: 60px;
+}
+
+.bar3 {
+  left: 120px;
+}
+
+.bar4 {
+  left: 180px;
+}
+
+.bar5 {
+  left: 240px;
+}
+
+.contact {
+  position: absolute;
+  letter-spacing: 0.1rem;
   z-index: 10;
-  position: absolute;
 }
 
-.quote1 {
-  top: 130px;
-  left: 112px;
-  font-size: 0.7rem;
-  text-align: right;
-}
-
-.source1 {
-  top: 159px;
-  left: 205px;
-  font-size: 0.6rem;
-  font-style: italic;
-}
-
-.parent2 {
-  position: absolute;
-  width: 280px;
-  height: 180px;
-  top: 40px;
-  left: 10px;
-  overflow: hidden;
-}
-
-.child2 {
-  height: 180px;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  width: 280px;
-  opacity: 0;
-}
-
-.quote2 {
-  top: 130px;
-  left: 160px;
-  font-size: 0.7rem;
-  text-align: right;
-}
-
-.source2 {
-  top: 159px;
-  left: 222px;
-  font-size: 0.6rem;
-  font-style: italic;
-}
-
-.parent3 {
-  position: absolute;
-  width: 280px;
-  height: 180px;
-  top: 40px;
-  left: 10px;
-  overflow: hidden;
-}
-
-.child3 {
-  height: 180px;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  width: 280px;
-  opacity: 0;
-}
-
-.quote3 {
-  top: 130px;
-  left: 160px;
-  font-size: 0.7rem;
-  text-align: right;
-}
-
-.source3 {
-  top: 146px;
-  left: 208px;
-  font-size: 0.6rem;
-  font-style: italic;
-}
-
-/* end section */
-
-.end {
-  opacity: 0;
-}
-
-.end_title {
-  position: absolute;
+.name {
   top: 70px;
-  left: 0;
   left: 20px;
-  color: #014898;
+  font-size: 1.4rem;
+  font-weight: 700;
 }
 
-.end_para {
-  position: absolute;
-  top: 100px;
-  left: 0;
+.telephone {
+  top: 105px;
   left: 20px;
-  color: #014898;
+  font-size: 0.9rem;
+  opacity: 0;
+  color: #ffffff !important;
+  font-weight: 500;
 }
 
-.end_btn {
-  background-color: #e2051a;
-  color: white;
-  padding: 7px;
-  border-radius: 5%;
-  left: 15px;
-  font-size: 0.8rem;
-  top: 155px;
+span {
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+.portfolio {
+  top: 127px;
+  left: 20px;
+  font-size: 0.9rem;
+  opacity: 0;
+  font-weight: 500;
+}
+
+.anim {
+  top: 150px;
+  left: 20px;
+  font-size: 0.9rem;
+  opacity: 0;
+  font-weight: 500;
 }
 
 /* Button code */
