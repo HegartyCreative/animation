@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap");
 
 *[x-apple-data-detectors],  /* iOS */
     .x-gmail-data-detectors,    /* Gmail */
@@ -28,6 +28,7 @@ html {
 
 body {
   color: white;
+  font-family: "Oooh Baby", cursive;
 }
 
 .background {
@@ -36,6 +37,15 @@ body {
   position: relative;
   overflow: hidden;
   border: 1px solid #333;
+}
+
+.start {
+  position: absolute;
+  height: 250px;
+  width: 300px;
+  top: 0;
+  left: 0;
+  z-index: 20;
 }
 
 .food {
@@ -56,19 +66,60 @@ body {
 
 .pasta {
   position: absolute;
-  width: 60%;
-  left: 90px;
-  top: 255px;
+  width: 80%;
+  left: 80px;
+  top: 250px;
   z-index: 10;
 }
 
 .pasta_sauce {
   position: absolute;
-  width: 50%;
+  width: 60%;
   left: 0px;
+  top: -20px;
+  z-index: 5;
+}
+
+.text1 {
+  position: absolute;
+  top: 108px;
+  left: 55px;
+  font-size: 1.9rem;
+  color: orange;
+}
+
+.soup {
+  position: absolute;
+  width: 80%;
+  left: 95px;
+  top: -225px;
+  z-index: 10;
+}
+
+.soup_sauce {
+  position: absolute;
+  width: 60%;
+  right: 0px;
   top: 0px;
   z-index: 5;
 }
+
+.text1 {
+  position: absolute;
+  top: 108px;
+  left: 28px;
+  font-size: 2.1rem;
+  color: white;
+}
+
+.text2 {
+  position: absolute;
+  top: 104px;
+  left: 26px;
+  font-size: 1.7rem;
+  color: white;
+}
+
 /* Button code */
 
 .btn {
