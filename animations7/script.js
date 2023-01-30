@@ -8,70 +8,236 @@ let animation = gsap.timeline({
 });
 animation.pause();
 
-animation
+// First Animation
 
-  .fromTo(
-    ".logo",
-    { opacity: 1 },
-    { opacity: 0, duration: 1, ease: "power2.out" },
-    "+=1"
-  )
-  .fromTo(
-    ".model",
-    { x: 80, opacity: 0, scale: 0.6 },
-    { x: 0, opacity: 1, duration: 1.5, scale: 1, ease: "power2.out" }
-  )
-  .fromTo(
-    ".one",
-    { x: 35, opacity: 0 },
-    { x: 0, opacity: 1, duration: 2, ease: "power4.out" },
-    "-=1"
-  )
-  .fromTo(
-    ".four",
-    { x: -29, opacity: 0 },
-    { x: 0, opacity: 1, duration: 2, ease: "power4.out" },
-    "<"
-  )
-  .fromTo(
-    ".two",
-    { y: -29, opacity: 0 },
-    { y: 0, opacity: 1, duration: 2, ease: "power4.out" },
-    "<"
-  )
-  .fromTo(
-    ".three",
-    { y: 29, opacity: 0 },
-    { y: 0, opacity: 1, duration: 2, ease: "power4.out" },
-    "<"
-  )
+animation.to(".start", {
+  opacity: 0,
+  duration: 0,
+});
 
-  .fromTo(
-    ".everywhere",
-    { y: -15, opacity: 0 },
-    { y: 0, opacity: 1, duration: 1, ease: "power4.out" },
-    "-=1.5"
-  )
+animation.fromTo(
+  ".logo_horizontal",
+  {
+    opacity: 0,
+  },
+  {
+    opacity: 1,
+  },
+  "=+0.5"
+);
 
-  .fromTo(
-    ".brand",
-    { y: -15, opacity: 0 },
-    { y: 0, opacity: 1, duration: 1, ease: "power4.out" },
-    "-=0.75"
-  )
+// First animation
 
-  .fromTo(
-    ".show",
-    { opacity: 0 },
-    { opacity: 1, duration: 0.5, ease: "power4.out" },
-    "-=0.5"
-  )
+// Enter stage
 
-  .fromTo(
-    ".logo2",
-    { opacity: 0 },
-    { opacity: 1, duration: 1, ease: "power4.out" }
-  );
+animation.fromTo(
+  ".main_heading_background1",
+  {
+    x: -200,
+  },
+  {
+    x: -40,
+    ease: "back.out(2)",
+  }
+);
+
+animation.fromTo(
+  ".main_heading1",
+  {
+    x: -160,
+  },
+  {
+    x: 0,
+    ease: "back.out(1.7)",
+  },
+  "=-0.25"
+);
+
+animation.fromTo(
+  ".sub_heading_background1",
+  {
+    x: -220,
+  },
+  {
+    x: -40,
+    ease: "back.out(2)",
+  }
+);
+
+animation.fromTo(
+  ".sub_heading1",
+  {
+    x: -180,
+  },
+  {
+    x: 0,
+    ease: "back.out(1.7)",
+  },
+  "=-0.25"
+);
+
+// Leave stage
+
+animation.to(".main_heading_background1, .main_heading1", {
+  x: -210,
+  delay: 2,
+  ease: "back.in(2)",
+});
+
+animation.to(".sub_heading_background1, .sub_heading1", {
+  x: -230,
+  ease: "back.in(2)",
+});
+
+// Second animation
+
+animation.to(".background2", {
+  opacity: 1,
+  duration: 0.25,
+});
+
+// Enter stage
+
+animation.fromTo(
+  ".main_heading_background2",
+  {
+    x: -200,
+  },
+  {
+    x: -40,
+    ease: "back.out(2)",
+  },
+  "=+0.5"
+);
+
+animation.fromTo(
+  ".main_heading2",
+  {
+    x: -160,
+  },
+  {
+    x: 0,
+    ease: "back.out(1.7)",
+  },
+  "=-0.25"
+);
+
+animation.fromTo(
+  ".sub_heading_background2",
+  {
+    x: -240,
+  },
+  {
+    x: -40,
+    ease: "back.out(2)",
+  }
+);
+
+animation.fromTo(
+  ".sub_heading2",
+  {
+    x: -195,
+  },
+  {
+    x: 0,
+    ease: "back.out(1.7)",
+  },
+  "=-0.25"
+);
+
+// Leave stage
+
+animation.to(".main_heading_background2, .main_heading2", {
+  x: -210,
+  delay: 2,
+  ease: "back.in(2)",
+});
+
+animation.to(".sub_heading_background2, .sub_heading2", {
+  x: -240,
+  ease: "back.in(2)",
+});
+
+// Third animation
+
+animation.to(".background3", {
+  opacity: 1,
+  duration: 0.25,
+});
+
+// Enter stage
+
+animation.fromTo(
+  ".main_heading_background3",
+  {
+    x: -200,
+  },
+  {
+    x: -40,
+    ease: "back.out(2)",
+  },
+  "=+0.5"
+);
+
+animation.fromTo(
+  ".main_heading3",
+  {
+    x: -160,
+  },
+  {
+    x: 0,
+    ease: "back.out(1.7)",
+  },
+  "=-0.25"
+);
+
+animation.fromTo(
+  ".sub_heading_background3",
+  {
+    x: -240,
+  },
+  {
+    x: -40,
+    ease: "back.out(2)",
+  }
+);
+
+animation.fromTo(
+  ".sub_heading3",
+  {
+    x: -195,
+  },
+  {
+    x: 0,
+    ease: "back.out(1.7)",
+  },
+  "=-0.25"
+);
+
+// Leave stage
+
+animation.to(".main_heading_background3, .main_heading3", {
+  x: -210,
+  delay: 2,
+  ease: "back.in(2)",
+});
+
+animation.to(".sub_heading_background3, .sub_heading3", {
+  x: -240,
+  ease: "back.in(2)",
+});
+
+animation.to(
+  ".apply",
+  {
+    opacity: 1,
+    duration: 1,
+    ease: "back.out(1.7)",
+  },
+  "=-0.5"
+);
+
+// Button code
 
 pause.addEventListener("click", () => {
   animation.paused(!animation.paused());

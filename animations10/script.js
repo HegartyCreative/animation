@@ -1,5 +1,7 @@
 let select = (e) => document.querySelector(e);
 let selectAll = (e) => document.querySelectoAll(e);
+let widthOuter = window.outerWidth;
+let heightInner = window.innerHeight;
 
 let pause = select("#pause");
 
@@ -8,155 +10,200 @@ let animation = gsap.timeline({
 });
 animation.pause();
 
-// First Animation
-
 animation.to(".start", {
   opacity: 0,
   duration: 0,
 });
 
+// First Animation
+
 animation.fromTo(
-  ".logo_horizontal",
+  ".logo",
   {
-    opacity: 0,
+    x: 305,
+    y: 20,
   },
+  {
+    x: 180,
+    duration: 0.25,
+  }
+);
+
+animation.fromTo(
+  ".intro",
+  {
+    y: -58,
+    x: 72,
+    opacity: 0,
+    ease: "power4.out",
+  },
+  {
+    y: 80,
+    opacity: 1,
+  }
+);
+
+animation.to(".intro", {
+  x: widthOuter,
+  ease: "back.in(1)",
+  delay: 2,
+});
+
+animation.fromTo(
+  ".car",
+  {
+    x: -280,
+    y: 30,
+    ease: "back.in(1)",
+  },
+  {
+    x: 12,
+  }
+);
+
+animation.from(
+  ".tagLine",
+  {
+    x: -150,
+    ease: "back.in(1)",
+  },
+  "<"
+);
+
+animation.fromTo(
+  ".left_wheel",
+  {
+    x: -257,
+    y: 128,
+    ease: "back.in(1)",
+  },
+  {
+    x: 36,
+  },
+  "<"
+);
+
+animation.fromTo(
+  ".right_wheel",
+  {
+    x: -93,
+    y: 127,
+    ease: "back.in(1)",
+  },
+  {
+    x: 200,
+  },
+  "<"
+);
+
+animation.to(
+  ".left_wheel, .right_wheel",
+  {
+    rotation: 360,
+  },
+  "<"
+);
+
+animation.from(
+  ".ready",
+  {
+    scale: 0,
+    transformOrigin: "50% 100%",
+    ease: "back.out(2.5)",
+  },
+  "=+0.25"
+);
+
+animation.to(
+  ".cta",
   {
     opacity: 1,
   },
-  "=+0.5"
+  "=+1.5"
 );
 
-// First animation
-
-// Enter stage
-
-animation.fromTo(
-  ".main_heading_background1",
+animation.to(
+  ".ready",
   {
-    x: -200,
+    x: 265,
   },
-  {
-    x: -40,
-    ease: "back.out(2)",
-  }
+  "=-1"
 );
 
-animation.fromTo(
-  ".main_heading1",
+animation.to(
+  ".car",
   {
-    x: -160,
-  },
-  {
-    x: 0,
-    ease: "back.out(1.7)",
-  },
-  "=-0.25"
-);
-
-animation.fromTo(
-  ".sub_heading_background1",
-  {
-    x: -220,
-  },
-  {
-    x: -40,
-    ease: "back.out(2)",
-  }
-);
-
-animation.fromTo(
-  ".sub_heading1",
-  {
-    x: -180,
-  },
-  {
-    x: 0,
-    ease: "back.out(1.7)",
-  },
-  "=-0.25"
-);
-
-// Leave stage
-
-animation.to(".main_heading_background1, .main_heading1", {
-  x: -210,
-  delay: 2,
-  ease: "back.in(2)",
-});
-
-animation.to(".sub_heading_background1, .sub_heading1", {
-  x: -230,
-  ease: "back.in(2)",
-});
-
-// Second animation
-
-animation.to(".background2", {
-  opacity: 1,
-  duration: 0.25,
-});
-
-// Enter stage
-
-animation.fromTo(
-  ".main_heading_background2",
-  {
-    x: -200,
-  },
-  {
-    x: -40,
-    ease: "back.out(2)",
+    x: 300,
+    ease: "back.in(1)",
   },
   "=+2"
 );
 
-animation.fromTo(
-  ".main_heading2",
+animation.to(
+  ".left_wheel",
   {
-    x: -160,
+    x: 324,
+    ease: "back.in(1)",
   },
+  "<"
+);
+
+animation.to(
+  ".right_wheel",
   {
-    x: 0,
-    ease: "back.out(1.7)",
+    x: 488,
+    ease: "back.in(1)",
   },
-  "=-0.25"
+  "<"
 );
 
 animation.fromTo(
-  ".sub_heading_background2",
+  ".left_wheel, .right_wheel",
   {
-    x: -240,
+    rotation: 0,
   },
   {
-    x: -40,
-    ease: "back.out(2)",
-  }
+    rotation: 360,
+    ease: "back.in(1)",
+  },
+  "<"
 );
 
-animation.fromTo(
-  ".sub_heading2",
+animation.to(
+  ".cta",
   {
-    x: -195,
+    y: 100,
+    ease: "back.in(1)",
   },
-  {
-    x: 0,
-    ease: "back.out(1.7)",
-  },
-  "=-0.25"
+  "<"
 );
 
-// Leave stage
+animation.to(
+  ".tagLine",
+  {
+    x: -150,
+    ease: "back.in(1)",
+  },
+  "<"
+);
 
-animation.to(".main_heading_background2, .main_heading2", {
-  x: -210,
-  delay: 2,
-  ease: "back.in(2)",
-});
+animation.from(
+  ".website",
+  {
+    y: -35,
+    ease: "power4.out",
+    duration: 0.25,
+  },
+  "=+0.15"
+);
 
-animation.to(".sub_heading_background2, .sub_heading2", {
-  x: -240,
-  ease: "back.in(2)",
-});
+animation.to(
+  ".details",
+  {
+    opacity: 1,
+  },
+  "=+0.15"
+);
 
 // Button code
 

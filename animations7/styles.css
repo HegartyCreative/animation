@@ -1,5 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
+*[x-apple-data-detectors],  /* iOS */
+    .x-gmail-data-detectors,    /* Gmail */
+    .x-gmail-data-detectors *,
+    .aBn {
+  border-bottom: 0 !important;
+  cursor: default !important;
+  color: inherit !important;
+  text-decoration: none !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+}
 
 html {
   box-sizing: border-box;
@@ -13,102 +26,230 @@ html {
   padding: 0;
 }
 
+body {
+  color: orange;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.container {
+  height: 250px;
+  width: 300px;
+  background-color: white;
+}
+
 .background {
-  background-image: url("images/background.jpg");
   height: 250px;
   width: 300px;
   position: relative;
   overflow: hidden;
+  z-index: 0;
+  border: 1px solid lightgrey;
 }
 
-.logo {
-  background-image: url("images/logo.png");
+.start {
   height: 250px;
   width: 300px;
   position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
 }
 
-.model {
-  background-image: url("images/model.png");
+.background2 {
   height: 250px;
   width: 300px;
   position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  opacity: 0;
 }
 
-.walk,
-.one,
-.two,
-.three,
-.four {
-  font-family: "Anton", sans-serif;
+.background3 {
+  height: 250px;
+  width: 300px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  opacity: 0;
+}
+
+.logo_horizontal {
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  width: 130px;
+}
+/* First Animation */
+
+/* Enter stage */
+
+.main_heading1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  font-size: 1.1rem;
+  top: 100px;
   color: white;
+  padding-left: 10px;
+  font-weight: 400;
+}
+
+.main_heading_background1 {
+  position: absolute;
+  height: 30px;
+  width: 180px;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  top: 92px;
+  background-color: black;
+}
+
+.sub_heading1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  font-size: 1.1rem;
+  top: 133px;
+  color: white;
+  padding-left: 10px;
+  font-weight: 700;
+}
+
+.sub_heading_background1 {
+  position: absolute;
+  height: 30px;
+  width: 215px;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  top: 125px;
+  background-color: black;
+}
+
+/* Second Animation */
+
+/* Enter stage */
+
+.main_heading2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  font-size: 1.1rem;
+  top: 100px;
+  color: white;
+  padding-left: 10px;
+  font-weight: 400;
+}
+
+.main_heading_background2 {
+  position: absolute;
+  height: 30px;
+  width: 162px;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  top: 92px;
+  background-color: black;
+}
+
+.sub_heading2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  font-size: 1.1rem;
+  top: 133px;
+  color: white;
+  padding-left: 10px;
+  font-weight: 700;
+}
+
+.sub_heading_background2 {
+  position: absolute;
+  height: 30px;
+  width: 236px;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  top: 125px;
+  background-color: black;
+}
+
+/* Third Animation */
+
+/* Enter stage */
+
+.main_heading3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  font-size: 1.1rem;
+  top: 100px;
+  color: white;
+  padding-left: 10px;
+  font-weight: 400;
+}
+
+.main_heading_background3 {
+  position: absolute;
+  height: 30px;
+  width: 157px;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  top: 92px;
+  background-color: black;
+}
+
+.sub_heading3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  font-size: 1.1rem;
+  top: 133px;
+  color: white;
+  padding-left: 10px;
+  font-weight: 700;
+}
+
+.sub_heading_background3 {
+  position: absolute;
+  height: 30px;
+  width: 190px;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  top: 125px;
+  background-color: black;
+}
+
+h1.apply {
+  background-color: #076400;
+  color: white;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  position: absolute;
+  top: 170px;
+  left: 220px;
+  z-index: 100;
+  font-size: 0.9rem;
+  padding-top: 20px;
   text-transform: uppercase;
-  font-size: 4.2rem;
-}
-
-.one {
-  left: 132px;
-  position: absolute;
-}
-
-.two {
-  left: 180px;
-  position: absolute;
-}
-
-.three {
-  left: 215px;
-  position: absolute;
-}
-
-.four {
-  left: 244px;
-  position: absolute;
-}
-
-.text {
-  font-family: "Josefin Sans", sans-serif;
-}
-
-.everywhere {
-  color: white;
-  font-size: 1.1em;
-  position: absolute;
-  left: 182px;
-  top: 90px;
-  letter-spacing: 0.03rem;
-}
-
-.brand {
-  color: black;
-  font-size: 1.2em;
-  position: absolute;
-  left: 138px;
-  top: 118px;
-  letter-spacing: 0.03rem;
-  text-align: right;
-  line-height: 1.3rem;
-}
-
-.show {
-  color: black;
-  font-size: 1.1em;
-  position: absolute;
-  left: 178px;
-  top: 160px;
-  letter-spacing: 0.03rem;
-  background-color: white;
   text-align: center;
-  padding: 0.5rem 0.4rem 0.3rem 0.4rem;
-  border-radius: 0.6rem;
+  line-height: 1.1rem;
+  opacity: 0;
 }
 
-.logo2 {
-  background-image: url("images/logo2.png");
-  height: 250px;
-  width: 300px;
-  position: absolute;
-}
+/* Button code */
 
 .btn {
   height: 30px;
