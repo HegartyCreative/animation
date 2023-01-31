@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+      name="format-detection"
+      content="telephone=no"
+    />
+    <title>Animation1</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="background">
+          <img src="images/logo.svg" alt="Logo" class="logo" />
+          <header class="header"></header>
+          <h1 class="main_heading">Tour de France</h1>
+          <h2 class="year">2022</h2>
+          <div class="year_background"></div>
+          <p class="figure"><span id="riders">0</span></p>
+          <p class="riders">riders</p>
+          <p class="figure"><span id="teams">0</span></p>
+          <p class="teams">teams</p>
+          <img src="images/cyclists.svg" alt="Cyclists" class="cyclists" />
+
+          <button id="pause" class="btn">Play</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="script.js" defer></script>
+  </body>
+</html>
