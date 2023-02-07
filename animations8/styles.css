@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
 
 *[x-apple-data-detectors],  /* iOS */
     .x-gmail-data-detectors,    /* Gmail */
@@ -27,7 +27,15 @@ html {
 }
 
 body {
-  color: white;
+  font-family: "Fjalla One", sans-serif;
+}
+
+.start {
+  height: 250px;
+  width: 300px;
+  position: absolute;
+  overflow: hidden;
+  z-index: 100;
 }
 
 .background {
@@ -37,111 +45,88 @@ body {
   overflow: hidden;
 }
 
-.start {
+.b1,
+.u1,
+.b2,
+.b3,
+.l,
+.e,
+.greenShadow,
+.redShadow,
+.green1,
+.green2,
+.green3,
+.cream,
+.red,
+.innerShadow1,
+.g,
+.u2,
+.m,
+.innerShadow2,
+.circle1,
+.circle2,
+.swirl {
   height: 250px;
   width: 300px;
   position: absolute;
-  z-index: 100;
   top: 0;
   left: 0;
-}
-
-.sky_parent,
-.grass_parent {
-  position: absolute;
-  width: 300px;
-  height: 250px;
-  overflow: hidden;
-}
-
-.sky,
-.grass {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 300px;
-  height: 250px;
-  overflow: hidden;
-}
-
-.sky {
   z-index: 0;
 }
 
-.grass {
-  z-index: 3;
+.redShadow {
+  z-index: 0;
 }
 
-.woman_parent {
+.star {
+  width: 100px;
   position: absolute;
-  width: 300px;
-  height: 250px;
-  overflow: hidden;
-}
-
-.woman {
-  width: 55%;
-  position: absolute;
-  top: 89px;
+  top: 120px;
   left: 140px;
-  z-index: 3;
+}
+
+.moneyHolder {
+  width: 60px;
+  position: absolute;
+  top: 160px;
+  left: 190px;
+}
+
+.money {
+  width: 22px;
+  position: absolute;
+  top: 176px;
+  left: 204px;
+}
+
+.currency {
+  width: 13px;
+  position: absolute;
+  top: 178px;
+  left: 228px;
 }
 
 .text {
+  width: 45px;
+  position: absolute;
+  top: 32px;
+  left: 50px;
   z-index: 20;
-  position: absolute;
-  left: 0px;
-  top: 30px;
 }
 
-.background_h1 {
-  background-color: rgba(84, 138, 28, 0.5);
-  height: 32px;
-  width: 160px;
-  left: -10px;
-  top: 4px;
+.redCircles {
+  width: 30px;
   position: absolute;
+  top: 180px;
+  left: 50px;
+  z-index: 0;
 }
 
-h1 {
-  color: white;
-  font-size: 1rem;
-  font-family: "Montserrat", sans-serif;
-  letter-spacing: 0.05rem;
-  top: 6px;
-  left: 15px;
+.creamCircles {
+  width: 34px;
   position: absolute;
-  width: 200px;
-  z-index: 20;
-  font-weight: 700;
-}
-
-h2 {
-  color: rgb(84, 138, 28);
-  font-weight: 700;
-  font-size: 1rem;
-  letter-spacing: 0.05rem;
-  top: 45px;
-  left: 15px;
-  position: absolute;
-  width: 200px;
-  z-index: 20;
-  font-family: "Montserrat", sans-serif;
-  text-shadow: 0.5px 0.5px rgba(255, 255, 255, 0.5);
-  text-transform: uppercase;
-}
-
-p {
-  color: white;
-  background-color: rgba(84, 138, 28, 0.5);
-  font-family: "Montserrat", sans-serif;
-  padding: 3px 6px;
-  position: absolute;
-  top: 120px;
-  left: 10px;
-  width: 78px;
-  font-size: 13px;
-  border-radius: 5px;
+  top: 40px;
+  left: 220px;
   z-index: 0;
 }
 

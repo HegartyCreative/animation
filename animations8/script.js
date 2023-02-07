@@ -3,94 +3,199 @@ let selectAll = (e) => document.querySelectoAll(e);
 
 let pause = select("#pause");
 
-let animation = gsap.timeline({
+let master = gsap.timeline({
   onComplete: () => (pause.innerHTML = "Play"),
 });
-animation.pause();
 
-animation.to(".start", { opacity: 0, duration: 0 });
+master.pause();
 
-animation.fromTo(
-  ".sky",
-  { scale: 1 },
-  { scale: 1.2, duration: 6, ease: "power1.out", transformOrigin: "0% 100%" }
-);
+master.to(".start", {
+  opacity: 0,
+});
 
-animation.fromTo(
-  ".grass",
-  { scale: 1 },
+// Bubble Text animation
+
+const moveAnimation1 = () => {
+  const tl = gsap.timeline();
+  master.from(
+    ".b1, .u1, .b2, .b3, .l, .e, .greenShadow, .redShadow, .green1, .green2, .green3, .cream, .red",
+    {
+      opacity: 0,
+      scale: 0,
+      ease: "bounce",
+      stagger: 0.15,
+    }
+  );
+  return tl;
+};
+
+const moveAnimation2 = () => {
+  const tl = gsap.timeline();
+  master.from(
+    ".g, .u2, .m",
+    {
+      opacity: 0,
+      scale: 0,
+      ease: "bounce",
+      stagger: 0.15,
+    },
+    "=-1.25"
+  );
+  return tl;
+};
+
+// BUBBLE TEXT
+
+master.add(moveAnimation1());
+
+master.from(
+  ".innerShadow1",
   {
-    scale: 1.3,
-    duration: 6,
-    ease: "power1.out",
-    transformOrigin: "50% 50%",
+    opacity: 0,
   },
-  "<"
+  "=-0.25"
 );
 
-animation.fromTo(
-  ".woman",
-  { scale: 1, x: 0, y: 220 },
+master.add(moveAnimation2());
+
+master.from(
+  ".innerShadow2",
   {
-    scale: 1.05,
-    x: 0,
-    y: -45,
-    duration: 0.75,
-    ease: "back.out(2)",
-    transformOrigin: "50% 50%",
+    opacity: 0,
   },
-  "=-4"
+  "=-0.25"
 );
 
-animation.fromTo(
-  ".woman",
-  { scale: 1 },
+master.from(
+  ".circle1",
   {
-    scale: 1.03,
-    repeat: 5,
-    yoyo: true,
-    ease: "power1.out",
+    opacity: 0,
+    scale: 1,
   },
-  "<"
+  "=-0.25"
 );
 
-animation.from(
-  ".background_h1",
+master.from(
+  ".circle2",
   {
-    x: -155,
-    ease: "back.out(1.5)",
+    opacity: 0,
+    scale: 1,
+  },
+  "=-0.25"
+);
+
+master.from(
+  ".swirl",
+  {
+    opacity: 0,
+    scale: 1,
+    duration: 4,
+    ease: "back.out(1.7)",
+  },
+  "=-0.25"
+);
+
+master.fromTo(
+  ".star",
+  {
+    opacity: 0,
+    scale: 0,
+  },
+  {
+    opacity: 1,
+    scale: 1,
     duration: 0.25,
+    ease: "back.out(1.7)",
   },
   "=-5"
 );
 
-animation.fromTo(
-  "h1",
-  { x: -155, opacity: 0 },
-  { x: 0, opacity: 1, duration: 0.25, ease: "back.out(1.5)" },
-  "=-4.75"
+master.fromTo(
+  ".moneyHolder",
+  {
+    opacity: 0,
+    scale: 0,
+  },
+  {
+    opacity: 1,
+    scale: 1,
+    duration: 0.25,
+    ease: "back.out(1.7)",
+  },
+  ">"
 );
 
-animation.fromTo(
-  "h2",
-  { y: 20, opacity: 0 },
-  { y: 0, opacity: 1, duration: 0.25, ease: "back.out(1.5)" },
-  "=-4.5"
+master.fromTo(
+  ".cash",
+  {
+    opacity: 0,
+    scale: 0,
+  },
+  {
+    opacity: 1,
+    scale: 1.2,
+    duration: 0.15,
+    ease: "back.out(2)",
+    stagger: 0.15,
+  },
+  ">"
 );
 
-animation.fromTo(
-  "p",
-  { y: 30, opacity: 0 },
-  { y: 0, opacity: 1, duration: 0.25, ease: "back.out(1.5)" },
-  "=-4.25"
+master.fromTo(
+  ".text",
+  {
+    opacity: 0,
+    scale: 0,
+  },
+  {
+    opacity: 1,
+    scale: 2,
+    duration: 0.25,
+    ease: "back.out(1.7)",
+  },
+  ">"
 );
+
+master.fromTo(
+  ".redCircles",
+  {
+    opacity: 0,
+    scale: 0,
+  },
+  {
+    opacity: 1,
+    scale: 2,
+    duration: 0.25,
+    ease: "back.out(1.7)",
+  },
+  ">"
+);
+
+master.fromTo(
+  ".creamCircles",
+  {
+    opacity: 0,
+    scale: 0,
+  },
+  {
+    opacity: 1,
+    scale: 2,
+    duration: 0.25,
+    ease: "back.out(1.7)",
+  },
+  ">"
+);
+
+// SHADOWS
+
+master.from;
 
 // Button code
 
 pause.addEventListener("click", () => {
-  animation.paused(!animation.paused());
-  if (animation.progress() == 1) {
-    animation.restart();
+  master.paused(!master.paused());
+  if (master.progress() == 1) {
+    master.restart();
   }
-  pause.innerHTML = animation.paused() ? "Play" : "Pause";
+  pause.innerHTML = master.paused() ? "Play" : "Pause";
 });

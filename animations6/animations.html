@@ -2,37 +2,58 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" name="format-detection" content="telephone=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+      name="format-detection"
+      content="telephone=no"
+    />
     <title>Animation1</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="wrapper">
       <div class="container">
-        
-        <div class="background">
-          <img src="images/start.jpg" alt="MacBook" class="start">
-          <div class="overlay"></div>
-          <video webkit-playsinline playsinline width="300" height="250" id="theVideo" preload="preload" class="video"> <source src='images/Sequence_01.mp4' type="video/mp4"></source>
-          </video> 
-          <p class="web web1">digital</p>
-          <p class="web web2">creative</p>
-          <div class="bars bar1"></div>
-          <div class="bars bar2"></div>
-          <div class="bars bar3"></div>
-          <div class="bars bar4"></div>
-          <div class="bars bar5"></div>
-          <h1 class="name contact">sean hegarty</h1>
-          <h2 class="telephone contact"><span editable="true" style="color: #FFFFFF;">&zwj;07855 456521</span></h2>
-          <h3 class="portfolio contact">hegartycreative.com</h3>
-          <h3 class="anim contact">hegartyanimations.com</h3>
-          <div class="h1_background"></div>
+        <img src="images/start.jpg" alt="Building" class="start">
+        <img src="images/floor.png" alt="" class="floor intro">
+        <img src="images/building_one.png" alt="" class="building_one intro">
+        <img src="images/building_six.png" alt="" class="building_six intro">
+        <img src="images/building_two.png" alt="" class="building_two intro">
+        <img src="images/building_five.png" alt="" class="building_five intro">
+        <img src="images/building_three.png" alt="" class="building_three intro">
+        <img src="images/building_four.png" alt="" class="building_four intro">
+        <div class="mask_building intro"></div>
+        <h1 class="main_heading intro">Building of the Year </h1>
+        <p class="sub_heading intro">2023</p>
+        <div class="lineTop"></div>
+        <div class="lineBottom"></div>
+        <img src="images/building_one.jpg" alt="Building" class="buildingOne section1">
+        <img src="images/building_two.jpg" alt="Building" class="buildingTwo section1">
+        <h2 class="category_heading section1 ">3,500+</h2>
+        <p class="category_text section1">Buildings nominated</p>
+        <div class="lineTop2"></div>
+        <div class="lineBottom2"></div>
+        <img src="images/building_three.jpg" alt="Building" class="buildingThree section2">
+        <img src="images/building_four.jpg" alt="Building" class="buildingFour section2">
+        <h2 class="category_heading2 section2 ">45</h2>
+        <p class="category_text2 section2">Countries nominated</p>
+        <div class="lineTop3"></div>
+        <div class="lineBottom3"></div>
+        <img src="images/building_five.jpg" alt="Building" class="buildingFive section3">
+        <img src="images/building_six.jpg" alt="Building" class="buildingSix section3">
+        <h2 class="category_heading3 section3 ">2,434</h2>
+        <p class="category_text3 section3">Contractors nominated</p>
+        <img class="master_logo" src="images/logo_master.png" alt="Logo" >
+        <p class="invite">Join us in a celebrating the finest<br> construction and design projects this year</p>
+        <p class="website">buildingawards.org</p>
+        <!-- Button code -->
+
           <button id="pause" class="btn">Play</button>
         </div>
       </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="script.js" defer></script>
   </body>
