@@ -1,216 +1,197 @@
 let select = (e) => document.querySelector(e);
 let selectAll = (e) => document.querySelectoAll(e);
-let widthOuter = window.outerWidth;
-let heightInner = window.innerHeight;
 
 let pause = select("#pause");
 
-let animation = gsap.timeline({
+let master = gsap.timeline({
   onComplete: () => (pause.innerHTML = "Play"),
 });
-animation.pause();
 
-animation.to(".start", {
-  opacity: 0,
-  duration: 0,
-});
+master.pause();
 
-// First Animation
-
-animation.fromTo(
-  ".logo",
+master.to(
+  ".start_group",
   {
-    x: 305,
-    y: 20,
-  },
-  {
-    x: 180,
-    duration: 0.25,
-  }
-);
-
-animation.fromTo(
-  ".intro",
-  {
-    y: -58,
-    x: 72,
     opacity: 0,
-    ease: "power4.out",
   },
+  "=+1"
+);
+
+// apples
+master.from(
+  ".apples_image",
+  { y: 250, duration: 0.5, ease: "back.out(2)" },
+  "=+0.75"
+);
+
+master.fromTo(
+  ".apples_text",
+  { x: 80, y: 80, opacity: 0 },
+  { y: 120, ease: "back.out(2)", opacity: 1, duration: 0.35 }
+);
+
+master.to(
+  ".apples",
   {
-    y: 80,
+    opacity: 0,
+  },
+  "=+1"
+);
+
+// grapes
+master.from(
+  ".grapes_image",
+  { y: 250, duration: 0.5, ease: "back.out(2)" },
+  "=-0.25"
+);
+master.fromTo(
+  ".grapes_text",
+  { x: 65, y: 80, opacity: 0 },
+  { y: 120, ease: "back.out(2)", opacity: 1, duration: 0.35 }
+);
+
+master.to(
+  ".grapes",
+  {
+    opacity: 0,
+  },
+  "=+1"
+);
+
+// bananas
+master.from(
+  ".bananas_image",
+  { y: 250, duration: 0.5, ease: "back.out(2)" },
+  "=-0.25"
+);
+master.fromTo(
+  ".bananas_text",
+  { x: 81, y: 80, opacity: 0 },
+  { y: 120, ease: "back.out(2)", opacity: 1, duration: 0.35 }
+);
+
+master.to(
+  ".bananas",
+  {
+    opacity: 0,
+  },
+  "=+1"
+);
+
+// peppers
+master.from(
+  ".peppers_image",
+  { y: 250, duration: 0.5, ease: "back.out(2)" },
+  "=-0.25"
+);
+master.fromTo(
+  ".peppers_text",
+  { x: 100, y: 80, opacity: 0 },
+  { y: 120, ease: "back.out(2)", opacity: 1, duration: 0.35 }
+);
+
+master.to(
+  ".peppers",
+  {
+    opacity: 0,
+  },
+  "=+1"
+);
+
+// tomatoes
+master.from(
+  ".tomatoes_image",
+  { y: 250, duration: 0.5, ease: "back.out(2)" },
+  "=-0.25"
+);
+master.fromTo(
+  ".tomatoes_text",
+  { x: 98, y: 80, opacity: 0 },
+  { y: 120, ease: "back.out(2)", opacity: 1, duration: 0.35 }
+);
+
+master.to(
+  ".tomatoes",
+  {
+    opacity: 0,
+  },
+  "=+1"
+);
+
+// cucumbers
+master.from(
+  ".cucumbers_image",
+  { y: 250, duration: 0.5, ease: "back.out(2)" },
+  "=-0.25"
+);
+master.fromTo(
+  ".cucumbers_text",
+  { x: 64, y: 80, opacity: 0 },
+  { y: 120, ease: "back.out(2)", opacity: 1, duration: 0.35 }
+);
+
+master.to(
+  ".cucumbers",
+  {
+    opacity: 0,
+  },
+  "=+1"
+);
+
+// corn
+master.from(
+  ".corn_image",
+  { y: 250, duration: 0.5, ease: "back.out(2)" },
+  "=-0.25"
+);
+master.fromTo(
+  ".corn_text",
+  { x: 70, y: 80, opacity: 0 },
+  { y: 120, ease: "back.out(2)", opacity: 1, duration: 0.35 }
+);
+
+master.to(
+  ".corn",
+  {
+    opacity: 0,
+  },
+  "=+1"
+);
+
+// carrots
+master.from(
+  ".carrots_image",
+  { y: 250, duration: 0.5, ease: "back.out(2)" },
+  "=-0.25"
+);
+master.fromTo(
+  ".carrots_text",
+  { x: 96, y: 80, opacity: 0 },
+  { y: 120, ease: "back.out(2)", opacity: 1, duration: 0.35 }
+);
+
+master.to(
+  ".carrots",
+  {
+    opacity: 0,
+  },
+  "=+1"
+);
+
+master.to(
+  ".end",
+  {
     opacity: 1,
-  }
-);
-
-animation.to(".intro", {
-  x: widthOuter,
-  ease: "back.in(1)",
-  delay: 2,
-});
-
-animation.fromTo(
-  ".car",
-  {
-    x: -280,
-    y: 30,
-    ease: "back.in(1)",
   },
-  {
-    x: 12,
-  }
-);
-
-animation.from(
-  ".tagLine",
-  {
-    x: -150,
-    ease: "back.in(1)",
-  },
-  "<"
-);
-
-animation.fromTo(
-  ".left_wheel",
-  {
-    x: -257,
-    y: 128,
-    ease: "back.in(1)",
-  },
-  {
-    x: 36,
-  },
-  "<"
-);
-
-animation.fromTo(
-  ".right_wheel",
-  {
-    x: -93,
-    y: 127,
-    ease: "back.in(1)",
-  },
-  {
-    x: 200,
-  },
-  "<"
-);
-
-animation.to(
-  ".left_wheel, .right_wheel",
-  {
-    rotation: 360,
-  },
-  "<"
-);
-
-animation.from(
-  ".ready",
-  {
-    scale: 0,
-    transformOrigin: "50% 100%",
-    ease: "back.out(2.5)",
-  },
-  "=+0.25"
-);
-
-animation.to(
-  ".cta",
-  {
-    opacity: 1,
-  },
-  "=+1.5"
-);
-
-animation.to(
-  ".ready",
-  {
-    x: 265,
-  },
-  "=-1"
-);
-
-animation.to(
-  ".car",
-  {
-    x: 300,
-    ease: "back.in(1)",
-  },
-  "=+2"
-);
-
-animation.to(
-  ".left_wheel",
-  {
-    x: 324,
-    ease: "back.in(1)",
-  },
-  "<"
-);
-
-animation.to(
-  ".right_wheel",
-  {
-    x: 488,
-    ease: "back.in(1)",
-  },
-  "<"
-);
-
-animation.fromTo(
-  ".left_wheel, .right_wheel",
-  {
-    rotation: 0,
-  },
-  {
-    rotation: 360,
-    ease: "back.in(1)",
-  },
-  "<"
-);
-
-animation.to(
-  ".cta",
-  {
-    y: 100,
-    ease: "back.in(1)",
-  },
-  "<"
-);
-
-animation.to(
-  ".tagLine",
-  {
-    x: -150,
-    ease: "back.in(1)",
-  },
-  "<"
-);
-
-animation.from(
-  ".website",
-  {
-    y: -35,
-    ease: "power4.out",
-    duration: 0.25,
-  },
-  "=+0.15"
-);
-
-animation.to(
-  ".details",
-  {
-    opacity: 1,
-  },
-  "=+0.15"
+  "=-0.1"
 );
 
 // Button code
 
 pause.addEventListener("click", () => {
-  animation.paused(!animation.paused());
-  if (animation.progress() == 1) {
-    animation.restart();
+  master.paused(!master.paused());
+  if (master.progress() == 1) {
+    master.restart();
   }
-  pause.innerHTML = animation.paused() ? "Play" : "Pause";
+  pause.innerHTML = master.paused() ? "Play" : "Pause";
 });

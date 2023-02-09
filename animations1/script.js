@@ -11,7 +11,7 @@ nfl.pause();
 nfl.to(".background_full", { opacity: 1 });
 nfl.to(
   ".background_right",
-  { x: -260, ease: "power4.out", duration: 0.25 },
+  { x: -260, ease: "power4.out", duration: 0.35 },
   "=+1"
 );
 nfl.to(".mask1, .mask2, .mask3", { opacity: 1 }, "=+0.25");
@@ -22,21 +22,21 @@ nfl.to(".team1, .team2, .team3", { opacity: 1 });
 nfl.fromTo(
   ".logo",
   { scale: 0, opacity: 0 },
-  { scale: 1.4, ease: "bounce.out", opacity: 1, duration: 0.4 },
+  { scale: 1.4, ease: "bounce.out", opacity: 1, duration: 0.25 },
   "=-0.5"
 );
 
-nfl.from(".bills", { x: -90, ease: "power2.out", duration: 0.25 }), "=-0.25";
+nfl.from(".bills", { x: -90, ease: "power2.out", duration: 0.45 }), "=-0.25";
 nfl.to(".ground1", { opacity: 1, duration: 0.25 });
-nfl.from(".team1", { y: -18, ease: "back.out(2)", duration: 0.15 }, "=+0.05");
+nfl.from(".team1", { y: -18, ease: "back.out(2)", duration: 0.2 }, "=+0.05");
 
-nfl.from(".titans", { x: -90, ease: "power2.out", duration: 0.25 });
+nfl.from(".titans", { x: -90, ease: "power2.out", duration: 0.45 });
 nfl.to(".ground_1", { opacity: 1, duration: 0.25 });
-nfl.from(".team2", { y: -18, ease: "back.out(2)", duration: 0.15 }, "=+0.05");
+nfl.from(".team2", { y: -18, ease: "back.out(2)", duration: 0.2 }, "=+0.05");
 
-nfl.from(".jags", { x: -90, ease: "power2.out", duration: 0.25 });
+nfl.from(".jags", { x: -90, ease: "power2.out", duration: 0.45 });
 nfl.to(".ground2", { opacity: 1, duration: 0.25 });
-nfl.from(".team3", { y: -18, ease: "back.out(2)", duration: 0.15 }, "=+0.05");
+nfl.from(".team3", { y: -18, ease: "back.out(2)", duration: 0.2 }, "=+0.05");
 
 pause.addEventListener("click", () => {
   nfl.paused(!nfl.paused());

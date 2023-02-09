@@ -1,124 +1,214 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap");
-
-*[x-apple-data-detectors],  /* iOS */
-    .x-gmail-data-detectors,    /* Gmail */
-    .x-gmail-data-detectors *,
-    .aBn {
-  border-bottom: 0 !important;
-  cursor: default !important;
-  color: inherit !important;
-  text-decoration: none !important;
-  font-size: inherit !important;
-  font-family: inherit !important;
-  font-weight: inherit !important;
-  line-height: inherit !important;
-}
-
 html {
   box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 *,
 *::before,
 *::after {
   box-sizing: inherit;
-  margin: 0;
-  padding: 0;
 }
 
-body {
-  font-family: "Nunito", sans-serif;
-}
-
-.background {
+.container {
   height: 250px;
   width: 300px;
   position: relative;
   overflow: hidden;
-  border: 1px solid #333;
-  background-color: white;
+  border: 1px solid rgb(230, 230, 230);
 }
 
 .start {
   height: 250px;
   width: 300px;
   position: absolute;
-  background-color: white;
+  overflow: hidden;
+  z-index: 50;
 }
 
-.logo {
+.start_text {
+  z-index: 100;
+  color: red;
+  text-align: center;
+  font-weight: normal;
+  font-size: 20px;
+  top: 70px;
+  left: 75px;
+  font-family: "Shadows Into Light Two", cursive;
   position: absolute;
-  height: 17px;
+  text-rendering: optimizeLegibility;
+}
+
+.background {
+  height: 250px;
+  width: 300px;
+  position: absolute;
+  overflow: hidden;
+  border: 1px solid rgb(230, 230, 230);
   z-index: 10;
 }
 
-.intro {
+.food {
+  height: 250px;
+  width: 300px;
   position: absolute;
-  color: rgb(100, 100, 100);
-  text-align: center;
-  font-size: 1.6rem;
-  font-weight: 600;
-  line-height: 1.8rem;
-}
-
-.car {
-  position: absolute;
-  width: 90%;
-}
-
-.left_wheel {
-  position: absolute;
-  width: 14.3%;
+  z-index: 3;
   opacity: 1;
 }
 
-.right_wheel {
+.end {
+  height: 250px;
+  width: 300px;
   position: absolute;
-  width: 14.9%;
-  opacity: 1;
-}
-
-.tagLine {
-  color: rgb(100, 100, 100);
-  font-size: 0.8rem;
-  top: 17px;
-  left: 15px;
-  position: absolute;
-  line-height: 1rem;
-}
-
-.ready {
-  color: rgb(100, 100, 100);
-  left: 36px;
-  top: 195px;
-  position: absolute;
-  font-size: 1.6rem;
-}
-
-.cta {
-  height: 45px;
-  position: absolute;
-  top: 190px;
-  left: 83px;
+  z-index: 100;
   opacity: 0;
 }
 
-.website {
-  font-size: 0.8rem;
+.text {
   position: absolute;
-  top: 20px;
-  left: 20px;
-  color: rgb(100, 100, 100);
+  font-size: 1.3rem;
+  z-index: 3;
+  font-family: "Shadows Into Light Two", cursive;
+  font-weight: normal;
 }
 
-.details {
-  background-color: rgb(100, 100, 100);
-  color: white;
+/* apples */
+
+.apples_image {
+  height: 250px;
+  width: 300px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.apples_text {
+  color: #c11216;
+}
+
+/* grapes */
+
+.grapes_image {
+  height: 250px;
+  width: 300px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.grapes_text {
+  color: #b5ca03;
+}
+
+/* bananas */
+
+.bananas_image {
+  height: 250px;
+  width: 300px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.bananas_text {
+  color: #fed41e;
+}
+
+/* peppers */
+
+.peppers_image {
+  height: 250px;
+  width: 300px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.peppers_text {
+  color: #487801;
+}
+
+/* tomatoes */
+
+.tomatoes_image {
+  height: 250px;
+  width: 300px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.tomatoes_text {
+  color: #fe1e10;
+}
+
+/* cucumbers */
+
+.cucumbers_image {
+  height: 250px;
+  width: 300px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.cucumbers_text {
+  color: #5b892d;
+}
+
+/* corn */
+
+.corn_image {
+  height: 250px;
+  width: 300px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.corn_text {
+  color: #fcd34f;
+}
+
+/* carrots */
+
+.carrots_image {
+  height: 250px;
+  width: 300px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.carrots_text {
+  color: #fea30b;
+}
+
+.end_text {
+  z-index: 100;
+  color: red;
   text-align: center;
   position: absolute;
-  top: 100px;
-  left: 60px;
-  padding: 10px 15px;
+  top: 40px;
+  left: 0px;
+  font-size: 4rem;
   opacity: 0;
 }
 
