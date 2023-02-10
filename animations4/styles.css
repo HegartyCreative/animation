@@ -1,9 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap");
 
 html {
   box-sizing: border-box;
-  font-family: "Gill Sans", sans-serif;
+}
+
+body {
+  font-family: "Dancing Script", cursive;
+  font-weight: normal;
 }
 
 *,
@@ -14,152 +17,220 @@ html {
   padding: 0;
 }
 
-.container {
-  border: 1px solid grey;
-  position: relative;
+.background {
   height: 250px;
   width: 300px;
+  position: relative;
   overflow: hidden;
 }
 
-.logo {
-  width: 15%;
-  position: absolute;
-  right: 12px;
-  top: 9px;
-}
-
-.parent1 {
-  position: absolute;
-  width: 280px;
-  height: 180px;
-  top: 40px;
-  left: 10px;
-  overflow: hidden;
-}
-
-.child1 {
-  height: 180px;
-  overflow: hidden;
+.start {
+  height: 250px;
+  width: 300px;
   position: absolute;
   top: 0;
-  width: 280px;
+  left: 0;
+  z-index: 100;
 }
 
-p {
+.start_text {
+  height: 250px;
+  width: 300px;
+  position: absolute;
+  top: 147px;
+  right: 20px;
+  z-index: 110;
   color: white;
+
+  font-size: 1.5rem;
+  text-align: right;
+}
+
+.box1 {
+  height: 250px;
+  width: 300px;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 1);
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.barcelona {
+  position: absolute;
+  height: 275px;
+  width: 325px;
+  top: 0;
+  left: 0;
   z-index: 10;
+}
+
+.barcelona_text1 {
   position: absolute;
-}
-
-.quote1 {
-  top: 130px;
-  left: 112px;
-  font-size: 0.7rem;
-  text-align: right;
-}
-
-.source1 {
-  top: 159px;
-  left: 205px;
-  font-size: 0.6rem;
-  font-style: italic;
-}
-
-.parent2 {
-  position: absolute;
-  width: 280px;
-  height: 180px;
-  top: 40px;
-  left: 10px;
-  overflow: hidden;
-}
-
-.child2 {
-  height: 180px;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  width: 280px;
+  top: 15px;
+  left: 78px;
+  z-index: 15;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 500;
   opacity: 0;
 }
 
-.quote2 {
-  top: 130px;
-  left: 160px;
-  font-size: 0.7rem;
-  text-align: right;
-}
-
-.source2 {
-  top: 159px;
-  left: 222px;
-  font-size: 0.6rem;
-  font-style: italic;
-}
-
-.parent3 {
+.barcelona_text2 {
   position: absolute;
-  width: 280px;
-  height: 180px;
   top: 40px;
-  left: 10px;
-  overflow: hidden;
-}
-
-.child3 {
-  height: 180px;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  width: 280px;
+  left: 106px;
+  z-index: 15;
+  color: #018edd;
+  font-size: 2rem;
+  font-weight: 500;
   opacity: 0;
 }
 
-.quote3 {
-  top: 130px;
-  left: 160px;
-  font-size: 0.7rem;
-  text-align: right;
+.venice {
+  position: absolute;
+  height: 275px;
+  width: 325px;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 
-.source3 {
-  top: 146px;
-  left: 208px;
-  font-size: 0.6rem;
-  font-style: italic;
+.venice_text1 {
+  position: absolute;
+  top: 15px;
+  left: 30px;
+  z-index: 15;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 500;
+  opacity: 0;
 }
 
-/* end section */
+.venice_text2 {
+  position: absolute;
+  top: 40px;
+  left: 120px;
+  z-index: 15;
+  color: #ffe56f;
+  font-size: 2rem;
+  font-weight: 500;
+  opacity: 0;
+}
+
+.rome {
+  position: absolute;
+  height: 275px;
+  width: 325px;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.rome_text1 {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  z-index: 15;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 500;
+  opacity: 0;
+}
+
+.rome_text2 {
+  position: absolute;
+  top: 40px;
+  left: 75px;
+  z-index: 15;
+  color: #f68919;
+  font-size: 2rem;
+  font-weight: 500;
+  opacity: 0;
+}
+
+.berlin {
+  position: absolute;
+  height: 275px;
+  width: 325px;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.berlin_text1 {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  z-index: 15;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 500;
+  opacity: 0;
+}
+
+.berlin_text2 {
+  position: absolute;
+  top: 40px;
+  left: 130px;
+  z-index: 15;
+  color: #3b6e9f;
+  font-size: 2rem;
+  font-weight: 500;
+  opacity: 0;
+}
+
+.montpelier {
+  position: absolute;
+  height: 275px;
+  width: 325px;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.montpelier_text1 {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  z-index: 15;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 500;
+  opacity: 0;
+}
+
+.montpelier_text2 {
+  position: absolute;
+  top: 44px;
+  left: 130px;
+  z-index: 15;
+  color: #1a4d8b;
+  font-size: 2rem;
+  font-weight: 500;
+  opacity: 0;
+}
 
 .end {
+  height: 250px;
+  width: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
   opacity: 0;
 }
 
-.end_title {
+.end_text {
+  height: 250px;
+  width: 300px;
   position: absolute;
-  top: 70px;
-  left: 0;
-  left: 20px;
-  color: #014898;
-}
-
-.end_para {
-  position: absolute;
-  top: 100px;
-  left: 0;
-  left: 20px;
-  color: #014898;
-}
-
-.end_btn {
-  background-color: #e2051a;
+  top: 63px;
+  left: 73px;
+  z-index: 110;
   color: white;
-  padding: 7px;
-  border-radius: 5%;
-  left: 15px;
-  font-size: 0.8rem;
-  top: 155px;
+  font-size: 2.2rem;
+  opacity: 0;
 }
 
 /* Button code */
