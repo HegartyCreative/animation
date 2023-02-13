@@ -8,15 +8,41 @@ let travel = gsap.timeline({
 });
 travel.pause();
 
-travel.to(".one", { opacity: 0 }, "=+2");
-
-travel.fromTo(
-  ".circle",
-  { scale: 0 },
-  { scale: 1, duration: 0.25, ease: "back.out(5)" }
+travel.to(
+  ".right, .left",
+  {
+    opacity: 1,
+  },
+  "=+1"
 );
 
-travel.to(".start_logo", { scale: 0 }, "<");
+travel.to(".master", { opacity: 0 }, ">");
+
+travel.to(".right", {
+  x: -235,
+  y: -200,
+  duration: 0.35,
+  ease: "back.in(1.25)",
+});
+
+travel.to(
+  ".left",
+  {
+    x: 235,
+    y: 200,
+    duration: 0.35,
+    ease: "back.in(1.25)",
+  },
+  "<"
+);
+
+travel.to(
+  ".circle",
+  {
+    opacity: 1,
+  },
+  "=-0.15"
+);
 
 travel.fromTo(
   ".visit",

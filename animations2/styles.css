@@ -18,6 +18,7 @@ html {
   height: 250px;
   width: 300px;
   background-color: #6cb4ee;
+  overflow: hidden;
 }
 
 .one {
@@ -27,14 +28,43 @@ html {
   background-color: #6cb4ee;
 }
 
-.start {
+.left {
+  position: absolute;
+  height: 250px;
+  width: 300px;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  z-index: 100;
+}
+
+.right {
+  position: absolute;
+  height: 250px;
+  width: 300px;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  z-index: 100;
+}
+
+.master {
+  position: absolute;
+  height: 250px;
+  width: 300px;
+  left: 0;
+  top: 0;
+  z-index: 200;
+}
+
+/* .start {
   position: absolute;
   background-color: #6cb4ee;
   height: 250px;
   width: 300px;
   left: 0;
   top: 0;
-}
+} */
 
 .start_logo {
   position: absolute;
@@ -53,6 +83,7 @@ html {
   top: 19%;
   z-index: 20;
   position: absolute;
+  opacity: 0;
 }
 
 .logo {

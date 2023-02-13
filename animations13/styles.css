@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  /* margin: 100px; */
+}
+
+.background {
+  height: 250px;
+  width: 300px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgb(230, 230, 230);
+}
+
+.title {
+  height: 250px;
+  width: 300px;
+  position: absolute;
+  top: 90px;
+  left: 60px;
+  font-size: 3rem;
+}
+
+.isAn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 3rem;
+}
+
+.invisible {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 2.6rem;
+}
+
+.foe {
+  position: absolute;
+  top: 80px;
+  left: 55px;
+  font-size: 3.2rem;
+  color: red;
+  opacity: 0;
+}
+
+.invisible_img {
+  position: absolute;
+  top: 170px;
+  left: 180px;
+  z-index: 100;
+  width: 35%;
+}
+
+.living {
+  position: absolute;
+  top: 75px;
+  left: 20px;
+  font-size: 2.8rem;
+  opacity: 0;
+}
+
+.inLiberia {
+  position: absolute;
+  top: 120px;
+  left: 20px;
+  font-size: 2.8rem;
+  opacity: 0;
+}
+
+.right {
+  position: absolute;
+  top: 158px;
+  left: 10px;
+  font-size: 2rem;
+}
+
+.africa1 {
+  position: absolute;
+  width: 80%;
+  opacity: 0;
+}
+
+.africa2 {
+  position: absolute;
+  width: 5%;
+  top: 78px;
+  left: 178px;
+  opacity: 0;
+}
+
+/* Button code */
+
+.btn {
+  height: 30px;
+  width: 60px;
+  background-color: rgb(0, 0, 0);
+  position: fixed;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  left: 10px;
+  z-index: 100;
+  color: white;
+  box-shadow: none;
+  border: none;
+  font-size: 15px;
+  border: 1px solid black;
+}
+
+.btn:hover {
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+}
+
+#pause {
+  left: 10px;
+  top: 260px;
+}
