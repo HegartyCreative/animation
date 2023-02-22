@@ -9,182 +9,171 @@ let master = gsap.timeline({
 
 master.pause();
 
-master.to(
-  ".start_group",
-  {
-    opacity: 0,
-  },
-  "=+1"
-);
+// Nothing
 
-// apples
-master.from(
-  ".apples_image",
-  { y: 250, duration: 0.5, ease: "back.out(2)" },
-  "=+0.75"
-);
+master.to(".audrey", {
+  opacity: 0,
+  duration: 0,
+  delay: 1,
+});
 
-master.fromTo(
-  ".apples_text",
-  { x: 80, y: 80, opacity: 0 },
-  { y: 120, ease: "back.out(2)", opacity: 1, duration: 0.35 }
-);
+master.to(".nothing, .elephant", {
+  opacity: 1,
+  duration: 0,
+});
+
+// Is
 
 master.to(
-  ".apples",
-  {
-    opacity: 0,
-  },
-  "=+1"
-);
-
-// grapes
-master.from(
-  ".grapes_image",
-  { y: 250, duration: 0.5, ease: "back.out(2)" },
-  "=-0.25"
-);
-master.fromTo(
-  ".grapes_text",
-  { x: 65, y: 80, opacity: 0 },
-  { y: 120, ease: "back.out(2)", opacity: 1, duration: 0.35 }
-);
-
-master.to(
-  ".grapes",
-  {
-    opacity: 0,
-  },
-  "=+1"
-);
-
-// bananas
-master.from(
-  ".bananas_image",
-  { y: 250, duration: 0.5, ease: "back.out(2)" },
-  "=-0.25"
-);
-master.fromTo(
-  ".bananas_text",
-  { x: 81, y: 80, opacity: 0 },
-  { y: 120, ease: "back.out(2)", opacity: 1, duration: 0.35 }
-);
-
-master.to(
-  ".bananas",
-  {
-    opacity: 0,
-  },
-  "=+1"
-);
-
-// peppers
-master.from(
-  ".peppers_image",
-  { y: 250, duration: 0.5, ease: "back.out(2)" },
-  "=-0.25"
-);
-master.fromTo(
-  ".peppers_text",
-  { x: 100, y: 80, opacity: 0 },
-  { y: 120, ease: "back.out(2)", opacity: 1, duration: 0.35 }
-);
-
-master.to(
-  ".peppers",
-  {
-    opacity: 0,
-  },
-  "=+1"
-);
-
-// tomatoes
-master.from(
-  ".tomatoes_image",
-  { y: 250, duration: 0.5, ease: "back.out(2)" },
-  "=-0.25"
-);
-master.fromTo(
-  ".tomatoes_text",
-  { x: 98, y: 80, opacity: 0 },
-  { y: 120, ease: "back.out(2)", opacity: 1, duration: 0.35 }
-);
-
-master.to(
-  ".tomatoes",
-  {
-    opacity: 0,
-  },
-  "=+1"
-);
-
-// cucumbers
-master.from(
-  ".cucumbers_image",
-  { y: 250, duration: 0.5, ease: "back.out(2)" },
-  "=-0.25"
-);
-master.fromTo(
-  ".cucumbers_text",
-  { x: 64, y: 80, opacity: 0 },
-  { y: 120, ease: "back.out(2)", opacity: 1, duration: 0.35 }
-);
-
-master.to(
-  ".cucumbers",
-  {
-    opacity: 0,
-  },
-  "=+1"
-);
-
-// corn
-master.from(
-  ".corn_image",
-  { y: 250, duration: 0.5, ease: "back.out(2)" },
-  "=-0.25"
-);
-master.fromTo(
-  ".corn_text",
-  { x: 70, y: 80, opacity: 0 },
-  { y: 120, ease: "back.out(2)", opacity: 1, duration: 0.35 }
-);
-
-master.to(
-  ".corn",
-  {
-    opacity: 0,
-  },
-  "=+1"
-);
-
-// carrots
-master.from(
-  ".carrots_image",
-  { y: 250, duration: 0.5, ease: "back.out(2)" },
-  "=-0.25"
-);
-master.fromTo(
-  ".carrots_text",
-  { x: 96, y: 80, opacity: 0 },
-  { y: 120, ease: "back.out(2)", opacity: 1, duration: 0.35 }
-);
-
-master.to(
-  ".carrots",
-  {
-    opacity: 0,
-  },
-  "=+1"
-);
-
-master.to(
-  ".end",
+  ".is, .dancing",
   {
     opacity: 1,
+    duration: 0.3,
   },
-  "=-0.1"
+  "=+0.6"
 );
+
+master.to(
+  ".nothing, .elephant",
+  {
+    opacity: 0,
+    duration: 0,
+  },
+  "<"
+);
+
+// Impossible
+
+master.to(
+  ".impossible, .lying",
+  {
+    opacity: 1,
+    duration: 0.3,
+  },
+  "=+0.6"
+);
+
+master.to(
+  ".is, .dancing",
+  {
+    opacity: 0,
+    duration: 0,
+  },
+  "<"
+);
+
+// The
+
+master.to(
+  ".thee, .hands",
+  {
+    opacity: 1,
+    duration: 0.3,
+  },
+  "=+0.6"
+);
+
+master.to(
+  ".impossible, .lying",
+  {
+    opacity: 0,
+    duration: 0,
+  },
+  "<"
+);
+
+// Word,
+
+master.to(
+  ".word, .lightening",
+  {
+    opacity: 1,
+    duration: 0.3,
+  },
+  "=+0.6"
+);
+
+master.to(
+  ".thee, .hands",
+  {
+    opacity: 0,
+    duration: 0,
+  },
+  "<"
+);
+
+// Itself,
+
+master.to(
+  ".itself, .flame",
+  {
+    opacity: 1,
+    duration: 0.3,
+  },
+  "=+0.6"
+);
+
+master.to(
+  ".word, .lightening",
+  {
+    opacity: 0,
+    duration: 0,
+  },
+  "<"
+);
+
+// Says,
+
+master.to(
+  ".says, .coffee",
+  {
+    opacity: 1,
+    duration: 0.3,
+  },
+  "=+0.6"
+);
+
+master.to(
+  ".itself, .flame",
+  {
+    opacity: 0,
+    duration: 0,
+  },
+  "<"
+);
+
+// Im possible,
+
+master.to(
+  ".possible, .tennis",
+  {
+    opacity: 1,
+    duration: 0.3,
+  },
+  "=+0.6"
+);
+
+master.to(
+  ".says, .coffee",
+  {
+    opacity: 0,
+    duration: 0,
+  },
+  "<"
+);
+
+master.to(
+  ".possible, .tennis",
+  {
+    opacity: 0,
+    duration: 0.3,
+  },
+  "=+0.6"
+);
+
+master.to(".name, .date", {
+  opacity: 1,
+});
 
 // Button code
 

@@ -8,25 +8,27 @@ let nfl = gsap.timeline({
 });
 nfl.pause();
 
+gsap.set(".container", { autoAlpha: 1 });
+
 nfl.to(".background_full", { opacity: 1 });
 nfl.to(
   ".background_right",
-  { x: -260, ease: "power4.out", duration: 0.35 },
-  "=+1"
+  { x: -260, ease: "back.out(1)", duration: 0.4 },
+  "=+0.5"
 );
-nfl.to(".mask1, .mask2, .mask3", { opacity: 1 }, "=+0.25");
-nfl.from("h1", { x: 190, duration: 0.25, ease: "back.out(1.7)" }, "=-0.15");
-nfl.from("h2", { x: 125, duration: 0.25, ease: "back.out(1.7)" }, "=-0.15");
+nfl.to(".mask1, .mask2, .mask3", { opacity: 1 }, "=+0.15");
+nfl.from("h1", { x: 195, duration: 0.25, ease: "back.out(1.7)" }, "=-0.15");
+nfl.from("h2", { x: 130, duration: 0.25, ease: "back.out(1.7)" }, "=-0.15");
 nfl.to(".team1, .team2, .team3", { opacity: 1 });
 
 nfl.fromTo(
   ".logo",
   { scale: 0, opacity: 0 },
-  { scale: 1.4, ease: "bounce.out", opacity: 1, duration: 0.25 },
-  "=-0.5"
+  { scale: 1.4, ease: "bounce", opacity: 1, duration: 0.5 },
+  "=-1"
 );
 
-nfl.from(".bills", { x: -90, ease: "power2.out", duration: 0.45 }), "=-0.25";
+nfl.from(".bills", { x: -90, ease: "power2.out", duration: 0.45 }), "=-1";
 nfl.to(".ground1", { opacity: 1, duration: 0.25 });
 nfl.from(".team1", { y: -18, ease: "back.out(2)", duration: 0.2 }, "=+0.05");
 

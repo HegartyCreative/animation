@@ -3,88 +3,274 @@ let selectAll = (e) => document.querySelectoAll(e);
 
 let pause = select("#pause");
 
-let retail = gsap.timeline({
+let master = gsap.timeline({
   onComplete: () => (pause.innerHTML = "Play"),
 });
-retail.pause();
-retail.to(".logo1, .background", { opacity: 1 }, "=+1");
-// Image One
-retail.fromTo(".One", { x: -302 }, { x: 0, ease: "back.out(1)" });
-retail.to(".one_text_full", { opacity: 1 }, "=+0.5");
-retail.to(".logo1, .background", { opacity: 0 });
-retail.to(".line1", { opacity: 1, duration: 0.25 }, "=+1");
-retail.to(".one_text_full, .line1", {
-  y: 55,
-  ease: "back.in(1.7)",
-});
-retail.to(".line1", { backgroundColor: "grey", duration: "0.25" }, "=-0.5");
-retail.to(".one_text_full", { color: "grey" }, "<");
-retail.to(".one_text_discount", { opacity: 1 }, "=-0.25");
-retail.to(".One, .one_text_discount", { opacity: 0 });
 
-// Image Two
-retail.fromTo(".Two", { x: -302 }, { x: 0, ease: "back.out(1)" });
-retail.to(".two_text_full", { opacity: 1 }, "=+0.5");
-retail.to(".line2", { opacity: 1, duration: 0.25 }, "=+1");
-retail.to(".two_text_full, .line2", {
-  y: 55,
-  ease: "back.in(1.7)",
-});
-retail.to(".line2", { backgroundColor: "grey", duration: "0.25" }, "=-0.5");
-retail.to(".two_text_full", { color: "grey" }, "<");
-retail.to(".two_text_discount", { opacity: 1 }, "=-0.25");
-retail.to(".Two, .two_text_discount", { opacity: 0 }, "=+1");
+master.pause();
 
-// Image Three
-retail.fromTo(".Three", { x: -302 }, { x: 0, ease: "back.out(1)" });
-retail.to(".three_text_full", { opacity: 1 }, "=+0.5");
-retail.to(".line3", { opacity: 1, duration: 0.25 }, "=+1");
-retail.to(".three_text_full, .line3", {
-  y: 55,
-  ease: "back.in(1.7)",
-});
-retail.to(".line3", { backgroundColor: "grey", duration: "0.25" }, "=-0.5");
-retail.to(".three_text_full", { color: "grey" }, "<");
-retail.to(".three_text_discount", { opacity: 1 }, "=-0.25");
-retail.to(".Three, .three_text_discount", { opacity: 0 }, "=+1");
+gsap.set(".container", { autoAlpha: 1 });
 
-// Image Four
-retail.fromTo(".Four", { x: -302 }, { x: 0, ease: "back.out(1)" });
-retail.to(".four_text_full", { opacity: 1 }, "=+0.5");
-retail.to(".line4", { opacity: 1, duration: 0.25 }, "=+1");
-retail.to(".four_text_full, .line4", {
-  y: 55,
-  ease: "back.in(1.7)",
-});
-retail.to(".line4", { backgroundColor: "grey", duration: "0.25" }, "=-0.5");
-retail.to(".four_text_full", { color: "grey" }, "<");
-retail.to(".four_text_discount", { opacity: 1 }, "=-0.25");
-retail.to(".Four, .four_text_discount", { opacity: 0 });
-
-// End
-
-retail.to(".background", { opacity: 1, duration: 0.25 }, "<");
-retail.to(".logo2", { opacity: 1, duration: 0.25 });
-retail.fromTo(
-  ".cta",
-  { scale: 0, opacity: 0, rotation: 0 },
+master.to(
+  "h1",
   {
-    scale: 0.75,
-    ease: "back.out(3)",
-    opacity: 1,
-    rotation: 360,
-    transformOrigin: "50% 50%",
-    duration: 0.25,
+    x: -290,
+    ease: "back.in(1)",
+    duration: 0.45,
   },
   "=+0.5"
+);
+
+master.to(
+  ".background",
+  {
+    x: -1000,
+    duration: 9,
+    ease: "none",
+  },
+  "=-0.25"
+);
+
+master.to(
+  ".grass",
+  {
+    x: -1000,
+    duration: 9,
+    ease: "none",
+  },
+  "<"
+);
+
+master.to(
+  ".flowers",
+  {
+    x: -1100,
+    duration: 9,
+    ease: "none",
+  },
+  "<"
+);
+
+master.to(
+  ".bunny",
+  {
+    x: -1020,
+    duration: 9,
+    ease: "none",
+  },
+  "<"
+);
+
+master.from(
+  ".one",
+  {
+    y: 130,
+    duration: 0.8,
+    ease: "back.out(1.7)",
+  },
+  "<"
+);
+
+master.from(
+  ".two",
+  {
+    y: 160,
+    duration: 0.8,
+    ease: "back.out(1.7)",
+  },
+  ">"
+);
+
+master.to(
+  ".quote1",
+  {
+    opacity: 1,
+  },
+  ">-=0.5"
+);
+
+master.from(
+  ".three",
+  {
+    y: 175,
+    duration: 0.8,
+    ease: "back.out(1.7)",
+  },
+  ">"
+);
+
+master.from(
+  ".four",
+  {
+    y: 175,
+    duration: 0.8,
+    ease: "back.out(1.7)",
+  },
+  ">"
+);
+
+master.to(
+  ".quote1",
+  {
+    opacity: 0,
+  },
+  ">-=0.5"
+);
+
+master.from(
+  ".five",
+  {
+    y: 205,
+    duration: 0.8,
+    ease: "back.out(1.7)",
+  },
+  ">"
+);
+
+master.to(
+  ".quote2",
+  {
+    opacity: 1,
+  },
+  ">-=0.5"
+);
+
+master.from(
+  ".six",
+  {
+    y: 175,
+    duration: 0.8,
+    ease: "back.out(1.7)",
+  },
+  ">"
+);
+
+master.from(
+  ".seven",
+  {
+    y: 175,
+    duration: 0.8,
+    ease: "back.out(1.7)",
+  },
+  ">"
+);
+
+master.to(
+  ".quote2",
+  {
+    opacity: 0,
+  },
+  ">-=0.5"
+);
+
+master.from(
+  ".eight",
+  {
+    y: 225,
+    duration: 0.8,
+    ease: "back.out(1.7)",
+  },
+  ">"
+);
+
+master.to(
+  ".quote3",
+  {
+    opacity: 1,
+  },
+  ">-=0.5"
+);
+
+master.from(
+  ".nine",
+  {
+    y: 145,
+    duration: 0.8,
+    ease: "back.out(1.7)",
+  },
+  ">"
+);
+
+master.from(
+  ".ten",
+  {
+    y: 155,
+    duration: 0.8,
+    ease: "back.out(1.7)",
+  },
+  ">"
+);
+
+master.to(
+  ".quote3",
+  {
+    opacity: 0,
+  },
+  ">-=0.5"
+);
+
+master.from(
+  ".eleven",
+  {
+    y: 175,
+    duration: 0.8,
+    ease: "back.out(1.7)",
+  },
+  ">"
+);
+
+master.to(
+  ".quote4",
+  {
+    opacity: 1,
+  },
+  ">-=0.5"
+);
+
+master.from(
+  ".twelve",
+  {
+    y: 175,
+    duration: 0.8,
+    ease: "back.out(1.7)",
+  },
+  ">"
+);
+
+master.to(".bunny, .background, .quote4", {
+  opacity: 0,
+});
+
+master.to(
+  ".end_background",
+  {
+    opacity: 1,
+  },
+  "<"
+);
+
+master.to(
+  ".end",
+  {
+    opacity: 1,
+  },
+  "=+0.25"
+);
+
+master.to(
+  "h2",
+  {
+    opacity: 1,
+  },
+  "=-0.25"
 );
 
 // Button code
 
 pause.addEventListener("click", () => {
-  retail.paused(!retail.paused());
-  if (retail.progress() == 1) {
-    retail.restart();
+  master.paused(!master.paused());
+  if (master.progress() == 1) {
+    master.restart();
   }
-  pause.innerHTML = retail.paused() ? "Play" : "Pause";
+  pause.innerHTML = master.paused() ? "Play" : "Pause";
 });

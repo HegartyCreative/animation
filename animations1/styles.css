@@ -14,6 +14,7 @@ html {
   height: 250px;
   width: 300px;
   overflow: hidden;
+  visibility: hidden;
 }
 
 .background_full {
@@ -37,7 +38,7 @@ html {
 .background_right {
   position: absolute;
   height: 250px;
-  width: 300px;
+  width: 325px;
   top: 0;
   left: 260px;
   z-index: 70;
@@ -54,7 +55,7 @@ html {
 .logo {
   position: absolute;
   top: 13px;
-  left: 47px;
+  left: 20px;
   width: 10%;
   z-index: 100;
 }
@@ -64,27 +65,29 @@ h1 {
   position: absolute;
   font-size: 1.1rem;
   top: 10px;
-  right: 17px;
+  right: 13px;
   color: black;
   text-transform: uppercase;
   z-index: 100;
   font-family: "Orbitron", sans-serif;
   font-weight: normal;
+  letter-spacing: 0.05rem;
 }
 
 .main_heading {
   text-align: right;
   position: absolute;
-  font-size: 1.2rem;
-  top: 80px;
-  right: 20px;
+  font-size: 1.9rem;
+  line-height: 2rem;
+  top: 5px;
+  right: 10px;
   color: white;
   text-transform: uppercase;
   z-index: 60;
-  background-color: rgba(0, 0, 0, 0.6);
   padding: 7px;
   font-family: "Orbitron", sans-serif;
   font-weight: normal;
+  letter-spacing: 0.1rem;
 }
 
 h2 {
@@ -92,13 +95,14 @@ h2 {
   position: absolute;
   font-size: 0.6rem;
   top: 55px;
-  right: 13px;
+  right: 14px;
   color: #3b8dc1;
   letter-spacing: 0.05rem;
   z-index: 100;
   padding-top: 3px;
   font-family: "Orbitron", sans-serif;
   font-weight: normal;
+  letter-spacing: 0.05rem;
 }
 
 /* Bills */
@@ -106,7 +110,7 @@ h2 {
 .ground1 {
   position: absolute;
   top: 90px;
-  left: 153px;
+  left: 148px;
   font-size: 0.5rem;
   letter-spacing: 0.05rem;
   color: #3b8dc1;
@@ -122,7 +126,7 @@ h2 {
   background-color: rgb(212, 224, 245);
   position: absolute;
   top: 80px;
-  left: 152px;
+  left: 147px;
   z-index: 80;
   opacity: 0;
 }
@@ -130,7 +134,7 @@ h2 {
 .team1 {
   position: absolute;
   top: 101px;
-  left: 153px;
+  left: 148px;
   font-size: 0.65rem;
   letter-spacing: 0.05rem;
   color: black;
@@ -143,7 +147,7 @@ h2 {
 .bills {
   position: absolute;
   top: 90px;
-  left: 91px;
+  left: 80px;
   width: 17%;
   z-index: 70;
 }
@@ -153,7 +157,7 @@ h2 {
 .ground_1 {
   position: absolute;
   top: 148px;
-  left: 160px;
+  left: 155px;
   font-size: 0.5rem;
   letter-spacing: 0.05rem;
   color: #3b8dc1;
@@ -169,7 +173,7 @@ h2 {
   background-color: rgb(212, 224, 245);
   position: absolute;
   top: 139px;
-  left: 160px;
+  left: 155px;
   z-index: 80;
   opacity: 0;
 }
@@ -177,7 +181,7 @@ h2 {
 .team2 {
   position: absolute;
   top: 159px;
-  left: 160px;
+  left: 155px;
   font-size: 0.65rem;
   letter-spacing: 0.05rem;
   color: black;
@@ -190,7 +194,7 @@ h2 {
 .titans {
   position: absolute;
   top: 141px;
-  left: 97px;
+  left: 87px;
   width: 18%;
   z-index: 70;
 }
@@ -200,7 +204,7 @@ h2 {
 .ground2 {
   position: absolute;
   top: 204px;
-  left: 172px;
+  left: 167px;
   font-size: 0.5rem;
   letter-spacing: 0.05rem;
   color: #3b8dc1;
@@ -217,7 +221,7 @@ h2 {
   background-color: rgb(212, 224, 245);
   position: absolute;
   top: 195px;
-  left: 170px;
+  left: 165px;
   z-index: 80;
   opacity: 0;
 }
@@ -225,7 +229,7 @@ h2 {
 .team3 {
   position: absolute;
   top: 214px;
-  left: 172px;
+  left: 167px;
   font-size: 0.65rem;
   letter-spacing: 0.05rem;
   color: black;
@@ -238,7 +242,7 @@ h2 {
 .jags {
   position: absolute;
   top: 201px;
-  left: 117px;
+  left: 107px;
   width: 15%;
   z-index: 70;
 }

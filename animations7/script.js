@@ -3,246 +3,187 @@ let selectAll = (e) => document.querySelectoAll(e);
 
 let pause = select("#pause");
 
-let animation = gsap.timeline({
+let master = gsap.timeline({
   onComplete: () => (pause.innerHTML = "Play"),
 });
-animation.pause();
 
-// First Animation
+master.pause();
 
-animation.to(".start", {
+master.to(".start", {
   opacity: 0,
-  duration: 0,
 });
 
-animation.fromTo(
-  ".logo_horizontal",
+master.from(
+  ".heading",
+  {
+    x: -140,
+    ease: "back.out(1.5)",
+  },
+  "=+0.5"
+);
+
+master.to(
+  ".body_text",
+  {
+    opacity: 1,
+    duration: 0.25,
+  },
+  "=-0.25"
+);
+
+// One
+
+master.from(
+  ".one",
+  {
+    scale: 0,
+    ease: "back.out(1.5)",
+    duration: 0.5,
+    transformOrigin: "right bottom",
+  },
+  "=-0.25"
+);
+
+master.from(
+  ".one_text",
+  {
+    x: 110,
+    ease: "back.out(1.5)",
+    duration: 0.5,
+  },
+  "=-0.25"
+);
+
+master.to(
+  ".one, .one_text",
   {
     opacity: 0,
   },
-  {
-    opacity: 1,
-  },
-  "=+0.5"
+  "=+1.5"
 );
 
-// First animation
+// Two
 
-// Enter stage
+master.from(".two", {
+  scale: 0,
+  ease: "back.out(1.5)",
+  duration: 0.5,
+  transformOrigin: "right bottom",
+});
 
-animation.fromTo(
-  ".main_heading_background1",
+master.from(
+  ".two_text",
   {
-    x: -200,
-  },
-  {
-    x: -40,
-    ease: "back.out(2)",
-  }
-);
-
-animation.fromTo(
-  ".main_heading1",
-  {
-    x: -160,
-  },
-  {
-    x: 0,
-    ease: "back.out(1.7)",
+    x: 110,
+    ease: "back.out(1.5)",
+    duration: 0.5,
   },
   "=-0.25"
 );
 
-animation.fromTo(
-  ".sub_heading_background1",
+master.to(
+  ".two, .two_text",
   {
-    x: -220,
+    opacity: 0,
   },
-  {
-    x: -40,
-    ease: "back.out(2)",
-  }
+  "=+1.5"
 );
 
-animation.fromTo(
-  ".sub_heading1",
+// Three
+
+master.from(".three", {
+  scale: 0,
+  ease: "back.out(1.5)",
+  duration: 0.5,
+  transformOrigin: "right bottom",
+});
+
+master.from(
+  ".three_text",
   {
-    x: -180,
-  },
-  {
-    x: 0,
-    ease: "back.out(1.7)",
+    x: 110,
+    ease: "back.out(1.5)",
+    duration: 0.5,
   },
   "=-0.25"
 );
 
-// Leave stage
+master.to(
+  ".three, .three_text",
+  {
+    opacity: 0,
+  },
+  "=+1.5"
+);
 
-animation.to(".main_heading_background1, .main_heading1", {
-  x: -210,
-  delay: 2,
-  ease: "back.in(2)",
+// Four
+
+master.from(".four", {
+  scale: 0,
+  ease: "back.out(1.5)",
+  duration: 0.5,
+  transformOrigin: "bottom bottom",
 });
 
-animation.to(".sub_heading_background1, .sub_heading1", {
-  x: -230,
-  ease: "back.in(2)",
+master.from(
+  ".four_text",
+  {
+    x: -80,
+    ease: "back.out(1.5)",
+    duration: 0.5,
+  },
+  "=-0.25"
+);
+
+master.to(
+  ".four, .four_text",
+  {
+    opacity: 0,
+  },
+  "=+1.5"
+);
+
+// Five
+
+master.from(".five", {
+  scale: 0,
+  ease: "back.out(1.5)",
+  duration: 0.5,
+  transformOrigin: "right bottom",
 });
 
-// Second animation
+master.from(
+  ".five_text",
+  {
+    x: 110,
+    ease: "back.out(1.5)",
+    duration: 0.5,
+  },
+  "=-0.25"
+);
 
-animation.to(".background2", {
+master.to(
+  ".five, .five_text",
+  {
+    opacity: 0,
+  },
+  "=+1.5"
+);
+
+master.set(".start", {
   opacity: 1,
-  duration: 0.25,
 });
 
-// Enter stage
-
-animation.fromTo(
-  ".main_heading_background2",
-  {
-    x: -200,
-  },
-  {
-    x: -40,
-    ease: "back.out(2)",
-  },
-  "=+0.5"
-);
-
-animation.fromTo(
-  ".main_heading2",
-  {
-    x: -160,
-  },
-  {
-    x: 0,
-    ease: "back.out(1.7)",
-  },
-  "=-0.25"
-);
-
-animation.fromTo(
-  ".sub_heading_background2",
-  {
-    x: -240,
-  },
-  {
-    x: -40,
-    ease: "back.out(2)",
-  }
-);
-
-animation.fromTo(
-  ".sub_heading2",
-  {
-    x: -195,
-  },
-  {
-    x: 0,
-    ease: "back.out(1.7)",
-  },
-  "=-0.25"
-);
-
-// Leave stage
-
-animation.to(".main_heading_background2, .main_heading2", {
-  x: -210,
-  delay: 2,
-  ease: "back.in(2)",
-});
-
-animation.to(".sub_heading_background2, .sub_heading2", {
-  x: -240,
-  ease: "back.in(2)",
-});
-
-// Third animation
-
-animation.to(".background3", {
+master.set(".cta2", {
   opacity: 1,
-  duration: 0.25,
 });
-
-// Enter stage
-
-animation.fromTo(
-  ".main_heading_background3",
-  {
-    x: -200,
-  },
-  {
-    x: -40,
-    ease: "back.out(2)",
-  },
-  "=+0.5"
-);
-
-animation.fromTo(
-  ".main_heading3",
-  {
-    x: -160,
-  },
-  {
-    x: 0,
-    ease: "back.out(1.7)",
-  },
-  "=-0.25"
-);
-
-animation.fromTo(
-  ".sub_heading_background3",
-  {
-    x: -240,
-  },
-  {
-    x: -40,
-    ease: "back.out(2)",
-  }
-);
-
-animation.fromTo(
-  ".sub_heading3",
-  {
-    x: -195,
-  },
-  {
-    x: 0,
-    ease: "back.out(1.7)",
-  },
-  "=-0.25"
-);
-
-// Leave stage
-
-animation.to(".main_heading_background3, .main_heading3", {
-  x: -210,
-  delay: 2,
-  ease: "back.in(2)",
-});
-
-animation.to(".sub_heading_background3, .sub_heading3", {
-  x: -240,
-  ease: "back.in(2)",
-});
-
-animation.to(
-  ".apply",
-  {
-    opacity: 1,
-    duration: 1,
-    ease: "back.out(1.7)",
-  },
-  "=-0.5"
-);
 
 // Button code
 
 pause.addEventListener("click", () => {
-  animation.paused(!animation.paused());
-  if (animation.progress() == 1) {
-    animation.restart();
+  master.paused(!master.paused());
+  if (master.progress() == 1) {
+    master.restart();
   }
-  pause.innerHTML = animation.paused() ? "Play" : "Pause";
+  pause.innerHTML = master.paused() ? "Play" : "Pause";
 });

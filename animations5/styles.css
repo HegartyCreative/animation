@@ -1,11 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+*[x-apple-data-detectors],  /* iOS */
+    .x-gmail-data-detectors,    /* Gmail */
+    .x-gmail-data-detectors *,
+    .aBn {
+  border-bottom: 0 !important;
+  cursor: default !important;
+  color: inherit !important;
+  text-decoration: none !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+}
 
 html {
   box-sizing: border-box;
-}
-
-body {
-  font-family: "Bodoni Moda", serif;
 }
 
 *,
@@ -16,244 +26,219 @@ body {
   padding: 0;
 }
 
+body {
+  font-family: "Lobster", cursive;
+  font-weight: normal;
+}
+
 .container {
-  position: relative;
   height: 250px;
   width: 300px;
-  background-color: white;
-  border: 1px solid #697666;
+  position: relative;
   overflow: hidden;
+  visibility: hidden;
 }
 
 .background {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 250px;
-  width: 300px;
-  background-color: #697666;
+  width: 1330px;
   z-index: 0;
 }
 
-.logo1 {
+.end_background {
   position: absolute;
-  left: 30%;
-  top: 40%;
-  width: 40%;
-  opacity: 1;
-}
-
-/* Image One */
-
-.One {
+  top: 0;
+  left: 0;
   height: 250px;
   width: 300px;
+  z-index: 0;
+  opacity: 0;
+}
+
+h1 {
   position: absolute;
-  left: 0px;
+  top: 61px;
+  left: 23px;
+  font-size: 2rem;
+  line-height: 1.9rem;
+  letter-spacing: 0.1rem;
+  z-index: 100;
+  color: red;
+}
+
+.grass {
+  position: absolute;
   top: 0px;
+  left: -20px;
+  height: 250px;
+  width: 1490px;
+  z-index: 15;
+}
+
+.flowers {
+  position: absolute;
+  top: 0px;
+  left: -20px;
+  height: 250px;
+  width: 1490px;
+  z-index: 10;
+}
+
+.one {
+  position: absolute;
+  bottom: 0px;
+  left: 130px;
+  width: 25%;
   z-index: 5;
 }
 
-.line1 {
+.two {
   position: absolute;
-  top: 207px;
-  left: 111px;
-  width: 90px;
-  height: 2px;
-  background-color: #ff6731;
-  rotate: -15deg;
-  opacity: 0;
-  z-index: 30;
+  bottom: 10px;
+  left: 231px;
+  width: 27%;
+  z-index: 5;
 }
 
-.one_text_full {
+.quote1 {
   position: absolute;
-  left: 116px;
-  top: 185px;
-  color: #ff6731;
+  top: 10px;
+  left: 40px;
+  width: 27%;
   z-index: 10;
-  font-size: 30px;
+  opacity: 0;
+}
+
+.three {
+  position: absolute;
+  bottom: 10px;
+  left: 331px;
+  width: 27%;
+  z-index: 5;
+}
+
+.four {
+  position: absolute;
+  bottom: 15px;
+  left: 415px;
+  width: 32%;
+  z-index: 5;
+}
+
+.five {
+  position: absolute;
+  bottom: 15px;
+  left: 515px;
+  width: 32%;
+  z-index: 5;
+}
+
+.quote2 {
+  position: absolute;
+  top: 15px;
+  left: 80px;
+  width: 27%;
+  z-index: 10;
+  opacity: 0;
+}
+
+.six {
+  position: absolute;
+  bottom: 15px;
+  left: 625px;
+  width: 27%;
+  z-index: 5;
+}
+
+.seven {
+  position: absolute;
+  bottom: 15px;
+  left: 720px;
+  width: 31%;
+  z-index: 5;
+}
+
+.eight {
+  position: absolute;
+  bottom: 10px;
+  left: 825px;
+  width: 26%;
+  z-index: 5;
+}
+
+.quote3 {
+  position: absolute;
+  top: 8px;
+  left: 120px;
+  width: 27%;
+  z-index: 10;
+  opacity: 0;
+}
+
+.nine {
+  position: absolute;
+  bottom: 10px;
+  left: 925px;
+  width: 26%;
+  z-index: 5;
+}
+
+.ten {
+  position: absolute;
+  bottom: 10px;
+  left: 1025px;
+  width: 30%;
+  z-index: 5;
+}
+
+.eleven {
+  position: absolute;
+  bottom: 10px;
+  left: 1125px;
+  width: 30%;
+  z-index: 5;
+}
+
+.quote4 {
+  position: absolute;
+  top: 20px;
+  left: 160px;
+  width: 27%;
+  z-index: 10;
+  opacity: 0;
+}
+
+.twelve {
+  position: absolute;
+  bottom: 10px;
+  left: 1225px;
+  width: 24%;
+  z-index: 5;
+}
+
+.end {
+  position: absolute;
+  top: 23px;
+  left: 120px;
+  width: 23%;
+  z-index: 10;
+  opacity: 0;
+}
+
+h2 {
+  position: absolute;
+  top: 70px;
+  left: 29px;
+  font-size: 2.5rem;
   letter-spacing: 0.1rem;
-  font-weight: 400;
+  z-index: 100;
+  color: #ff8080;
   opacity: 0;
 }
-
-.one_text_discount {
-  position: absolute;
-  left: 116px;
-  top: 185px;
-  color: #ff6731;
-  z-index: 10;
-  font-size: 30px;
-  letter-spacing: 0.1rem;
-  font-weight: 400;
-  opacity: 0;
-}
-
-/* Image Two */
-
-.Two {
-  height: 250px;
-  width: 300px;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  z-index: 10;
-}
-
-.line2 {
-  position: absolute;
-  top: 207px;
-  left: 109px;
-  width: 90px;
-  height: 2px;
-  background-color: #ff6731;
-  rotate: -15deg;
-  opacity: 0;
-  z-index: 30;
-}
-
-.two_text_full {
-  position: absolute;
-  left: 112px;
-  top: 185px;
-  color: #ff6731;
-  z-index: 10;
-  font-size: 30px;
-  letter-spacing: 0.1rem;
-  font-weight: 400;
-  opacity: 0;
-}
-
-.two_text_discount {
-  position: absolute;
-  left: 112px;
-  top: 185px;
-  color: #ff6731;
-  z-index: 10;
-  font-size: 30px;
-  letter-spacing: 0.1rem;
-  font-weight: 400;
-  opacity: 0;
-}
-
-/* Image Three */
-
-.Three {
-  height: 250px;
-  width: 300px;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  z-index: 10;
-}
-
-.line3 {
-  position: absolute;
-  top: 207px;
-  left: 111px;
-  width: 90px;
-  height: 2px;
-  background-color: #ff6731;
-  rotate: -15deg;
-  opacity: 0;
-  z-index: 30;
-}
-
-.three_text_full {
-  position: absolute;
-  left: 116px;
-  top: 185px;
-  color: #ff6731;
-  z-index: 10;
-  font-size: 30px;
-  letter-spacing: 0.1rem;
-  font-weight: 400;
-  opacity: 0;
-}
-
-.three_text_discount {
-  position: absolute;
-  left: 116px;
-  top: 185px;
-  color: #ff6731;
-  z-index: 10;
-  font-size: 30px;
-  letter-spacing: 0.1rem;
-  font-weight: 400;
-  opacity: 0;
-}
-
-/* Image Four */
-
-.Four {
-  height: 250px;
-  width: 300px;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  z-index: 10;
-}
-
-.line4 {
-  position: absolute;
-  top: 207px;
-  left: 111px;
-  width: 90px;
-  height: 2px;
-  background-color: #ff6731;
-  rotate: -15deg;
-  opacity: 0;
-  z-index: 30;
-}
-
-.four_text_full {
-  position: absolute;
-  left: 116px;
-  top: 185px;
-  color: #ff6731;
-  z-index: 10;
-  font-size: 30px;
-  letter-spacing: 0.1rem;
-  font-weight: 400;
-  opacity: 0;
-}
-
-.logo {
-  position: absolute;
-  left: 10%;
-  top: 30%;
-  width: 80%;
-  opacity: 1;
-}
-
-.four_text_discount {
-  position: absolute;
-  left: 116px;
-  top: 185px;
-  color: #ff6731;
-  z-index: 10;
-  font-size: 30px;
-  letter-spacing: 0.1rem;
-  font-weight: 400;
-  opacity: 0;
-}
-
-.logo2 {
-  position: absolute;
-  left: 30%;
-  top: 75%;
-  width: 40%;
-  opacity: 0;
-}
-
-.cta {
-  position: absolute;
-  left: 30%;
-  top: 15%;
-  width: 40%;
-  opacity: 0;
-}
-
-/* Code below for the button */
+/* Button code */
 
 .btn {
   height: 30px;

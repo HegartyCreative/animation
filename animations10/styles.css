@@ -1,215 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost&display=swap");
+
 html {
   box-sizing: border-box;
-  height: 100%;
-  margin: 0;
-  padding: 0;
 }
 
 *,
 *::before,
 *::after {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
-.container {
-  height: 250px;
-  width: 300px;
-  position: relative;
-  overflow: hidden;
-  border: 1px solid rgb(230, 230, 230);
-}
-
-.start {
-  height: 250px;
-  width: 300px;
-  position: absolute;
-  overflow: hidden;
-  z-index: 50;
-}
-
-.start_text {
-  z-index: 100;
-  color: red;
-  text-align: center;
+body {
+  font-family: "Jost", sans-serif;
+  text-transform: uppercase;
   font-weight: normal;
-  font-size: 20px;
-  top: 70px;
-  left: 75px;
-  font-family: "Shadows Into Light Two", cursive;
-  position: absolute;
-  text-rendering: optimizeLegibility;
+  font-size: 1.6rem;
+  letter-spacing: 0.3rem;
+  /* margin: 100px; */
 }
 
 .background {
   height: 250px;
   width: 300px;
-  position: absolute;
+  position: relative;
   overflow: hidden;
-  border: 1px solid rgb(230, 230, 230);
-  z-index: 10;
+  background-color: black;
 }
 
-.food {
+.audrey {
   height: 250px;
   width: 300px;
   position: absolute;
-  z-index: 3;
-  opacity: 1;
-}
-
-.end {
-  height: 250px;
-  width: 300px;
-  position: absolute;
-  z-index: 100;
-  opacity: 0;
+  top: 0;
+  left: 0;
 }
 
 .text {
+  margin: 0;
   position: absolute;
-  font-size: 1.3rem;
-  z-index: 3;
-  font-family: "Shadows Into Light Two", cursive;
-  font-weight: normal;
-}
-
-/* apples */
-
-.apples_image {
-  height: 250px;
-  width: 300px;
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  left: 0;
-  z-index: 5;
-}
-
-.apples_text {
-  color: #c11216;
-}
-
-/* grapes */
-
-.grapes_image {
-  height: 250px;
-  width: 300px;
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  left: 0;
-  z-index: 5;
-}
-
-.grapes_text {
-  color: #b5ca03;
-}
-
-/* bananas */
-
-.bananas_image {
-  height: 250px;
-  width: 300px;
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  left: 0;
-  z-index: 5;
-}
-
-.bananas_text {
-  color: #fed41e;
-}
-
-/* peppers */
-
-.peppers_image {
-  height: 250px;
-  width: 300px;
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  left: 0;
-  z-index: 5;
-}
-
-.peppers_text {
-  color: #487801;
-}
-
-/* tomatoes */
-
-.tomatoes_image {
-  height: 250px;
-  width: 300px;
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  left: 0;
-  z-index: 5;
-}
-
-.tomatoes_text {
-  color: #fe1e10;
-}
-
-/* cucumbers */
-
-.cucumbers_image {
-  height: 250px;
-  width: 300px;
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  left: 0;
-  z-index: 5;
-}
-
-.cucumbers_text {
-  color: #5b892d;
-}
-
-/* corn */
-
-.corn_image {
-  height: 250px;
-  width: 300px;
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  left: 0;
-  z-index: 5;
-}
-
-.corn_text {
-  color: #fcd34f;
-}
-
-/* carrots */
-
-.carrots_image {
-  height: 250px;
-  width: 300px;
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  left: 0;
-  z-index: 5;
-}
-
-.carrots_text {
-  color: #fea30b;
-}
-
-.end_text {
+  top: 42%;
+  left: 50%;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  text-transform: uppercase;
   z-index: 100;
-  color: red;
-  text-align: center;
+}
+
+/* .bar {
+  fill: white;
+} */
+
+.image {
+  height: 250px;
+  width: 300px;
   position: absolute;
-  top: 40px;
-  left: 0px;
-  font-size: 4rem;
+  top: 0;
+  left: 0;
   opacity: 0;
+}
+.nothing,
+.is,
+.impossible,
+.thee,
+.word,
+.itself,
+.says,
+.possible {
+  opacity: 0;
+}
+
+.nothing {
+  color: white;
+}
+
+.is {
+  color: white;
+}
+
+.impossible {
+  color: white;
+}
+
+.thee {
+  color: white;
+}
+
+.word {
+  color: white;
+}
+
+.itself {
+  color: white;
+}
+
+.says {
+  color: black;
+}
+
+.possible {
+  color: white;
+  margin: 0;
+  position: absolute;
+  top: 42%;
+  left: 8%;
+  transform: translateY(0);
+  transform: translateX(0);
+  text-transform: uppercase;
+  z-index: 100;
+}
+
+.name {
+  color: white;
+  opacity: 0;
+  font-size: 1.1rem;
+  font-weight: normal;
+  position: absolute;
+  top: 90px;
+  left: 20px;
+}
+
+.date {
+  color: white;
+  opacity: 0;
+  font-size: 0.5rem;
+  font-weight: normal;
+  position: absolute;
+  top: 117px;
+  left: 20px;
+  letter-spacing: 0.15rem;
 }
 
 /* Button code */

@@ -1,196 +1,445 @@
 let select = (e) => document.querySelector(e);
 let selectAll = (e) => document.querySelectoAll(e);
 
+const wallet_front = select(".wallet_front");
+const wallet_back = select(".wallet_back");
+const passport = select(".passport");
+const ticket = select(".ticket");
+const photo = select(".photo");
+const suitcase = select(".suitcase");
+const redeemer = select(".redeemer");
+const paris = select(".paris");
+const camera = select(".camera");
+const liberty = select(".liberty");
+const postcard = select(".postcard");
+const plane = select(".plane");
+const taj = select(".taj");
+const ben = select(".ben");
+const bon_image = select(".bon_image");
+const bon_background = select(".bon_background");
+const bon = select(".bon");
+const voyage = select(".voyage");
+const logo = select(".logo");
+const start = select(".start");
+const introduction = select(".introduction");
+const depart = select(".depart");
+const explore = select(".explore");
+
+gsap.set(".container", { autoAlpha: 1 });
+
 let pause = select("#pause");
 
-let master = gsap.timeline({
+const master = gsap.timeline({
   onComplete: () => (pause.innerHTML = "Play"),
 });
-
 master.pause();
 
-master.to(".start", {
-  opacity: 0,
+gsap.defaults({
+  ease: "power2.in",
+  duration: 0.35,
 });
 
-// Bubble Text animation
+master
+  .to(start, {
+    opacity: 0,
+  })
+  .from(wallet_front, {
+    y: -100,
+    x: 280,
+    duration: 0.4,
+    ease: "back.out(1.7)",
+    rotation: 45,
+    transformOrigin: "left 50%",
+  })
 
-const moveAnimation1 = () => {
-  const tl = gsap.timeline();
-  master.from(
-    ".b1, .u1, .b2, .b3, .l, .e, .greenShadow, .redShadow, .green1, .green2, .green3, .cream, .red",
+  .from(
+    wallet_back,
     {
-      opacity: 0,
-      scale: 0,
-      ease: "bounce",
-      stagger: 0.15,
-    }
-  );
-  return tl;
-};
-
-const moveAnimation2 = () => {
-  const tl = gsap.timeline();
-  master.from(
-    ".g, .u2, .m",
-    {
-      opacity: 0,
-      scale: 0,
-      ease: "bounce",
-      stagger: 0.15,
+      y: -100,
+      x: 280,
+      duration: 0.4,
+      ease: "back.out(1.7)",
+      rotation: 45,
+      transformOrigin: "left 50%",
     },
-    "=-1.25"
-  );
-  return tl;
-};
+    "<"
+  )
 
-// BUBBLE TEXT
+  .to(
+    passport,
+    {
+      opacity: 1,
+    },
+    "=-0.25"
+  )
 
-master.add(moveAnimation1());
+  .to(
+    photo,
+    {
+      opacity: 1,
+    },
+    "<"
+  )
 
-master.from(
-  ".innerShadow1",
-  {
+  .to(
+    suitcase,
+    {
+      opacity: 1,
+    },
+    "<"
+  )
+
+  .to(
+    redeemer,
+    {
+      opacity: 1,
+    },
+    "<"
+  )
+
+  .to(
+    ticket,
+    {
+      opacity: 1,
+    },
+    "<"
+  )
+
+  .to(
+    paris,
+    {
+      opacity: 1,
+    },
+    "<"
+  )
+
+  .to(
+    camera,
+    {
+      opacity: 1,
+    },
+    "<"
+  )
+
+  .to(
+    taj,
+    {
+      opacity: 1,
+    },
+    "<"
+  )
+
+  .to(
+    liberty,
+    {
+      opacity: 1,
+    },
+    "<"
+  )
+
+  .to(
+    postcard,
+    {
+      opacity: 1,
+    },
+    "<"
+  )
+
+  .to(
+    ben,
+    {
+      opacity: 1,
+    },
+    "<"
+  )
+
+  .from(
+    passport,
+    {
+      y: 40,
+      x: 30,
+      duration: 0.5,
+      ease: "back.out(1.7)",
+    },
+    "=+0.5"
+  )
+  .from(
+    photo,
+    {
+      y: 40,
+      duration: 0.5,
+      ease: "back.out(1.7)",
+    },
+    "=-0.25"
+  )
+
+  .from(
+    redeemer,
+    {
+      y: 110,
+      x: 40,
+      duration: 0.5,
+      ease: "back.out(1.7)",
+    },
+    "=-0.25"
+  )
+
+  .from(
+    suitcase,
+    {
+      y: 60,
+      duration: 0.5,
+      ease: "back.out(1.7)",
+    },
+    "=-0.25"
+  )
+
+  .from(
+    ticket,
+    {
+      y: 60,
+      x: 50,
+      duration: 0.5,
+      ease: "back.out(1.7)",
+    },
+    "=-0.15"
+  )
+
+  .from(
+    paris,
+    {
+      y: 120,
+      duration: 0.5,
+      ease: "back.out(1.7)",
+    },
+    "=-0.25"
+  )
+
+  .from(
+    camera,
+    {
+      y: 50,
+      duration: 0.5,
+      ease: "back.out(1.7)",
+    },
+    "=-0.25"
+  )
+
+  .from(
+    taj,
+    {
+      y: 80,
+      duration: 0.5,
+      ease: "back.out(1.7)",
+    },
+    "=-0.25"
+  )
+
+  .from(
+    liberty,
+    {
+      y: 120,
+      duration: 0.5,
+      ease: "back.out(1.7)",
+    },
+    "=-0.25"
+  )
+
+  .from(
+    postcard,
+    {
+      y: 60,
+      x: -20,
+      duration: 0.5,
+      ease: "back.out(1.7)",
+    },
+    "=-0.25"
+  )
+
+  .from(
+    ben,
+    {
+      y: 110,
+      x: -30,
+      duration: 0.5,
+      ease: "back.out(1.7)",
+    },
+    "=-0.25"
+  )
+
+  .to(introduction, {
     opacity: 0,
-  },
-  "=-0.25"
-);
+  })
 
-master.add(moveAnimation2());
+  .to(
+    wallet_back,
+    {
+      opacity: 0,
+    },
+    "<"
+  )
 
-master.from(
-  ".innerShadow2",
-  {
-    opacity: 0,
-  },
-  "=-0.25"
-);
+  .to(
+    paris,
+    {
+      opacity: 0,
+    },
+    "<"
+  )
 
-master.from(
-  ".circle1",
-  {
-    opacity: 0,
-    scale: 1,
-  },
-  "=-0.25"
-);
+  .to(
+    redeemer,
+    {
+      opacity: 0,
+    },
+    "<"
+  )
 
-master.from(
-  ".circle2",
-  {
-    opacity: 0,
-    scale: 1,
-  },
-  "=-0.25"
-);
+  .to(
+    passport,
+    {
+      opacity: 0,
+    },
+    "<"
+  )
 
-master.from(
-  ".swirl",
-  {
-    opacity: 0,
-    scale: 1,
-    duration: 4,
-    ease: "back.out(1.7)",
-  },
-  "=-0.25"
-);
+  .to(
+    ticket,
+    {
+      opacity: 0,
+    },
+    "<"
+  )
 
-master.fromTo(
-  ".star",
-  {
-    opacity: 0,
-    scale: 0,
-  },
-  {
+  .to(
+    ben,
+    {
+      opacity: 0,
+    },
+    "<"
+  )
+
+  .to(
+    liberty,
+    {
+      opacity: 0,
+    },
+    "<"
+  )
+
+  .to(
+    postcard,
+    {
+      opacity: 0,
+    },
+    "<"
+  )
+
+  .to(
+    camera,
+    {
+      opacity: 0,
+    },
+    "<"
+  )
+
+  .to(
+    taj,
+    {
+      opacity: 0,
+    },
+    "<"
+  )
+
+  .to(
+    photo,
+    {
+      opacity: 0,
+    },
+    "<"
+  )
+
+  .to(
+    suitcase,
+    {
+      opacity: 0,
+    },
+    "<"
+  )
+
+  .fromTo(
+    bon_image,
+    {
+      opacity: 0,
+      scale: 0,
+      rotation: 0,
+    },
+    {
+      opacity: 1,
+      scale: 1,
+      rotation: 360,
+      duration: 0.75,
+    },
+    "=-0.15"
+  )
+
+  .fromTo(
+    bon_background,
+    {
+      opacity: 0,
+      scale: 0,
+    },
+    {
+      opacity: 1,
+      scale: 1,
+      ease: "back.out(1.7)",
+      duration: 0.25,
+    },
+    "=-0.15"
+  )
+
+  .fromTo(
+    bon,
+    {
+      opacity: 0,
+      scale: 0,
+      rotation: 90,
+    },
+    {
+      opacity: 1,
+      scale: 1,
+      ease: "back.out(1.7)",
+      rotation: 0,
+      duration: 0.25,
+    },
+    "=-0.15"
+  )
+
+  .fromTo(
+    voyage,
+    {
+      opacity: 0,
+      scale: 0,
+      ease: "back.out(1.7)",
+      rotation: -90,
+    },
+    {
+      opacity: 1,
+      scale: 1,
+      rotation: 0,
+      ease: "back.out(1.7)",
+      duration: 0.25,
+    },
+    "=-0.15"
+  )
+
+  .to(logo, {
     opacity: 1,
-    scale: 1,
-    duration: 0.25,
-    ease: "back.out(1.7)",
-  },
-  "=-5"
-);
+  })
 
-master.fromTo(
-  ".moneyHolder",
-  {
-    opacity: 0,
-    scale: 0,
-  },
-  {
+  .to(explore, {
     opacity: 1,
-    scale: 1,
-    duration: 0.25,
-    ease: "back.out(1.7)",
-  },
-  ">"
-);
-
-master.fromTo(
-  ".cash",
-  {
-    opacity: 0,
-    scale: 0,
-  },
-  {
-    opacity: 1,
-    scale: 1.2,
-    duration: 0.15,
-    ease: "back.out(2)",
-    stagger: 0.15,
-  },
-  ">"
-);
-
-master.fromTo(
-  ".text",
-  {
-    opacity: 0,
-    scale: 0,
-  },
-  {
-    opacity: 1,
-    scale: 2,
-    duration: 0.25,
-    ease: "back.out(1.7)",
-  },
-  ">"
-);
-
-master.fromTo(
-  ".redCircles",
-  {
-    opacity: 0,
-    scale: 0,
-  },
-  {
-    opacity: 1,
-    scale: 2,
-    duration: 0.25,
-    ease: "back.out(1.7)",
-  },
-  ">"
-);
-
-master.fromTo(
-  ".creamCircles",
-  {
-    opacity: 0,
-    scale: 0,
-  },
-  {
-    opacity: 1,
-    scale: 2,
-    duration: 0.25,
-    ease: "back.out(1.7)",
-  },
-  ">"
-);
-
-// SHADOWS
-
-master.from;
-
-// Button code
+  });
 
 pause.addEventListener("click", () => {
   master.paused(!master.paused());

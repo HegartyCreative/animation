@@ -3,211 +3,246 @@ let selectAll = (e) => document.querySelectoAll(e);
 
 let pause = select("#pause");
 
-let master = gsap.timeline({
+let animation = gsap.timeline({
   onComplete: () => (pause.innerHTML = "Play"),
 });
+animation.pause();
 
-master.pause();
+// First Animation
 
-master.to(".title", {
-  x: -60,
-  y: -138,
-  rotation: -90,
-  delay: 1,
+animation.to(".start", {
+  opacity: 0,
+  duration: 0,
 });
 
-master.fromTo(
-  ".isAn",
+animation.fromTo(
+  ".logo_horizontal",
   {
-    x: -13,
-    y: 130,
-    rotation: -90,
-    duration: 1,
-    scale: 1,
-    transformOriginX: "50% 50%",
     opacity: 0,
   },
   {
-    scale: 1.2,
-    transformOriginX: "bottom bottom",
-    y: 120,
-    x: 10,
-    rotation: -60,
     opacity: 1,
   },
-  ">"
-);
-master.to(
-  ".title",
-  {
-    opacity: 0,
-  },
-  "<"
+  "=+0.5"
 );
 
-master.to(".isAn", {
-  rotate: -90,
-  x: -40,
-  y: 100,
-});
+// First animation
 
-master.fromTo(
-  ".invisible",
+// Enter stage
+
+animation.fromTo(
+  ".main_heading_background1",
   {
-    x: 170,
-    y: 320,
-    scale: 3,
-    rotate: -45,
+    x: -200,
   },
   {
-    x: 55,
-    y: 42,
-    scale: 1,
-    rotate: 0,
+    x: -40,
+    ease: "back.out(2)",
   }
 );
 
-master.to(
-  ".foe",
+animation.fromTo(
+  ".main_heading1",
   {
-    opacity: 1,
+    x: -160,
   },
-  ">"
+  {
+    x: 0,
+    ease: "back.out(1.7)",
+  },
+  "=-0.25"
 );
 
-master.from(".invisible_img", {
-  y: 200,
-});
-
-master.to(
-  ".isAn, .invisible, .foe",
+animation.fromTo(
+  ".sub_heading_background1",
   {
     x: -220,
-    ease: "back.in(0.25)",
-    stagger: 0.2,
   },
-  "=+2"
+  {
+    x: -40,
+    ease: "back.out(2)",
+  }
 );
 
-master.to(
-  ".invisible_img",
+animation.fromTo(
+  ".sub_heading1",
   {
-    x: 200,
-    ease: "back.in(0.25)",
+    x: -180,
   },
-  ">"
-);
-
-master.to(".living, .inLiberia", {
-  opacity: 1,
-});
-
-master.to(".living", {
-  y: -10,
-  scale: 0.9,
-  transformOrigin: "0% 100%",
-});
-
-master.to(
-  ".inLiberia",
   {
-    y: -20,
-    scale: 0.8,
-    transformOrigin: "0% 100%",
-  },
-  "<"
-);
-
-master.fromTo(
-  ".africa1",
-  {
-    opacity: 0,
-    scale: 1.1,
     x: 0,
-    y: 0,
+    ease: "back.out(1.7)",
+  },
+  "=-0.25"
+);
+
+// Leave stage
+
+animation.to(".main_heading_background1, .main_heading1", {
+  x: -210,
+  delay: 2,
+  ease: "back.in(2)",
+});
+
+animation.to(".sub_heading_background1, .sub_heading1", {
+  x: -230,
+  ease: "back.in(2)",
+});
+
+// Second animation
+
+animation.to(".background2", {
+  opacity: 1,
+  duration: 0.25,
+});
+
+// Enter stage
+
+animation.fromTo(
+  ".main_heading_background2",
+  {
+    x: -200,
   },
   {
-    scale: 0.85,
-    x: 145,
-    y: -40,
+    x: -40,
+    ease: "back.out(2)",
+  },
+  "=+0.5"
+);
+
+animation.fromTo(
+  ".main_heading2",
+  {
+    x: -160,
+  },
+  {
+    x: 0,
+    ease: "back.out(1.7)",
+  },
+  "=-0.25"
+);
+
+animation.fromTo(
+  ".sub_heading_background2",
+  {
+    x: -240,
+  },
+  {
+    x: -40,
+    ease: "back.out(2)",
+  }
+);
+
+animation.fromTo(
+  ".sub_heading2",
+  {
+    x: -195,
+  },
+  {
+    x: 0,
+    ease: "back.out(1.7)",
+  },
+  "=-0.25"
+);
+
+// Leave stage
+
+animation.to(".main_heading_background2, .main_heading2", {
+  x: -210,
+  delay: 2,
+  ease: "back.in(2)",
+});
+
+animation.to(".sub_heading_background2, .sub_heading2", {
+  x: -240,
+  ease: "back.in(2)",
+});
+
+// Third animation
+
+animation.to(".background3", {
+  opacity: 1,
+  duration: 0.25,
+});
+
+// Enter stage
+
+animation.fromTo(
+  ".main_heading_background3",
+  {
+    x: -200,
+  },
+  {
+    x: -40,
+    ease: "back.out(2)",
+  },
+  "=+0.5"
+);
+
+animation.fromTo(
+  ".main_heading3",
+  {
+    x: -160,
+  },
+  {
+    x: 0,
+    ease: "back.out(1.7)",
+  },
+  "=-0.25"
+);
+
+animation.fromTo(
+  ".sub_heading_background3",
+  {
+    x: -240,
+  },
+  {
+    x: -40,
+    ease: "back.out(2)",
+  }
+);
+
+animation.fromTo(
+  ".sub_heading3",
+  {
+    x: -195,
+  },
+  {
+    x: 0,
+    ease: "back.out(1.7)",
+  },
+  "=-0.25"
+);
+
+// Leave stage
+
+animation.to(".main_heading_background3, .main_heading3", {
+  x: -210,
+  delay: 2,
+  ease: "back.in(2)",
+});
+
+animation.to(".sub_heading_background3, .sub_heading3", {
+  x: -240,
+  ease: "back.in(2)",
+});
+
+animation.to(
+  ".apply",
+  {
     opacity: 1,
     duration: 1,
+    ease: "back.out(1.7)",
   },
-  "<"
-);
-
-master.to(
-  ".africa2",
-  {
-    opacity: 1,
-  },
-  ">"
-);
-
-master.fromTo(
-  ".right, .now, .is",
-  {
-    y: 0,
-    x: 0,
-    opacity: 0,
-  },
-  {
-    opacity: 1,
-    y: -10,
-    x: 10,
-    stagger: 0.25,
-  },
-  ">"
-);
-
-master.fromTo(
-  ".living",
-  {
-    scale: 1,
-  },
-  {
-    scale: 0.5,
-    rotate: -90,
-    x: 30,
-    y: 45,
-  },
-  "=+1"
-);
-
-master.fromTo(
-  ".inLiberia",
-  {
-    scale: 1,
-  },
-  {
-    scale: 0.5,
-    rotate: -90,
-    x: 52,
-    y: 0,
-  },
-  "=-0.2"
-);
-
-master.fromTo(
-  ".right",
-  {
-    scale: 1,
-  },
-  {
-    scale: 0.5,
-    rotate: -90,
-    x: -51,
-    y: -64,
-  },
-  "=-0.2"
+  "=-0.5"
 );
 
 // Button code
 
 pause.addEventListener("click", () => {
-  master.paused(!master.paused());
-  if (master.progress() == 1) {
-    master.restart();
+  animation.paused(!animation.paused());
+  if (animation.progress() == 1) {
+    animation.restart();
   }
-  pause.innerHTML = master.paused() ? "Play" : "Pause";
+  pause.innerHTML = animation.paused() ? "Play" : "Pause";
 });

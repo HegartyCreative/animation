@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="background" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 300 250">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="150" y1="250.55" x2="150" y2="-.18" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#faab19"/>
+      <stop offset="0" stop-color="#faad20"/>
+      <stop offset=".08" stop-color="#fbc55c"/>
+      <stop offset=".15" stop-color="#fcd88e"/>
+      <stop offset=".22" stop-color="#fde8b5"/>
+      <stop offset=".28" stop-color="#fef3d1"/>
+      <stop offset=".33" stop-color="#fef9e2"/>
+      <stop offset=".37" stop-color="#fffce8"/>
+      <stop offset=".42" stop-color="#f6f8e7"/>
+      <stop offset=".51" stop-color="#def0e4"/>
+      <stop offset=".62" stop-color="#b8e3df"/>
+      <stop offset=".74" stop-color="#83d0d9"/>
+      <stop offset=".88" stop-color="#3fb8d2"/>
+      <stop offset="1" stop-color="#00a2cb"/>
+    </linearGradient>
+  </defs>
+  <rect class="cls-1" width="300" height="250"/>
+</svg>
