@@ -244,6 +244,7 @@ body {
   top: 160px;
   z-index: 50;
   opacity: 0;
+  font-weight: normal;
 }
 
 .category_text {

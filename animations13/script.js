@@ -158,13 +158,6 @@ animation.to(".sub_heading_background2, .sub_heading2", {
   ease: "back.in(2)",
 });
 
-// Third animation
-
-animation.to(".background3", {
-  opacity: 1,
-  duration: 0.25,
-});
-
 // Enter stage
 
 animation.fromTo(

@@ -29,6 +29,7 @@ html {
 body {
   color: orange;
   font-family: "Josefin Sans", sans-serif;
+  font-weight: normal;
 }
 
 .container {
@@ -95,7 +96,7 @@ body {
   top: 100px;
   color: white;
   padding-left: 10px;
-  font-weight: 400;
+  font-weight: normal;
 }
 
 .main_heading_background1 {
@@ -118,7 +119,7 @@ body {
   top: 133px;
   color: white;
   padding-left: 10px;
-  font-weight: 700;
+  font-weight: normal;
 }
 
 .sub_heading_background1 {
@@ -145,7 +146,7 @@ body {
   top: 100px;
   color: white;
   padding-left: 10px;
-  font-weight: 400;
+  font-weight: normal;
 }
 
 .main_heading_background2 {
@@ -168,7 +169,7 @@ body {
   top: 133px;
   color: white;
   padding-left: 10px;
-  font-weight: 700;
+  font-weight: normal;
 }
 
 .sub_heading_background2 {
@@ -195,7 +196,7 @@ body {
   top: 100px;
   color: white;
   padding-left: 10px;
-  font-weight: 400;
+  font-weight: normal;
 }
 
 .main_heading_background3 {
@@ -218,7 +219,7 @@ body {
   top: 133px;
   color: white;
   padding-left: 10px;
-  font-weight: 700;
+  font-weight: normal;
 }
 
 .sub_heading_background3 {
@@ -248,6 +249,7 @@ h1.apply {
   text-align: center;
   line-height: 1.1rem;
   opacity: 0;
+  font-weight: normal;
 }
 
 /* Button code */

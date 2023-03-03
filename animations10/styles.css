@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Jost&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 
 html {
   box-sizing: border-box;
@@ -13,123 +13,39 @@ html {
 }
 
 body {
-  font-family: "Jost", sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
-  font-weight: normal;
-  font-size: 1.6rem;
-  letter-spacing: 0.3rem;
   /* margin: 100px; */
 }
 
-.background {
+.container {
   height: 250px;
   width: 300px;
   position: relative;
   overflow: hidden;
-  background-color: black;
+  border: 1px solid rgb(230, 230, 230);
 }
 
-.audrey {
-  height: 250px;
-  width: 300px;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.text {
-  margin: 0;
-  position: absolute;
-  top: 42%;
-  left: 50%;
-  transform: translateY(-50%);
-  transform: translateX(-50%);
-  text-transform: uppercase;
-  z-index: 100;
-}
-
-/* .bar {
-  fill: white;
-} */
-
-.image {
-  height: 250px;
-  width: 300px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-}
-.nothing,
-.is,
-.impossible,
-.thee,
-.word,
-.itself,
-.says,
-.possible {
+#clouds,
+#sun,
+#balloon {
   opacity: 0;
 }
 
-.nothing {
-  color: white;
-}
-
-.is {
-  color: white;
-}
-
-.impossible {
-  color: white;
-}
-
-.thee {
-  color: white;
-}
-
-.word {
-  color: white;
-}
-
-.itself {
-  color: white;
-}
-
-.says {
-  color: black;
-}
-
-.possible {
-  color: white;
-  margin: 0;
+.logo {
+  top: 20px;
+  left: 112px;
+  width: 25%;
   position: absolute;
-  top: 42%;
-  left: 8%;
-  transform: translateY(0);
-  transform: translateX(0);
-  text-transform: uppercase;
-  z-index: 100;
+  overflow: hidden;
 }
 
-.name {
-  color: white;
-  opacity: 0;
-  font-size: 1.1rem;
-  font-weight: normal;
+.logo2 {
+  top: 35px;
+  left: 67px;
+  width: 55%;
   position: absolute;
-  top: 90px;
-  left: 20px;
-}
-
-.date {
-  color: white;
-  opacity: 0;
-  font-size: 0.5rem;
-  font-weight: normal;
-  position: absolute;
-  top: 117px;
-  left: 20px;
-  letter-spacing: 0.15rem;
+  overflow: hidden;
 }
 
 /* Button code */

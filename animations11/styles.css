@@ -28,6 +28,7 @@ html {
 
 body {
   font-family: "Orbitron", sans-serif;
+  font-weight: normal;
 }
 
 .background {
@@ -89,6 +90,7 @@ body {
   left: 0px;
   font-size: 1.9rem;
   z-index: 200;
+  font-weight: normal;
 }
 
 .date {
@@ -99,6 +101,7 @@ body {
   z-index: 10;
   opacity: 0;
   font-size: 1.4rem;
+  font-weight: normal;
 }
 
 .year_background {
@@ -115,6 +118,7 @@ body {
   font-family: "Orbitron", sans-serif;
   color: black;
   position: absolute;
+  font-weight: normal;
 }
 
 /* RIDERS */
@@ -132,6 +136,7 @@ body {
   color: black;
   position: absolute;
   font-size: 1.6rem;
+  font-weight: normal;
 }
 
 /* TEAMS */
@@ -150,6 +155,7 @@ body {
   position: absolute;
   font-size: 1.6rem;
   opacity: 0;
+  font-weight: normal;
 }
 
 .cyclists {
@@ -176,6 +182,7 @@ body {
   position: absolute;
   font-size: 1.6rem;
   opacity: 0;
+  font-weight: normal;
 }
 
 .stage {
@@ -202,6 +209,7 @@ body {
   position: absolute;
   font-size: 1.6rem;
   opacity: 0;
+  font-weight: normal;
 }
 
 .km {
@@ -228,6 +236,7 @@ body {
   position: absolute;
   font-size: 1.6rem;
   opacity: 0;
+  font-weight: normal;
 }
 
 .longest {

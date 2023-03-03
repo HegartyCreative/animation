@@ -3,58 +3,111 @@ let selectAll = (e) => document.querySelectoAll(e);
 
 let pause = select("#pause");
 
-let music = gsap.timeline({
+let retail = gsap.timeline({
   onComplete: () => (pause.innerHTML = "Play"),
 });
-music.pause();
+retail.pause();
 
-music.fromTo(
-  "h2",
-  { opacity: 1 },
-  { opacity: 0, ease: "power.out(4)" },
-  "=+0.4"
-);
+// Intro
 
-music.fromTo(
-  ".main",
-  { opacity: 0 },
-  { opacity: 1, ease: "power.out(4)" },
-  "=+0.4"
-);
-music.fromTo(
-  "h3",
-  { opacity: 0, y: 5 },
-  { opacity: 1, y: 0, duration: 0.25, ease: "power.out" },
-  "=+0.05"
-);
+retail.set(".startingShape, .saleText", {
+  opacity: 0,
+});
 
-music.fromTo("h1", { x: -290 }, { x: 0, ease: "power.out" });
-
-music.fromTo(
-  ".checked",
-  { opacity: 0, y: 5, scale: 0 },
+retail.from(
+  ".introText",
   {
-    opacity: 1,
-    scale: 1.2,
-    y: 0,
-    stagger: 0.1,
-    ease: "back.out(5)",
-    duration: 0.5,
+    x: -140,
+    ease: "back.out(1.7)",
   },
-  "=-0.75"
+  ">"
 );
 
-music.fromTo(
-  "h4, h5",
-  { y: 50 },
-  { y: 0, ease: "power.out", duration: 0.25 },
-  "=-0.75"
+retail.from(
+  ".cta",
+  {
+    x: -109,
+    ease: "back.out(1.7)",
+  },
+  "-=0.25"
 );
+
+retail.from(
+  ".shape2",
+  {
+    x: -25,
+    ease: "back.out(1.7)",
+  },
+  "-=0.25"
+);
+
+retail.from(
+  ".shape1",
+  {
+    x: 95,
+    ease: "back.out(1.7)",
+  },
+  "<"
+);
+
+// One
+retail.to(".one", { opacity: 1, duration: 0.2 }, "=+0.15");
+
+retail.to(".one_text_full", { opacity: 1 }, "=-0.25");
+retail.to(".line1", { opacity: 1, duration: 0.25 }, "=+2");
+retail.to(".one_text_full, .line1", {
+  y: 110,
+  ease: "back.in(1.7)",
+});
+retail.to(".line1", { backgroundColor: "white", duration: "0" }, "=-0.5");
+retail.to(".one_text_full", { color: "white" }, "<");
+retail.to(".one_text_discount", { opacity: 1, duration: 0.25 }, "=-0.25");
+retail.to(".one, .one_text_discount", { opacity: 0, duration: 0 }, "=+2");
+
+// Two
+retail.to(".two", { opacity: 1, duration: 0.2 }, "-=0.25");
+retail.to(".two_text_full", { opacity: 1 }, "=+0.25");
+retail.to(".line2", { opacity: 1, duration: 0.25 }, "=+2");
+retail.to(".two_text_full, .line2", {
+  y: 110,
+  ease: "back.in(1.7)",
+});
+retail.to(".line2", { backgroundColor: "white", duration: "0.25" }, "=-0.5");
+retail.to(".two_text_full", { color: "white" }, "<");
+retail.to(".two_text_discount", { opacity: 1, duration: 0.25 }, "=-0.25");
+retail.to(".two, .two_text_discount", { opacity: 0, duration: 0 }, "=+2");
+
+// Three
+retail.to(".three", { opacity: 1, duration: 0.2 }, "-=0.25");
+retail.to(".three_text_full", { opacity: 1 }, "=+0.25");
+retail.to(".line3", { opacity: 1, duration: 0.25 }, "=+2");
+retail.to(".three_text_full, .line3", {
+  y: 110,
+  ease: "back.in(1.7)",
+});
+retail.to(".line3", { backgroundColor: "white", duration: "0.25" }, "=-0.5");
+retail.to(".three_text_full", { color: "white" }, "<");
+retail.to(".three_text_discount", { opacity: 1, duration: 0.25 }, "=-0.25");
+retail.to(".three, .three_text_discount", { opacity: 0, duration: 0 }, "=+2");
+
+// Four
+retail.to(".four", { opacity: 1, duration: 0.2 }, "-=0.25");
+retail.to(".four_text_full", { opacity: 1 }, "=+0.25");
+retail.to(".line4", { opacity: 1, duration: 0.25 }, "=+2");
+retail.to(".four_text_full, .line4", {
+  y: 110,
+  ease: "back.in(1.7)",
+});
+retail.to(".line4", { backgroundColor: "white", duration: "0.25" }, "=-0.5");
+retail.to(".four_text_full", { color: "white" }, "<");
+retail.to(".four_text_discount", { opacity: 1, duration: 0.25 }, "=-0.25");
+
+// Button code
 
 pause.addEventListener("click", () => {
-  music.paused(!music.paused());
-  if (music.progress() == 1) {
-    music.restart();
+  retail.paused(!retail.paused());
+  if (retail.progress() == 1) {
+    retail.restart();
   }
-  pause.innerHTML = music.paused() ? "Play" : "Pause";
+  pause.innerHTML = retail.paused() ? "Play" : "Pause";
 });

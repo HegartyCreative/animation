@@ -9,171 +9,60 @@ let master = gsap.timeline({
 
 master.pause();
 
-// Nothing
-
-master.to(".audrey", {
+master.to(".logo2", {
   opacity: 0,
-  duration: 0,
-  delay: 1,
 });
 
-master.to(".nothing, .elephant", {
-  opacity: 1,
-  duration: 0,
-});
-
-// Is
-
-master.to(
-  ".is, .dancing",
+master.fromTo(
+  "#mountain1",
   {
-    opacity: 1,
-    duration: 0.3,
+    scaleY: 0,
+    transformOrigin: "bottom bottom",
   },
-  "=+0.6"
-);
-
-master.to(
-  ".nothing, .elephant",
   {
-    opacity: 0,
-    duration: 0,
+    scaleY: 1,
+    transformOrigin: "bottom bottom",
+    ease: "back.out(2)",
+    stagger: 0.25,
   },
   "<"
 );
 
-// Impossible
+master.fromTo(
+  "#Statue1, #liberty, #building1, #mountain2, #pisa, #ben, #mountain3, #building1, #building2, #building3, #arc, #windmill ",
+  {
+    scaleY: 0,
+    transformOrigin: "bottom bottom",
+  },
+  {
+    scaleY: 1,
+    transformOrigin: "bottom bottom",
+    ease: "back.out(2)",
+    stagger: 0.25,
+  }
+);
 
 master.to(
-  ".impossible, .lying",
+  "#clouds, #sun, #balloon",
   {
     opacity: 1,
-    duration: 0.3,
+    stagger: 0.25,
   },
-  "=+0.6"
+  "=-3"
 );
 
-master.to(
-  ".is, .dancing",
+master.fromTo(
+  ".logo",
   {
     opacity: 0,
-    duration: 0,
+    scale: 0,
   },
-  "<"
-);
-
-// The
-
-master.to(
-  ".thee, .hands",
   {
     opacity: 1,
-    duration: 0.3,
-  },
-  "=+0.6"
+    scale: 1,
+    ease: "back.out(1.5)",
+  }
 );
-
-master.to(
-  ".impossible, .lying",
-  {
-    opacity: 0,
-    duration: 0,
-  },
-  "<"
-);
-
-// Word,
-
-master.to(
-  ".word, .lightening",
-  {
-    opacity: 1,
-    duration: 0.3,
-  },
-  "=+0.6"
-);
-
-master.to(
-  ".thee, .hands",
-  {
-    opacity: 0,
-    duration: 0,
-  },
-  "<"
-);
-
-// Itself,
-
-master.to(
-  ".itself, .flame",
-  {
-    opacity: 1,
-    duration: 0.3,
-  },
-  "=+0.6"
-);
-
-master.to(
-  ".word, .lightening",
-  {
-    opacity: 0,
-    duration: 0,
-  },
-  "<"
-);
-
-// Says,
-
-master.to(
-  ".says, .coffee",
-  {
-    opacity: 1,
-    duration: 0.3,
-  },
-  "=+0.6"
-);
-
-master.to(
-  ".itself, .flame",
-  {
-    opacity: 0,
-    duration: 0,
-  },
-  "<"
-);
-
-// Im possible,
-
-master.to(
-  ".possible, .tennis",
-  {
-    opacity: 1,
-    duration: 0.3,
-  },
-  "=+0.6"
-);
-
-master.to(
-  ".says, .coffee",
-  {
-    opacity: 0,
-    duration: 0,
-  },
-  "<"
-);
-
-master.to(
-  ".possible, .tennis",
-  {
-    opacity: 0,
-    duration: 0.3,
-  },
-  "=+0.6"
-);
-
-master.to(".name, .date", {
-  opacity: 1,
-});
 
 // Button code
 

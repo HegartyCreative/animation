@@ -75,7 +75,7 @@ master.to(".logo", {
   opacity: 1,
 });
 
-// ONE
+///////////////////////////////////////////////////////////////// ONE
 
 // ONE ENTER
 
@@ -108,7 +108,7 @@ master.fromTo(
 );
 
 master.to(".intro", {
-  opacity: 0,
+  opacity: 1,
 });
 
 master.fromTo(
@@ -143,7 +143,7 @@ master.fromTo(
 master.to(
   ".apple_left",
   {
-    y: 220,
+    y: 250,
     ease: "back.in(1)",
   },
   "=+2"
@@ -176,7 +176,7 @@ master.to(
   "<"
 );
 
-// TWO
+/////////////////////////////////////////////////////////////////// TWO
 
 // TWO ENTER
 
@@ -217,7 +217,7 @@ master.fromTo(
   {
     y: 0,
     duration: 0.5,
-    ease: "back.out(1)",
+    ease: "back.out(1.7)",
   }
 );
 
@@ -235,12 +235,12 @@ master.fromTo(
   "<"
 );
 
-// TWO LEAVES
+// ONE LEAVES
 
 master.to(
   ".pomegranate_left",
   {
-    y: 220,
+    y: 250,
     ease: "back.in(1)",
   },
   "=+2"
@@ -273,7 +273,7 @@ master.to(
   "<"
 );
 
-// THREE
+/////////////////////////////////////////////////////////////////// THREE
 
 // THREE ENTER
 
@@ -314,7 +314,7 @@ master.fromTo(
   {
     y: 0,
     duration: 0.5,
-    ease: "back.out(1)",
+    ease: "back.out(1.7)",
   }
 );
 
@@ -332,26 +332,93 @@ master.fromTo(
   "<"
 );
 
+// ONE LEAVES
+
 master.to(
-  ".end",
+  ".passionFruit_left",
   {
-    ease: "power1.out",
-    opacity: 1,
-    duration: 0.25,
+    y: 250,
+    ease: "back.in(1)",
   },
   "=+2"
 );
 
-master.fromTo(
-  ".end",
-  { scale: 1 },
+master.to(
+  ".left3",
   {
-    scale: 1.05,
-    x: 10,
-    duration: 5,
-    ease: "none",
+    y: 250,
+    ease: "back.in(1)",
+  },
+  "<"
+);
+
+master.to(
+  ".orange_right",
+  {
+    y: -250,
+    ease: "back.in(1)",
+  },
+  "<"
+);
+
+master.to(
+  ".right3",
+  {
+    y: -250,
+    ease: "back.in(1)",
+  },
+  "<"
+);
+
+master.to(".intro", {
+  opacity: 1,
+});
+
+// End code
+
+master.from(
+  ".endText1",
+  {
+    x: 289,
+    ease: "back.out(1.7)",
   },
   "=-0.5"
+);
+
+master.from(
+  ".endText2",
+  {
+    x: -280,
+    ease: "back.out(1.7)",
+  },
+  "=-0.25"
+);
+
+master.from(
+  ".banana",
+  {
+    y: 60,
+    ease: "back.out(2)",
+  },
+  "=-0.25"
+);
+
+master.from(
+  ".strawberry",
+  {
+    y: 65,
+    ease: "back.out(2)",
+  },
+  "=-0.25"
+);
+
+master.from(
+  ".peach",
+  {
+    y: 100,
+    ease: "back.out(2)",
+  },
+  "=-0.25"
 );
 
 // Button code

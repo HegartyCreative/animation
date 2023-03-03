@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap");
 
 *[x-apple-data-detectors],  /* iOS */
     .x-gmail-data-detectors,    /* Gmail */
@@ -27,7 +27,8 @@ html {
 }
 
 body {
-  font-family: "Fjalla One", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
 }
 
 .background {
@@ -116,9 +117,9 @@ body {
 
 .logo {
   position: absolute;
-  left: 10px;
-  top: 10px;
-  width: 40%;
+  left: 5px;
+  top: 5px;
+  width: 33%;
   z-index: 30;
   opacity: 0;
 }
@@ -147,19 +148,17 @@ body {
 
 .apple_left {
   position: absolute;
-  left: 2px;
-  top: 81px;
-  rotate: -90deg;
-  width: 70%;
+  left: 0px;
+  top: 0px;
+  width: 100%;
   z-index: 5;
 }
 
 .pineapple_right {
   position: absolute;
-  left: 89px;
-  top: 81px;
-  rotate: -90deg;
-  width: 70%;
+  left: 0px;
+  top: 0px;
+  width: 100%;
   z-index: 5;
 }
 
@@ -181,24 +180,23 @@ body {
   position: absolute;
   top: 0;
   left: 150px;
+  z-index: 0;
   z-index: 5;
 }
 
 .pomegranate_left {
   position: absolute;
-  left: 2px;
-  top: 81px;
-  rotate: -90deg;
-  width: 70%;
+  left: 0px;
+  top: 0px;
+  width: 100%;
   z-index: 5;
 }
 
 .lime_right {
   position: absolute;
-  left: 89px;
-  top: 81px;
-  rotate: -90deg;
-  width: 70%;
+  left: 0px;
+  top: 0px;
+  width: 100%;
   z-index: 5;
 }
 
@@ -214,51 +212,74 @@ body {
 }
 
 .right3 {
-  background-color: #ef9292;
+  background-color: orange;
   width: 150px;
   height: 250px;
   position: absolute;
   top: 0;
   left: 150px;
+  z-index: 0;
   z-index: 5;
 }
 
 .passionFruit_left {
   position: absolute;
-  left: 2px;
-  top: 81px;
-  rotate: -90deg;
-  width: 70%;
+  left: 0px;
+  top: 0px;
+  width: 100%;
   z-index: 5;
 }
 
 .orange_right {
   position: absolute;
-  left: 89px;
-  top: 81px;
-  rotate: -90deg;
-  width: 70%;
+  left: 0px;
+  top: 0px;
+  width: 100%;
   z-index: 5;
 }
 
-.end {
-  width: 377px;
-  height: 250px;
+/* //////////// :end */
+
+.endText1 {
+  font-size: 2.6rem;
   position: absolute;
-  top: 0;
-  right: 0;
-  opacity: 0;
-  z-index: 10;
+  top: 40px;
+  left: 10px;
+  z-index: 200;
+  color: #71a882;
 }
 
-/* .website {
-  color: #095dd2;
-  z-index: 50;
+.endText2 {
+  font-size: 2rem;
   position: absolute;
-  top: 220px;
-  left: 20px;
-  font-size: 0.8rem;
-} */
+  top: 84px;
+  left: 10px;
+  z-index: 200;
+  color: #ff3f29;
+}
+
+.banana {
+  position: absolute;
+  left: 100px;
+  top: 190px;
+  width: 20%;
+  z-index: 20;
+}
+.peach {
+  position: absolute;
+  left: 162px;
+  top: 150px;
+  width: 15%;
+  z-index: 20;
+}
+
+.strawberry {
+  position: absolute;
+  left: 210px;
+  top: 184px;
+  width: 14%;
+  z-index: 20;
+}
 
 /* Button code */
 

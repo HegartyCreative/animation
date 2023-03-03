@@ -18,7 +18,7 @@ html {
   position: relative;
 }
 
-.start {
+.start_logo {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -58,7 +58,7 @@ html {
 
 .wallet_front {
   position: absolute;
-  top: 90px;
+  top: 115px;
   left: 65px;
   width: 57%;
   z-index: 15;
@@ -93,8 +93,8 @@ html {
 .photo {
   position: absolute;
   top: 97px;
-  left: 91px;
-  width: 12%;
+  left: 98px;
+  width: 13%;
   z-index: 5;
   opacity: 0;
 }
@@ -120,8 +120,8 @@ html {
 .suitcase {
   position: absolute;
   top: 95px;
-  left: 117px;
-  width: 18%;
+  left: 124px;
+  width: 19%;
   z-index: 5;
   opacity: 0;
 }
@@ -129,7 +129,7 @@ html {
 .taj {
   position: absolute;
   top: 45px;
-  left: 100px;
+  left: 110px;
   width: 35%;
   z-index: 5;
   opacity: 0;
@@ -138,7 +138,7 @@ html {
 .camera {
   position: absolute;
   top: 90px;
-  left: 165px;
+  left: 175px;
   width: 15%;
   z-index: 5;
   opacity: 0;
@@ -147,19 +147,9 @@ html {
 .liberty {
   position: absolute;
   top: 10px;
-  left: 160px;
+  left: 175px;
   width: 18%;
   z-index: 5;
-  opacity: 0;
-}
-
-.postcard {
-  position: absolute;
-  top: 95px;
-  left: 200px;
-  width: 14%;
-  z-index: 5;
-  rotate: -160deg;
   opacity: 0;
 }
 

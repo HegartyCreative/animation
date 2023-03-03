@@ -239,12 +239,14 @@ master.from(
 
 master.to(".bunny, .background, .quote4", {
   opacity: 0,
+  duration: 0.25,
 });
 
 master.to(
   ".end_background",
   {
     opacity: 1,
+    duration: 0.25,
   },
   "<"
 );
@@ -253,6 +255,7 @@ master.to(
   ".end",
   {
     opacity: 1,
+    duration: 0.25,
   },
   "=+0.25"
 );
@@ -261,6 +264,7 @@ master.to(
   "h2",
   {
     opacity: 1,
+    duration: 0.25,
   },
   "=-0.25"
 );
