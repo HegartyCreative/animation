@@ -1,6 +1,8 @@
 let select = (e) => document.querySelector(e);
 let selectAll = (e) => document.querySelectoAll(e);
 
+gsap.set(".wrapper", { autoAlpha: 1 });
+
 let pause = select("#pause");
 
 let master = gsap.timeline({
@@ -9,264 +11,85 @@ let master = gsap.timeline({
 
 master.pause();
 
-gsap.set(".container", { autoAlpha: 1 });
-
 master.to(
-  "h1",
-  {
-    x: -290,
-    ease: "back.in(1)",
-    duration: 0.45,
-  },
-  "=+0.5"
-);
-
-master.to(
-  ".background",
-  {
-    x: -1000,
-    duration: 9,
-    ease: "none",
-  },
-  "=-0.25"
-);
-
-master.to(
-  ".grass",
-  {
-    x: -1000,
-    duration: 9,
-    ease: "none",
-  },
-  "<"
-);
-
-master.to(
-  ".flowers",
-  {
-    x: -1100,
-    duration: 9,
-    ease: "none",
-  },
-  "<"
-);
-
-master.to(
-  ".bunny",
-  {
-    x: -1020,
-    duration: 9,
-    ease: "none",
-  },
-  "<"
-);
-
-master.from(
-  ".one",
-  {
-    y: 130,
-    duration: 0.8,
-    ease: "back.out(1.7)",
-  },
-  "<"
-);
-
-master.from(
-  ".two",
-  {
-    y: 160,
-    duration: 0.8,
-    ease: "back.out(1.7)",
-  },
-  ">"
-);
-
-master.to(
-  ".quote1",
-  {
-    opacity: 1,
-  },
-  ">-=0.5"
-);
-
-master.from(
-  ".three",
-  {
-    y: 175,
-    duration: 0.8,
-    ease: "back.out(1.7)",
-  },
-  ">"
-);
-
-master.from(
-  ".four",
-  {
-    y: 175,
-    duration: 0.8,
-    ease: "back.out(1.7)",
-  },
-  ">"
-);
-
-master.to(
-  ".quote1",
+  ".logo1",
   {
     opacity: 0,
   },
-  ">-=0.5"
+  "=+1"
 );
 
-master.from(
-  ".five",
+master.from(".clouds", {
+  x: -210,
+  duration: 0.75,
+});
+
+master.fromTo(
+  ".rain_main",
   {
-    y: 205,
-    duration: 0.8,
-    ease: "back.out(1.7)",
+    scaleY: 0,
+    transformOrigin: "top top",
+    y: 20,
   },
-  ">"
+  {
+    scaleY: 1,
+    transformOrigin: "top top",
+    y: 0,
+    duration: 0.4,
+  }
 );
 
 master.to(
-  ".quote2",
+  ".clouds, .rain_main, .rain_minor, .large_puddle, .small_puddle, .man, .umbrella",
   {
-    opacity: 1,
+    x: -72,
+    duration: 0.4,
   },
-  ">-=0.5"
+  "=+1.5"
 );
 
-master.from(
-  ".six",
-  {
-    y: 175,
-    duration: 0.8,
-    ease: "back.out(1.7)",
-  },
-  ">"
-);
-
-master.from(
-  ".seven",
-  {
-    y: 175,
-    duration: 0.8,
-    ease: "back.out(1.7)",
-  },
-  ">"
-);
-
-master.to(
-  ".quote2",
-  {
-    opacity: 0,
-  },
-  ">-=0.5"
-);
-
-master.from(
-  ".eight",
-  {
-    y: 225,
-    duration: 0.8,
-    ease: "back.out(1.7)",
-  },
-  ">"
-);
-
-master.to(
-  ".quote3",
-  {
-    opacity: 1,
-  },
-  ">-=0.5"
-);
-
-master.from(
-  ".nine",
-  {
-    y: 145,
-    duration: 0.8,
-    ease: "back.out(1.7)",
-  },
-  ">"
-);
-
-master.from(
-  ".ten",
-  {
-    y: 155,
-    duration: 0.8,
-    ease: "back.out(1.7)",
-  },
-  ">"
-);
-
-master.to(
-  ".quote3",
-  {
-    opacity: 0,
-  },
-  ">-=0.5"
-);
-
-master.from(
-  ".eleven",
-  {
-    y: 175,
-    duration: 0.8,
-    ease: "back.out(1.7)",
-  },
-  ">"
-);
-
-master.to(
-  ".quote4",
-  {
-    opacity: 1,
-  },
-  ">-=0.5"
-);
-
-master.from(
-  ".twelve",
-  {
-    y: 175,
-    duration: 0.8,
-    ease: "back.out(1.7)",
-  },
-  ">"
-);
-
-master.to(".bunny, .background, .quote4", {
-  opacity: 0,
-  duration: 0.25,
+master.from(".logo2", {
+  y: -110,
+  ease: "back.out(1.7)",
 });
 
 master.to(
-  ".end_background",
+  ".text, .cta",
   {
     opacity: 1,
-    duration: 0.25,
+  },
+  "=-0.25"
+);
+
+master.fromTo(
+  ".umbrella",
+  {
+    opacity: 0,
+    y: 10,
+  },
+  {
+    opacity: 1,
+    y: 0,
+  },
+  "=+1"
+);
+
+master.to(
+  ".rain_main",
+  {
+    opacity: 0,
+    duration: 0.1,
   },
   "<"
 );
 
 master.to(
-  ".end",
+  ".rain_minor",
   {
     opacity: 1,
-    duration: 0.25,
+    duration: 0.1,
   },
-  "=+0.25"
-);
-
-master.to(
-  "h2",
-  {
-    opacity: 1,
-    duration: 0.25,
-  },
-  "=-0.25"
+  "<"
 );
 
 // Button code

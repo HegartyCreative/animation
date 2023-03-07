@@ -172,7 +172,7 @@ html {
 
 .bon_image {
   position: absolute;
-  top: 23px;
+  top: 3px;
   left: 60px;
   width: 60%;
   z-index: 20;
@@ -181,29 +181,29 @@ html {
 
 .bon_background {
   position: absolute;
-  top: 62px;
+  top: 47px;
   left: 76px;
   width: 50%;
   z-index: 20;
-  z-index: 0;
+  opacity: 1;
 }
 
 .bon {
   position: absolute;
-  top: 68px;
+  top: 67px;
   left: 104px;
   width: 31%;
   z-index: 20;
-  z-index: 0;
+  opacity: 1;
 }
 
 .voyage {
   position: absolute;
-  top: 100px;
+  top: 78px;
   left: 81px;
   width: 47%;
   z-index: 20;
-  z-index: 0;
+  opacity: 1;
 }
 
 .logo {

@@ -32,6 +32,11 @@ body {
   font-weight: normal;
 }
 
+h1 {
+  color: white;
+  font-weight: normal;
+}
+
 .container {
   height: 250px;
   width: 300px;

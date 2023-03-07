@@ -358,13 +358,13 @@ master
   .fromTo(
     bon_image,
     {
-      opacity: 0,
+      opacity: 1,
       scale: 0,
       rotation: 0,
     },
     {
       opacity: 1,
-      scale: 1,
+      scale: 0.5,
       rotation: 360,
       duration: 0.75,
     },
@@ -374,12 +374,12 @@ master
   .fromTo(
     bon_background,
     {
-      opacity: 0,
+      opacity: 1,
       scale: 0,
     },
     {
       opacity: 1,
-      scale: 1,
+      scale: 0.5,
       ease: "back.out(1.7)",
       duration: 0.25,
     },
@@ -389,13 +389,13 @@ master
   .fromTo(
     bon,
     {
-      opacity: 0,
+      opacity: 1,
       scale: 0,
       rotation: 90,
     },
     {
       opacity: 1,
-      scale: 1,
+      scale: 0.5,
       ease: "back.out(1.7)",
       rotation: 0,
       duration: 0.25,
@@ -406,14 +406,14 @@ master
   .fromTo(
     voyage,
     {
-      opacity: 0,
+      opacity: 1,
       scale: 0,
       ease: "back.out(1.7)",
       rotation: -90,
     },
     {
       opacity: 1,
-      scale: 1,
+      scale: 0.5,
       rotation: 0,
       ease: "back.out(1.7)",
       duration: 0.25,
