@@ -1,18 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
-
-*[x-apple-data-detectors],  /* iOS */
-    .x-gmail-data-detectors,    /* Gmail */
-    .x-gmail-data-detectors *,
-    .aBn {
-  border-bottom: 0 !important;
-  cursor: default !important;
-  color: inherit !important;
-  text-decoration: none !important;
-  font-size: inherit !important;
-  font-family: inherit !important;
-  font-weight: inherit !important;
-  line-height: inherit !important;
-}
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
 
 html {
   box-sizing: border-box;
@@ -26,221 +13,176 @@ html {
   padding: 0;
 }
 
-body {
-  font-family: "Lobster", cursive;
-  font-weight: normal;
-}
-
-.container {
-  height: 250px;
-  width: 300px;
-  position: relative;
-  overflow: hidden;
-  visibility: hidden;
-}
-
 .background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 250px;
-  width: 1330px;
-  z-index: 0;
-}
-
-.end_background {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   height: 250px;
   width: 300px;
-  z-index: 0;
-  opacity: 0;
-}
-
-h1 {
-  position: absolute;
-  top: 61px;
-  left: 23px;
-  font-size: 2rem;
-  line-height: 1.9rem;
-  letter-spacing: 0.1rem;
-  z-index: 100;
-  color: red;
-  font-weight: normal;
-}
-
-.grass {
-  position: absolute;
-  top: 0px;
-  left: -20px;
-  height: 250px;
-  width: 1490px;
-  z-index: 15;
-}
-
-.flowers {
-  position: absolute;
-  top: 0px;
-  left: -20px;
-  height: 250px;
-  width: 1490px;
-  z-index: 10;
+  background-color: #93c4ec;
+  overflow: hidden;
 }
 
 .one {
-  position: absolute;
-  bottom: 0px;
-  left: 130px;
-  width: 25%;
-  z-index: 5;
+  position: relative;
+  height: 250px;
+  width: 300px;
+  background-color: #93c4ec;
 }
 
-.two {
+.left {
   position: absolute;
-  bottom: 10px;
-  left: 231px;
-  width: 27%;
-  z-index: 5;
+  height: 250px;
+  width: 300px;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  z-index: 100;
 }
 
-.quote1 {
+.right {
   position: absolute;
-  top: 10px;
-  left: 40px;
-  width: 27%;
-  z-index: 10;
+  height: 250px;
+  width: 300px;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  z-index: 100;
+}
+
+.master {
+  position: absolute;
+  height: 250px;
+  width: 300px;
+  left: 0;
+  top: 0;
+  z-index: 200;
+}
+
+/* .start {
+  position: absolute;
+  background-color: #6cb4ee;
+  height: 250px;
+  width: 300px;
+  left: 0;
+  top: 0;
+} */
+
+.start_logo {
+  position: absolute;
+  width: 70%;
+  top: 47px;
+  left: 43px;
   opacity: 0;
 }
 
-.three {
+.circle {
+  width: 152px;
+  height: 152px;
+  background-color: white;
+  border-radius: 50%;
+  left: 23.5%;
+  top: 22%;
+  z-index: 20;
   position: absolute;
-  bottom: 10px;
-  left: 331px;
-  width: 27%;
-  z-index: 5;
-}
-
-.four {
-  position: absolute;
-  bottom: 15px;
-  left: 415px;
-  width: 32%;
-  z-index: 5;
-}
-
-.five {
-  position: absolute;
-  bottom: 15px;
-  left: 515px;
-  width: 32%;
-  z-index: 5;
-}
-
-.quote2 {
-  position: absolute;
-  top: 15px;
-  left: 80px;
-  width: 27%;
-  z-index: 10;
   opacity: 0;
 }
 
-.six {
+.logo {
   position: absolute;
-  bottom: 15px;
-  left: 625px;
-  width: 27%;
-  z-index: 5;
+  left: 82px;
+  top: 80px;
+  width: 42%;
+  z-index: 20;
 }
 
-.seven {
+.umbrella {
   position: absolute;
-  bottom: 15px;
-  left: 720px;
-  width: 31%;
-  z-index: 5;
+  left: 65px;
+  top: 7px;
+  width: 42%;
+  z-index: 0;
 }
 
-.eight {
+.shell {
   position: absolute;
-  bottom: 10px;
-  left: 825px;
+  left: 50px;
+  top: 43px;
+  width: 18%;
+  z-index: 0;
+}
+
+.cocktail1 {
+  position: absolute;
+  left: 13px;
+  top: 79px;
   width: 26%;
-  z-index: 5;
+  z-index: 0;
 }
 
-.quote3 {
+.fries {
   position: absolute;
-  top: 8px;
-  left: 120px;
-  width: 27%;
-  z-index: 10;
-  opacity: 0;
-}
-
-.nine {
-  position: absolute;
-  bottom: 10px;
-  left: 925px;
-  width: 26%;
-  z-index: 5;
-}
-
-.ten {
-  position: absolute;
-  bottom: 10px;
-  left: 1025px;
-  width: 30%;
-  z-index: 5;
-}
-
-.eleven {
-  position: absolute;
-  bottom: 10px;
-  left: 1125px;
-  width: 30%;
-  z-index: 5;
-}
-
-.quote4 {
-  position: absolute;
-  top: 20px;
-  left: 160px;
-  width: 27%;
-  z-index: 10;
-  opacity: 0;
-}
-
-.twelve {
-  position: absolute;
-  bottom: 10px;
-  left: 1225px;
-  width: 24%;
-  z-index: 5;
-}
-
-.end {
-  position: absolute;
-  top: 23px;
-  left: 120px;
+  left: 30px;
+  top: 118px;
   width: 23%;
   z-index: 10;
-  opacity: 0;
 }
 
-h2 {
+.ball {
   position: absolute;
-  top: 70px;
-  left: 29px;
-  font-size: 2.5rem;
-  letter-spacing: 0.1rem;
-  z-index: 100;
-  color: #ff8080;
-  opacity: 0;
-  font-weight: normal;
+  left: 65px;
+  top: 153px;
+  width: 19%;
+  z-index: 10;
 }
-/* Button code */
+
+.sandals {
+  position: absolute;
+  left: 95px;
+  top: 178px;
+  width: 22%;
+  z-index: 10;
+}
+
+.chair {
+  position: absolute;
+  left: 148px;
+  top: 144px;
+  width: 38%;
+  z-index: 30;
+}
+
+.ring {
+  position: absolute;
+  left: 200px;
+  top: 113px;
+  width: 27%;
+  z-index: 10;
+}
+
+.burger {
+  position: absolute;
+  left: 210px;
+  top: 78px;
+  width: 20%;
+  z-index: 5;
+}
+
+.lotion {
+  position: absolute;
+  left: 170px;
+  top: 25px;
+  width: 27%;
+  z-index: 5;
+}
+
+.icecream {
+  position: absolute;
+  left: 175px;
+  top: 11px;
+  width: 13%;
+  z-index: 5;
+}
+
+/* Code below for the button */
 
 .btn {
   height: 30px;

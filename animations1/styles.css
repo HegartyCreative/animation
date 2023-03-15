@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap");
+
 html {
   box-sizing: border-box;
 }
@@ -9,242 +11,229 @@ html {
   margin: 0;
   padding: 0;
 }
+
+p {
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  color: white;
+  letter-spacing: 0.05rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
 .container {
-  position: relative;
   height: 250px;
   width: 300px;
+  position: relative;
   overflow: hidden;
   visibility: hidden;
 }
 
-.background_full {
-  position: absolute;
+.background {
+  position: relative;
   height: 250px;
   width: 300px;
-  z-index: 0;
-  top: 0;
-  left: 0;
+  background: #f12711; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f5af19,
+    #f12711
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f5af19,
+    #f12711
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.background_left {
-  position: absolute;
-  height: 250px;
-  width: 300px;
-  z-index: 90;
-  top: 0;
-  left: 0;
-}
+/* Introduction */
 
-.background_right {
+.believe,
+.innovation,
+.starts,
+.when,
+.listen,
+.working,
+.with,
+.hiv,
+.decades,
+.used,
+.science,
+.technology,
+.talents,
+.think,
+.every,
+.reduce,
+.people {
   position: absolute;
-  height: 250px;
-  width: 325px;
-  top: 0;
-  left: 260px;
-  z-index: 70;
-}
-
-.image_right {
-  position: absolute;
-  height: 250px;
-  width: 300px;
-  top: 0;
-  z-index: 50;
 }
 
 .logo {
+  height: 250px;
+  width: 300px;
   position: absolute;
-  top: 13px;
-  left: 20px;
-  width: 10%;
-  z-index: 100;
+  z-index: 50;
+  top: 0;
+  left: 0;
 }
 
-h1 {
-  text-align: right;
-  position: absolute;
-  font-size: 1.1rem;
-  top: 10px;
-  right: 13px;
-  color: black;
+.believe {
+  left: 69px;
+  top: 102px;
+}
+
+.innovation {
+  left: 46px;
+  top: 102px;
   text-transform: uppercase;
-  z-index: 100;
-  font-family: "Orbitron", sans-serif;
-  font-weight: normal;
-  letter-spacing: 0.05rem;
+  font-weight: 600;
 }
 
-.main_heading {
-  text-align: right;
-  position: absolute;
-  font-size: 1.9rem;
-  line-height: 2rem;
-  top: 5px;
-  right: 10px;
-  color: white;
+.starts {
+  left: 96px;
+  top: 102px;
+  opacity: 0;
   text-transform: uppercase;
-  z-index: 60;
-  padding: 7px;
-  font-family: "Orbitron", sans-serif;
-  font-weight: normal;
-  letter-spacing: 0.1rem;
 }
 
-h2 {
-  text-align: right;
+.when {
+  left: 71px;
+  top: 102px;
+  opacity: 0;
+  text-transform: uppercase;
+}
+
+.listen {
+  left: 98px;
+  top: 102px;
+  opacity: 0;
+  text-transform: uppercase;
+}
+
+/* Working */
+
+.working {
+  left: 72px;
+  top: 102px;
+  opacity: 0;
+}
+
+.with {
+  left: 157px;
+  top: 102px;
+  opacity: 0;
+}
+
+.hiv {
+  left: 37px;
+  top: 102px;
+  opacity: 0;
+}
+
+.hiv span,
+.science,
+.technology,
+.talents span {
+  font-weight: 600;
+}
+
+/* Community */
+
+.community_image {
+  height: 250px;
+  width: 300px;
   position: absolute;
-  font-size: 0.6rem;
-  top: 55px;
-  right: 14px;
-  color: #3b8dc1;
-  letter-spacing: 0.05rem;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  scale: 1.2;
+  opacity: 0;
+}
+
+.square {
+  height: 250px;
+  width: 300px;
+  position: absolute;
   z-index: 100;
-  padding-top: 3px;
-  font-family: "Orbitron", sans-serif;
-  font-weight: normal;
-  letter-spacing: 0.05rem;
+  top: 0;
+  left: 0;
+  scale: 1.2;
+  opacity: 0;
 }
 
-/* Bills */
+.decades {
+  left: 77px;
+  top: 77px;
+  opacity: 0;
+  line-height: 2.4rem;
+}
 
-.ground1 {
+.used {
+  left: 88px;
+  top: 77px;
+  opacity: 0;
+  line-height: 2.4rem;
+}
+
+.disease {
+  height: 250px;
+  width: 300px;
   position: absolute;
+  z-index: 00;
+  top: 0;
+  left: 0;
+  scale: 1.2;
+  opacity: 0;
+}
+
+.science {
+  left: 90px;
+  top: 50px;
+}
+
+.technology {
+  left: 67px;
   top: 90px;
-  left: 148px;
-  font-size: 0.5rem;
-  letter-spacing: 0.05rem;
-  color: #3b8dc1;
-  z-index: 90;
-  opacity: 0;
-  font-family: "Orbitron", sans-serif;
-  font-weight: normal;
 }
 
-.mask1 {
-  width: 85px;
-  height: 20px;
-  background-color: rgb(212, 224, 245);
-  position: absolute;
-  top: 80px;
-  left: 147px;
-  z-index: 80;
+.talents {
+  left: 71px;
+  top: 130px;
+}
+
+.think {
+  left: 42px;
+  top: 60px;
+  opacity: 1;
+  line-height: 3rem;
   opacity: 0;
 }
 
-.team1 {
-  position: absolute;
-  top: 101px;
-  left: 148px;
-  font-size: 0.65rem;
-  letter-spacing: 0.05rem;
-  color: black;
-  z-index: 70;
+.think span {
+  font-weight: 600;
+  font-size: 4rem;
+}
+
+.every {
+  left: 76px;
+  top: 70px;
+  opacity: 1;
+  font-size: 2rem;
   opacity: 0;
-  font-family: "Orbitron", sans-serif;
-  font-weight: normal;
+  text-align: center;
+  line-height: 2.4rem;
 }
 
-.bills {
-  position: absolute;
-  top: 90px;
-  left: 80px;
-  width: 17%;
-  z-index: 70;
+.reduce {
+  left: 31px;
+  top: 30px;
+  line-height: 2.4rem;
 }
 
-/* Titans */
-
-.ground_1 {
-  position: absolute;
-  top: 148px;
-  left: 155px;
-  font-size: 0.5rem;
-  letter-spacing: 0.05rem;
-  color: #3b8dc1;
-  z-index: 90;
-  opacity: 0;
-  font-family: "Orbitron", sans-serif;
-  font-weight: normal;
-}
-
-.mask2 {
-  width: 126px;
-  height: 20px;
-  background-color: rgb(212, 224, 245);
-  position: absolute;
-  top: 139px;
-  left: 155px;
-  z-index: 80;
-  opacity: 0;
-}
-
-.team2 {
-  position: absolute;
-  top: 159px;
-  left: 155px;
-  font-size: 0.65rem;
-  letter-spacing: 0.05rem;
-  color: black;
-  z-index: 70;
-  opacity: 0;
-  font-family: "Orbitron", sans-serif;
-  font-weight: normal;
-}
-
-.titans {
-  position: absolute;
-  top: 141px;
-  left: 87px;
-  width: 18%;
-  z-index: 70;
-}
-
-/* Jags */
-
-.ground2 {
-  position: absolute;
-  top: 204px;
-  left: 167px;
-  font-size: 0.5rem;
-  letter-spacing: 0.05rem;
-  color: #3b8dc1;
-  z-index: 40;
-  opacity: 0;
-  z-index: 90;
-  font-family: "Orbitron", sans-serif;
-  font-weight: normal;
-}
-
-.mask3 {
-  width: 125px;
-  height: 20px;
-  background-color: rgb(212, 224, 245);
-  position: absolute;
-  top: 195px;
-  left: 165px;
-  z-index: 80;
-  opacity: 0;
-}
-
-.team3 {
-  position: absolute;
-  top: 214px;
-  left: 167px;
-  font-size: 0.65rem;
-  letter-spacing: 0.05rem;
-  color: black;
-  z-index: 70;
-  opacity: 0;
-  font-family: "Orbitron", sans-serif;
-  font-weight: normal;
-}
-
-.jags {
-  position: absolute;
-  top: 201px;
-  left: 107px;
-  width: 15%;
-  z-index: 70;
+.people {
+  left: 62px;
+  top: 120px;
+  line-height: 2.4rem;
 }
 
 /* Code below for the button */

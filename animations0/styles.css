@@ -1,18 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700&display=swap");
-
-*[x-apple-data-detectors],  /* iOS */
-    .x-gmail-data-detectors,    /* Gmail */
-    .x-gmail-data-detectors *,
-    .aBn {
-  border-bottom: 0 !important;
-  cursor: default !important;
-  color: inherit !important;
-  text-decoration: none !important;
-  font-size: inherit !important;
-  font-family: inherit !important;
-  font-weight: inherit !important;
-  line-height: inherit !important;
-}
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 html {
   box-sizing: border-box;
@@ -22,70 +9,12 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
-  color: white;
-}
-
-.background {
-  height: 250px;
-  width: 300px;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.start {
-  height: 250px;
-  width: 300px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 100;
-}
-
-.bars {
-  background: #f12711; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to bottom,
-    #f5af19,
-    #f12711
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to bottom,
-    #f5af19,
-    #f12711
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  height: 250px;
-  width: 60px;
-  top: 0;
-  position: absolute;
-}
-
-.web {
-  font-size: 2rem;
-  z-index: 100;
-}
-
-.web1 {
-  position: absolute;
-  top: 90px;
-  left: 39px;
-  color: white;
-}
-
-.web2 {
-  position: absolute;
-  top: 120px;
-  left: 110px;
-  color: white;
+  font-weight: normal;
 }
 
 .video {
@@ -94,73 +23,277 @@ body {
   top: 0;
   left: 0;
   position: absolute;
+  z-index: 0;
 }
 
-p {
-  letter-spacing: 0.2rem;
+h1 {
+  font-family: "Abril Fatface", cursive;
+  font-weight: normal;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-top: 80px;
+  letter-spacing: 0.05rem;
+  color: black;
+  z-index: 5;
 }
 
-.bar1 {
-  left: 0;
+h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  font-size: 1.2rem;
+  text-align: center;
+  color: black;
+  z-index: 5;
 }
 
-.bar2 {
-  left: 60px;
+.container {
+  height: 250px;
+  width: 300px;
+  position: relative;
+  overflow: hidden;
+  visibility: hidden;
 }
 
-.bar3 {
-  left: 120px;
-}
-
-.bar4 {
-  left: 180px;
-}
-
-.bar5 {
-  left: 240px;
-}
-
-.contact {
+.wrapper {
+  height: 250px;
+  width: 300px;
   position: absolute;
-  letter-spacing: 0.1rem;
-  z-index: 10;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  background-color: #fbab7e;
+  background-image: linear-gradient(180deg, #fbab7e 0%, #f7ce68 100%);
+  z-index: 5;
 }
 
-.name {
-  top: 70px;
-  left: 20px;
-  font-size: 1.4rem;
-  font-weight: 700;
+.introText {
+  font-family: "Abril Fatface", cursive;
+  font-weight: normal;
+  font-size: 2.8rem;
+  text-align: center;
+  margin-top: 80px;
+  letter-spacing: 0.05rem;
+  color: white;
+  z-index: 5;
 }
 
-.telephone {
-  top: 105px;
-  left: 20px;
-  font-size: 0.9rem;
+.transition1 {
+  background-color: #fbab7e;
+  background-image: linear-gradient(270deg, #fbab7e 0%, #f7ce68 100%);
+  height: 320px;
+  width: 320px;
+  top: 0px;
+  left: 300px;
+  position: absolute;
+  z-index: 50;
+}
+
+.firstLine {
+  font-family: "Abril Fatface", cursive;
+  font-size: 1.3rem;
+  position: absolute;
+  top: 192px;
+  left: 42px;
+  z-index: 150;
+  color: black;
+  font-weight: normal;
+}
+
+.background {
+  height: 250px;
+  width: 300px;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  z-index: 130;
   opacity: 0;
-  color: #ffffff !important;
-  font-weight: 500;
 }
 
-span {
-  color: #ffffff !important;
-  text-decoration: none;
-}
-
-.portfolio {
-  top: 127px;
-  left: 20px;
-  font-size: 0.9rem;
+.mac {
+  height: 250px;
+  width: 300px;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  z-index: 130;
   opacity: 0;
-  font-weight: 500;
 }
 
-.anim {
-  top: 150px;
-  left: 20px;
-  font-size: 0.9rem;
+.screen {
+  height: 250px;
+  width: 300px;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  z-index: 100;
   opacity: 0;
-  font-weight: 500;
+}
+
+.cog1 {
+  height: 250px;
+  width: 300px;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  z-index: 200;
+  opacity: 0;
+}
+
+.cog2 {
+  height: 250px;
+  width: 300px;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  z-index: 200;
+  opacity: 0;
+}
+
+.cog3 {
+  height: 250px;
+  width: 300px;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  z-index: 200;
+  opacity: 0;
+}
+
+.laptop {
+  height: 250px;
+  width: 300px;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  z-index: 200;
+  opacity: 0;
+}
+
+.folder {
+  height: 250px;
+  width: 300px;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  z-index: 200;
+  opacity: 0;
+}
+
+.bar {
+  height: 250px;
+  width: 300px;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  z-index: 110;
+  opacity: 0;
+}
+
+.stats {
+  height: 250px;
+  width: 300px;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  z-index: 110;
+  opacity: 1;
+}
+
+#clock {
+  height: 250px;
+  width: 300px;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  z-index: 130;
+  opacity: 0;
+}
+
+.secondLine {
+  font-family: "Abril Fatface", cursive;
+  font-size: 1.3rem;
+  position: absolute;
+  top: 192px;
+  left: 66px;
+  z-index: 150;
+  color: black;
+  font-weight: normal;
+}
+
+.client {
+  height: 250px;
+  width: 300px;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  z-index: 200;
+  opacity: 0;
+}
+
+.thirdLine {
+  font-family: "Abril Fatface", cursive;
+  font-size: 1.3rem;
+  position: absolute;
+  top: 192px;
+  left: 56px;
+  z-index: 150;
+  color: black;
+  font-weight: normal;
+}
+
+.fourthLine {
+  font-family: "Abril Fatface", cursive;
+  font-size: 1.5rem;
+  position: absolute;
+  text-align: center;
+  top: 80px;
+  left: 37px;
+  z-index: 150;
+  line-height: 1.7rem;
+  color: black;
+  font-weight: normal;
+}
+
+.fifthLine {
+  font-family: "Abril Fatface", cursive;
+  font-size: 1.5rem;
+  position: absolute;
+  text-align: center;
+  top: 60px;
+  left: 75px;
+  z-index: 150;
+  line-height: 1.7rem;
+  color: black;
+  opacity: 0;
+  font-weight: normal;
+}
+
+.sixthLine {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  position: absolute;
+  text-align: center;
+  top: 88px;
+  left: 87px;
+  z-index: 150;
+  line-height: 1.7rem;
+  color: black;
+  opacity: 0;
+  font-weight: normal;
+}
+
+.seventhLine {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+  position: absolute;
+  text-align: center;
+  top: 130px;
+  left: 73px;
+  z-index: 150;
+  line-height: 1.1rem;
+  color: black;
+  opacity: 0;
+  font-weight: normal;
 }
 
 /* Button code */

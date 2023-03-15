@@ -3,278 +3,47 @@ let selectAll = (e) => document.querySelectoAll(e);
 
 let pause = select("#pause");
 
-let master = gsap.timeline({
+let nfl = gsap.timeline({
   onComplete: () => (pause.innerHTML = "Play"),
 });
-
-master.pause();
+nfl.pause();
 
 gsap.set(".container", { autoAlpha: 1 });
 
-master.to(
-  "h1",
-  {
-    x: -290,
-    ease: "back.in(1)",
-    duration: 0.45,
-  },
-  "=+0.5"
-);
-
-master.to(
-  ".background",
-  {
-    x: -1000,
-    duration: 9,
-    ease: "none",
-  },
-  "=-0.25"
-);
-
-master.to(
-  ".grass",
-  {
-    x: -1000,
-    duration: 9,
-    ease: "none",
-  },
-  "<"
-);
-
-master.to(
-  ".flowers",
-  {
-    x: -1100,
-    duration: 9,
-    ease: "none",
-  },
-  "<"
-);
-
-master.to(
-  ".bunny",
-  {
-    x: -1020,
-    duration: 9,
-    ease: "none",
-  },
-  "<"
-);
-
-master.from(
-  ".one",
-  {
-    y: 130,
-    duration: 0.8,
-    ease: "back.out(1.7)",
-  },
-  "<"
-);
-
-master.from(
-  ".two",
-  {
-    y: 160,
-    duration: 0.8,
-    ease: "back.out(1.7)",
-  },
-  ">"
-);
-
-master.to(
-  ".quote1",
-  {
-    opacity: 1,
-  },
-  ">-=0.5"
-);
-
-master.from(
-  ".three",
-  {
-    y: 175,
-    duration: 0.8,
-    ease: "back.out(1.7)",
-  },
-  ">"
-);
-
-master.from(
-  ".four",
-  {
-    y: 175,
-    duration: 0.8,
-    ease: "back.out(1.7)",
-  },
-  ">"
-);
-
-master.to(
-  ".quote1",
-  {
-    opacity: 0,
-  },
-  ">-=0.5"
-);
-
-master.from(
-  ".five",
-  {
-    y: 205,
-    duration: 0.8,
-    ease: "back.out(1.7)",
-  },
-  ">"
-);
-
-master.to(
-  ".quote2",
-  {
-    opacity: 1,
-  },
-  ">-=0.5"
-);
-
-master.from(
-  ".six",
-  {
-    y: 175,
-    duration: 0.8,
-    ease: "back.out(1.7)",
-  },
-  ">"
-);
-
-master.from(
-  ".seven",
-  {
-    y: 175,
-    duration: 0.8,
-    ease: "back.out(1.7)",
-  },
-  ">"
-);
-
-master.to(
-  ".quote2",
-  {
-    opacity: 0,
-  },
-  ">-=0.5"
-);
-
-master.from(
-  ".eight",
-  {
-    y: 225,
-    duration: 0.8,
-    ease: "back.out(1.7)",
-  },
-  ">"
-);
-
-master.to(
-  ".quote3",
-  {
-    opacity: 1,
-  },
-  ">-=0.5"
-);
-
-master.from(
-  ".nine",
-  {
-    y: 145,
-    duration: 0.8,
-    ease: "back.out(1.7)",
-  },
-  ">"
-);
-
-master.from(
-  ".ten",
-  {
-    y: 155,
-    duration: 0.8,
-    ease: "back.out(1.7)",
-  },
-  ">"
-);
-
-master.to(
-  ".quote3",
-  {
-    opacity: 0,
-  },
-  ">-=0.5"
-);
-
-master.from(
-  ".eleven",
-  {
-    y: 175,
-    duration: 0.8,
-    ease: "back.out(1.7)",
-  },
-  ">"
-);
-
-master.to(
-  ".quote4",
-  {
-    opacity: 1,
-  },
-  ">-=0.5"
-);
-
-master.from(
-  ".twelve",
-  {
-    y: 175,
-    duration: 0.8,
-    ease: "back.out(1.7)",
-  },
-  ">"
-);
-
-master.to(".bunny, .background, .quote4", {
-  opacity: 0,
-  duration: 0.25,
-});
-
-master.to(
-  ".end_background",
-  {
-    opacity: 1,
-    duration: 0.25,
-  },
-  "<"
-);
-
-master.to(
-  ".end",
-  {
-    opacity: 1,
-    duration: 0.25,
-  },
+nfl.to(".background_full", { opacity: 1 });
+nfl.to(
+  ".background_right",
+  { x: -260, ease: "back.out(1)", duration: 0.6 },
   "=+0.25"
 );
+nfl.to(".mask1, .mask2, .mask3", { opacity: 1 }, "=+0.15");
+nfl.from("h1", { x: 195, duration: 0.5, ease: "back.out(1.7)" }, "=-0.25");
+nfl.from("h2", { x: 130, duration: 0.5, ease: "back.out(1.7)" }, "=-0.25");
+nfl.to(".team1, .team2, .team3", { opacity: 1 });
 
-master.to(
-  "h2",
-  {
-    opacity: 1,
-    duration: 0.25,
-  },
-  "=-0.25"
+nfl.fromTo(
+  ".logo",
+  { scale: 0, opacity: 0 },
+  { scale: 1.4, ease: "bounce", opacity: 1, duration: 1 },
+  "=-0.75"
 );
 
-// Button code
+nfl.from(".bills", { x: -90, ease: "power2.out", duration: 0.45 }), "=-1";
+nfl.to(".ground1", { opacity: 1, duration: 0.25 });
+nfl.from(".team1", { y: -18, ease: "back.out(2)", duration: 0.5 }, "=+0.05");
+
+nfl.from(".titans", { x: -90, ease: "power2.out", duration: 0.45 });
+nfl.to(".ground_1", { opacity: 1, duration: 0.25 });
+nfl.from(".team2", { y: -18, ease: "back.out(2)", duration: 0.5 }, "=+0.05");
+
+nfl.from(".jags", { x: -90, ease: "power2.out", duration: 0.45 });
+nfl.to(".ground2", { opacity: 1, duration: 0.25 });
+nfl.from(".team3", { y: -18, ease: "back.out(2)", duration: 0.5 }, "=+0.05");
 
 pause.addEventListener("click", () => {
-  master.paused(!master.paused());
-  if (master.progress() == 1) {
-    master.restart();
+  nfl.paused(!nfl.paused());
+  if (nfl.progress() == 1) {
+    nfl.restart();
   }
-  pause.innerHTML = master.paused() ? "Play" : "Pause";
+  pause.innerHTML = nfl.paused() ? "Play" : "Pause";
 });

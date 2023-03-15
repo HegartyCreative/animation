@@ -3,205 +3,109 @@ let selectAll = (e) => document.querySelectoAll(e);
 
 let pause = select("#pause");
 
-let travel = gsap.timeline({
+let master = gsap.timeline({
   onComplete: () => (pause.innerHTML = "Play"),
 });
-travel.pause();
 
-travel.to(
-  ".right, .left",
-  {
-    opacity: 1,
-  },
-  "=+1"
-);
+master.pause();
 
-travel.to(".master", { opacity: 0 }, ">");
+gsap.set(".container", { autoAlpha: 1 });
 
-travel.to(".right", {
-  x: -235,
-  y: -200,
-  duration: 0.35,
-  ease: "back.in(1.25)",
+master.to(".top, .bottom", {
+  opacity: 1,
 });
 
-travel.to(
-  ".left",
+master.to(
+  ".model",
   {
-    x: 235,
-    y: 200,
-    duration: 0.35,
-    ease: "back.in(1.25)",
+    opacity: 1,
+    y: -30,
+    ease: "power.out4",
+    duration: 1,
+    repeat: -1,
+    yoyo: true,
   },
   "<"
 );
 
-travel.to(
-  ".circle",
+master.to(
+  ".logo",
   {
-    opacity: 1,
+    y: 5,
+    repeat: -1,
+    yoyo: true,
+    ease: "power.out4",
+    duration: 1,
   },
-  "=-0.15"
+  "<"
 );
 
-travel.fromTo(
-  ".visit",
-  { opacity: 0, scale: 0 },
+master.to(
+  ".left",
   {
-    opacity: 1,
-    scale: 1,
-    delay: 1,
-    transformOrigin: "center center",
-    ease: Power4.easeOut,
+    scaleY: 1.2,
+    transformOrigin: "bottom bottom",
+    duration: 0.25,
+    stagger: {
+      each: 0.25,
+      repeat: -1,
+      yoyo: true,
+    },
   },
-  "=-1.5"
+  "=-0.5"
 );
 
-travel.fromTo(
-  ".umbrella",
-  { opacity: 0, scale: 0 },
+master.to(
+  ".left1",
   {
-    opacity: 1,
-    scale: 1,
-    duration: 0.45,
+    scaleY: 1.3,
     transformOrigin: "bottom bottom",
-    ease: Bounce.easeOut,
+    duration: 0.25,
+    stagger: {
+      each: 0.15,
+      repeat: -1,
+      yoyo: true,
+    },
   },
-  "=-0.3"
-);
-travel.fromTo(
-  ".shell",
-  { opacity: 0, scale: 0 },
-  {
-    opacity: 1,
-    scale: 1,
-    duration: 0.45,
-    transformOrigin: "bottom bottom",
-    ease: Bounce.easeOut,
-  },
-  "=-0.3"
-);
-travel.fromTo(
-  ".cocktail1",
-  { opacity: 0, scale: 0 },
-  {
-    opacity: 1,
-    scale: 1,
-    duration: 0.45,
-    transformOrigin: "bottom bottom",
-    ease: Bounce.easeOut,
-  },
-  "=-0.3"
+  "<"
 );
 
-travel.fromTo(
-  ".fries",
-  { opacity: 0, scale: 0 },
+master.to(
+  ".right",
   {
-    opacity: 1,
-    scale: 1,
-    duration: 0.45,
+    scaleY: 1.2,
     transformOrigin: "bottom bottom",
-    ease: Bounce.easeOut,
+    duration: 0.25,
+    stagger: {
+      each: 0.35,
+      repeat: -1,
+      yoyo: true,
+    },
   },
-  "=-0.3"
+  "<"
 );
 
-travel.fromTo(
-  ".ball",
-  { opacity: 0, scale: 0 },
+master.to(
+  ".right1",
   {
-    opacity: 1,
-    scale: 1,
-    duration: 0.45,
+    scaleY: 1.3,
     transformOrigin: "bottom bottom",
-    ease: Bounce.easeOut,
+    duration: 0.25,
+    stagger: {
+      each: 0.25,
+      repeat: -1,
+      yoyo: true,
+    },
   },
-  "=-0.3"
+  "<"
 );
 
-travel.fromTo(
-  ".sandals",
-  { opacity: 0, scale: 0 },
-  {
-    opacity: 1,
-    scale: 1,
-    duration: 0.45,
-    transformOrigin: "bottom bottom",
-    ease: Bounce.easeOut,
-  },
-  "=-0.3"
-);
-
-travel.fromTo(
-  ".chair",
-  { opacity: 0, scale: 0 },
-  {
-    opacity: 1,
-    scale: 1,
-    duration: 0.45,
-    transformOrigin: "bottom bottom",
-    ease: Bounce.easeOut,
-  },
-  "=-0.3"
-);
-
-travel.fromTo(
-  ".ring",
-  { opacity: 0, scale: 0 },
-  {
-    opacity: 1,
-    scale: 1,
-    duration: 0.45,
-    transformOrigin: "bottom bottom",
-    ease: Bounce.easeOut,
-  },
-  "=-0.3"
-);
-
-travel.fromTo(
-  ".burger",
-  { opacity: 0, scale: 0 },
-  {
-    opacity: 1,
-    scale: 1,
-    duration: 0.45,
-    transformOrigin: "bottom bottom",
-    ease: Bounce.easeOut,
-  },
-  "=-0.3"
-);
-
-travel.fromTo(
-  ".lotion",
-  { opacity: 0, scale: 0 },
-  {
-    opacity: 1,
-    scale: 1,
-    duration: 0.45,
-    transformOrigin: "bottom bottom",
-    ease: Bounce.easeOut,
-  },
-  "=-0.3"
-);
-
-travel.fromTo(
-  ".icecream",
-  { opacity: 0, scale: 0 },
-  {
-    opacity: 1,
-    scale: 1,
-    duration: 0.45,
-    transformOrigin: "bottom bottom",
-    ease: Bounce.easeOut,
-  },
-  "=-0.3"
-);
+// Button code
 
 pause.addEventListener("click", () => {
-  travel.paused(!travel.paused());
-  if (travel.progress() == 1) {
-    travel.restart();
+  master.paused(!master.paused());
+  if (master.progress() == 1) {
+    master.restart();
   }
-  pause.innerHTML = travel.paused() ? "Play" : "Pause";
+  pause.innerHTML = master.paused() ? "Play" : "Pause";
 });

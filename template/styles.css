@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  position: relative;
+  height: 250px;
+  width: 300px;
+  background-color: #005148;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.ball1 {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+}
+
+.ball2 {
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  width: 10px;
+  height: 10px;
+  background-color: blue;
+}
+
+/* Code below for the button */
+
+.btn {
+  height: 30px;
+  width: 60px;
+  background-color: rgb(0, 0, 0);
+  position: fixed;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  left: 10px;
+  z-index: 100;
+  color: white;
+  box-shadow: none;
+  border: none;
+  font-size: 15px;
+  border: 1px solid black;
+}
+
+.btn:hover {
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+}
+
+#pause {
+  left: 10px;
+  top: 260px;
+}

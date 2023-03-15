@@ -3,111 +3,259 @@ let selectAll = (e) => document.querySelectoAll(e);
 
 let pause = select("#pause");
 
-let retail = gsap.timeline({
+let master = gsap.timeline({
   onComplete: () => (pause.innerHTML = "Play"),
 });
-retail.pause();
+master.pause();
 
-// Intro
+gsap.set(".container", { autoAlpha: 1 });
 
-retail.set(".startingShape, .saleText", {
+master.to(".logo", {
   opacity: 0,
 });
 
-retail.from(
-  ".introText",
+master.fromTo(
+  ".believe",
+  { opacity: 0, scale: 15, transformOrigin: "center center" },
   {
-    x: -140,
+    opacity: 1,
+    scale: 1,
+    ease: "none",
+    duration: 0.25,
+  }
+);
+
+master.fromTo(
+  ".simplified",
+  { opacity: 0 },
+  {
+    opacity: 1,
+    ease: "power4.out",
+    duration: 0.15,
+  },
+  "=+1"
+);
+
+master.to(
+  ".believe",
+  {
+    opacity: 0,
+    duration: 0.1,
+  },
+  "<"
+);
+
+master.from(
+  ".business",
+  { x: 190, ease: "back.out(1.2)", duration: 0.25 },
+  "+=0.5"
+);
+
+master.to(
+  ".simplified",
+  {
+    x: -74,
+    ease: "back.out(1.2)",
+    duration: 0.25,
+  },
+  "-=0.22"
+);
+
+master.to(
+  ".simplified, .business",
+  {
+    y: 150,
+    ease: "back.in(1)",
+    stagger: 0.1,
+    duration: 0.1,
+  },
+  "+=0.5"
+);
+
+master.from(
+  ".cybersecurity",
+  {
+    y: -200,
     ease: "back.out(1.7)",
+    duration: 0.25,
+  },
+  "+=0.25"
+);
+
+master.from(
+  ".available",
+  {
+    x: -250,
+    ease: "back.out(1.7)",
+    duration: 0.25,
+  },
+  "+=0.25"
+);
+
+master.to(
+  ".cybersecurity",
+  {
+    y: -24,
+    ease: "back.out(1.7)",
+    duration: 0.25,
+  },
+  "<"
+);
+
+master.from(
+  ".all",
+  {
+    x: 220,
+    ease: "back.out(1.7)",
+    duration: 0.25,
+  },
+  "<"
+);
+
+master.from(
+  ".one",
+  {
+    y: -250,
+  },
+  "+=1"
+);
+
+master.from(
+  ".two",
+  {
+    y: 250,
+  },
+  "-=0.35"
+);
+
+master.from(
+  ".three",
+  {
+    y: -250,
+  },
+  "-=0.35"
+);
+
+master.to(
+  ".cybersecurity, .available, .all",
+  {
+    opacity: 0,
   },
   ">"
 );
 
-retail.from(
-  ".cta",
+master.from(".protect", {
+  x: 120,
+  ease: "back.out(1.7)",
+});
+
+master.from(
+  ".your",
   {
-    x: -109,
+    x: 120,
     ease: "back.out(1.7)",
   },
   "-=0.25"
 );
 
-retail.from(
-  ".shape2",
+master.from(
+  ".business2",
   {
-    x: -25,
+    x: 120,
     ease: "back.out(1.7)",
   },
   "-=0.25"
 );
 
-retail.from(
-  ".shape1",
+master.from(
+  ".today",
   {
-    x: 95,
+    x: 120,
+    ease: "back.out(1.7)",
+  },
+  "-=0.25"
+);
+
+master.to(
+  ".one, .two, .three, .protect, .your, .business2, .today",
+  {
+    opacity: 0,
+    duration: 0.75,
+  },
+  "+=1"
+);
+
+master.to(".four", {
+  left: 0,
+  duration: 0.25,
+});
+
+master.from(".soBackground", {
+  x: -190,
+  ease: "back.out(1)",
+});
+
+master.from(
+  ".so",
+  {
+    x: -190,
+    ease: "back.out(1)",
+  },
+  "-=0.25"
+);
+
+master.from(".growBackground", {
+  x: 180,
+  ease: "back.out(1)",
+});
+
+master.from(
+  ".grow",
+  {
+    x: 170,
+    ease: "back.out(1)",
+  },
+  "-=0.25"
+);
+
+master.to(
+  ".so, .soBackground, .grow, .growBackground",
+  {
+    opacity: 0,
+  },
+  "+=1"
+);
+
+master.to(".four", {
+  opacity: 0,
+});
+
+master.to(
+  ".logo",
+  {
+    opacity: 1,
+  },
+  "-=0.25"
+);
+
+master.from(".company", {
+  y: 80,
+  ease: "back.out(1.7)",
+});
+
+master.to(
+  ".logo",
+  {
+    y: -20,
     ease: "back.out(1.7)",
   },
   "<"
 );
 
-// One
-retail.to(".one", { opacity: 1, duration: 0.2 }, "=+0.15");
-
-retail.to(".one_text_full", { opacity: 1 }, "=-0.25");
-retail.to(".line1", { opacity: 1, duration: 0.25 }, "=+2");
-retail.to(".one_text_full, .line1", {
-  y: 110,
-  ease: "back.in(1.7)",
-});
-retail.to(".line1", { backgroundColor: "white", duration: "0" }, "=-0.5");
-retail.to(".one_text_full", { color: "white" }, "<");
-retail.to(".one_text_discount", { opacity: 1, duration: 0.25 }, "=-0.25");
-retail.to(".one, .one_text_discount", { opacity: 0, duration: 0 }, "=+2");
-
-// Two
-retail.to(".two", { opacity: 1, duration: 0.2 }, "-=0.25");
-retail.to(".two_text_full", { opacity: 1 }, "=+0.25");
-retail.to(".line2", { opacity: 1, duration: 0.25 }, "=+2");
-retail.to(".two_text_full, .line2", {
-  y: 110,
-  ease: "back.in(1.7)",
-});
-retail.to(".line2", { backgroundColor: "white", duration: "0.25" }, "=-0.5");
-retail.to(".two_text_full", { color: "white" }, "<");
-retail.to(".two_text_discount", { opacity: 1, duration: 0.25 }, "=-0.25");
-retail.to(".two, .two_text_discount", { opacity: 0, duration: 0 }, "=+2");
-
-// Three
-retail.to(".three", { opacity: 1, duration: 0.2 }, "-=0.25");
-retail.to(".three_text_full", { opacity: 1 }, "=+0.25");
-retail.to(".line3", { opacity: 1, duration: 0.25 }, "=+2");
-retail.to(".three_text_full, .line3", {
-  y: 110,
-  ease: "back.in(1.7)",
-});
-retail.to(".line3", { backgroundColor: "white", duration: "0.25" }, "=-0.5");
-retail.to(".three_text_full", { color: "white" }, "<");
-retail.to(".three_text_discount", { opacity: 1, duration: 0.25 }, "=-0.25");
-retail.to(".three, .three_text_discount", { opacity: 0, duration: 0 }, "=+2");
-
-// Four
-retail.to(".four", { opacity: 1, duration: 0.2 }, "-=0.25");
-retail.to(".four_text_full", { opacity: 1 }, "=+0.25");
-retail.to(".line4", { opacity: 1, duration: 0.25 }, "=+2");
-retail.to(".four_text_full, .line4", {
-  y: 110,
-  ease: "back.in(1.7)",
-});
-retail.to(".line4", { backgroundColor: "white", duration: "0.25" }, "=-0.5");
-retail.to(".four_text_full", { color: "white" }, "<");
-retail.to(".four_text_discount", { opacity: 1, duration: 0.25 }, "=-0.25");
-
-// Button code
-
 pause.addEventListener("click", () => {
-  retail.paused(!retail.paused());
-  if (retail.progress() == 1) {
-    retail.restart();
+  master.paused(!master.paused());
+  if (master.progress() == 1) {
+    master.restart();
   }
-  pause.innerHTML = retail.paused() ? "Play" : "Pause";
+  pause.innerHTML = master.paused() ? "Play" : "Pause";
 });

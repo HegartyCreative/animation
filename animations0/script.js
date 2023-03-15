@@ -5,84 +5,321 @@ let movie = document.getElementById("theVideo");
 
 let pause = select("#pause");
 
-let animation = gsap.timeline({
+let master = gsap.timeline({
   onComplete: () => (pause.innerHTML = "Play"),
 });
-animation.pause();
 
-animation.to(".start", { opacity: 0, duration: 0 });
+master.pause();
 
-animation.fromTo(
-  ".web1",
+gsap.set(".container", { autoAlpha: 1 });
+
+master.to(
+  ".wrapper",
   {
-    y: -10,
-    opacity: 0,
+    y: 250,
+    ease: "back.in(1)",
+    duration: 0.75,
   },
-  {
-    y: 0,
-    opacity: 1,
-    duration: 1,
-    ease: "back.out(2)",
-  },
-  "=+1"
+  "=+0.5"
 );
 
-animation.fromTo(
-  ".web2",
+master.to(
+  ".introText",
   {
-    y: -10,
-    opacity: 0,
+    scale: 0.8,
+    ease: "back.out(3)",
+  },
+  "=-0.15"
+);
+
+master.fromTo(
+  ".transition1",
+  {
+    rotation: 0,
   },
   {
-    y: 0,
+    rotation: -90,
+    transformOrigin: "bottom left",
+  },
+  "=+2.5"
+);
+
+master.to(
+  ".introText",
+  {
+    opacity: 0,
+  },
+  "<"
+);
+
+master.from(".firstLine", {
+  x: -260,
+  ease: "back.out(1.7)",
+});
+
+master.to(
+  ".background, .mac, .screen",
+  {
     opacity: 1,
-    duration: 1,
-    ease: "back.out(2)",
+  },
+  ">"
+);
+
+master.to(
+  ".cogs",
+  {
+    opacity: 1,
+    stagger: 0.25,
+  },
+  "=+0.15"
+);
+
+master.to(
+  ".laptop",
+  {
+    opacity: 1,
+  },
+  "=-0.15"
+);
+
+master.to(
+  ".folder",
+  {
+    opacity: 1,
   },
   "=-0.25"
 );
 
-animation.to(".web", { opacity: 0, duration: 0.25 }, "=+0.5");
-
-animation.to(
-  ".bars",
+master.fromTo(
+  ".bar",
   {
-    y: 250,
-    duration: 0.5,
-    stagger: 0.2,
-    ease: "power4.out",
+    y: 110,
+    opacity: 0,
   },
-  "=+0.02"
-);
-
-animation.from(".name", { x: -185, ease: "back.out(0.5)", duration: 0.75 });
-animation.to(".telephone", { opacity: 1 }, "=+0.5");
-animation.to(".portfolio", { opacity: 1 }, "=+0.5");
-animation.to(".anim", { opacity: 1 }, "=+0.5");
-
-animation.to(
-  ".bars",
   {
     y: 0,
-    duration: 0.5,
-    stagger: 0.2,
-    ease: "power4.out",
+    opacity: 1,
+    ease: "back.out(1.5)",
+    stagger: 0.25,
+  },
+  "=-1.5"
+);
+
+master.to(
+  ".bar",
+  {
+    x: -250,
+  },
+  "=+0.75"
+);
+
+master.fromTo(
+  ".stats",
+  {
+    x: 250,
+  },
+  {
+    x: 0,
+    ease: "back.out(1.5)",
+    stagger: 0.25,
+  },
+  "=+0.25"
+);
+
+master.to(
+  ".stats",
+  {
+    x: -280,
+    ease: "back.out(1.5)",
+    stagger: 0.25,
+    duration: 1,
+  },
+  "=+0.75"
+);
+
+master.to(
+  ".background, .screen, .mac",
+  {
+    opacity: 0,
+    duration: 0.1,
+  },
+  "=-0.5"
+);
+
+master.to(
+  ".firstLine",
+  {
+    y: 100,
+    ease: "back.out(1.7)",
+  },
+  "<"
+);
+
+master.to(
+  ".firstLine",
+  {
+    y: 60,
+    ease: "back.out(1.7)",
+  },
+  "=+0.25"
+);
+
+master.to(
+  "#clock",
+  {
+    opacity: 1,
+  },
+  "-=1"
+);
+
+master.fromTo(
+  "#clock",
+  {
+    scale: 0.8,
+  },
+  {
+    scale: 0.6,
+    duration: 1,
+    ease: "back.inOut(1.7)",
+    y: -20,
+  },
+  "-=1"
+);
+
+master.to(
+  "#hour",
+  {
+    rotation: 360,
+    transformOrigin: "bottom bottom",
+    duration: 2,
+    ease: "none",
+    repeat: 2,
+  },
+  "-=1"
+);
+
+master.to(
+  "#minute",
+  {
+    rotation: 720,
+    transformOrigin: "top left",
+    duration: 2,
+    ease: "none",
+    repeat: 2,
+  },
+  "<"
+);
+
+master.to(
+  "#second",
+  {
+    rotation: 1080,
+    transformOrigin: "top right",
+    duration: 2,
+    ease: "none",
+    repeat: 2,
+  },
+  "<"
+);
+
+master.from(
+  ".secondLine",
+  {
+    x: -290,
+    ease: "back.out(1.7)",
+  },
+  "-=6"
+);
+
+master.to(
+  ".secondLine",
+  {
+    y: 60,
+    ease: "back.out(1.7)",
+  },
+  "-=3"
+);
+
+master.to(
+  "#clock",
+  {
+    opacity: 0,
+  },
+  "<"
+);
+
+master.to(
+  ".client",
+  {
+    opacity: 1,
+    y: -20,
+    stagger: 0.15,
+  },
+  "-=3"
+);
+
+master.from(
+  ".thirdLine",
+  {
+    x: -260,
+    ease: "back.out(1.7)",
+  },
+  "-=1.5"
+);
+
+master.to(
+  ".thirdLine",
+  {
+    y: 100,
+    ease: "back.out(1.7)",
+  },
+  "=+0.25"
+);
+
+master.to(
+  ".client",
+  {
+    opacity: 0,
+  },
+  "<"
+);
+
+master.from(
+  ".fourthLine",
+  {
+    x: -260,
+    ease: "back.out(1.7)",
+  },
+  "-=0.2"
+);
+
+master.to(
+  ".fourthLine",
+  {
+    opacity: 0,
   },
   "=+1.5"
 );
 
-animation.to(".name", { opacity: 1 });
-animation.to(".telephone", { opacity: 1 }, "<");
-animation.to(".portfolio", { opacity: 1 }, "<");
-animation.to(".anim", { opacity: 1 }, "<");
+master.to(".fifthLine", {
+  opacity: 1,
+});
+
+master.to(".sixthLine", {
+  opacity: 1,
+});
+
+master.to(".seventhLine", {
+  opacity: 1,
+});
 
 // Button code
 
 pause.addEventListener("click", () => {
   movie.play();
-  animation.paused(!animation.paused());
-  if (animation.progress() == 1) {
-    animation.restart();
+  master.paused(!master.paused());
+  if (master.progress() == 1) {
+    master.restart();
   }
-  pause.innerHTML = animation.paused() ? "Play" : "Pause";
+  pause.innerHTML = master.paused() ? "Play" : "Pause";
 });

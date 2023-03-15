@@ -1,11 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;600&display=swap");
 
 html {
   box-sizing: border-box;
-}
-
-body {
-  font-family: "Lato", sans-serif;
 }
 
 *,
@@ -17,281 +13,172 @@ body {
 }
 
 .container {
-  position: relative;
   height: 250px;
   width: 300px;
-  background-color: #1b1f2f;
+  position: relative;
   overflow: hidden;
-}
-
-h1 {
-  color: #ffb330;
-  font-size: 1.2rem;
-  position: absolute;
-  top: 15px;
-  left: 20px;
-  font-weight: 700;
-}
-
-h1 span {
-  color: white;
-  font-weight: 700;
-}
-
-h1.main {
-  font-size: 2.4rem;
-  position: absolute;
-  top: 32px;
-  left: 18px;
-  font-weight: 700;
+  visibility: hidden;
+  background: #0f1a2a;
 }
 
 p {
-  position: absolute;
+  font-family: "Montserrat Alternates", sans-serif;
   color: white;
-  font-size: 0.7rem;
-  left: 20px;
-  top: 90px;
-  font-weight: 400;
+  font-size: 1.1rem;
+  position: absolute;
+  width: 300px;
+  height: 250px;
 }
 
-p.cta {
+.logo {
   position: absolute;
-  color: #1b1f2f;
-  font-size: 0.6rem;
-  left: 30px;
-  top: 142px;
-  z-index: 10;
-  font-weight: 400;
-  background-color: white;
-  padding: 5px;
-  border-radius: 10px;
+  height: 250px;
+  width: 300px;
+  top: 0;
+  left: 0;
 }
 
-.saleText {
-  text-transform: uppercase;
-  color: #1b1f2f;
-  position: absolute;
-  top: 160px;
-  left: 115px;
-  font-size: 2rem;
-  text-align: center;
-  font-weight: 700;
-  z-index: 10;
-  line-height: 1.8rem;
+.believe,
+.simplified {
+  opacity: 0;
+  width: 250px;
+  height: 300px;
 }
 
-.startingShape {
-  position: absolute;
-  top: 115px;
+.believe {
+  top: 100px;
   left: 100px;
-  rotate: 45deg;
-  width: 150px;
-  height: 150px;
-  background-color: #ffb330;
-  border: 5px solid white;
+  height: 24px;
+  width: 130px;
 }
 
-.shape1 {
+.simplified {
+  top: 100px;
+  left: 105px;
+  opacity: 0;
+}
+
+.business {
+  top: 100px;
+  left: 128px;
   position: absolute;
-  left: 170px;
-  top: 35px;
-  width: 100%;
+  color: #ec8c34;
 }
 
-.shape2 {
-  position: absolute;
-  left: -162px;
-  top: 64px;
-  width: 70%;
+.cybersecurity {
+  top: 100px;
+  left: 90px;
 }
 
-/* ONE */
+.available {
+  top: 100px;
+  left: 62px;
+}
+
+.all {
+  top: 123px;
+  left: 79px;
+}
+
+.all span {
+  color: #ec8c34;
+}
 
 .one {
   position: absolute;
-  top: 40px;
-  left: 75px;
-  width: 95%;
-  z-index: 100;
-  opacity: 0;
+  top: 0;
+  left: 0;
+  height: 250px;
+  width: 100px;
 }
-
-.line1 {
-  position: absolute;
-  top: 207px;
-  left: 31px;
-  width: 90px;
-  height: 2px;
-  background-color: #ffb330;
-  rotate: -15deg;
-  opacity: 0;
-  z-index: 130;
-}
-
-.one_text_full {
-  position: absolute;
-  left: 36px;
-  top: 185px;
-  color: #ffb330;
-  z-index: 100;
-  font-size: 30px;
-  letter-spacing: 0.1rem;
-  font-weight: 700;
-  opacity: 0;
-}
-
-.one_text_discount {
-  position: absolute;
-  left: 36px;
-  top: 185px;
-  color: #ffb330;
-  z-index: 100;
-  font-size: 30px;
-  letter-spacing: 0.1rem;
-  font-weight: 700;
-  opacity: 0;
-}
-
-/* TWO */
 
 .two {
   position: absolute;
-  top: 40px;
-  left: 75px;
-  width: 95%;
-  z-index: 100;
-  opacity: 0;
+  top: 0;
+  left: 100px;
+  height: 250px;
+  width: 100px;
 }
-
-.line2 {
-  position: absolute;
-  top: 207px;
-  left: 31px;
-  width: 90px;
-  height: 2px;
-  background-color: #ffb330;
-  rotate: -15deg;
-  opacity: 0;
-  z-index: 130;
-}
-
-.two_text_full {
-  position: absolute;
-  left: 36px;
-  top: 185px;
-  color: #ffb330;
-  z-index: 100;
-  font-size: 30px;
-  letter-spacing: 0.1rem;
-  font-weight: 700;
-  opacity: 0;
-}
-
-.two_text_discount {
-  position: absolute;
-  left: 36px;
-  top: 185px;
-  color: #ffb330;
-  z-index: 100;
-  font-size: 30px;
-  letter-spacing: 0.1rem;
-  font-weight: 700;
-  opacity: 0;
-}
-
-/* THREE */
 
 .three {
   position: absolute;
-  top: 40px;
-  left: 75px;
-  width: 95%;
-  z-index: 100;
-  opacity: 0;
+  top: 0;
+  left: 200px;
+  height: 250px;
+  width: 100px;
 }
 
-.line3 {
-  position: absolute;
-  top: 207px;
-  left: 31px;
-  width: 90px;
-  height: 2px;
-  background-color: #ffb330;
-  rotate: -15deg;
-  opacity: 0;
-  z-index: 130;
+.protect {
+  top: 20px;
+  left: 195px;
 }
 
-.three_text_full {
-  position: absolute;
-  left: 36px;
-  top: 185px;
-  color: #ffb330;
-  z-index: 100;
-  font-size: 30px;
-  letter-spacing: 0.1rem;
-  font-weight: 700;
-  opacity: 0;
+.your {
+  top: 42px;
+  left: 195px;
 }
 
-.three_text_discount {
-  position: absolute;
-  left: 36px;
-  top: 185px;
-  color: #ffb330;
-  z-index: 100;
-  font-size: 30px;
-  letter-spacing: 0.1rem;
-  font-weight: 700;
-  opacity: 0;
+.business2 {
+  top: 64px;
+  left: 195px;
 }
 
-/* FOUR */
+.today {
+  top: 86px;
+  left: 195px;
+  color: #ec8c34;
+}
 
 .four {
   position: absolute;
-  top: 40px;
-  left: 75px;
-  width: 95%;
-  z-index: 100;
-  opacity: 0;
+  height: 250px;
+  width: 375px;
+  top: 0;
+  left: -375px;
 }
 
-.line4 {
-  position: absolute;
-  top: 207px;
-  left: 31px;
-  width: 90px;
-  height: 2px;
-  background-color: #ffb330;
-  rotate: -15deg;
-  opacity: 0;
-  z-index: 130;
+.so {
+  top: 20px;
+  left: 70px;
+  color: black;
+  height: 30px;
+  z-index: 200;
 }
 
-.four_text_full {
-  position: absolute;
-  left: 36px;
-  top: 185px;
-  color: #ffb330;
+.soBackground {
+  background-color: #ec8c34;
+  height: 30px;
+  width: 180px;
   z-index: 100;
-  font-size: 30px;
-  letter-spacing: 0.1rem;
-  font-weight: 700;
-  opacity: 0;
+  position: absolute;
+  top: 17px;
+  left: 0;
 }
 
-.four_text_discount {
-  position: absolute;
-  left: 36px;
-  top: 185px;
-  color: #ffb330;
+.grow {
+  top: 198px;
+  left: 133px;
+  color: black;
+  z-index: 200;
+}
+
+.growBackground {
+  background-color: #ec8c34;
+  height: 30px;
+  width: 180px;
   z-index: 100;
-  font-size: 30px;
-  letter-spacing: 0.1rem;
-  font-weight: 700;
-  opacity: 0;
+  position: absolute;
+  top: 195px;
+  right: 0;
+}
+
+.company {
+  top: 170px;
+  left: 52px;
+}
+
+.company span {
+  color: #ec8c34;
 }
 
 /* Code below for the button */

@@ -1,19 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
-
-*[x-apple-data-detectors],  /* iOS */
-    .x-gmail-data-detectors,    /* Gmail */
-    .x-gmail-data-detectors *,
-    .aBn {
-  border-bottom: 0 !important;
-  cursor: default !important;
-  color: inherit !important;
-  text-decoration: none !important;
-  font-size: inherit !important;
-  font-family: inherit !important;
-  font-weight: inherit !important;
-  line-height: inherit !important;
-}
-
 html {
   box-sizing: border-box;
 }
@@ -25,222 +9,245 @@ html {
   margin: 0;
   padding: 0;
 }
-
-body {
-  font-family: "Lobster", cursive;
-  font-weight: normal;
-}
-
 .container {
+  position: relative;
   height: 250px;
   width: 300px;
-  position: relative;
   overflow: hidden;
   visibility: hidden;
 }
 
-.background {
+.background_full {
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 250px;
-  width: 1330px;
-  z-index: 0;
-}
-
-.end_background {
-  position: absolute;
-  top: 0;
-  left: 0;
   height: 250px;
   width: 300px;
   z-index: 0;
-  opacity: 0;
+  top: 0;
+  left: 0;
+}
+
+.background_left {
+  position: absolute;
+  height: 250px;
+  width: 300px;
+  z-index: 90;
+  top: 0;
+  left: 0;
+}
+
+.background_right {
+  position: absolute;
+  height: 250px;
+  width: 325px;
+  top: 0;
+  left: 260px;
+  z-index: 70;
+}
+
+.image_right {
+  position: absolute;
+  height: 250px;
+  width: 300px;
+  top: 0;
+  z-index: 50;
+}
+
+.logo {
+  position: absolute;
+  top: 13px;
+  left: 20px;
+  width: 10%;
+  z-index: 100;
 }
 
 h1 {
+  text-align: right;
   position: absolute;
-  top: 61px;
-  left: 23px;
-  font-size: 2rem;
-  line-height: 1.9rem;
-  letter-spacing: 0.1rem;
-  z-index: 100;
-  color: red;
-  font-weight: normal;
-}
-
-.grass {
-  position: absolute;
-  top: 0px;
-  left: -20px;
-  height: 250px;
-  width: 1490px;
-  z-index: 15;
-}
-
-.flowers {
-  position: absolute;
-  top: 0px;
-  left: -20px;
-  height: 250px;
-  width: 1490px;
-  z-index: 10;
-}
-
-.one {
-  position: absolute;
-  bottom: 0px;
-  left: 130px;
-  width: 25%;
-  z-index: 5;
-}
-
-.two {
-  position: absolute;
-  bottom: 10px;
-  left: 231px;
-  width: 27%;
-  z-index: 5;
-}
-
-.quote1 {
-  position: absolute;
+  font-size: 1.1rem;
   top: 10px;
-  left: 40px;
-  width: 27%;
-  z-index: 10;
-  opacity: 0;
+  right: 13px;
+  color: black;
+  text-transform: uppercase;
+  z-index: 100;
+  font-family: "Orbitron", sans-serif;
+  font-weight: normal;
+  letter-spacing: 0.05rem;
 }
 
-.three {
+.main_heading {
+  text-align: right;
   position: absolute;
-  bottom: 10px;
-  left: 331px;
-  width: 27%;
-  z-index: 5;
-}
-
-.four {
-  position: absolute;
-  bottom: 15px;
-  left: 415px;
-  width: 32%;
-  z-index: 5;
-}
-
-.five {
-  position: absolute;
-  bottom: 15px;
-  left: 515px;
-  width: 32%;
-  z-index: 5;
-}
-
-.quote2 {
-  position: absolute;
-  top: 15px;
-  left: 80px;
-  width: 27%;
-  z-index: 10;
-  opacity: 0;
-}
-
-.six {
-  position: absolute;
-  bottom: 15px;
-  left: 625px;
-  width: 27%;
-  z-index: 5;
-}
-
-.seven {
-  position: absolute;
-  bottom: 15px;
-  left: 720px;
-  width: 31%;
-  z-index: 5;
-}
-
-.eight {
-  position: absolute;
-  bottom: 10px;
-  left: 825px;
-  width: 26%;
-  z-index: 5;
-}
-
-.quote3 {
-  position: absolute;
-  top: 8px;
-  left: 120px;
-  width: 27%;
-  z-index: 10;
-  opacity: 0;
-}
-
-.nine {
-  position: absolute;
-  bottom: 10px;
-  left: 925px;
-  width: 26%;
-  z-index: 5;
-}
-
-.ten {
-  position: absolute;
-  bottom: 10px;
-  left: 1025px;
-  width: 30%;
-  z-index: 5;
-}
-
-.eleven {
-  position: absolute;
-  bottom: 10px;
-  left: 1125px;
-  width: 30%;
-  z-index: 5;
-}
-
-.quote4 {
-  position: absolute;
-  top: 20px;
-  left: 160px;
-  width: 27%;
-  z-index: 10;
-  opacity: 0;
-}
-
-.twelve {
-  position: absolute;
-  bottom: 10px;
-  left: 1225px;
-  width: 24%;
-  z-index: 5;
-}
-
-.end {
-  position: absolute;
-  top: 23px;
-  left: 120px;
-  width: 23%;
-  z-index: 10;
-  opacity: 0;
+  font-size: 1.9rem;
+  line-height: 2rem;
+  top: 5px;
+  right: 10px;
+  color: white;
+  text-transform: uppercase;
+  z-index: 60;
+  padding: 7px;
+  font-family: "Orbitron", sans-serif;
+  font-weight: normal;
+  letter-spacing: 0.1rem;
 }
 
 h2 {
+  text-align: right;
   position: absolute;
-  top: 70px;
-  left: 29px;
-  font-size: 2.5rem;
-  letter-spacing: 0.1rem;
+  font-size: 0.6rem;
+  top: 55px;
+  right: 14px;
+  color: #3b8dc1;
+  letter-spacing: 0.05rem;
   z-index: 100;
-  color: #ff8080;
+  padding-top: 3px;
+  font-family: "Orbitron", sans-serif;
+  font-weight: normal;
+  letter-spacing: 0.05rem;
+}
+
+/* Bills */
+
+.ground1 {
+  position: absolute;
+  top: 90px;
+  left: 148px;
+  font-size: 0.5rem;
+  letter-spacing: 0.05rem;
+  color: #3b8dc1;
+  z-index: 90;
   opacity: 0;
+  font-family: "Orbitron", sans-serif;
   font-weight: normal;
 }
-/* Button code */
+
+.mask1 {
+  width: 85px;
+  height: 20px;
+  background-color: rgb(212, 224, 245);
+  position: absolute;
+  top: 80px;
+  left: 147px;
+  z-index: 80;
+  opacity: 0;
+}
+
+.team1 {
+  position: absolute;
+  top: 101px;
+  left: 148px;
+  font-size: 0.65rem;
+  letter-spacing: 0.05rem;
+  color: black;
+  z-index: 70;
+  opacity: 0;
+  font-family: "Orbitron", sans-serif;
+  font-weight: normal;
+}
+
+.bills {
+  position: absolute;
+  top: 90px;
+  left: 80px;
+  width: 17%;
+  z-index: 70;
+}
+
+/* Titans */
+
+.ground_1 {
+  position: absolute;
+  top: 148px;
+  left: 155px;
+  font-size: 0.5rem;
+  letter-spacing: 0.05rem;
+  color: #3b8dc1;
+  z-index: 90;
+  opacity: 0;
+  font-family: "Orbitron", sans-serif;
+  font-weight: normal;
+}
+
+.mask2 {
+  width: 126px;
+  height: 20px;
+  background-color: rgb(212, 224, 245);
+  position: absolute;
+  top: 139px;
+  left: 155px;
+  z-index: 80;
+  opacity: 0;
+}
+
+.team2 {
+  position: absolute;
+  top: 159px;
+  left: 155px;
+  font-size: 0.65rem;
+  letter-spacing: 0.05rem;
+  color: black;
+  z-index: 70;
+  opacity: 0;
+  font-family: "Orbitron", sans-serif;
+  font-weight: normal;
+}
+
+.titans {
+  position: absolute;
+  top: 141px;
+  left: 87px;
+  width: 18%;
+  z-index: 70;
+}
+
+/* Jags */
+
+.ground2 {
+  position: absolute;
+  top: 204px;
+  left: 167px;
+  font-size: 0.5rem;
+  letter-spacing: 0.05rem;
+  color: #3b8dc1;
+  z-index: 40;
+  opacity: 0;
+  z-index: 90;
+  font-family: "Orbitron", sans-serif;
+  font-weight: normal;
+}
+
+.mask3 {
+  width: 125px;
+  height: 20px;
+  background-color: rgb(212, 224, 245);
+  position: absolute;
+  top: 195px;
+  left: 165px;
+  z-index: 80;
+  opacity: 0;
+}
+
+.team3 {
+  position: absolute;
+  top: 214px;
+  left: 167px;
+  font-size: 0.65rem;
+  letter-spacing: 0.05rem;
+  color: black;
+  z-index: 70;
+  opacity: 0;
+  font-family: "Orbitron", sans-serif;
+  font-weight: normal;
+}
+
+.jags {
+  position: absolute;
+  top: 201px;
+  left: 107px;
+  width: 15%;
+  z-index: 70;
+}
+
+/* Code below for the button */
 
 .btn {
   height: 30px;

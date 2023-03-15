@@ -3,278 +3,205 @@ let selectAll = (e) => document.querySelectoAll(e);
 
 let pause = select("#pause");
 
-let master = gsap.timeline({
+let travel = gsap.timeline({
   onComplete: () => (pause.innerHTML = "Play"),
 });
+travel.pause();
 
-master.pause();
-
-gsap.set(".container", { autoAlpha: 1 });
-
-master.to(
-  "h1",
-  {
-    x: -290,
-    ease: "back.in(1)",
-    duration: 0.45,
-  },
-  "=+0.5"
-);
-
-master.to(
-  ".background",
-  {
-    x: -1000,
-    duration: 9,
-    ease: "none",
-  },
-  "=-0.25"
-);
-
-master.to(
-  ".grass",
-  {
-    x: -1000,
-    duration: 9,
-    ease: "none",
-  },
-  "<"
-);
-
-master.to(
-  ".flowers",
-  {
-    x: -1100,
-    duration: 9,
-    ease: "none",
-  },
-  "<"
-);
-
-master.to(
-  ".bunny",
-  {
-    x: -1020,
-    duration: 9,
-    ease: "none",
-  },
-  "<"
-);
-
-master.from(
-  ".one",
-  {
-    y: 130,
-    duration: 0.8,
-    ease: "back.out(1.7)",
-  },
-  "<"
-);
-
-master.from(
-  ".two",
-  {
-    y: 160,
-    duration: 0.8,
-    ease: "back.out(1.7)",
-  },
-  ">"
-);
-
-master.to(
-  ".quote1",
+travel.to(
+  ".right, .left",
   {
     opacity: 1,
   },
-  ">-=0.5"
+  "=+1"
 );
 
-master.from(
-  ".three",
-  {
-    y: 175,
-    duration: 0.8,
-    ease: "back.out(1.7)",
-  },
-  ">"
-);
+travel.to(".master", { opacity: 0 }, ">");
 
-master.from(
-  ".four",
-  {
-    y: 175,
-    duration: 0.8,
-    ease: "back.out(1.7)",
-  },
-  ">"
-);
-
-master.to(
-  ".quote1",
-  {
-    opacity: 0,
-  },
-  ">-=0.5"
-);
-
-master.from(
-  ".five",
-  {
-    y: 205,
-    duration: 0.8,
-    ease: "back.out(1.7)",
-  },
-  ">"
-);
-
-master.to(
-  ".quote2",
-  {
-    opacity: 1,
-  },
-  ">-=0.5"
-);
-
-master.from(
-  ".six",
-  {
-    y: 175,
-    duration: 0.8,
-    ease: "back.out(1.7)",
-  },
-  ">"
-);
-
-master.from(
-  ".seven",
-  {
-    y: 175,
-    duration: 0.8,
-    ease: "back.out(1.7)",
-  },
-  ">"
-);
-
-master.to(
-  ".quote2",
-  {
-    opacity: 0,
-  },
-  ">-=0.5"
-);
-
-master.from(
-  ".eight",
-  {
-    y: 225,
-    duration: 0.8,
-    ease: "back.out(1.7)",
-  },
-  ">"
-);
-
-master.to(
-  ".quote3",
-  {
-    opacity: 1,
-  },
-  ">-=0.5"
-);
-
-master.from(
-  ".nine",
-  {
-    y: 145,
-    duration: 0.8,
-    ease: "back.out(1.7)",
-  },
-  ">"
-);
-
-master.from(
-  ".ten",
-  {
-    y: 155,
-    duration: 0.8,
-    ease: "back.out(1.7)",
-  },
-  ">"
-);
-
-master.to(
-  ".quote3",
-  {
-    opacity: 0,
-  },
-  ">-=0.5"
-);
-
-master.from(
-  ".eleven",
-  {
-    y: 175,
-    duration: 0.8,
-    ease: "back.out(1.7)",
-  },
-  ">"
-);
-
-master.to(
-  ".quote4",
-  {
-    opacity: 1,
-  },
-  ">-=0.5"
-);
-
-master.from(
-  ".twelve",
-  {
-    y: 175,
-    duration: 0.8,
-    ease: "back.out(1.7)",
-  },
-  ">"
-);
-
-master.to(".bunny, .background, .quote4", {
-  opacity: 0,
-  duration: 0.25,
+travel.to(".right", {
+  x: -235,
+  y: -200,
+  duration: 0.35,
+  ease: "back.in(1.25)",
 });
 
-master.to(
-  ".end_background",
+travel.to(
+  ".left",
   {
-    opacity: 1,
-    duration: 0.25,
+    x: 235,
+    y: 200,
+    duration: 0.35,
+    ease: "back.in(1.25)",
   },
   "<"
 );
 
-master.to(
-  ".end",
+travel.to(
+  ".circle",
   {
     opacity: 1,
-    duration: 0.25,
   },
-  "=+0.25"
+  "=-0.15"
 );
 
-master.to(
-  "h2",
+travel.fromTo(
+  ".umbrella",
+  { opacity: 0, scale: 0 },
   {
     opacity: 1,
-    duration: 0.25,
+    scale: 1,
+    duration: 0.45,
+    transformOrigin: "bottom bottom",
+    ease: Bounce.easeOut,
   },
-  "=-0.25"
+  "=-0.3"
+);
+travel.fromTo(
+  ".shell",
+  { opacity: 0, scale: 0 },
+  {
+    opacity: 1,
+    scale: 1,
+    duration: 0.45,
+    transformOrigin: "bottom bottom",
+    ease: Bounce.easeOut,
+  },
+  "=-0.3"
+);
+travel.fromTo(
+  ".cocktail1",
+  { opacity: 0, scale: 0 },
+  {
+    opacity: 1,
+    scale: 1,
+    duration: 0.45,
+    transformOrigin: "bottom bottom",
+    ease: Bounce.easeOut,
+  },
+  "=-0.3"
 );
 
-// Button code
+travel.fromTo(
+  ".fries",
+  { opacity: 0, scale: 0 },
+  {
+    opacity: 1,
+    scale: 1,
+    duration: 0.45,
+    transformOrigin: "bottom bottom",
+    ease: Bounce.easeOut,
+  },
+  "=-0.3"
+);
+
+travel.fromTo(
+  ".ball",
+  { opacity: 0, scale: 0 },
+  {
+    opacity: 1,
+    scale: 1,
+    duration: 0.45,
+    transformOrigin: "bottom bottom",
+    ease: Bounce.easeOut,
+  },
+  "=-0.3"
+);
+
+travel.fromTo(
+  ".sandals",
+  { opacity: 0, scale: 0 },
+  {
+    opacity: 1,
+    scale: 1,
+    duration: 0.45,
+    transformOrigin: "bottom bottom",
+    ease: Bounce.easeOut,
+  },
+  "=-0.3"
+);
+
+travel.fromTo(
+  ".chair",
+  { opacity: 0, scale: 0 },
+  {
+    opacity: 1,
+    scale: 1,
+    duration: 0.45,
+    transformOrigin: "bottom bottom",
+    ease: Bounce.easeOut,
+  },
+  "=-0.3"
+);
+
+travel.fromTo(
+  ".ring",
+  { opacity: 0, scale: 0 },
+  {
+    opacity: 1,
+    scale: 1,
+    duration: 0.45,
+    transformOrigin: "bottom bottom",
+    ease: Bounce.easeOut,
+  },
+  "=-0.3"
+);
+
+travel.fromTo(
+  ".burger",
+  { opacity: 0, scale: 0 },
+  {
+    opacity: 1,
+    scale: 1,
+    duration: 0.45,
+    transformOrigin: "bottom bottom",
+    ease: Bounce.easeOut,
+  },
+  "=-0.3"
+);
+
+travel.fromTo(
+  ".lotion",
+  { opacity: 0, scale: 0 },
+  {
+    opacity: 1,
+    scale: 1,
+    duration: 0.45,
+    transformOrigin: "bottom bottom",
+    ease: Bounce.easeOut,
+  },
+  "=-0.3"
+);
+
+travel.fromTo(
+  ".icecream",
+  { opacity: 0, scale: 0 },
+  {
+    opacity: 1,
+    scale: 1,
+    duration: 0.45,
+    transformOrigin: "bottom bottom",
+    ease: Bounce.easeOut,
+  },
+  "=-0.3"
+);
+
+travel.fromTo(
+  ".logo",
+  { opacity: 0, scale: 0 },
+  {
+    opacity: 1,
+    scale: 1,
+    delay: 1,
+    transformOrigin: "center center",
+    ease: Power4.easeOut,
+  },
+  "=-1.5"
+);
 
 pause.addEventListener("click", () => {
-  master.paused(!master.paused());
-  if (master.progress() == 1) {
-    master.restart();
+  travel.paused(!travel.paused());
+  if (travel.progress() == 1) {
+    travel.restart();
   }
-  pause.innerHTML = master.paused() ? "Play" : "Pause";
+  pause.innerHTML = travel.paused() ? "Play" : "Pause";
 });
