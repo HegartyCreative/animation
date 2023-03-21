@@ -3,430 +3,239 @@ let selectAll = (e) => document.querySelectoAll(e);
 
 let pause = select("#pause");
 
-let master = gsap.timeline({
+let animation = gsap.timeline({
   onComplete: () => (pause.innerHTML = "Play"),
 });
+animation.pause();
 
-master.pause();
+// First Animation
 
-master.to(
-  ".main_logo",
+animation.to(".start", {
+  opacity: 0,
+  duration: 0,
+});
+
+animation.fromTo(
+  ".logo_horizontal",
   {
     opacity: 0,
   },
-  "=+1"
+  {
+    opacity: 1,
+  },
+  "=+0.5"
 );
 
-master.to(".start", {
-  x: 300,
-});
+// First animation
 
-master.from(".supporting", {
-  x: -255,
-  ease: "back.out(1)",
-});
+// Enter stage
 
-master.from(".healthy", {
-  x: 280,
-  ease: "back.out(1)",
-});
-
-master.from(".diets", {
-  x: -270,
-  ease: "back.out(1)",
-});
-
-master.from(
-  ".grapes",
+animation.fromTo(
+  ".main_heading_background1",
   {
-    y: 80,
-    ease: "back.out(3)",
-  },
-  "=-0.4"
-);
-
-master.from(
-  ".cherry",
-  {
-    y: 50,
-    ease: "back.out(3)",
-  },
-  "=-0.3"
-);
-
-master.from(
-  ".pear",
-  {
-    y: 50,
-    ease: "back.out(3)",
-  },
-  "=-0.2"
-);
-
-master.to(
-  ".supporting, .healthy, .diets, .grapes, .cherry, .pear",
-  {
-    opacity: 0,
-  },
-  "=+1"
-);
-
-master.to(".logo", {
-  opacity: 1,
-});
-
-///////////////////////////////////////////////////////////////// ONE
-
-// ONE ENTER
-
-master.fromTo(
-  ".left1",
-  {
-    y: -250,
-    x: 0,
+    x: -200,
   },
   {
-    y: 0,
-    duration: 0.4,
-    ease: "power1.out",
-  },
-  "<"
-);
-
-master.fromTo(
-  ".right1",
-  {
-    y: 250,
-    x: 0,
-  },
-  {
-    y: 0,
-    duration: 0.4,
-    ease: "power1.out",
-  },
-  "<"
-);
-
-master.to(".intro", {
-  opacity: 1,
-});
-
-master.fromTo(
-  ".apple_left",
-  {
-    y: -250,
-    x: 0,
-  },
-  {
-    y: 0,
-    duration: 0.5,
-    ease: "back.out(1.7)",
+    x: -40,
+    ease: "back.out(2)",
   }
 );
 
-master.fromTo(
-  ".pineapple_right",
+animation.fromTo(
+  ".main_heading1",
   {
-    y: 250,
+    x: -160,
+  },
+  {
     x: 0,
-  },
-  {
-    y: 0,
-    duration: 0.5,
-    ease: "back.out(1)",
-  },
-  "<"
-);
-
-// ONE LEAVES
-
-master.to(
-  ".apple_left",
-  {
-    y: 250,
-    ease: "back.in(1)",
-  },
-  "=+2"
-);
-
-master.to(
-  ".left1",
-  {
-    y: 250,
-    ease: "back.in(1)",
-  },
-  "<"
-);
-
-master.to(
-  ".pineapple_right",
-  {
-    y: -250,
-    ease: "back.in(1)",
-  },
-  "<"
-);
-
-master.to(
-  ".right1",
-  {
-    y: -250,
-    ease: "back.in(1)",
-  },
-  "<"
-);
-
-/////////////////////////////////////////////////////////////////// TWO
-
-// TWO ENTER
-
-master.fromTo(
-  ".left2",
-  {
-    y: -250,
-    x: 0,
-  },
-  {
-    y: 0,
-    duration: 0.4,
-    ease: "power1.out",
-  },
-  "=+0.25"
-);
-
-master.fromTo(
-  ".right2",
-  {
-    y: 250,
-    x: 0,
-  },
-  {
-    y: 0,
-    duration: 0.4,
-    ease: "power1.out",
-  },
-  "<"
-);
-
-master.fromTo(
-  ".pomegranate_left",
-  {
-    y: -250,
-    x: 0,
-  },
-  {
-    y: 0,
-    duration: 0.5,
     ease: "back.out(1.7)",
+  },
+  "=-0.25"
+);
+
+animation.fromTo(
+  ".sub_heading_background1",
+  {
+    x: -220,
+  },
+  {
+    x: -40,
+    ease: "back.out(2)",
   }
 );
 
-master.fromTo(
-  ".lime_right",
+animation.fromTo(
+  ".sub_heading1",
   {
-    y: 250,
+    x: -180,
+  },
+  {
     x: 0,
-  },
-  {
-    y: 0,
-    duration: 0.5,
-    ease: "back.out(1)",
-  },
-  "<"
-);
-
-// ONE LEAVES
-
-master.to(
-  ".pomegranate_left",
-  {
-    y: 250,
-    ease: "back.in(1)",
-  },
-  "=+2"
-);
-
-master.to(
-  ".left2",
-  {
-    y: 250,
-    ease: "back.in(1)",
-  },
-  "<"
-);
-
-master.to(
-  ".lime_right",
-  {
-    y: -250,
-    ease: "back.in(1)",
-  },
-  "<"
-);
-
-master.to(
-  ".right2",
-  {
-    y: -250,
-    ease: "back.in(1)",
-  },
-  "<"
-);
-
-/////////////////////////////////////////////////////////////////// THREE
-
-// THREE ENTER
-
-master.fromTo(
-  ".left3",
-  {
-    y: -250,
-    x: 0,
-  },
-  {
-    y: 0,
-    duration: 0.4,
-    ease: "power1.out",
-  },
-  "=+0.25"
-);
-
-master.fromTo(
-  ".right3",
-  {
-    y: 250,
-    x: 0,
-  },
-  {
-    y: 0,
-    duration: 0.4,
-    ease: "power1.out",
-  },
-  "<"
-);
-
-master.fromTo(
-  ".passionFruit_left",
-  {
-    y: -250,
-    x: 0,
-  },
-  {
-    y: 0,
-    duration: 0.5,
     ease: "back.out(1.7)",
-  }
+  },
+  "=-0.25"
 );
 
-master.fromTo(
-  ".orange_right",
-  {
-    y: 250,
-    x: 0,
-  },
-  {
-    y: 0,
-    duration: 0.5,
-    ease: "back.out(1)",
-  },
-  "<"
-);
+// Leave stage
 
-// ONE LEAVES
-
-master.to(
-  ".passionFruit_left",
-  {
-    y: 250,
-    ease: "back.in(1)",
-  },
-  "=+2"
-);
-
-master.to(
-  ".left3",
-  {
-    y: 250,
-    ease: "back.in(1)",
-  },
-  "<"
-);
-
-master.to(
-  ".orange_right",
-  {
-    y: -250,
-    ease: "back.in(1)",
-  },
-  "<"
-);
-
-master.to(
-  ".right3",
-  {
-    y: -250,
-    ease: "back.in(1)",
-  },
-  "<"
-);
-
-master.to(".intro", {
-  opacity: 1,
+animation.to(".main_heading_background1, .main_heading1", {
+  x: -210,
+  delay: 2,
+  ease: "back.in(2)",
 });
 
-// End code
+animation.to(".sub_heading_background1, .sub_heading1", {
+  x: -230,
+  ease: "back.in(2)",
+});
 
-master.from(
-  ".endText1",
+// Second animation
+
+animation.to(".background2", {
+  opacity: 1,
+  duration: 0.25,
+});
+
+// Enter stage
+
+animation.fromTo(
+  ".main_heading_background2",
   {
-    x: 289,
+    x: -200,
+  },
+  {
+    x: -40,
+    ease: "back.out(2)",
+  },
+  "=+0.5"
+);
+
+animation.fromTo(
+  ".main_heading2",
+  {
+    x: -160,
+  },
+  {
+    x: 0,
+    ease: "back.out(1.7)",
+  },
+  "=-0.25"
+);
+
+animation.fromTo(
+  ".sub_heading_background2",
+  {
+    x: -240,
+  },
+  {
+    x: -40,
+    ease: "back.out(2)",
+  }
+);
+
+animation.fromTo(
+  ".sub_heading2",
+  {
+    x: -195,
+  },
+  {
+    x: 0,
+    ease: "back.out(1.7)",
+  },
+  "=-0.25"
+);
+
+// Leave stage
+
+animation.to(".main_heading_background2, .main_heading2", {
+  x: -210,
+  delay: 2,
+  ease: "back.in(2)",
+});
+
+animation.to(".sub_heading_background2, .sub_heading2", {
+  x: -240,
+  ease: "back.in(2)",
+});
+
+// Enter stage
+
+animation.fromTo(
+  ".main_heading_background3",
+  {
+    x: -200,
+  },
+  {
+    x: -40,
+    ease: "back.out(2)",
+  },
+  "=+0.5"
+);
+
+animation.fromTo(
+  ".main_heading3",
+  {
+    x: -160,
+  },
+  {
+    x: 0,
+    ease: "back.out(1.7)",
+  },
+  "=-0.25"
+);
+
+animation.fromTo(
+  ".sub_heading_background3",
+  {
+    x: -240,
+  },
+  {
+    x: -40,
+    ease: "back.out(2)",
+  }
+);
+
+animation.fromTo(
+  ".sub_heading3",
+  {
+    x: -195,
+  },
+  {
+    x: 0,
+    ease: "back.out(1.7)",
+  },
+  "=-0.25"
+);
+
+// Leave stage
+
+animation.to(".main_heading_background3, .main_heading3", {
+  x: -210,
+  delay: 2,
+  ease: "back.in(2)",
+});
+
+animation.to(".sub_heading_background3, .sub_heading3", {
+  x: -240,
+  ease: "back.in(2)",
+});
+
+animation.to(
+  ".apply",
+  {
+    opacity: 1,
+    duration: 1,
     ease: "back.out(1.7)",
   },
   "=-0.5"
 );
 
-master.from(
-  ".endText2",
-  {
-    x: -280,
-    ease: "back.out(1.7)",
-  },
-  "=-0.25"
-);
-
-master.from(
-  ".banana",
-  {
-    y: 60,
-    ease: "back.out(2)",
-  },
-  "=-0.25"
-);
-
-master.from(
-  ".strawberry",
-  {
-    y: 65,
-    ease: "back.out(2)",
-  },
-  "=-0.25"
-);
-
-master.from(
-  ".peach",
-  {
-    y: 100,
-    ease: "back.out(2)",
-  },
-  "=-0.25"
-);
-
 // Button code
 
 pause.addEventListener("click", () => {
-  master.paused(!master.paused());
-  if (master.progress() == 1) {
-    master.restart();
+  animation.paused(!animation.paused());
+  if (animation.progress() == 1) {
+    animation.restart();
   }
-  pause.innerHTML = master.paused() ? "Play" : "Pause";
+  pause.innerHTML = animation.paused() ? "Play" : "Pause";
 });

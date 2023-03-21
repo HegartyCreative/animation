@@ -1,49 +1,103 @@
 let select = (e) => document.querySelector(e);
 let selectAll = (e) => document.querySelectoAll(e);
 
+gsap.set(".wrapper", { autoAlpha: 1 });
+
 let pause = select("#pause");
 
-let nfl = gsap.timeline({
+let master = gsap.timeline({
   onComplete: () => (pause.innerHTML = "Play"),
 });
-nfl.pause();
 
-gsap.set(".container", { autoAlpha: 1 });
+master.pause();
 
-nfl.to(".background_full", { opacity: 1 });
-nfl.to(
-  ".background_right",
-  { x: -260, ease: "back.out(1)", duration: 0.6 },
-  "=+0.25"
-);
-nfl.to(".mask1, .mask2, .mask3", { opacity: 1 }, "=+0.15");
-nfl.from("h1", { x: 195, duration: 0.5, ease: "back.out(1.7)" }, "=-0.25");
-nfl.from("h2", { x: 130, duration: 0.5, ease: "back.out(1.7)" }, "=-0.25");
-nfl.to(".team1, .team2, .team3", { opacity: 1 });
-
-nfl.fromTo(
-  ".logo",
-  { scale: 0, opacity: 0 },
-  { scale: 1.4, ease: "bounce", opacity: 1, duration: 1 },
-  "=-0.75"
+master.to(
+  ".logo1",
+  {
+    opacity: 0,
+  },
+  "=+1"
 );
 
-nfl.from(".bills", { x: -90, ease: "power2.out", duration: 0.45 }), "=-1";
-nfl.to(".ground1", { opacity: 1, duration: 0.25 });
-nfl.from(".team1", { y: -18, ease: "back.out(2)", duration: 0.5 }, "=+0.05");
+master.from(".clouds", {
+  x: -210,
+  duration: 0.75,
+});
 
-nfl.from(".titans", { x: -90, ease: "power2.out", duration: 0.45 });
-nfl.to(".ground_1", { opacity: 1, duration: 0.25 });
-nfl.from(".team2", { y: -18, ease: "back.out(2)", duration: 0.5 }, "=+0.05");
+master.fromTo(
+  ".rain_main",
+  {
+    scaleY: 0,
+    transformOrigin: "top top",
+    y: 20,
+  },
+  {
+    scaleY: 1,
+    transformOrigin: "top top",
+    y: 0,
+    duration: 0.4,
+  }
+);
 
-nfl.from(".jags", { x: -90, ease: "power2.out", duration: 0.45 });
-nfl.to(".ground2", { opacity: 1, duration: 0.25 });
-nfl.from(".team3", { y: -18, ease: "back.out(2)", duration: 0.5 }, "=+0.05");
+master.to(
+  ".clouds, .rain_main, .rain_minor, .large_puddle, .small_puddle, .man, .umbrella",
+  {
+    x: -72,
+    duration: 0.4,
+  },
+  "=+1.5"
+);
+
+master.from(".logo2", {
+  y: -110,
+  ease: "back.out(1.7)",
+});
+
+master.to(
+  ".text, .cta",
+  {
+    opacity: 1,
+  },
+  "=-0.25"
+);
+
+master.fromTo(
+  ".umbrella",
+  {
+    opacity: 0,
+    y: 10,
+  },
+  {
+    opacity: 1,
+    y: 0,
+  },
+  "=+1"
+);
+
+master.to(
+  ".rain_main",
+  {
+    opacity: 0,
+    duration: 0.1,
+  },
+  "<"
+);
+
+master.to(
+  ".rain_minor",
+  {
+    opacity: 1,
+    duration: 0.1,
+  },
+  "<"
+);
+
+// Button code
 
 pause.addEventListener("click", () => {
-  nfl.paused(!nfl.paused());
-  if (nfl.progress() == 1) {
-    nfl.restart();
+  master.paused(!master.paused());
+  if (master.progress() == 1) {
+    master.restart();
   }
-  pause.innerHTML = nfl.paused() ? "Play" : "Pause";
+  pause.innerHTML = master.paused() ? "Play" : "Pause";
 });

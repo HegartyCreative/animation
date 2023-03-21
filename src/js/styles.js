@@ -12,7 +12,7 @@
     "😍",
   ];
   let demo = document.querySelector(".demo");
-  let animation = gsap.timeline({ repeat: 5, repeatDelay: 0.6 });
+  // let animation = gsap.timeline({ repeat: 5, repeatDelay: 0.6 });
 
   function createLayers() {
     phrases.forEach((value) => {

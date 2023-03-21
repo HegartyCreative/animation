@@ -3,109 +3,159 @@ let selectAll = (e) => document.querySelectoAll(e);
 
 let pause = select("#pause");
 
-let master = gsap.timeline({
-  onComplete: () => (pause.innerHTML = "Play"),
-});
-
-master.pause();
-
 gsap.set(".container", { autoAlpha: 1 });
 
-master.to(".top, .bottom", {
-  opacity: 1,
+let retail = gsap.timeline({
+  onComplete: () => (pause.innerHTML = "Play"),
+});
+retail.pause();
+
+// Intro
+
+retail.set(".startingShape, .saleText", {
+  opacity: 0,
 });
 
-master.to(
-  ".model",
+retail.from(
+  ".introText",
+  {
+    x: -140,
+    ease: "back.out(1.7)",
+  },
+  ">"
+);
+
+retail.from(
+  ".cta",
+  {
+    x: -109,
+    ease: "back.out(1.7)",
+  },
+  "-=0.25"
+);
+
+retail.from(
+  ".shape2",
+  {
+    x: -25,
+    ease: "back.out(1.7)",
+  },
+  "-=0.25"
+);
+
+retail.from(
+  ".shape1",
+  {
+    x: 95,
+    ease: "back.out(1.7)",
+  },
+  "<"
+);
+
+// One
+retail.from(".one", { x: 190, duration: 0.5, ease: "back.out(1.5)" }, "=+0.15");
+
+retail.from(
+  ".one_text_full",
+  { x: -110, duration: 0.25, ease: "back.out(1.5)" },
+  "=-0.25"
+);
+retail.to(".line1", { opacity: 1, duration: 0.25 }, "=+2");
+retail.to(".one_text_full, .line1", {
+  y: 110,
+  ease: "back.in(1.7)",
+});
+retail.to(".line1", { backgroundColor: "white", duration: "0" }, "=-0.5");
+retail.to(".one_text_full", { color: "white" }, "<");
+retail.to(".one_text_discount", { opacity: 1, duration: 0.25 }, "=-0.25");
+retail.to(".one, .one_text_discount", { opacity: 0, duration: 0.25 }, "=+2");
+
+// Two
+retail.from(".two", { x: 190, duration: 0.5, ease: "back.out(1.5)" }, "=+0.25");
+retail.from(
+  ".two_text_full",
+  { x: -110, duration: 0.25, ease: "back.out(1.5)" },
+  "=-0.25"
+);
+retail.to(".line2", { opacity: 1, duration: 0.25 }, "=+2");
+retail.to(".two_text_full, .line2", {
+  y: 110,
+  ease: "back.in(1.7)",
+});
+retail.to(".line2", { backgroundColor: "white", duration: "0.25" }, "=-0.5");
+retail.to(".two_text_full", { color: "white" }, "<");
+retail.to(".two_text_discount", { opacity: 1, duration: 0.25 }, "=-0.25");
+retail.to(".two, .two_text_discount", { opacity: 0, duration: 0.25 }, "=+2");
+
+// Three
+retail.from(
+  ".three",
+  { x: 190, duration: 0.5, ease: "back.out(1.5)" },
+  "=+0.25"
+);
+retail.from(
+  ".three_text_full",
+  { x: -110, duration: 0.25, ease: "back.out(1.5)" },
+  "=-0.25"
+);
+retail.to(".line3", { opacity: 1, duration: 0.25 }, "=+2");
+retail.to(".three_text_full, .line3", {
+  y: 110,
+  ease: "back.in(1.7)",
+});
+retail.to(".line3", { backgroundColor: "white", duration: "0.25" }, "=-0.5");
+retail.to(".three_text_full", { color: "white" }, "<");
+retail.to(".three_text_discount", { opacity: 1, duration: 0.25 }, "=-0.25");
+retail.to(
+  ".three, .three_text_discount",
+  { opacity: 0, duration: 0.25 },
+  "=+2"
+);
+
+// Four
+retail.from(
+  ".four",
+  { x: 190, duration: 0.5, ease: "back.out(1.5)" },
+  "=+0.25"
+);
+retail.from(
+  ".four_text_full",
+  { x: -110, duration: 0.25, ease: "back.out(1.5)" },
+  "=-0.25"
+);
+retail.to(".line4", { opacity: 1, duration: 0.25 }, "=+2");
+retail.to(".four_text_full, .line4", {
+  y: 110,
+  ease: "back.in(1.7)",
+});
+retail.to(".line4", { backgroundColor: "white", duration: "0.25" }, "=-0.5");
+retail.to(".four_text_full", { color: "white" }, "<");
+retail.to(".four_text_discount", { opacity: 1, duration: 0.25 }, "=-0.25");
+
+retail.to(
+  ".four_text_discount, .four, .cta, .introText, .shape1, .shape2",
+  {
+    opacity: 0,
+    duration: 0.1,
+  },
+  "=+0.5"
+);
+
+retail.to(
+  ".saleText, .startingShape ",
   {
     opacity: 1,
-    y: -30,
-    ease: "power.out4",
-    duration: 1,
-    repeat: -1,
-    yoyo: true,
-  },
-  "<"
-);
-
-master.to(
-  ".logo",
-  {
-    y: 5,
-    repeat: -1,
-    yoyo: true,
-    ease: "power.out4",
-    duration: 1,
-  },
-  "<"
-);
-
-master.to(
-  ".left",
-  {
-    scaleY: 1.2,
-    transformOrigin: "bottom bottom",
     duration: 0.25,
-    stagger: {
-      each: 0.25,
-      repeat: -1,
-      yoyo: true,
-    },
   },
-  "=-0.5"
-);
-
-master.to(
-  ".left1",
-  {
-    scaleY: 1.3,
-    transformOrigin: "bottom bottom",
-    duration: 0.25,
-    stagger: {
-      each: 0.15,
-      repeat: -1,
-      yoyo: true,
-    },
-  },
-  "<"
-);
-
-master.to(
-  ".right",
-  {
-    scaleY: 1.2,
-    transformOrigin: "bottom bottom",
-    duration: 0.25,
-    stagger: {
-      each: 0.35,
-      repeat: -1,
-      yoyo: true,
-    },
-  },
-  "<"
-);
-
-master.to(
-  ".right1",
-  {
-    scaleY: 1.3,
-    transformOrigin: "bottom bottom",
-    duration: 0.25,
-    stagger: {
-      each: 0.25,
-      repeat: -1,
-      yoyo: true,
-    },
-  },
-  "<"
+  "-=0.25"
 );
 
 // Button code
 
 pause.addEventListener("click", () => {
-  master.paused(!master.paused());
-  if (master.progress() == 1) {
-    master.restart();
+  retail.paused(!retail.paused());
+  if (retail.progress() == 1) {
+    retail.restart();
   }
-  pause.innerHTML = master.paused() ? "Play" : "Pause";
+  pause.innerHTML = retail.paused() ? "Play" : "Pause";
 });

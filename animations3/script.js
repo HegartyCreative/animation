@@ -3,312 +3,205 @@ let selectAll = (e) => document.querySelectoAll(e);
 
 let pause = select("#pause");
 
-let master = gsap.timeline({
+let travel = gsap.timeline({
   onComplete: () => (pause.innerHTML = "Play"),
 });
-master.pause();
+travel.pause();
 
-gsap.set(".container", { autoAlpha: 1 });
-
-// Intro
-
-// master.to(".start", {
-//   opacity: 0,
-// });
-
-master.to(
-  ".top2, .marketing2, .trends2, .year2, .leftCircle2, .rightCircle2 ",
+travel.to(
+  ".right, .left",
   {
-    opacity: 0,
-  }
+    opacity: 1,
+  },
+  "=+1"
 );
 
-master.from(".top", {
-  x: 200,
-  ease: "back.out(1.5)",
+travel.to(".master", { opacity: 0 }, ">");
+
+travel.to(".right", {
+  x: -235,
+  y: -200,
+  duration: 0.35,
+  ease: "back.in(1.25)",
 });
 
-master.from(
-  ".marketing",
+travel.to(
+  ".left",
   {
-    x: -240,
-    ease: "back.out(1.5)",
-  },
-  "-=0.35"
-);
-
-master.from(
-  ".trends",
-  {
-    x: 230,
-    ease: "back.out(1.5)",
-  },
-  "-=0.35"
-);
-
-master.from(
-  ".year",
-  {
-    x: -190,
-    ease: "back.out(1.5)",
-  },
-  "-=0.35"
-);
-
-master.from(
-  ".leftCircle",
-  {
-    x: -100,
-    y: 100,
-    ease: "back.out(1.5)",
+    x: 235,
+    y: 200,
+    duration: 0.35,
+    ease: "back.in(1.25)",
   },
   "<"
 );
 
-master.from(
-  ".rightCircle",
-  {
-    x: 100,
-    y: -100,
-    ease: "back.out(1.5)",
-  },
-  "<"
-);
-
-// Intro leave
-
-master.to(
-  ".leftCircle, .rightCircle",
-  {
-    opacity: 0.2,
-    scale: 0.8,
-  },
-  "=+2"
-);
-
-master.to(
-  ".top",
-  {
-    scale: 0.7,
-    x: -100,
-    y: -25,
-  },
-  "<"
-);
-
-master.to(
-  ".marketing",
-  {
-    scale: 0.7,
-    x: -10,
-    y: -64,
-  },
-  "<"
-);
-
-master.to(
-  ".trends",
-  {
-    scale: 0.7,
-    x: -76,
-    y: -78,
-  },
-  "<"
-);
-
-master.to(
-  ".year",
-  {
-    scale: 0.7,
-    x: 6,
-    y: -116,
-  },
-  "<"
-);
-
-master.from(".subHeading", {
-  opacity: 0,
-});
-
-// Bars
-
-// Influencer
-
-master.from(".influencer", {
-  scaleY: 0,
-  transformOrigin: "bottom bottom",
-  duration: 0.5,
-  ease: "back.out(1.5)",
-});
-
-master.fromTo(
-  ".influencer_text",
-  {
-    opacity: 0,
-    y: -30,
-  },
-  {
-    opacity: 1,
-    y: 0,
-    duration: 0.5,
-    ease: "back.out(1.75)",
-  }
-);
-
-master.to(
-  ".influencer_amount",
+travel.to(
+  ".circle",
   {
     opacity: 1,
   },
-  "<"
+  "=-0.15"
 );
 
-// Mobile
-
-master.from(
-  ".mobile",
+travel.fromTo(
+  ".umbrella",
+  { opacity: 0, scale: 0 },
   {
-    scaleY: 0,
+    opacity: 1,
+    scale: 1,
+    duration: 0.45,
     transformOrigin: "bottom bottom",
-    duration: 0.5,
-    ease: "back.out(1.5)",
+    ease: Bounce.easeOut,
   },
-  "-=0.25"
+  "=-0.3"
 );
-
-master.fromTo(
-  ".mobile_text",
-  {
-    opacity: 0,
-    y: -30,
-  },
+travel.fromTo(
+  ".shell",
+  { opacity: 0, scale: 0 },
   {
     opacity: 1,
-    y: 0,
-    duration: 0.5,
-    ease: "back.out(1.75)",
-  }
-);
-
-master.to(
-  ".mobile_amount",
-  {
-    opacity: 1,
-  },
-  "<"
-);
-
-// Short
-
-master.from(
-  ".short",
-  {
-    scaleY: 0,
+    scale: 1,
+    duration: 0.45,
     transformOrigin: "bottom bottom",
-    duration: 0.5,
-    ease: "back.out(1.5)",
+    ease: Bounce.easeOut,
   },
-  "-=0.25"
+  "=-0.3"
 );
-
-master.fromTo(
-  ".short_text",
-  {
-    opacity: 0,
-    y: -30,
-  },
+travel.fromTo(
+  ".cocktail1",
+  { opacity: 0, scale: 0 },
   {
     opacity: 1,
-    y: 0,
-    duration: 0.5,
-    ease: "back.out(1.75)",
-  }
-);
-
-master.to(
-  ".short_amount",
-  {
-    opacity: 1,
-  },
-  "<"
-);
-
-// Virtual
-
-master.from(
-  ".virtual",
-  {
-    scaleY: 0,
+    scale: 1,
+    duration: 0.45,
     transformOrigin: "bottom bottom",
-    duration: 0.5,
-    ease: "back.out(1.5)",
+    ease: Bounce.easeOut,
   },
-  "-=0.25"
+  "=-0.3"
 );
 
-master.fromTo(
-  ".virtual_text",
-  {
-    opacity: 0,
-    y: -30,
-  },
+travel.fromTo(
+  ".fries",
+  { opacity: 0, scale: 0 },
   {
     opacity: 1,
-    y: 0,
-    duration: 0.5,
-    ease: "back.out(1.75)",
-  }
-);
-
-master.to(
-  ".virtual_amount",
-  {
-    opacity: 1,
-  },
-  "<"
-);
-
-// Experimental
-
-master.from(
-  ".experimental",
-  {
-    scaleY: 0,
+    scale: 1,
+    duration: 0.45,
     transformOrigin: "bottom bottom",
-    duration: 0.5,
-    ease: "back.out(1.5)",
+    ease: Bounce.easeOut,
   },
-  "-=0.25"
+  "=-0.3"
 );
 
-master.fromTo(
-  ".experimental_text",
-  {
-    opacity: 0,
-    y: -30,
-  },
+travel.fromTo(
+  ".ball",
+  { opacity: 0, scale: 0 },
   {
     opacity: 1,
-    y: 0,
-    duration: 0.5,
-    ease: "back.out(1.75)",
-  }
+    scale: 1,
+    duration: 0.45,
+    transformOrigin: "bottom bottom",
+    ease: Bounce.easeOut,
+  },
+  "=-0.3"
 );
 
-master.to(
-  ".experimental_amount",
+travel.fromTo(
+  ".sandals",
+  { opacity: 0, scale: 0 },
   {
     opacity: 1,
+    scale: 1,
+    duration: 0.45,
+    transformOrigin: "bottom bottom",
+    ease: Bounce.easeOut,
   },
-  "<"
+  "=-0.3"
 );
 
-// Button code
+travel.fromTo(
+  ".chair",
+  { opacity: 0, scale: 0 },
+  {
+    opacity: 1,
+    scale: 1,
+    duration: 0.45,
+    transformOrigin: "bottom bottom",
+    ease: Bounce.easeOut,
+  },
+  "=-0.3"
+);
+
+travel.fromTo(
+  ".ring",
+  { opacity: 0, scale: 0 },
+  {
+    opacity: 1,
+    scale: 1,
+    duration: 0.45,
+    transformOrigin: "bottom bottom",
+    ease: Bounce.easeOut,
+  },
+  "=-0.3"
+);
+
+travel.fromTo(
+  ".burger",
+  { opacity: 0, scale: 0 },
+  {
+    opacity: 1,
+    scale: 1,
+    duration: 0.45,
+    transformOrigin: "bottom bottom",
+    ease: Bounce.easeOut,
+  },
+  "=-0.3"
+);
+
+travel.fromTo(
+  ".lotion",
+  { opacity: 0, scale: 0 },
+  {
+    opacity: 1,
+    scale: 1,
+    duration: 0.45,
+    transformOrigin: "bottom bottom",
+    ease: Bounce.easeOut,
+  },
+  "=-0.3"
+);
+
+travel.fromTo(
+  ".icecream",
+  { opacity: 0, scale: 0 },
+  {
+    opacity: 1,
+    scale: 1,
+    duration: 0.45,
+    transformOrigin: "bottom bottom",
+    ease: Bounce.easeOut,
+  },
+  "=-0.3"
+);
+
+travel.fromTo(
+  ".logo",
+  { opacity: 0, scale: 0 },
+  {
+    opacity: 1,
+    scale: 1,
+    delay: 1,
+    transformOrigin: "center center",
+    ease: Power4.easeOut,
+  },
+  "=-1.5"
+);
 
 pause.addEventListener("click", () => {
-  master.paused(!master.paused());
-  if (master.progress() == 1) {
-    master.restart();
+  travel.paused(!travel.paused());
+  if (travel.progress() == 1) {
+    travel.restart();
   }
-  pause.innerHTML = master.paused() ? "Play" : "Pause";
+  pause.innerHTML = travel.paused() ? "Play" : "Pause";
 });

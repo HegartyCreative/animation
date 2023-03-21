@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
 
 *[x-apple-data-detectors],  /* iOS */
     .x-gmail-data-detectors,    /* Gmail */
@@ -27,8 +27,15 @@ html {
 }
 
 body {
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 700;
+  color: orange;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: normal;
+}
+
+.container {
+  height: 250px;
+  width: 300px;
+  background-color: white;
 }
 
 .background {
@@ -36,249 +43,213 @@ body {
   width: 300px;
   position: relative;
   overflow: hidden;
-  border: 1px solid rgb(230, 230, 230);
-}
-
-.main_logo {
-  position: absolute;
-  left: 22px;
-  top: 90px;
-  height: 50px;
-  z-index: 15;
-  opacity: 1;
+  z-index: 0;
+  border: 1px solid lightgrey;
 }
 
 .start {
-  position: absolute;
   height: 250px;
   width: 300px;
-  background-color: #f2cdac;
+  position: absolute;
   left: 0;
   top: 0;
-  z-index: 5;
+  z-index: 10;
+  border: 1px solid lightgrey;
 }
 
-.intro {
+.background2 {
   height: 250px;
   width: 300px;
-  background-color: #d2e8e3;
+  position: absolute;
   left: 0;
   top: 0;
-  z-index: 5;
-}
-
-.supporting {
-  position: absolute;
-  left: 42px;
-  top: 35px;
-  width: 70%;
-  z-index: 20;
-}
-
-.healthy {
-  position: absolute;
-  left: 29px;
-  top: 80px;
-  width: 80%;
-  z-index: 20;
-}
-
-.diets {
-  position: absolute;
-  left: 150px;
-  top: 145px;
-  width: 40%;
-  z-index: 20;
-}
-
-.cherry {
-  position: absolute;
-  left: 10px;
-  top: 200px;
-  width: 12%;
-  z-index: 20;
-}
-
-.grapes {
-  position: absolute;
-  left: 46px;
-  top: 175px;
-  width: 12%;
-  z-index: 20;
-}
-
-.pear {
-  position: absolute;
-  left: 80px;
-  top: 202px;
-  width: 11%;
-  z-index: 20;
-}
-
-.logo {
-  position: absolute;
-  left: 5px;
-  top: 5px;
-  width: 33%;
-  z-index: 30;
+  z-index: 10;
   opacity: 0;
 }
 
-/* ONE */
-
-.left1 {
-  background-color: #ffed50;
-  width: 150px;
+.background3 {
   height: 250px;
+  width: 300px;
   position: absolute;
-  z-index: 5;
+  left: 0;
   top: 0;
+  z-index: 10;
+  opacity: 0;
 }
 
-.right1 {
-  background-color: #ff3f29;
-  width: 150px;
-  height: 250px;
+.logo_horizontal {
   position: absolute;
-  top: 0;
-  left: 150px;
-  z-index: 0;
-  z-index: 5;
+  left: 20px;
+  top: 10px;
+  width: 130px;
 }
+/* First Animation */
 
-.apple_left {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  z-index: 5;
-}
+/* Enter stage */
 
-.pineapple_right {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  z-index: 5;
-}
-
-/* TWO */
-
-.left2 {
-  background-color: lightgreen;
-  width: 150px;
-  height: 250px;
-  position: absolute;
-  z-index: 5;
-  top: 0;
-}
-
-.right2 {
-  background-color: pink;
-  width: 150px;
-  height: 250px;
+.main_heading1 {
   position: absolute;
   top: 0;
-  left: 150px;
-  z-index: 0;
-  z-index: 5;
-}
-
-.pomegranate_left {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  z-index: 5;
-}
-
-.lime_right {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  z-index: 5;
-}
-
-/* THREE */
-
-.left3 {
-  background-color: lightskyblue;
-  width: 150px;
-  height: 250px;
-  position: absolute;
-  z-index: 5;
-  top: 0;
-}
-
-.right3 {
-  background-color: orange;
-  width: 150px;
-  height: 250px;
-  position: absolute;
-  top: 0;
-  left: 150px;
-  z-index: 0;
-  z-index: 5;
-}
-
-.passionFruit_left {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  z-index: 5;
-}
-
-.orange_right {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  z-index: 5;
-}
-
-/* //////////// :end */
-
-.endText1 {
-  font-size: 2.6rem;
-  position: absolute;
-  top: 40px;
-  left: 10px;
-  z-index: 200;
-  color: #71a882;
-}
-
-.endText2 {
-  font-size: 2rem;
-  position: absolute;
-  top: 84px;
-  left: 10px;
-  z-index: 200;
-  color: #ff3f29;
-}
-
-.banana {
-  position: absolute;
-  left: 100px;
-  top: 190px;
-  width: 20%;
+  left: 0;
   z-index: 20;
-}
-.peach {
-  position: absolute;
-  left: 162px;
-  top: 150px;
-  width: 15%;
-  z-index: 20;
+  font-size: 1.1rem;
+  top: 100px;
+  color: white;
+  padding-left: 10px;
+  font-weight: normal;
 }
 
-.strawberry {
+.main_heading_background1 {
   position: absolute;
-  left: 210px;
-  top: 184px;
-  width: 14%;
+  height: 30px;
+  width: 180px;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  top: 92px;
+  background-color: black;
+}
+
+.sub_heading1 {
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: 20;
+  font-size: 1.1rem;
+  top: 133px;
+  color: white;
+  padding-left: 10px;
+  font-weight: normal;
+}
+
+.sub_heading_background1 {
+  position: absolute;
+  height: 30px;
+  width: 215px;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  top: 125px;
+  background-color: black;
+}
+
+/* Second Animation */
+
+/* Enter stage */
+
+.main_heading2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  font-size: 1.1rem;
+  top: 100px;
+  color: white;
+  padding-left: 10px;
+  font-weight: normal;
+}
+
+.main_heading_background2 {
+  position: absolute;
+  height: 30px;
+  width: 162px;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  top: 92px;
+  background-color: black;
+}
+
+.sub_heading2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  font-size: 1.1rem;
+  top: 133px;
+  color: white;
+  padding-left: 10px;
+  font-weight: normal;
+}
+
+.sub_heading_background2 {
+  position: absolute;
+  height: 30px;
+  width: 236px;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  top: 125px;
+  background-color: black;
+}
+
+/* Third Animation */
+
+/* Enter stage */
+
+.main_heading3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  font-size: 1.1rem;
+  top: 100px;
+  color: white;
+  padding-left: 10px;
+  font-weight: normal;
+}
+
+.main_heading_background3 {
+  position: absolute;
+  height: 30px;
+  width: 157px;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  top: 92px;
+  background-color: black;
+}
+
+.sub_heading3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  font-size: 1.1rem;
+  top: 133px;
+  color: white;
+  padding-left: 10px;
+  font-weight: normal;
+}
+
+.sub_heading_background3 {
+  position: absolute;
+  height: 30px;
+  width: 190px;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  top: 125px;
+  background-color: black;
+}
+
+h1.apply {
+  background-color: #076400;
+  color: white;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  position: absolute;
+  top: 170px;
+  left: 220px;
+  z-index: 100;
+  font-size: 0.9rem;
+  padding-top: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.1rem;
+  opacity: 0;
+  font-weight: normal;
 }
 
 /* Button code */

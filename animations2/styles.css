@@ -1,21 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
-
-*[x-apple-data-detectors],  /* iOS */
-    .x-gmail-data-detectors,    /* Gmail */
-    .x-gmail-data-detectors *,
-    .aBn {
-  border-bottom: 0 !important;
-  cursor: default !important;
-  color: inherit !important;
-  text-decoration: none !important;
-  font-size: inherit !important;
-  font-family: inherit !important;
-  font-weight: inherit !important;
-  line-height: inherit !important;
-}
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
 
 html {
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
 }
 
 *,
@@ -26,96 +16,278 @@ html {
   padding: 0;
 }
 
-body {
-  font-family: "Righteous", cursive;
-  font-weight: normal;
-}
-
 .container {
+  position: relative;
   height: 250px;
   width: 300px;
-  position: relative;
+  background-color: #1b1f2f;
   overflow: hidden;
   visibility: hidden;
-  border: 1px solid #007ddf;
-}
-
-.logo {
-  height: 250px;
-  width: 300px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 5;
 }
 
 h1 {
-  text-align: center;
-  color: #007ddf;
-  font-size: 1.15rem;
-  margin-top: 48px;
-  z-index: 10;
+  color: #ffb330;
+  font-size: 1.2rem;
   position: absolute;
-  top: 0;
-  left: 21px;
-  font-weight: normal;
+  top: 15px;
+  left: 20px;
+  font-weight: 700;
 }
 
-.location {
-  text-align: center;
-  color: #007ddf;
-  font-size: 0.8rem;
-  line-height: 0.9rem;
-  margin-top: 46px;
-  z-index: 10;
-  position: absolute;
-  top: 150px;
-  left: 24px;
-  text-align: center;
-  font-weight: normal;
+h1 span {
+  color: white;
+  font-weight: 700;
 }
 
-.date {
-  text-align: center;
-  color: #007ddf;
-  font-size: 0.8rem;
-  line-height: 0.9rem;
-  margin-top: 46px;
-  z-index: 10;
+h1.main {
+  font-size: 2.4rem;
   position: absolute;
-  top: 150px;
-  left: 230px;
-  text-align: center;
-  font-weight: normal;
+  top: 32px;
+  left: 18px;
+  font-weight: 700;
 }
 
-.top {
-  height: 250px;
-  width: 300px;
+p {
   position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-}
-
-.bottom {
-  height: 250px;
-  width: 300px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
-}
-
-.model {
-  position: absolute;
+  color: white;
+  font-size: 0.7rem;
+  left: 20px;
   top: 90px;
-  left: 75px;
-  z-index: 5;
-  width: 48%;
+  font-weight: 400;
 }
 
-/* Button code */
+p.cta {
+  position: absolute;
+  color: #1b1f2f;
+  font-size: 0.6rem;
+  left: 30px;
+  top: 149px;
+  z-index: 10;
+  font-weight: 400;
+  background-color: white;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.saleText {
+  text-transform: uppercase;
+  color: #1b1f2f;
+  position: absolute;
+  top: 160px;
+  left: 115px;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 700;
+  z-index: 10;
+  line-height: 1.8rem;
+}
+
+.startingShape {
+  position: absolute;
+  top: 115px;
+  left: 100px;
+  rotate: 45deg;
+  width: 150px;
+  height: 150px;
+  background-color: #ffb330;
+  border: 5px solid white;
+}
+
+.shape1 {
+  position: absolute;
+  left: 170px;
+  top: 35px;
+  width: 100%;
+}
+
+.shape2 {
+  position: absolute;
+  left: -162px;
+  top: 71px;
+  width: 70%;
+}
+
+/* ONE */
+
+.one {
+  position: absolute;
+  top: 40px;
+  left: 75px;
+  width: 95%;
+  z-index: 100;
+}
+
+.line1 {
+  position: absolute;
+  top: 207px;
+  left: 31px;
+  width: 90px;
+  height: 2px;
+  background-color: #ffb330;
+  rotate: -15deg;
+  opacity: 0;
+  z-index: 130;
+}
+
+.one_text_full {
+  position: absolute;
+  left: 36px;
+  top: 185px;
+  color: #ffb330;
+  z-index: 100;
+  font-size: 30px;
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+}
+
+.one_text_discount {
+  position: absolute;
+  left: 36px;
+  top: 185px;
+  color: #ffb330;
+  z-index: 100;
+  font-size: 30px;
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+  opacity: 0;
+}
+
+/* TWO */
+
+.two {
+  position: absolute;
+  top: 40px;
+  left: 75px;
+  width: 95%;
+  z-index: 100;
+}
+
+.line2 {
+  position: absolute;
+  top: 207px;
+  left: 31px;
+  width: 90px;
+  height: 2px;
+  background-color: #ffb330;
+  rotate: -15deg;
+  opacity: 0;
+  z-index: 130;
+}
+
+.two_text_full {
+  position: absolute;
+  left: 36px;
+  top: 185px;
+  color: #ffb330;
+  z-index: 100;
+  font-size: 30px;
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+}
+
+.two_text_discount {
+  position: absolute;
+  left: 36px;
+  top: 185px;
+  color: #ffb330;
+  z-index: 100;
+  font-size: 30px;
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+  opacity: 0;
+}
+
+/* THREE */
+
+.three {
+  position: absolute;
+  top: 40px;
+  left: 75px;
+  width: 95%;
+  z-index: 100;
+}
+
+.line3 {
+  position: absolute;
+  top: 207px;
+  left: 31px;
+  width: 90px;
+  height: 2px;
+  background-color: #ffb330;
+  rotate: -15deg;
+  opacity: 0;
+  z-index: 130;
+}
+
+.three_text_full {
+  position: absolute;
+  left: 36px;
+  top: 185px;
+  color: #ffb330;
+  z-index: 100;
+  font-size: 30px;
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+}
+
+.three_text_discount {
+  position: absolute;
+  left: 36px;
+  top: 185px;
+  color: #ffb330;
+  z-index: 100;
+  font-size: 30px;
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+  opacity: 0;
+}
+
+/* FOUR */
+
+.four {
+  position: absolute;
+  top: 40px;
+  left: 75px;
+  width: 95%;
+  z-index: 100;
+}
+
+.line4 {
+  position: absolute;
+  top: 207px;
+  left: 31px;
+  width: 90px;
+  height: 2px;
+  background-color: #ffb330;
+  rotate: -15deg;
+  opacity: 0;
+  z-index: 130;
+}
+
+.four_text_full {
+  position: absolute;
+  left: 36px;
+  top: 185px;
+  color: #ffb330;
+  z-index: 100;
+  font-size: 30px;
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+}
+
+.four_text_discount {
+  position: absolute;
+  left: 36px;
+  top: 185px;
+  color: #ffb330;
+  z-index: 100;
+  font-size: 30px;
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+  opacity: 0;
+}
+
+/* Code below for the button */
 
 .btn {
   height: 30px;

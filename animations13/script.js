@@ -1,241 +1,438 @@
 let select = (e) => document.querySelector(e);
 let selectAll = (e) => document.querySelectoAll(e);
 
+const wallet_front = select(".wallet_front");
+const wallet_back = select(".wallet_back");
+const passport = select(".passport");
+const ticket = select(".ticket");
+const photo = select(".photo");
+const suitcase = select(".suitcase");
+const redeemer = select(".redeemer");
+const paris = select(".paris");
+const camera = select(".camera");
+const liberty = select(".liberty");
+const plane = select(".plane");
+const taj = select(".taj");
+const ben = select(".ben");
+const bon_image = select(".bon_image");
+const bon_background = select(".bon_background");
+const bon = select(".bon");
+const voyage = select(".voyage");
+const logo = select(".logo");
+const start_logo = select(".start_logo");
+const introduction = select(".introduction");
+const depart = select(".depart");
+const explore = select(".explore");
+
+gsap.set(".container", { autoAlpha: 1 });
+
 let pause = select("#pause");
 
-let animation = gsap.timeline({
+const master = gsap.timeline({
   onComplete: () => (pause.innerHTML = "Play"),
 });
-animation.pause();
+master.pause();
 
-// First Animation
-
-animation.to(".start", {
-  opacity: 0,
-  duration: 0,
+gsap.defaults({
+  ease: "power2.in",
+  duration: 0.35,
 });
 
-animation.fromTo(
-  ".logo_horizontal",
-  {
+master
+  .to(start_logo, {
     opacity: 0,
-  },
-  {
+  })
+  .from(wallet_front, {
+    y: -100,
+    x: 280,
+    duration: 0.4,
+    ease: "back.out(1.7)",
+    rotation: 45,
+    transformOrigin: "left 50%",
+  })
+
+  .from(
+    wallet_back,
+    {
+      y: -100,
+      x: 280,
+      duration: 0.4,
+      ease: "back.out(1.7)",
+      rotation: 45,
+      transformOrigin: "left 50%",
+    },
+    "<"
+  )
+
+  .to(
+    passport,
+    {
+      opacity: 1,
+    },
+    "=-0.25"
+  )
+
+  .to(
+    photo,
+    {
+      opacity: 1,
+    },
+    "<"
+  )
+
+  .to(
+    suitcase,
+    {
+      opacity: 1,
+    },
+    "<"
+  )
+
+  .to(
+    redeemer,
+    {
+      opacity: 1,
+    },
+    "<"
+  )
+
+  .to(
+    ticket,
+    {
+      opacity: 1,
+    },
+    "<"
+  )
+
+  .to(
+    paris,
+    {
+      opacity: 1,
+    },
+    "<"
+  )
+
+  .to(
+    camera,
+    {
+      opacity: 1,
+    },
+    "<"
+  )
+
+  .to(
+    taj,
+    {
+      opacity: 1,
+    },
+    "<"
+  )
+
+  .to(
+    liberty,
+    {
+      opacity: 1,
+    },
+    "<"
+  )
+
+  .to(
+    ben,
+    {
+      opacity: 1,
+    },
+    "<"
+  )
+
+  .from(
+    passport,
+    {
+      y: 40,
+      x: 30,
+      duration: 0.5,
+      ease: "back.out(1.7)",
+    },
+    "=+0.5"
+  )
+  .from(
+    photo,
+    {
+      y: 40,
+      duration: 0.5,
+      ease: "back.out(1.7)",
+    },
+    "=-0.25"
+  )
+
+  .from(
+    redeemer,
+    {
+      y: 110,
+      x: 40,
+      duration: 0.5,
+      ease: "back.out(1.7)",
+    },
+    "=-0.25"
+  )
+
+  .from(
+    suitcase,
+    {
+      y: 60,
+      duration: 0.5,
+      ease: "back.out(1.7)",
+    },
+    "=-0.25"
+  )
+
+  .from(
+    ticket,
+    {
+      y: 60,
+      x: 50,
+      duration: 0.5,
+      ease: "back.out(1.7)",
+    },
+    "=-0.15"
+  )
+
+  .from(
+    paris,
+    {
+      y: 120,
+      duration: 0.5,
+      ease: "back.out(1.7)",
+    },
+    "=-0.25"
+  )
+
+  .from(
+    camera,
+    {
+      y: 50,
+      duration: 0.5,
+      ease: "back.out(1.7)",
+    },
+    "=-0.25"
+  )
+
+  .from(
+    taj,
+    {
+      y: 80,
+      duration: 0.5,
+      ease: "back.out(1.7)",
+    },
+    "=-0.25"
+  )
+
+  .from(
+    liberty,
+    {
+      y: 120,
+      duration: 0.5,
+      ease: "back.out(1.7)",
+    },
+    "=-0.25"
+  )
+
+  .from(
+    ben,
+    {
+      y: 110,
+      x: -30,
+      duration: 0.5,
+      ease: "back.out(1.7)",
+    },
+    "=-0.25"
+  )
+
+  .to(
+    introduction,
+    {
+      opacity: 0,
+      duration: 0.25,
+    },
+    "=+1"
+  )
+
+  .to(
+    wallet_back,
+    {
+      opacity: 0,
+      duration: 0.25,
+    },
+    "<"
+  )
+
+  .to(
+    paris,
+    {
+      opacity: 0,
+      duration: 0.25,
+    },
+    "<"
+  )
+
+  .to(
+    redeemer,
+    {
+      opacity: 0,
+      duration: 0.25,
+    },
+    "<"
+  )
+
+  .to(
+    passport,
+    {
+      opacity: 0,
+      duration: 0.25,
+    },
+    "<"
+  )
+
+  .to(
+    ticket,
+    {
+      opacity: 0,
+      duration: 0.25,
+    },
+    "<"
+  )
+
+  .to(
+    ben,
+    {
+      opacity: 0,
+      duration: 0.25,
+    },
+    "<"
+  )
+
+  .to(
+    liberty,
+    {
+      opacity: 0,
+      duration: 0.25,
+    },
+    "<"
+  )
+
+  .to(
+    camera,
+    {
+      opacity: 0,
+      duration: 0.25,
+    },
+    "<"
+  )
+
+  .to(
+    taj,
+    {
+      opacity: 0,
+      duration: 0.25,
+    },
+    "<"
+  )
+
+  .to(
+    photo,
+    {
+      opacity: 0,
+      duration: 0.25,
+    },
+    "<"
+  )
+
+  .to(
+    suitcase,
+    {
+      opacity: 0,
+      duration: 0.25,
+    },
+    "<"
+  )
+
+  .fromTo(
+    bon_image,
+    {
+      opacity: 1,
+      scale: 0,
+      rotation: 0,
+    },
+    {
+      opacity: 1,
+      scale: 0.5,
+      rotation: 360,
+      duration: 0.75,
+    },
+    "=-0.75"
+  )
+
+  .fromTo(
+    bon_background,
+    {
+      opacity: 1,
+      scale: 0,
+    },
+    {
+      opacity: 1,
+      scale: 0.5,
+      ease: "back.out(1.7)",
+      duration: 0.25,
+    },
+    "=-0.15"
+  )
+
+  .fromTo(
+    bon,
+    {
+      opacity: 1,
+      scale: 0,
+      rotation: 90,
+    },
+    {
+      opacity: 1,
+      scale: 0.5,
+      ease: "back.out(1.7)",
+      rotation: 0,
+      duration: 0.25,
+    },
+    "=-0.15"
+  )
+
+  .fromTo(
+    voyage,
+    {
+      opacity: 1,
+      scale: 0,
+      ease: "back.out(1.7)",
+      rotation: -90,
+    },
+    {
+      opacity: 1,
+      scale: 0.5,
+      rotation: 0,
+      ease: "back.out(1.7)",
+      duration: 0.25,
+    },
+    "=-0.15"
+  )
+
+  .to(logo, {
     opacity: 1,
-  },
-  "=+0.5"
-);
+  })
 
-// First animation
-
-// Enter stage
-
-animation.fromTo(
-  ".main_heading_background1",
-  {
-    x: -200,
-  },
-  {
-    x: -40,
-    ease: "back.out(2)",
-  }
-);
-
-animation.fromTo(
-  ".main_heading1",
-  {
-    x: -160,
-  },
-  {
-    x: 0,
-    ease: "back.out(1.7)",
-  },
-  "=-0.25"
-);
-
-animation.fromTo(
-  ".sub_heading_background1",
-  {
-    x: -220,
-  },
-  {
-    x: -40,
-    ease: "back.out(2)",
-  }
-);
-
-animation.fromTo(
-  ".sub_heading1",
-  {
-    x: -180,
-  },
-  {
-    x: 0,
-    ease: "back.out(1.7)",
-  },
-  "=-0.25"
-);
-
-// Leave stage
-
-animation.to(".main_heading_background1, .main_heading1", {
-  x: -210,
-  delay: 2,
-  ease: "back.in(2)",
-});
-
-animation.to(".sub_heading_background1, .sub_heading1", {
-  x: -230,
-  ease: "back.in(2)",
-});
-
-// Second animation
-
-animation.to(".background2", {
-  opacity: 1,
-  duration: 0.25,
-});
-
-// Enter stage
-
-animation.fromTo(
-  ".main_heading_background2",
-  {
-    x: -200,
-  },
-  {
-    x: -40,
-    ease: "back.out(2)",
-  },
-  "=+0.5"
-);
-
-animation.fromTo(
-  ".main_heading2",
-  {
-    x: -160,
-  },
-  {
-    x: 0,
-    ease: "back.out(1.7)",
-  },
-  "=-0.25"
-);
-
-animation.fromTo(
-  ".sub_heading_background2",
-  {
-    x: -240,
-  },
-  {
-    x: -40,
-    ease: "back.out(2)",
-  }
-);
-
-animation.fromTo(
-  ".sub_heading2",
-  {
-    x: -195,
-  },
-  {
-    x: 0,
-    ease: "back.out(1.7)",
-  },
-  "=-0.25"
-);
-
-// Leave stage
-
-animation.to(".main_heading_background2, .main_heading2", {
-  x: -210,
-  delay: 2,
-  ease: "back.in(2)",
-});
-
-animation.to(".sub_heading_background2, .sub_heading2", {
-  x: -240,
-  ease: "back.in(2)",
-});
-
-// Enter stage
-
-animation.fromTo(
-  ".main_heading_background3",
-  {
-    x: -200,
-  },
-  {
-    x: -40,
-    ease: "back.out(2)",
-  },
-  "=+0.5"
-);
-
-animation.fromTo(
-  ".main_heading3",
-  {
-    x: -160,
-  },
-  {
-    x: 0,
-    ease: "back.out(1.7)",
-  },
-  "=-0.25"
-);
-
-animation.fromTo(
-  ".sub_heading_background3",
-  {
-    x: -240,
-  },
-  {
-    x: -40,
-    ease: "back.out(2)",
-  }
-);
-
-animation.fromTo(
-  ".sub_heading3",
-  {
-    x: -195,
-  },
-  {
-    x: 0,
-    ease: "back.out(1.7)",
-  },
-  "=-0.25"
-);
-
-// Leave stage
-
-animation.to(".main_heading_background3, .main_heading3", {
-  x: -210,
-  delay: 2,
-  ease: "back.in(2)",
-});
-
-animation.to(".sub_heading_background3, .sub_heading3", {
-  x: -240,
-  ease: "back.in(2)",
-});
-
-animation.to(
-  ".apply",
-  {
+  .to(explore, {
     opacity: 1,
-    duration: 1,
-    ease: "back.out(1.7)",
-  },
-  "=-0.5"
-);
-
-// Button code
+  });
 
 pause.addEventListener("click", () => {
-  animation.paused(!animation.paused());
-  if (animation.progress() == 1) {
-    animation.restart();
+  master.paused(!master.paused());
+  if (master.progress() == 1) {
+    master.restart();
   }
-  pause.innerHTML = animation.paused() ? "Play" : "Pause";
+  pause.innerHTML = master.paused() ? "Play" : "Pause";
 });

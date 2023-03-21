@@ -3,89 +3,354 @@ let selectAll = (e) => document.querySelectoAll(e);
 
 let pause = select("#pause");
 
-gsap.set(".container", { autoAlpha: 1 });
-
 let master = gsap.timeline({
   onComplete: () => (pause.innerHTML = "Play"),
 });
 master.pause();
 
-// Intro
+gsap.set(".container", { autoAlpha: 1 });
 
-master.to(".start", {
+// Introduction
+
+master.to(".logo", {
   opacity: 0,
 });
 
-master.from("#Moon", {
-  x: -140,
-  ease: "none",
-  duration: 2,
+master.from(".believe", {
+  x: -230,
+  duration: 0.25,
 });
 
-master.from(
-  "#pumpkin1, #pumpkin2",
-  {
-    y: 70,
-    ease: "back.out(1.7)",
-    duration: 0.75,
-    stagger: 0.25,
-  },
-  "<"
-);
-
 master.to(
-  ".web",
+  ".believe",
   {
-    x: -20,
-    y: 20,
-    ease: "back.out(1.7)",
+    opacity: 0,
     duration: 0.25,
-    scale: 1.3,
+  },
+  "=+0.5"
+);
+
+master.from(".innovation", {
+  opacity: 0,
+  scale: 5,
+  duration: 0.25,
+  ease: "back.out(1.7)",
+});
+
+master.to(
+  ".starts",
+  {
+    opacity: 1,
+    duration: 0.1,
+  },
+  "=+0.5"
+);
+
+master.to(
+  ".innovation",
+  {
+    opacity: 0,
+    duration: 0.1,
   },
   "<"
 );
 
 master.to(
-  ".spider",
+  ".when",
   {
-    x: -30,
-    y: 30,
-    ease: "back.out(1.7)",
+    opacity: 1,
+    duration: 0.1,
+  },
+  "=+0.5"
+);
+
+master.to(
+  ".starts",
+  {
+    opacity: 0,
+    duration: 0.1,
+  },
+  "<"
+);
+
+master.to(
+  ".listen",
+  {
+    opacity: 1,
+    duration: 0.1,
+  },
+  "=+0.5"
+);
+
+master.to(
+  ".when",
+  {
+    opacity: 0,
+    duration: 0.1,
+  },
+  "<"
+);
+
+// People
+
+master.to(
+  ".listen",
+  {
+    opacity: 0,
+    duration: 0.1,
+  },
+  "=+1"
+);
+
+// Working
+
+master.to(
+  ".working",
+  {
+    opacity: 1,
+    duration: 0.25,
+  },
+  "+=0.25"
+);
+
+master.to(".working", {
+  x: -45,
+  ease: "power4.out",
+  duration: 0.25,
+});
+
+master.to(
+  ".with",
+  {
+    opacity: 1,
+    duration: 0.5,
+  },
+  "=-0.25"
+);
+
+master.to(
+  ".hiv",
+  {
+    opacity: 1,
+    duration: 0.25,
+  },
+  ">"
+);
+
+master.to(
+  ".working, .with",
+  {
+    opacity: 0,
+    duration: 0.1,
+  },
+  "<"
+);
+
+master.to(
+  ".community_image, .square",
+  {
+    opacity: 1,
+    duration: 0,
+  },
+  "=+0.5"
+);
+
+master.fromTo(
+  ".community_image, .square",
+  {
+    scale: 1.2,
+  },
+  {
+    scale: 1,
     duration: 3,
   },
-  ">"
+  "=-0.5"
 );
 
 master.to(
-  ".witch",
+  ".hiv, .square",
   {
-    x: 270,
-    y: -170,
-    ease: "none",
-    duration: 5,
+    opacity: 0,
+    duration: 0.25,
+  },
+  "=-0.25"
+);
+
+master.to(
+  ".community_image",
+  {
+    opacity: 0,
+    duration: 0.75,
+  },
+  "=+0.5"
+);
+
+master.to(
+  ".decades",
+  {
+    opacity: 1,
+    duration: 0.25,
+  },
+  "=-0.5"
+);
+master.to(
+  ".used",
+  {
+    opacity: 1,
+    duration: 0.25,
+  },
+  "=+1"
+);
+
+master.to(
+  ".decades",
+  {
+    opacity: 0,
+    duration: 0.15,
   },
   "<"
 );
 
-master.from(
-  "#happy",
+master.to(
+  ".disease",
   {
-    x: 150,
-    ease: "back.out(1.7)",
+    opacity: 1,
+  },
+  "=+1"
+);
+
+master.to(
+  ".used",
+  {
+    opacity: 0,
+    duration: 0.15,
   },
   "<"
 );
 
-master.from(
-  "#halloween",
+master.fromTo(
+  ".disease",
   {
-    x: 150,
-    ease: "back.out(1.7)",
+    scale: 1,
   },
-  ">"
+  {
+    scale: 1.4,
+    duration: 3.5,
+  },
+  "-=2"
 );
 
-// Button code
+master.from(
+  ".science",
+  {
+    x: -210,
+    ease: "back.out(2)",
+  },
+  "-=2"
+);
+
+master.from(
+  ".technology",
+  {
+    x: 240,
+    ease: "back.out(2)",
+  },
+  "-=1.5"
+);
+
+master.from(
+  ".talents",
+  {
+    x: -245,
+    ease: "back.out(2)",
+  },
+  "-=1"
+);
+
+master.to(
+  ".think",
+  {
+    opacity: 1,
+    duration: 0.25,
+  },
+  "=+0.75"
+);
+
+master.to(
+  ".science, .technology, .talents",
+  {
+    opacity: 0,
+  },
+  "<"
+);
+
+master.to(
+  ".disease",
+  {
+    opacity: 0,
+  },
+  "<"
+);
+
+master.to(
+  ".think",
+  {
+    opacity: 0,
+  },
+  "=+0.75"
+);
+
+master.to(
+  ".every",
+  {
+    opacity: 1,
+  },
+  "=-0.25"
+);
+
+master.to(
+  ".every",
+  {
+    opacity: 0,
+  },
+  "=+0.75"
+);
+
+master.from(
+  ".reduce",
+  {
+    opacity: 0,
+    y: -20,
+    scaleY: 0,
+  },
+  "=-0.25"
+);
+
+master.from(
+  ".people",
+  {
+    opacity: 0,
+    y: -20,
+    scaleY: 0,
+  },
+  "=+0.25"
+);
+
+master.to(
+  ".reduce, .people",
+  {
+    opacity: 0,
+  },
+  "=+2"
+);
+
+master.to(
+  ".logo",
+  {
+    opacity: 1,
+  },
+  "=-0.5"
+);
 
 pause.addEventListener("click", () => {
   master.paused(!master.paused());

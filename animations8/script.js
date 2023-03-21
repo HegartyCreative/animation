@@ -1,433 +1,427 @@
 let select = (e) => document.querySelector(e);
 let selectAll = (e) => document.querySelectoAll(e);
 
-const wallet_front = select(".wallet_front");
-const wallet_back = select(".wallet_back");
-const passport = select(".passport");
-const ticket = select(".ticket");
-const photo = select(".photo");
-const suitcase = select(".suitcase");
-const redeemer = select(".redeemer");
-const paris = select(".paris");
-const camera = select(".camera");
-const liberty = select(".liberty");
-const plane = select(".plane");
-const taj = select(".taj");
-const ben = select(".ben");
-const bon_image = select(".bon_image");
-const bon_background = select(".bon_background");
-const bon = select(".bon");
-const voyage = select(".voyage");
-const logo = select(".logo");
-const start_logo = select(".start_logo");
-const introduction = select(".introduction");
-const depart = select(".depart");
-const explore = select(".explore");
-
-gsap.set(".container", { autoAlpha: 1 });
-
 let pause = select("#pause");
 
-const master = gsap.timeline({
+let master = gsap.timeline({
   onComplete: () => (pause.innerHTML = "Play"),
 });
+
 master.pause();
 
-gsap.defaults({
-  ease: "power2.in",
-  duration: 0.35,
+master.to(
+  ".main_logo",
+  {
+    opacity: 0,
+  },
+  "=+1"
+);
+
+master.to(".start", {
+  x: 300,
 });
 
-master
-  .to(start_logo, {
+master.from(".supporting", {
+  x: -255,
+  ease: "back.out(1)",
+});
+
+master.from(".healthy", {
+  x: 280,
+  ease: "back.out(1)",
+});
+
+master.from(".diets", {
+  x: -270,
+  ease: "back.out(1)",
+});
+
+master.from(
+  ".grapes",
+  {
+    y: 80,
+    ease: "back.out(3)",
+  },
+  "=-0.4"
+);
+
+master.from(
+  ".cherry",
+  {
+    y: 50,
+    ease: "back.out(3)",
+  },
+  "=-0.3"
+);
+
+master.from(
+  ".pear",
+  {
+    y: 50,
+    ease: "back.out(3)",
+  },
+  "=-0.2"
+);
+
+master.to(
+  ".supporting, .healthy, .diets, .grapes, .cherry, .pear",
+  {
     opacity: 0,
-  })
-  .from(wallet_front, {
-    y: -100,
-    x: 280,
+  },
+  "=+1"
+);
+
+master.to(".logo", {
+  opacity: 1,
+});
+
+///////////////////////////////////////////////////////////////// ONE
+
+// ONE ENTER
+
+master.fromTo(
+  ".left1",
+  {
+    y: -250,
+    x: 0,
+  },
+  {
+    y: 0,
     duration: 0.4,
+    ease: "power1.out",
+  },
+  "<"
+);
+
+master.fromTo(
+  ".right1",
+  {
+    y: 250,
+    x: 0,
+  },
+  {
+    y: 0,
+    duration: 0.4,
+    ease: "power1.out",
+  },
+  "<"
+);
+
+master.to(".intro", {
+  opacity: 1,
+});
+
+master.fromTo(
+  ".apple_left",
+  {
+    y: -250,
+    x: 0,
+  },
+  {
+    y: 0,
+    duration: 0.5,
     ease: "back.out(1.7)",
-    rotation: 45,
-    transformOrigin: "left 50%",
-  })
+  }
+);
 
-  .from(
-    wallet_back,
-    {
-      y: -100,
-      x: 280,
-      duration: 0.4,
-      ease: "back.out(1.7)",
-      rotation: 45,
-      transformOrigin: "left 50%",
-    },
-    "<"
-  )
+master.fromTo(
+  ".pineapple_right",
+  {
+    y: 250,
+    x: 0,
+  },
+  {
+    y: 0,
+    duration: 0.5,
+    ease: "back.out(1)",
+  },
+  "<"
+);
 
-  .to(
-    passport,
-    {
-      opacity: 1,
-    },
-    "=-0.25"
-  )
+// ONE LEAVES
 
-  .to(
-    photo,
-    {
-      opacity: 1,
-    },
-    "<"
-  )
+master.to(
+  ".apple_left",
+  {
+    y: 250,
+    ease: "back.in(1)",
+  },
+  "=+2"
+);
 
-  .to(
-    suitcase,
-    {
-      opacity: 1,
-    },
-    "<"
-  )
+master.to(
+  ".left1",
+  {
+    y: 250,
+    ease: "back.in(1)",
+  },
+  "<"
+);
 
-  .to(
-    redeemer,
-    {
-      opacity: 1,
-    },
-    "<"
-  )
+master.to(
+  ".pineapple_right",
+  {
+    y: -250,
+    ease: "back.in(1)",
+  },
+  "<"
+);
 
-  .to(
-    ticket,
-    {
-      opacity: 1,
-    },
-    "<"
-  )
+master.to(
+  ".right1",
+  {
+    y: -250,
+    ease: "back.in(1)",
+  },
+  "<"
+);
 
-  .to(
-    paris,
-    {
-      opacity: 1,
-    },
-    "<"
-  )
+/////////////////////////////////////////////////////////////////// TWO
 
-  .to(
-    camera,
-    {
-      opacity: 1,
-    },
-    "<"
-  )
+// TWO ENTER
 
-  .to(
-    taj,
-    {
-      opacity: 1,
-    },
-    "<"
-  )
+master.fromTo(
+  ".left2",
+  {
+    y: -250,
+    x: 0,
+  },
+  {
+    y: 0,
+    duration: 0.4,
+    ease: "power1.out",
+  },
+  "=+0.25"
+);
 
-  .to(
-    liberty,
-    {
-      opacity: 1,
-    },
-    "<"
-  )
+master.fromTo(
+  ".right2",
+  {
+    y: 250,
+    x: 0,
+  },
+  {
+    y: 0,
+    duration: 0.4,
+    ease: "power1.out",
+  },
+  "<"
+);
 
-  .to(
-    ben,
-    {
-      opacity: 1,
-    },
-    "<"
-  )
+master.fromTo(
+  ".pomegranate_left",
+  {
+    y: -250,
+    x: 0,
+  },
+  {
+    y: 0,
+    duration: 0.5,
+    ease: "back.out(1.7)",
+  }
+);
 
-  .from(
-    passport,
-    {
-      y: 40,
-      x: 30,
-      duration: 0.5,
-      ease: "back.out(1.7)",
-    },
-    "=+0.5"
-  )
-  .from(
-    photo,
-    {
-      y: 40,
-      duration: 0.5,
-      ease: "back.out(1.7)",
-    },
-    "=-0.25"
-  )
+master.fromTo(
+  ".lime_right",
+  {
+    y: 250,
+    x: 0,
+  },
+  {
+    y: 0,
+    duration: 0.5,
+    ease: "back.out(1)",
+  },
+  "<"
+);
 
-  .from(
-    redeemer,
-    {
-      y: 110,
-      x: 40,
-      duration: 0.5,
-      ease: "back.out(1.7)",
-    },
-    "=-0.25"
-  )
+// ONE LEAVES
 
-  .from(
-    suitcase,
-    {
-      y: 60,
-      duration: 0.5,
-      ease: "back.out(1.7)",
-    },
-    "=-0.25"
-  )
+master.to(
+  ".pomegranate_left",
+  {
+    y: 250,
+    ease: "back.in(1)",
+  },
+  "=+2"
+);
 
-  .from(
-    ticket,
-    {
-      y: 60,
-      x: 50,
-      duration: 0.5,
-      ease: "back.out(1.7)",
-    },
-    "=-0.15"
-  )
+master.to(
+  ".left2",
+  {
+    y: 250,
+    ease: "back.in(1)",
+  },
+  "<"
+);
 
-  .from(
-    paris,
-    {
-      y: 120,
-      duration: 0.5,
-      ease: "back.out(1.7)",
-    },
-    "=-0.25"
-  )
+master.to(
+  ".lime_right",
+  {
+    y: -250,
+    ease: "back.in(1)",
+  },
+  "<"
+);
 
-  .from(
-    camera,
-    {
-      y: 50,
-      duration: 0.5,
-      ease: "back.out(1.7)",
-    },
-    "=-0.25"
-  )
+master.to(
+  ".right2",
+  {
+    y: -250,
+    ease: "back.in(1)",
+  },
+  "<"
+);
 
-  .from(
-    taj,
-    {
-      y: 80,
-      duration: 0.5,
-      ease: "back.out(1.7)",
-    },
-    "=-0.25"
-  )
+/////////////////////////////////////////////////////////////////// THREE
 
-  .from(
-    liberty,
-    {
-      y: 120,
-      duration: 0.5,
-      ease: "back.out(1.7)",
-    },
-    "=-0.25"
-  )
+// THREE ENTER
 
-  .from(
-    ben,
-    {
-      y: 110,
-      x: -30,
-      duration: 0.5,
-      ease: "back.out(1.7)",
-    },
-    "=-0.25"
-  )
+master.fromTo(
+  ".left3",
+  {
+    y: -250,
+    x: 0,
+  },
+  {
+    y: 0,
+    duration: 0.4,
+    ease: "power1.out",
+  },
+  "=+0.25"
+);
 
-  .to(
-    introduction,
-    {
-      opacity: 0,
-      duration: 0.25,
-    },
-    "=+1"
-  )
+master.fromTo(
+  ".right3",
+  {
+    y: 250,
+    x: 0,
+  },
+  {
+    y: 0,
+    duration: 0.4,
+    ease: "power1.out",
+  },
+  "<"
+);
 
-  .to(
-    wallet_back,
-    {
-      opacity: 0,
-      duration: 0.25,
-    },
-    "<"
-  )
+master.fromTo(
+  ".passionFruit_left",
+  {
+    y: -250,
+    x: 0,
+  },
+  {
+    y: 0,
+    duration: 0.5,
+    ease: "back.out(1.7)",
+  }
+);
 
-  .to(
-    paris,
-    {
-      opacity: 0,
-      duration: 0.25,
-    },
-    "<"
-  )
+master.fromTo(
+  ".orange_right",
+  {
+    y: 250,
+    x: 0,
+  },
+  {
+    y: 0,
+    duration: 0.5,
+    ease: "back.out(1)",
+  },
+  "<"
+);
 
-  .to(
-    redeemer,
-    {
-      opacity: 0,
-      duration: 0.25,
-    },
-    "<"
-  )
+// ONE LEAVES
 
-  .to(
-    passport,
-    {
-      opacity: 0,
-      duration: 0.25,
-    },
-    "<"
-  )
+master.to(
+  ".passionFruit_left",
+  {
+    y: 250,
+    ease: "back.in(1)",
+  },
+  "=+2"
+);
 
-  .to(
-    ticket,
-    {
-      opacity: 0,
-      duration: 0.25,
-    },
-    "<"
-  )
+master.to(
+  ".left3",
+  {
+    y: 250,
+    ease: "back.in(1)",
+  },
+  "<"
+);
 
-  .to(
-    ben,
-    {
-      opacity: 0,
-      duration: 0.25,
-    },
-    "<"
-  )
+master.to(
+  ".orange_right",
+  {
+    y: -250,
+    ease: "back.in(1)",
+  },
+  "<"
+);
 
-  .to(
-    liberty,
-    {
-      opacity: 0,
-      duration: 0.25,
-    },
-    "<"
-  )
+master.to(
+  ".right3",
+  {
+    y: -250,
+    ease: "back.in(1)",
+  },
+  "<"
+);
 
-  .to(
-    camera,
-    {
-      opacity: 0,
-      duration: 0.25,
-    },
-    "<"
-  )
+master.to(".intro", {
+  opacity: 1,
+});
 
-  .to(
-    taj,
-    {
-      opacity: 0,
-      duration: 0.25,
-    },
-    "<"
-  )
+// End code
 
-  .to(
-    photo,
-    {
-      opacity: 0,
-      duration: 0.25,
-    },
-    "<"
-  )
+master.from(
+  ".endText1",
+  {
+    x: 289,
+    ease: "back.out(1.7)",
+  },
+  "=-0.5"
+);
 
-  .to(
-    suitcase,
-    {
-      opacity: 0,
-      duration: 0.25,
-    },
-    "<"
-  )
+master.from(
+  ".endText2",
+  {
+    x: -280,
+    ease: "back.out(1.7)",
+  },
+  "=-0.25"
+);
 
-  .fromTo(
-    bon_image,
-    {
-      opacity: 1,
-      scale: 0,
-      rotation: 0,
-    },
-    {
-      opacity: 1,
-      scale: 0.5,
-      rotation: 360,
-      duration: 0.75,
-    },
-    "=-0.75"
-  )
+master.from(
+  ".banana",
+  {
+    y: 60,
+    ease: "back.out(2)",
+  },
+  "=-0.25"
+);
 
-  .fromTo(
-    bon_background,
-    {
-      opacity: 1,
-      scale: 0,
-    },
-    {
-      opacity: 1,
-      scale: 0.5,
-      ease: "back.out(1.7)",
-      duration: 0.25,
-    },
-    "=-0.15"
-  )
+master.from(
+  ".strawberry",
+  {
+    y: 65,
+    ease: "back.out(2)",
+  },
+  "=-0.25"
+);
 
-  .fromTo(
-    bon,
-    {
-      opacity: 1,
-      scale: 0,
-      rotation: 90,
-    },
-    {
-      opacity: 1,
-      scale: 0.5,
-      ease: "back.out(1.7)",
-      rotation: 0,
-      duration: 0.25,
-    },
-    "=-0.15"
-  )
+master.from(
+  ".peach",
+  {
+    y: 100,
+    ease: "back.out(2)",
+  },
+  "=-0.25"
+);
 
-  .fromTo(
-    voyage,
-    {
-      opacity: 1,
-      scale: 0,
-      ease: "back.out(1.7)",
-      rotation: -90,
-    },
-    {
-      opacity: 1,
-      scale: 0.5,
-      rotation: 0,
-      ease: "back.out(1.7)",
-      duration: 0.25,
-    },
-    "=-0.15"
-  )
-
-  .to(logo, {
-    opacity: 1,
-  })
-
-  .to(explore, {
-    opacity: 1,
-  });
+// Button code
 
 pause.addEventListener("click", () => {
   master.paused(!master.paused());
