@@ -76,6 +76,24 @@ animation.fromTo(
   "=-0.25"
 );
 
+animation.to(
+  ".circle1",
+  {
+    opacity: 1,
+    duration: 0.25,
+  },
+  "<"
+);
+
+animation.from(
+  ".background",
+  {
+    x: 145,
+    ease: "back.out(1.7)",
+  },
+  ">"
+);
+
 // Leave stage
 
 animation.to(".main_heading_background1, .main_heading1", {
@@ -89,12 +107,16 @@ animation.to(".sub_heading_background1, .sub_heading1", {
   ease: "back.in(2)",
 });
 
-// Second animation
+animation.to(
+  ".background, .circle1",
+  {
+    opacity: 0,
+    duration: 0.25,
+  },
+  "-=0.25"
+);
 
-animation.to(".background2", {
-  opacity: 1,
-  duration: 0.25,
-});
+// Second animation
 
 // Enter stage
 
@@ -145,6 +167,24 @@ animation.fromTo(
   "=-0.25"
 );
 
+animation.to(
+  ".circle2",
+  {
+    opacity: 1,
+    duration: 0.25,
+  },
+  "<"
+);
+
+animation.from(
+  ".background2",
+  {
+    x: 145,
+    ease: "back.out(1.7)",
+  },
+  ">"
+);
+
 // Leave stage
 
 animation.to(".main_heading_background2, .main_heading2", {
@@ -157,6 +197,15 @@ animation.to(".sub_heading_background2, .sub_heading2", {
   x: -240,
   ease: "back.in(2)",
 });
+
+animation.to(
+  ".background2, .circle2",
+  {
+    opacity: 0,
+    duration: 0.25,
+  },
+  "-=0.25"
+);
 
 // Enter stage
 
@@ -207,18 +256,36 @@ animation.fromTo(
   "=-0.25"
 );
 
+animation.to(
+  ".circle3",
+  {
+    opacity: 1,
+    duration: 0.25,
+  },
+  "<"
+);
+
+animation.from(
+  ".background3",
+  {
+    x: 145,
+    ease: "back.out(1.7)",
+  },
+  ">"
+);
+
 // Leave stage
 
-animation.to(".main_heading_background3, .main_heading3", {
-  x: -210,
-  delay: 2,
-  ease: "back.in(2)",
-});
+// animation.to(".main_heading_background3, .main_heading3", {
+//   x: -210,
+//   delay: 2,
+//   ease: "back.in(2)",
+// });
 
-animation.to(".sub_heading_background3, .sub_heading3", {
-  x: -240,
-  ease: "back.in(2)",
-});
+// animation.to(".sub_heading_background3, .sub_heading3", {
+//   x: -240,
+//   ease: "back.in(2)",
+// });
 
 animation.to(
   ".apply",
@@ -227,7 +294,7 @@ animation.to(
     duration: 1,
     ease: "back.out(1.7)",
   },
-  "=-0.5"
+  ">"
 );
 
 // Button code

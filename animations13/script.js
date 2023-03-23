@@ -14,15 +14,9 @@ const liberty = select(".liberty");
 const plane = select(".plane");
 const taj = select(".taj");
 const ben = select(".ben");
-const bon_image = select(".bon_image");
-const bon_background = select(".bon_background");
-const bon = select(".bon");
-const voyage = select(".voyage");
-const logo = select(".logo");
 const start_logo = select(".start_logo");
 const introduction = select(".introduction");
 const depart = select(".depart");
-const explore = select(".explore");
 
 gsap.set(".container", { autoAlpha: 1 });
 
@@ -353,81 +347,15 @@ master
       duration: 0.25,
     },
     "<"
-  )
+  );
 
-  .fromTo(
-    bon_image,
-    {
-      opacity: 1,
-      scale: 0,
-      rotation: 0,
-    },
-    {
-      opacity: 1,
-      scale: 0.5,
-      rotation: 360,
-      duration: 0.75,
-    },
-    "=-0.75"
-  )
-
-  .fromTo(
-    bon_background,
-    {
-      opacity: 1,
-      scale: 0,
-    },
-    {
-      opacity: 1,
-      scale: 0.5,
-      ease: "back.out(1.7)",
-      duration: 0.25,
-    },
-    "=-0.15"
-  )
-
-  .fromTo(
-    bon,
-    {
-      opacity: 1,
-      scale: 0,
-      rotation: 90,
-    },
-    {
-      opacity: 1,
-      scale: 0.5,
-      ease: "back.out(1.7)",
-      rotation: 0,
-      duration: 0.25,
-    },
-    "=-0.15"
-  )
-
-  .fromTo(
-    voyage,
-    {
-      opacity: 1,
-      scale: 0,
-      ease: "back.out(1.7)",
-      rotation: -90,
-    },
-    {
-      opacity: 1,
-      scale: 0.5,
-      rotation: 0,
-      ease: "back.out(1.7)",
-      duration: 0.25,
-    },
-    "=-0.15"
-  )
-
-  .to(logo, {
+master.to(
+  start_logo,
+  {
     opacity: 1,
-  })
-
-  .to(explore, {
-    opacity: 1,
-  });
+  },
+  "-=0.25"
+);
 
 pause.addEventListener("click", () => {
   master.paused(!master.paused());

@@ -20,10 +20,9 @@ html {
 
 .start_logo {
   position: absolute;
-  top: 0px;
-  left: 0px;
-  height: 250px;
-  width: 300px;
+  top: 95px;
+  left: 42px;
+  width: 70%;
   overflow: hidden;
   z-index: 100;
   opacity: 1;
@@ -47,7 +46,7 @@ html {
   z-index: 0;
 }
 
-.grass {
+.sea {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -160,14 +159,6 @@ html {
   width: 17%;
   z-index: 5;
   opacity: 0;
-}
-
-.plane {
-  position: absolute;
-  top: 5px;
-  left: 130px;
-  width: 12%;
-  z-index: 5;
 }
 
 .bon_image {
