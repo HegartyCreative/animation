@@ -75,7 +75,7 @@ master.to(
   {
     opacity: 0,
   },
-  "+=0.25"
+  "+=0.15"
 );
 
 // Use
@@ -241,19 +241,20 @@ master.to(
   ".end",
   {
     opacity: 0,
+    duration: 0.25,
   },
-  "-=0.15"
+  "+=0.5"
 );
 
 // Heading
 
 master.to(
-  ".blue2",
+  ".red",
   {
     x: 300,
     duration: 0.25,
   },
-  "-=0.05"
+  ">"
 );
 
 master.to(".final", {
@@ -261,6 +262,20 @@ master.to(".final", {
   y: 20,
   stagger: 0.25,
 });
+
+// Closing
+
+master.from(
+  ".endRight",
+  {
+    x: 300,
+    ease: "power.out4",
+    duration: 0.2,
+  },
+  "+=2"
+);
+
+master.to(".logo2", { opacity: 1, y: 30 });
 
 // Button code
 

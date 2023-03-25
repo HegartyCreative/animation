@@ -29,7 +29,7 @@ body {
 .start {
   position: absolute;
   width: 50%;
-  top: 90px;
+  top: 100px;
   left: 74px;
   z-index: 100;
 }
@@ -86,12 +86,12 @@ body {
 .customers {
   color: white;
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 2.3rem;
   text-align: center;
   font-weight: 600;
   position: absolute;
-  top: 145px;
-  left: 47px;
+  top: 147px;
+  left: 33px;
   opacity: 0;
 }
 
@@ -331,7 +331,7 @@ body {
   top: 0;
   left: 0;
   opacity: 0;
-  z-index: 50;
+  z-index: 100;
 }
 
 .end {
@@ -368,13 +368,13 @@ body {
 
 /* Heading */
 
-.blue2 {
+.red {
   position: absolute;
   height: 250px;
   width: 300px;
   top: 0;
   left: -300px;
-  background-color: #0974f1;
+  background-color: red;
   opacity: 1;
 }
 
@@ -402,6 +402,26 @@ body {
   top: 100px;
   left: 47px;
   opacity: 0;
+}
+
+/* Closing */
+
+.endRight {
+  position: absolute;
+  height: 250px;
+  width: 300px;
+  top: 0;
+  left: 0px;
+  background-color: #0974f1;
+}
+
+.logo2 {
+  position: absolute;
+  width: 50%;
+  top: 70px;
+  left: 74px;
+  opacity: 0;
+  z-index: 200;
 }
 
 /* Code below for the button */
