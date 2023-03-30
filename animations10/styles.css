@@ -1,4 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
+*[x-apple-data-detectors],  /* iOS */
+    .x-gmail-data-detectors,    /* Gmail */
+    .x-gmail-data-detectors *,
+    .aBn {
+  border-bottom: 0 !important;
+  cursor: default !important;
+  color: inherit !important;
+  text-decoration: none !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+}
 
 html {
   box-sizing: border-box;
@@ -13,39 +27,257 @@ html {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
-  text-transform: uppercase;
-  /* margin: 100px; */
+  color: orange;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: normal;
 }
 
 .container {
   height: 250px;
   width: 300px;
+  border: 1px solid #edede4;
   position: relative;
   overflow: hidden;
-  border: 1px solid rgb(230, 230, 230);
 }
 
-#clouds,
-#sun,
-#balloon {
+.background {
+  height: 250px;
+  width: 300px;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.circle1 {
+  height: 250px;
+  width: 300px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
   opacity: 0;
 }
 
-.logo {
-  top: 20px;
-  left: 112px;
-  width: 25%;
+.start {
+  height: 250px;
+  width: 300px;
   position: absolute;
-  overflow: hidden;
+  left: 0;
+  top: 0;
+  z-index: 10;
 }
 
-.logo2 {
-  top: 35px;
-  left: 67px;
-  width: 55%;
+.background2 {
+  height: 250px;
+  width: 300px;
   position: absolute;
-  overflow: hidden;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.circle2 {
+  height: 250px;
+  width: 300px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  opacity: 0;
+}
+
+.background3 {
+  height: 250px;
+  width: 300px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.circle3 {
+  height: 250px;
+  width: 300px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  opacity: 0;
+}
+
+.logo_horizontal {
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  width: 130px;
+}
+/* First Animation */
+
+/* Enter stage */
+
+.main_heading1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  font-size: 1.1rem;
+  top: 100px;
+  color: white;
+  padding-left: 10px;
+  font-weight: normal;
+}
+
+.main_heading_background1 {
+  position: absolute;
+  height: 30px;
+  width: 180px;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  top: 92px;
+  background-color: black;
+}
+
+.sub_heading1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  font-size: 1.1rem;
+  top: 133px;
+  color: white;
+  padding-left: 10px;
+  font-weight: normal;
+}
+
+.sub_heading_background1 {
+  position: absolute;
+  height: 30px;
+  width: 215px;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  top: 125px;
+  background-color: black;
+}
+
+/* Second Animation */
+
+/* Enter stage */
+
+.main_heading2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  font-size: 1.1rem;
+  top: 100px;
+  color: white;
+  padding-left: 10px;
+  font-weight: normal;
+}
+
+.main_heading_background2 {
+  position: absolute;
+  height: 30px;
+  width: 162px;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  top: 92px;
+  background-color: black;
+}
+
+.sub_heading2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  font-size: 1.1rem;
+  top: 133px;
+  color: white;
+  padding-left: 10px;
+  font-weight: normal;
+}
+
+.sub_heading_background2 {
+  position: absolute;
+  height: 30px;
+  width: 236px;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  top: 125px;
+  background-color: black;
+}
+
+/* Third Animation */
+
+/* Enter stage */
+
+.main_heading3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  font-size: 1.1rem;
+  top: 100px;
+  color: white;
+  padding-left: 10px;
+  font-weight: normal;
+}
+
+.main_heading_background3 {
+  position: absolute;
+  height: 30px;
+  width: 157px;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  top: 92px;
+  background-color: black;
+}
+
+.sub_heading3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  font-size: 1.1rem;
+  top: 133px;
+  color: white;
+  padding-left: 10px;
+  font-weight: normal;
+}
+
+.sub_heading_background3 {
+  position: absolute;
+  height: 30px;
+  width: 190px;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  top: 125px;
+  background-color: black;
+}
+
+h1.apply {
+  background-color: #076400;
+  color: white;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  position: absolute;
+  top: 165px;
+  left: 130px;
+  z-index: 100;
+  font-size: 0.9rem;
+  padding-top: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.1rem;
+  opacity: 0;
+  font-weight: normal;
 }
 
 /* Button code */

@@ -3,110 +3,58 @@ let selectAll = (e) => document.querySelectoAll(e);
 
 let pause = select("#pause");
 
-let master = gsap.timeline({
+let music = gsap.timeline({
   onComplete: () => (pause.innerHTML = "Play"),
 });
+music.pause();
 
-master.pause();
-
-// Button code
-
-master.to(".logo", {
-  opacity: 0,
-});
-
-master.from(".one", {
-  x: -100,
-  ease: "power4.out",
-  duration: 0.75,
-});
-
-master.to(
-  ".text1",
-  {
-    opacity: 1,
-    duration: 0.25,
-    x: 10,
-  },
-  "=-0.25"
+music.fromTo(
+  "h2",
+  { opacity: 1 },
+  { opacity: 0, ease: "power.out(4)" },
+  "=+0.4"
 );
 
-master.to(
-  ".two",
-  {
-    opacity: 1,
-    ease: "power4.out",
-  },
-  ">"
+music.fromTo(
+  ".main",
+  { opacity: 0 },
+  { opacity: 1, ease: "power.out(4)" },
+  "=+0.4"
+);
+music.fromTo(
+  "h3",
+  { opacity: 0, y: 5 },
+  { opacity: 1, y: 0, duration: 0.25, ease: "power.out" },
+  "=+0.05"
 );
 
-master.from(".two", {
-  x: -100,
-  ease: "power4.out",
-  duration: 0.75,
-});
+music.fromTo("h1", { x: -290 }, { x: 0, ease: "power.out" });
 
-master.to(
-  ".text2",
+music.fromTo(
+  ".checked",
+  { opacity: 0, y: 5, scale: 0 },
   {
     opacity: 1,
-    duration: 0.25,
-    x: 10,
+    scale: 1.2,
+    y: 0,
+    stagger: 0.1,
+    ease: "back.out(5)",
+    duration: 0.5,
   },
-  "=-0.25"
+  "=-0.75"
 );
 
-master.to(
-  ".three",
-  {
-    opacity: 1,
-    ease: "power4.out",
-  },
-  ">"
-);
-
-master.from(".three", {
-  x: -200,
-  ease: "power4.out",
-  duration: 0.75,
-});
-
-master.to(
-  ".text3",
-  {
-    opacity: 1,
-    duration: 0.25,
-    x: 10,
-  },
-  "=-0.25"
-);
-
-master.to(
-  ".generic",
-  {
-    opacity: 0,
-  },
-  "=+2"
-);
-
-master.to(".logo", {
-  opacity: 1,
-  y: -20,
-});
-
-master.to(
-  ".address",
-  {
-    opacity: 1,
-    y: -10,
-  },
-  "=-0.25"
+music.fromTo(
+  "h4, h5",
+  { y: 50 },
+  { y: 0, ease: "power.out", duration: 0.25 },
+  "=-0.75"
 );
 
 pause.addEventListener("click", () => {
-  master.paused(!master.paused());
-  if (master.progress() == 1) {
-    master.restart();
+  music.paused(!music.paused());
+  if (music.progress() == 1) {
+    music.restart();
   }
-  pause.innerHTML = master.paused() ? "Play" : "Pause";
+  pause.innerHTML = music.paused() ? "Play" : "Pause";
 });

@@ -9,111 +9,327 @@ let master = gsap.timeline({
 
 master.pause();
 
-master.to(".start", {
+master.to(
+  ".logo",
+  {
+    opacity: 0,
+  },
+  "=+1.5"
+);
+
+master.fromTo(
+  ".year_background",
+  {
+    x: -300,
+  },
+  {
+    x: 0,
+    ease: "power4.out",
+  },
+  "=-0.25"
+);
+
+master.fromTo(
+  ".location",
+  {
+    x: -270,
+    y: 30,
+    opacity: 0,
+  },
+  {
+    x: 14,
+    opacity: 1,
+    ease: "back.out(1)",
+  },
+  "=-0.25"
+);
+
+master.to(".date", {
+  opacity: 1,
+});
+
+master.from(".cyclist", {
+  x: -210,
+  ease: "back.out(1)",
+});
+
+master.to(
+  ".year_background",
+  {
+    x: 300,
+    ease: "power4.out",
+  },
+  "=+1"
+);
+
+master.to(".date, .location, .cyclist", {
   opacity: 0,
 });
 
-master.to(".monday", {
-  rotation: 75,
-  transformOrigin: "0% 100%",
-  ease: "power4.in",
-  duration: 1,
+master.fromTo(
+  ".left_shape",
+  {
+    opacity: 1,
+    scale: 0,
+    ease: "power4.out",
+    transformOrigin: "bottom left",
+  },
+  {
+    scale: 1,
+    duration: 0.1,
+  }
+);
+
+master.fromTo(
+  ".right_shape",
+  {
+    opacity: 1,
+    scale: 0,
+    ease: "power4.out",
+    transformOrigin: "top right",
+  },
+  {
+    scale: 1,
+    duration: 0.1,
+  },
+  "<"
+);
+
+master.to(".logo1", {
+  opacity: 1,
 });
-master.to(
-  ".monday",
-  {
-    y: 300,
-    ease: "power4.out",
-    duration: 1,
+
+// RIDERS
+
+master.to("#riders", {
+  opacity: 1,
+  innerText: 176,
+  snap: {
+    innerText: 1,
+    duration: 2,
   },
-  "=-0.25"
+});
+
+master.fromTo(
+  ".riders",
+  {
+    x: -90,
+    y: 135,
+  },
+  {
+    x: 50,
+  },
+  "=-0.5"
 );
 
-master.to(
-  ".tuesday",
-  {
-    rotation: -90,
-    transformOrigin: "25% 100%",
-    ease: "power4.in",
-    duration: 1,
-  },
-  "=-0.75"
-);
+master.from(".cyclists", {
+  x: -290,
+  ease: "back.out(1)",
+});
+
+// TEAMS
 
 master.to(
-  ".tuesday",
+  ".riders, #riders",
   {
-    y: 300,
-    ease: "power4.out",
-    duration: 1,
+    x: 300,
+    ease: "back.in(1)",
+    stagger: 0.15,
   },
-  "=-0.25"
+  "=+2"
 );
 
-master.to(
-  ".wednesday",
-  {
-    rotation: 60,
-    transformOrigin: "0% 100%",
-    ease: "power4.in",
-    duration: 1,
+master.to("#teams", {
+  opacity: 1,
+  innerText: 22,
+  snap: {
+    innerText: 1,
+    duration: 2,
   },
-  "=-0.75"
+});
+
+master.fromTo(
+  ".teams",
+  {
+    x: -90,
+    y: 135,
+  },
+  {
+    x: 37,
+    opacity: 1,
+  },
+  "=-0.5"
 );
 
-master.to(
-  ".wednesday",
-  {
-    y: 300,
-    ease: "power4.out",
-    duration: 1,
-  },
-  "=-0.25"
-);
+// STAGES
 
 master.to(
-  ".thursday",
+  ".teams, #teams, .cyclists",
   {
-    rotation: -70,
-    transformOrigin: "25% 100%",
-    ease: "power4.in",
-    duration: 1,
+    x: 300,
+    ease: "back.in(1)",
+    stagger: 0.15,
   },
-  "=-0.75"
+  "=+2"
 );
 
-master.to(
-  ".thursday",
-  {
-    y: 300,
-    ease: "power4.out",
-    duration: 1,
+master.to("#stages", {
+  opacity: 1,
+  innerText: 21,
+  snap: {
+    innerText: 1,
+    duration: 2,
   },
-  "=-0.25"
+});
+
+master.fromTo(
+  ".stages",
+  {
+    x: -90,
+    y: 135,
+  },
+  {
+    x: 37,
+    opacity: 1,
+  },
+  "=-0.5"
 );
 
-master.to(
-  ".set",
+master.from(
+  ".stage",
   {
+    x: -290,
+    ease: "back.out(1)",
+  },
+  "<"
+);
+
+// KM
+
+master.to(
+  ".stages, #stages",
+  {
+    x: 300,
+    ease: "back.in(1)",
+    stagger: 0.15,
+  },
+  "=+2"
+);
+
+master.to("#kms", {
+  opacity: 1,
+  innerText: 3404,
+  snap: {
+    innerText: 1,
+    duration: 2,
+  },
+});
+
+master.fromTo(
+  ".kms",
+  {
+    x: -90,
+    y: 135,
+  },
+  {
+    x: 37,
+    opacity: 1,
+  },
+  "=-0.5"
+);
+
+// Longest
+
+master.to(
+  ".kms, #kms",
+  {
+    x: 300,
+    ease: "back.in(1)",
+    stagger: 0.15,
+  },
+  "=+2"
+);
+
+master.to("#longests", {
+  opacity: 1,
+  innerText: 209,
+  snap: {
+    innerText: 1,
+    duration: 2,
+  },
+});
+
+master.fromTo(
+  ".longests",
+  {
+    x: -90,
+    y: 135,
+  },
+  {
+    x: 37,
     opacity: 1,
   },
   "=-0.5"
 );
 
 master.to(
-  ".black",
+  ".longests, #longests",
   {
-    opacity: 1,
+    x: 300,
+    ease: "back.in(1)",
+    stagger: 0.15,
+  },
+  "=+2"
+);
+
+master.to(
+  ".left_shape",
+  {
+    x: -80,
+    ease: "back.out(1)",
+    duration: 0.25,
+    transformOrigin: "bottom right",
+  },
+  "=+0.25"
+);
+
+master.to(
+  ".right_shape",
+  {
+    x: 155,
+    ease: "back.out(1)",
+    duration: 0.25,
+    transformOrigin: "top left",
+  },
+  "<"
+);
+
+master.to(
+  ".stage",
+  {
+    x: 100,
+    ease: "back.out(1)",
+    duration: 0.25,
   },
   "=-0.25"
 );
 
 master.to(
-  ".date",
+  ".logo1",
+  {
+    x: 110,
+    ease: "back.out(1)",
+    duration: 0.25,
+  },
+  "<"
+);
+
+master.to(
+  ".logo",
   {
     opacity: 1,
   },
-  ">"
+  "=+0.25"
 );
 
 // Button code

@@ -1,11 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
 
 html {
   box-sizing: border-box;
-}
-
-body {
-  font-family: "Lato", sans-serif;
 }
 
 *,
@@ -16,275 +13,173 @@ body {
   padding: 0;
 }
 
-.container {
+.background {
   position: relative;
   height: 250px;
   width: 300px;
-  background-color: #1b1f2f;
+  background-color: #93c4ec;
   overflow: hidden;
-  visibility: hidden;
 }
-
-h1 {
-  color: #ffb330;
-  font-size: 1.2rem;
-  position: absolute;
-  top: 15px;
-  left: 20px;
-  font-weight: 700;
-}
-
-h1 span {
-  color: white;
-  font-weight: 700;
-}
-
-h1.main {
-  font-size: 2.4rem;
-  position: absolute;
-  top: 32px;
-  left: 18px;
-  font-weight: 700;
-}
-
-p {
-  position: absolute;
-  color: white;
-  font-size: 0.7rem;
-  left: 20px;
-  top: 90px;
-  font-weight: 400;
-}
-
-p.cta {
-  position: absolute;
-  color: #1b1f2f;
-  font-size: 0.6rem;
-  left: 30px;
-  top: 149px;
-  z-index: 10;
-  font-weight: 400;
-  background-color: white;
-  padding: 5px;
-  border-radius: 10px;
-}
-
-.saleText {
-  text-transform: uppercase;
-  color: #1b1f2f;
-  position: absolute;
-  top: 160px;
-  left: 115px;
-  font-size: 2rem;
-  text-align: center;
-  font-weight: 700;
-  z-index: 10;
-  line-height: 1.8rem;
-}
-
-.startingShape {
-  position: absolute;
-  top: 115px;
-  left: 100px;
-  rotate: 45deg;
-  width: 150px;
-  height: 150px;
-  background-color: #ffb330;
-  border: 5px solid white;
-}
-
-.shape1 {
-  position: absolute;
-  left: 170px;
-  top: 35px;
-  width: 100%;
-}
-
-.shape2 {
-  position: absolute;
-  left: -162px;
-  top: 71px;
-  width: 70%;
-}
-
-/* ONE */
 
 .one {
-  position: absolute;
-  top: 40px;
-  left: 75px;
-  width: 95%;
-  z-index: 100;
+  position: relative;
+  height: 250px;
+  width: 300px;
+  background-color: #93c4ec;
 }
 
-.line1 {
+.left {
   position: absolute;
-  top: 207px;
-  left: 31px;
-  width: 90px;
-  height: 2px;
-  background-color: #ffb330;
-  rotate: -15deg;
+  height: 250px;
+  width: 300px;
+  left: 0;
+  top: 0;
   opacity: 0;
-  z-index: 130;
+  z-index: 100;
 }
 
-.one_text_full {
+.right {
   position: absolute;
-  left: 36px;
-  top: 185px;
-  color: #ffb330;
-  z-index: 100;
-  font-size: 30px;
-  letter-spacing: 0.1rem;
-  font-weight: 700;
-}
-
-.one_text_discount {
-  position: absolute;
-  left: 36px;
-  top: 185px;
-  color: #ffb330;
-  z-index: 100;
-  font-size: 30px;
-  letter-spacing: 0.1rem;
-  font-weight: 700;
+  height: 250px;
+  width: 300px;
+  left: 0;
+  top: 0;
   opacity: 0;
-}
-
-/* TWO */
-
-.two {
-  position: absolute;
-  top: 40px;
-  left: 75px;
-  width: 95%;
   z-index: 100;
 }
 
-.line2 {
+.master {
   position: absolute;
-  top: 207px;
-  left: 31px;
-  width: 90px;
-  height: 2px;
-  background-color: #ffb330;
-  rotate: -15deg;
-  opacity: 0;
-  z-index: 130;
+  height: 250px;
+  width: 300px;
+  left: 0;
+  top: 0;
+  z-index: 200;
 }
 
-.two_text_full {
+/* .start {
   position: absolute;
-  left: 36px;
-  top: 185px;
-  color: #ffb330;
-  z-index: 100;
-  font-size: 30px;
-  letter-spacing: 0.1rem;
-  font-weight: 700;
-}
+  background-color: #6cb4ee;
+  height: 250px;
+  width: 300px;
+  left: 0;
+  top: 0;
+} */
 
-.two_text_discount {
+.start_logo {
   position: absolute;
-  left: 36px;
-  top: 185px;
-  color: #ffb330;
-  z-index: 100;
-  font-size: 30px;
-  letter-spacing: 0.1rem;
-  font-weight: 700;
+  width: 70%;
+  top: 47px;
+  left: 43px;
   opacity: 0;
 }
 
-/* THREE */
-
-.three {
+.circle {
+  width: 152px;
+  height: 152px;
+  background-color: white;
+  border-radius: 50%;
+  left: 23.5%;
+  top: 22%;
+  z-index: 20;
   position: absolute;
-  top: 40px;
-  left: 75px;
-  width: 95%;
-  z-index: 100;
-}
-
-.line3 {
-  position: absolute;
-  top: 207px;
-  left: 31px;
-  width: 90px;
-  height: 2px;
-  background-color: #ffb330;
-  rotate: -15deg;
-  opacity: 0;
-  z-index: 130;
-}
-
-.three_text_full {
-  position: absolute;
-  left: 36px;
-  top: 185px;
-  color: #ffb330;
-  z-index: 100;
-  font-size: 30px;
-  letter-spacing: 0.1rem;
-  font-weight: 700;
-}
-
-.three_text_discount {
-  position: absolute;
-  left: 36px;
-  top: 185px;
-  color: #ffb330;
-  z-index: 100;
-  font-size: 30px;
-  letter-spacing: 0.1rem;
-  font-weight: 700;
   opacity: 0;
 }
 
-/* FOUR */
-
-.four {
+.logo {
   position: absolute;
-  top: 40px;
-  left: 75px;
-  width: 95%;
-  z-index: 100;
+  left: 82px;
+  top: 80px;
+  width: 42%;
+  z-index: 20;
 }
 
-.line4 {
+.umbrella {
   position: absolute;
-  top: 207px;
-  left: 31px;
-  width: 90px;
-  height: 2px;
-  background-color: #ffb330;
-  rotate: -15deg;
-  opacity: 0;
-  z-index: 130;
+  left: 65px;
+  top: 7px;
+  width: 42%;
+  z-index: 0;
 }
 
-.four_text_full {
+.shell {
   position: absolute;
-  left: 36px;
-  top: 185px;
-  color: #ffb330;
-  z-index: 100;
-  font-size: 30px;
-  letter-spacing: 0.1rem;
-  font-weight: 700;
+  left: 50px;
+  top: 43px;
+  width: 18%;
+  z-index: 0;
 }
 
-.four_text_discount {
+.cocktail1 {
   position: absolute;
-  left: 36px;
-  top: 185px;
-  color: #ffb330;
-  z-index: 100;
-  font-size: 30px;
-  letter-spacing: 0.1rem;
-  font-weight: 700;
-  opacity: 0;
+  left: 13px;
+  top: 79px;
+  width: 26%;
+  z-index: 0;
+}
+
+.fries {
+  position: absolute;
+  left: 30px;
+  top: 118px;
+  width: 23%;
+  z-index: 10;
+}
+
+.ball {
+  position: absolute;
+  left: 65px;
+  top: 153px;
+  width: 19%;
+  z-index: 10;
+}
+
+.sandals {
+  position: absolute;
+  left: 95px;
+  top: 178px;
+  width: 22%;
+  z-index: 10;
+}
+
+.chair {
+  position: absolute;
+  left: 148px;
+  top: 144px;
+  width: 38%;
+  z-index: 30;
+}
+
+.ring {
+  position: absolute;
+  left: 200px;
+  top: 113px;
+  width: 27%;
+  z-index: 10;
+}
+
+.burger {
+  position: absolute;
+  left: 210px;
+  top: 78px;
+  width: 20%;
+  z-index: 5;
+}
+
+.lotion {
+  position: absolute;
+  left: 170px;
+  top: 25px;
+  width: 27%;
+  z-index: 5;
+}
+
+.icecream {
+  position: absolute;
+  left: 175px;
+  top: 11px;
+  width: 13%;
+  z-index: 5;
 }
 
 /* Code below for the button */

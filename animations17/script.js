@@ -1,8 +1,6 @@
 let select = (e) => document.querySelector(e);
 let selectAll = (e) => document.querySelectoAll(e);
 
-gsap.set(".wrapper", { autoAlpha: 1 });
-
 let pause = select("#pause");
 
 let master = gsap.timeline({
@@ -11,83 +9,93 @@ let master = gsap.timeline({
 
 master.pause();
 
-master.to(
-  ".logo1",
-  {
-    opacity: 0,
-  },
-  "=+1"
-);
+gsap.set(".container", { autoAlpha: 1 });
 
-master.from(".clouds", {
-  x: -210,
-  duration: 0.75,
-});
-
-master.fromTo(
-  ".rain_main",
-  {
-    scaleY: 0,
-    transformOrigin: "top top",
-    y: 20,
-  },
-  {
-    scaleY: 1,
-    transformOrigin: "top top",
-    y: 0,
-    duration: 0.4,
-  }
-);
-
-master.to(
-  ".clouds, .rain_main, .rain_minor, .large_puddle, .small_puddle, .man, .umbrella",
-  {
-    x: -72,
-    duration: 0.4,
-  },
-  "=+1.5"
-);
-
-master.from(".logo2", {
-  y: -110,
-  ease: "back.out(1.7)",
+master.to(".top, .bottom", {
+  opacity: 1,
 });
 
 master.to(
-  ".text, .cta",
+  ".model",
   {
     opacity: 1,
-  },
-  "=-0.25"
-);
-
-master.fromTo(
-  ".umbrella",
-  {
-    opacity: 0,
-    y: 10,
-  },
-  {
-    opacity: 1,
-    y: 0,
-  },
-  "=+1"
-);
-
-master.to(
-  ".rain_main",
-  {
-    opacity: 0,
-    duration: 0.1,
+    y: -30,
+    ease: "power.out4",
+    duration: 1,
+    repeat: -1,
+    yoyo: true,
   },
   "<"
 );
 
 master.to(
-  ".rain_minor",
+  ".logo",
   {
-    opacity: 1,
-    duration: 0.1,
+    y: 5,
+    repeat: -1,
+    yoyo: true,
+    ease: "power.out4",
+    duration: 1,
+  },
+  "<"
+);
+
+master.to(
+  ".left",
+  {
+    scaleY: 1.2,
+    transformOrigin: "bottom bottom",
+    duration: 0.25,
+    stagger: {
+      each: 0.25,
+      repeat: -1,
+      yoyo: true,
+    },
+  },
+  "=-0.5"
+);
+
+master.to(
+  ".left1",
+  {
+    scaleY: 1.3,
+    transformOrigin: "bottom bottom",
+    duration: 0.25,
+    stagger: {
+      each: 0.15,
+      repeat: -1,
+      yoyo: true,
+    },
+  },
+  "<"
+);
+
+master.to(
+  ".right",
+  {
+    scaleY: 1.2,
+    transformOrigin: "bottom bottom",
+    duration: 0.25,
+    stagger: {
+      each: 0.35,
+      repeat: -1,
+      yoyo: true,
+    },
+  },
+  "<"
+);
+
+master.to(
+  ".right1",
+  {
+    scaleY: 1.3,
+    transformOrigin: "bottom bottom",
+    duration: 0.25,
+    stagger: {
+      each: 0.25,
+      repeat: -1,
+      yoyo: true,
+    },
   },
   "<"
 );

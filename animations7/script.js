@@ -3,58 +3,125 @@ let selectAll = (e) => document.querySelectoAll(e);
 
 let pause = select("#pause");
 
-let music = gsap.timeline({
+let master = gsap.timeline({
   onComplete: () => (pause.innerHTML = "Play"),
 });
-music.pause();
 
-music.fromTo(
-  "h2",
-  { opacity: 1 },
-  { opacity: 0, ease: "power.out(4)" },
-  "=+0.4"
-);
+master.pause();
 
-music.fromTo(
-  ".main",
-  { opacity: 0 },
-  { opacity: 1, ease: "power.out(4)" },
-  "=+0.4"
-);
-music.fromTo(
-  "h3",
-  { opacity: 0, y: 5 },
-  { opacity: 1, y: 0, duration: 0.25, ease: "power.out" },
-  "=+0.05"
-);
+master.to(".start", {
+  opacity: 0,
+});
 
-music.fromTo("h1", { x: -290 }, { x: 0, ease: "power.out" });
-
-music.fromTo(
-  ".checked",
-  { opacity: 0, y: 5, scale: 0 },
+master.to(".monday", {
+  rotation: 75,
+  transformOrigin: "0% 100%",
+  ease: "power4.in",
+  duration: 1,
+});
+master.to(
+  ".monday",
   {
-    opacity: 1,
-    scale: 1.2,
-    y: 0,
-    stagger: 0.1,
-    ease: "back.out(5)",
-    duration: 0.5,
+    y: 300,
+    ease: "power4.out",
+    duration: 1,
+  },
+  "=-0.25"
+);
+
+master.to(
+  ".tuesday",
+  {
+    rotation: -90,
+    transformOrigin: "25% 100%",
+    ease: "power4.in",
+    duration: 1,
   },
   "=-0.75"
 );
 
-music.fromTo(
-  "h4, h5",
-  { y: 50 },
-  { y: 0, ease: "power.out", duration: 0.25 },
+master.to(
+  ".tuesday",
+  {
+    y: 300,
+    ease: "power4.out",
+    duration: 1,
+  },
+  "=-0.25"
+);
+
+master.to(
+  ".wednesday",
+  {
+    rotation: 60,
+    transformOrigin: "0% 100%",
+    ease: "power4.in",
+    duration: 1,
+  },
   "=-0.75"
 );
 
+master.to(
+  ".wednesday",
+  {
+    y: 300,
+    ease: "power4.out",
+    duration: 1,
+  },
+  "=-0.25"
+);
+
+master.to(
+  ".thursday",
+  {
+    rotation: -70,
+    transformOrigin: "25% 100%",
+    ease: "power4.in",
+    duration: 1,
+  },
+  "=-0.75"
+);
+
+master.to(
+  ".thursday",
+  {
+    y: 300,
+    ease: "power4.out",
+    duration: 1,
+  },
+  "=-0.25"
+);
+
+master.to(
+  ".set",
+  {
+    opacity: 1,
+  },
+  "=-0.5"
+);
+
+master.to(
+  ".black",
+  {
+    opacity: 1,
+  },
+  "=-0.25"
+);
+
+master.to(
+  ".date",
+  {
+    opacity: 1,
+  },
+  ">"
+);
+
+// Button code
+
 pause.addEventListener("click", () => {
-  music.paused(!music.paused());
-  if (music.progress() == 1) {
-    music.restart();
+  master.paused(!master.paused());
+  if (master.progress() == 1) {
+    master.restart();
   }
-  pause.innerHTML = music.paused() ? "Play" : "Pause";
+  pause.innerHTML = master.paused() ? "Play" : "Pause";
 });

@@ -10,247 +10,300 @@ master.pause();
 
 gsap.set(".container", { autoAlpha: 1 });
 
-master.to(".logo", {
-  opacity: 0,
-});
+// Intro
 
-master.fromTo(
-  ".believe",
-  { opacity: 0, scale: 15, transformOrigin: "center center" },
+// master.to(".start", {
+//   opacity: 0,
+// });
+
+master.to(
+  ".top2, .marketing2, .trends2, .year2, .leftCircle2, .rightCircle2 ",
   {
-    opacity: 1,
-    scale: 1,
-    ease: "none",
-    duration: 0.25,
+    opacity: 0,
   }
 );
 
-master.fromTo(
-  ".simplified",
-  { opacity: 0 },
-  {
-    opacity: 1,
-    ease: "power4.out",
-    duration: 0.15,
-  },
-  "=+1"
-);
-
-master.to(
-  ".believe",
-  {
-    opacity: 0,
-    duration: 0.1,
-  },
-  "<"
-);
+master.from(".top", {
+  x: 200,
+  ease: "back.out(1.5)",
+});
 
 master.from(
-  ".business",
-  { x: 190, ease: "back.out(1.2)", duration: 0.25 },
-  "+=0.5"
-);
-
-master.to(
-  ".simplified",
+  ".marketing",
   {
-    x: -74,
-    ease: "back.out(1.2)",
-    duration: 0.25,
-  },
-  "-=0.22"
-);
-
-master.to(
-  ".simplified, .business",
-  {
-    y: 150,
-    ease: "back.in(1)",
-    stagger: 0.1,
-    duration: 0.1,
-  },
-  "+=0.5"
-);
-
-master.from(
-  ".cybersecurity",
-  {
-    y: -200,
-    ease: "back.out(1.7)",
-    duration: 0.25,
-  },
-  "+=0.25"
-);
-
-master.from(
-  ".available",
-  {
-    x: -250,
-    ease: "back.out(1.7)",
-    duration: 0.25,
-  },
-  "+=0.25"
-);
-
-master.to(
-  ".cybersecurity",
-  {
-    y: -24,
-    ease: "back.out(1.7)",
-    duration: 0.25,
-  },
-  "<"
-);
-
-master.from(
-  ".all",
-  {
-    x: 220,
-    ease: "back.out(1.7)",
-    duration: 0.25,
-  },
-  "<"
-);
-
-master.from(
-  ".one",
-  {
-    y: -250,
-  },
-  "+=1"
-);
-
-master.from(
-  ".two",
-  {
-    y: 250,
+    x: -240,
+    ease: "back.out(1.5)",
   },
   "-=0.35"
 );
 
 master.from(
-  ".three",
+  ".trends",
   {
-    y: -250,
+    x: 230,
+    ease: "back.out(1.5)",
   },
   "-=0.35"
 );
 
-master.to(
-  ".cybersecurity, .available, .all",
-  {
-    opacity: 0,
-  },
-  ">"
-);
-
-master.from(".protect", {
-  x: 120,
-  ease: "back.out(1.7)",
-});
-
 master.from(
-  ".your",
-  {
-    x: 120,
-    ease: "back.out(1.7)",
-  },
-  "-=0.25"
-);
-
-master.from(
-  ".business2",
-  {
-    x: 120,
-    ease: "back.out(1.7)",
-  },
-  "-=0.25"
-);
-
-master.from(
-  ".today",
-  {
-    x: 120,
-    ease: "back.out(1.7)",
-  },
-  "-=0.25"
-);
-
-master.to(
-  ".one, .two, .three, .protect, .your, .business2, .today",
-  {
-    opacity: 0,
-    duration: 0.75,
-  },
-  "+=1"
-);
-
-master.to(".four", {
-  left: 0,
-  duration: 0.25,
-});
-
-master.from(".soBackground", {
-  x: -190,
-  ease: "back.out(1)",
-});
-
-master.from(
-  ".so",
+  ".year",
   {
     x: -190,
-    ease: "back.out(1)",
+    ease: "back.out(1.5)",
   },
-  "-=0.25"
+  "-=0.35"
 );
 
-master.from(".growBackground", {
-  x: 180,
-  ease: "back.out(1)",
-});
+master.from(
+  ".leftCircle",
+  {
+    x: -100,
+    y: 100,
+    ease: "back.out(1.5)",
+  },
+  "<"
+);
 
 master.from(
-  ".grow",
+  ".rightCircle",
   {
-    x: 170,
-    ease: "back.out(1)",
+    x: 100,
+    y: -100,
+    ease: "back.out(1.5)",
   },
-  "-=0.25"
+  "<"
+);
+
+// Intro leave
+
+master.to(
+  ".leftCircle, .rightCircle",
+  {
+    opacity: 0.2,
+    scale: 0.8,
+  },
+  "=+2"
 );
 
 master.to(
-  ".so, .soBackground, .grow, .growBackground",
+  ".top",
   {
-    opacity: 0,
+    scale: 0.7,
+    x: -100,
+    y: -25,
   },
-  "+=1"
+  "<"
 );
 
-master.to(".four", {
+master.to(
+  ".marketing",
+  {
+    scale: 0.7,
+    x: -10,
+    y: -64,
+  },
+  "<"
+);
+
+master.to(
+  ".trends",
+  {
+    scale: 0.7,
+    x: -76,
+    y: -78,
+  },
+  "<"
+);
+
+master.to(
+  ".year",
+  {
+    scale: 0.7,
+    x: 6,
+    y: -116,
+  },
+  "<"
+);
+
+master.from(".subHeading", {
   opacity: 0,
 });
 
-master.to(
-  ".logo",
+// Bars
+
+// Influencer
+
+master.from(".influencer", {
+  scaleY: 0,
+  transformOrigin: "bottom bottom",
+  duration: 0.5,
+  ease: "back.out(1.5)",
+});
+
+master.fromTo(
+  ".influencer_text",
+  {
+    opacity: 0,
+    y: -30,
+  },
   {
     opacity: 1,
+    y: 0,
+    duration: 0.5,
+    ease: "back.out(1.75)",
+  }
+);
+
+master.to(
+  ".influencer_amount",
+  {
+    opacity: 1,
+  },
+  "<"
+);
+
+// Mobile
+
+master.from(
+  ".mobile",
+  {
+    scaleY: 0,
+    transformOrigin: "bottom bottom",
+    duration: 0.5,
+    ease: "back.out(1.5)",
   },
   "-=0.25"
 );
 
-master.from(".company", {
-  y: 80,
-  ease: "back.out(1.7)",
-});
+master.fromTo(
+  ".mobile_text",
+  {
+    opacity: 0,
+    y: -30,
+  },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 0.5,
+    ease: "back.out(1.75)",
+  }
+);
 
 master.to(
-  ".logo",
+  ".mobile_amount",
   {
-    y: -20,
-    ease: "back.out(1.7)",
+    opacity: 1,
   },
   "<"
 );
+
+// Short
+
+master.from(
+  ".short",
+  {
+    scaleY: 0,
+    transformOrigin: "bottom bottom",
+    duration: 0.5,
+    ease: "back.out(1.5)",
+  },
+  "-=0.25"
+);
+
+master.fromTo(
+  ".short_text",
+  {
+    opacity: 0,
+    y: -30,
+  },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 0.5,
+    ease: "back.out(1.75)",
+  }
+);
+
+master.to(
+  ".short_amount",
+  {
+    opacity: 1,
+  },
+  "<"
+);
+
+// Virtual
+
+master.from(
+  ".virtual",
+  {
+    scaleY: 0,
+    transformOrigin: "bottom bottom",
+    duration: 0.5,
+    ease: "back.out(1.5)",
+  },
+  "-=0.25"
+);
+
+master.fromTo(
+  ".virtual_text",
+  {
+    opacity: 0,
+    y: -30,
+  },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 0.5,
+    ease: "back.out(1.75)",
+  }
+);
+
+master.to(
+  ".virtual_amount",
+  {
+    opacity: 1,
+  },
+  "<"
+);
+
+// Experimental
+
+master.from(
+  ".experimental",
+  {
+    scaleY: 0,
+    transformOrigin: "bottom bottom",
+    duration: 0.5,
+    ease: "back.out(1.5)",
+  },
+  "-=0.25"
+);
+
+master.fromTo(
+  ".experimental_text",
+  {
+    opacity: 0,
+    y: -30,
+  },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 0.5,
+    ease: "back.out(1.75)",
+  }
+);
+
+master.to(
+  ".experimental_amount",
+  {
+    opacity: 1,
+  },
+  "<"
+);
+
+// Button code
 
 pause.addEventListener("click", () => {
   master.paused(!master.paused());

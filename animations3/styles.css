@@ -1,6 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
-
 html {
   box-sizing: border-box;
 }
@@ -12,174 +9,242 @@ html {
   margin: 0;
   padding: 0;
 }
-
-.background {
+.container {
   position: relative;
   height: 250px;
   width: 300px;
-  background-color: #93c4ec;
   overflow: hidden;
+  visibility: hidden;
 }
 
-.one {
-  position: relative;
-  height: 250px;
-  width: 300px;
-  background-color: #93c4ec;
-}
-
-.left {
+.background_full {
   position: absolute;
   height: 250px;
   width: 300px;
-  left: 0;
+  z-index: 0;
   top: 0;
-  opacity: 0;
-  z-index: 100;
+  left: 0;
 }
 
-.right {
+.background_left {
   position: absolute;
   height: 250px;
   width: 300px;
-  left: 0;
+  z-index: 90;
   top: 0;
-  opacity: 0;
-  z-index: 100;
+  left: 0;
 }
 
-.master {
+.background_right {
+  position: absolute;
+  height: 250px;
+  width: 325px;
+  top: 0;
+  left: 260px;
+  z-index: 70;
+}
+
+.image_right {
   position: absolute;
   height: 250px;
   width: 300px;
-  left: 0;
   top: 0;
-  z-index: 200;
-}
-
-/* .start {
-  position: absolute;
-  background-color: #6cb4ee;
-  height: 250px;
-  width: 300px;
-  left: 0;
-  top: 0;
-} */
-
-.start_logo {
-  position: absolute;
-  width: 70%;
-  top: 47px;
-  left: 43px;
-  opacity: 0;
-}
-
-.circle {
-  width: 152px;
-  height: 152px;
-  background-color: white;
-  border-radius: 50%;
-  left: 23.5%;
-  top: 22%;
-  z-index: 20;
-  position: absolute;
-  opacity: 0;
+  z-index: 50;
 }
 
 .logo {
   position: absolute;
-  left: 82px;
-  top: 80px;
-  width: 42%;
-  z-index: 20;
+  top: 13px;
+  left: 20px;
+  width: 10%;
+  z-index: 100;
 }
 
-.umbrella {
+h1 {
+  text-align: right;
   position: absolute;
-  left: 65px;
-  top: 7px;
-  width: 42%;
-  z-index: 0;
+  font-size: 1.1rem;
+  top: 10px;
+  right: 13px;
+  color: black;
+  text-transform: uppercase;
+  z-index: 100;
+  font-family: "Orbitron", sans-serif;
+  font-weight: normal;
+  letter-spacing: 0.05rem;
 }
 
-.shell {
+.main_heading {
+  text-align: right;
   position: absolute;
-  left: 50px;
-  top: 43px;
-  width: 18%;
-  z-index: 0;
+  font-size: 1.9rem;
+  line-height: 2rem;
+  top: 5px;
+  right: 10px;
+  color: white;
+  text-transform: uppercase;
+  z-index: 60;
+  padding: 7px;
+  font-family: "Orbitron", sans-serif;
+  font-weight: normal;
+  letter-spacing: 0.1rem;
 }
 
-.cocktail1 {
+h2 {
+  text-align: right;
   position: absolute;
-  left: 13px;
-  top: 79px;
-  width: 26%;
-  z-index: 0;
+  font-size: 0.6rem;
+  top: 55px;
+  right: 14px;
+  color: #3b8dc1;
+  letter-spacing: 0.05rem;
+  z-index: 100;
+  padding-top: 3px;
+  font-family: "Orbitron", sans-serif;
+  font-weight: normal;
+  letter-spacing: 0.05rem;
 }
 
-.fries {
-  position: absolute;
-  left: 30px;
-  top: 118px;
-  width: 23%;
-  z-index: 10;
-}
+/* Bills */
 
-.ball {
+.ground1 {
   position: absolute;
-  left: 65px;
-  top: 153px;
-  width: 19%;
-  z-index: 10;
-}
-
-.sandals {
-  position: absolute;
-  left: 95px;
-  top: 178px;
-  width: 22%;
-  z-index: 10;
-}
-
-.chair {
-  position: absolute;
+  top: 90px;
   left: 148px;
-  top: 144px;
-  width: 38%;
-  z-index: 30;
+  font-size: 0.5rem;
+  letter-spacing: 0.05rem;
+  color: #3b8dc1;
+  z-index: 90;
+  opacity: 0;
+  font-family: "Orbitron", sans-serif;
+  font-weight: normal;
 }
 
-.ring {
+.mask1 {
+  width: 85px;
+  height: 20px;
+  background-color: rgb(212, 224, 245);
   position: absolute;
-  left: 200px;
-  top: 113px;
-  width: 27%;
-  z-index: 10;
+  top: 80px;
+  left: 147px;
+  z-index: 80;
+  opacity: 0;
 }
 
-.burger {
+.team1 {
   position: absolute;
-  left: 210px;
-  top: 78px;
-  width: 20%;
-  z-index: 5;
+  top: 101px;
+  left: 148px;
+  font-size: 0.65rem;
+  letter-spacing: 0.05rem;
+  color: black;
+  z-index: 70;
+  opacity: 0;
+  font-family: "Orbitron", sans-serif;
+  font-weight: normal;
 }
 
-.lotion {
+.bills {
   position: absolute;
-  left: 170px;
-  top: 25px;
-  width: 27%;
-  z-index: 5;
+  top: 90px;
+  left: 80px;
+  width: 17%;
+  z-index: 70;
 }
 
-.icecream {
+/* Titans */
+
+.ground_1 {
   position: absolute;
-  left: 175px;
-  top: 11px;
-  width: 13%;
-  z-index: 5;
+  top: 148px;
+  left: 155px;
+  font-size: 0.5rem;
+  letter-spacing: 0.05rem;
+  color: #3b8dc1;
+  z-index: 90;
+  opacity: 0;
+  font-family: "Orbitron", sans-serif;
+  font-weight: normal;
+}
+
+.mask2 {
+  width: 126px;
+  height: 20px;
+  background-color: rgb(212, 224, 245);
+  position: absolute;
+  top: 139px;
+  left: 155px;
+  z-index: 80;
+  opacity: 0;
+}
+
+.team2 {
+  position: absolute;
+  top: 159px;
+  left: 155px;
+  font-size: 0.65rem;
+  letter-spacing: 0.05rem;
+  color: black;
+  z-index: 70;
+  opacity: 0;
+  font-family: "Orbitron", sans-serif;
+  font-weight: normal;
+}
+
+.titans {
+  position: absolute;
+  top: 141px;
+  left: 87px;
+  width: 18%;
+  z-index: 70;
+}
+
+/* Jags */
+
+.ground2 {
+  position: absolute;
+  top: 204px;
+  left: 167px;
+  font-size: 0.5rem;
+  letter-spacing: 0.05rem;
+  color: #3b8dc1;
+  z-index: 40;
+  opacity: 0;
+  z-index: 90;
+  font-family: "Orbitron", sans-serif;
+  font-weight: normal;
+}
+
+.mask3 {
+  width: 125px;
+  height: 20px;
+  background-color: rgb(212, 224, 245);
+  position: absolute;
+  top: 195px;
+  left: 165px;
+  z-index: 80;
+  opacity: 0;
+}
+
+.team3 {
+  position: absolute;
+  top: 214px;
+  left: 167px;
+  font-size: 0.65rem;
+  letter-spacing: 0.05rem;
+  color: black;
+  z-index: 70;
+  opacity: 0;
+  font-family: "Orbitron", sans-serif;
+  font-weight: normal;
+}
+
+.jags {
+  position: absolute;
+  top: 201px;
+  left: 107px;
+  width: 15%;
+  z-index: 70;
 }
 
 /* Code below for the button */

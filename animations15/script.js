@@ -1,6 +1,8 @@
 let select = (e) => document.querySelector(e);
 let selectAll = (e) => document.querySelectoAll(e);
 
+gsap.set(".wrapper", { autoAlpha: 1 });
+
 let pause = select("#pause");
 
 let master = gsap.timeline({
@@ -9,357 +11,85 @@ let master = gsap.timeline({
 
 master.pause();
 
-const moveAnimation1 = () => {
-  const tl = gsap.timeline();
-  master.from(
-    ".building_one, .building_six, .building_two, .building_five, .building_three, .building_four",
-    {
-      ease: "back.out(1.1)",
-      y: 200,
-      stagger: 0.15,
-    }
-  );
-  return tl;
-};
+master.to(
+  ".logo1",
+  {
+    opacity: 0,
+  },
+  "=+1"
+);
 
-master.to(".start", {
-  opacity: 0,
-  duration: 0,
+master.from(".clouds", {
+  x: -210,
+  duration: 0.75,
 });
 
-master.from(".floor", {
-  x: -300,
-  duration: 0.25,
+master.fromTo(
+  ".rain_main",
+  {
+    scaleY: 0,
+    transformOrigin: "top top",
+    y: 20,
+  },
+  {
+    scaleY: 1,
+    transformOrigin: "top top",
+    y: 0,
+    duration: 0.4,
+  }
+);
+
+master.to(
+  ".clouds, .rain_main, .rain_minor, .large_puddle, .small_puddle, .man, .umbrella",
+  {
+    x: -72,
+    duration: 0.4,
+  },
+  "=+1.5"
+);
+
+master.from(".logo2", {
+  y: -110,
+  ease: "back.out(1.7)",
 });
 
-master.add(moveAnimation1());
-
-master.fromTo(
-  ".main_heading",
-  {
-    y: -20,
-    opacity: 0,
-  },
+master.to(
+  ".text, .cta",
   {
     opacity: 1,
-    y: 0,
-    duration: 0.25,
-  },
-  "=-0.5"
-);
-
-master.fromTo(
-  ".sub_heading",
-  {
-    y: 5,
-    opacity: 0,
-  },
-  {
-    opacity: 1,
-    y: 0,
-    duration: 0.25,
   },
   "=-0.25"
 );
 
-master.to(
-  ".intro",
-  {
-    y: -220,
-    ease: "back.in(1.1)",
-  },
-  "=+2"
-);
-
-master.from(
-  ".buildingOne",
-  {
-    x: -250,
-    ease: "powerOut.4",
-    duration: 0.5,
-  },
-  "=-0.25"
-);
-
-master.from(
-  ".buildingTwo",
-  {
-    x: 250,
-    ease: "powerOut.4",
-    duration: 0.5,
-  },
-  "<"
-);
-
-master.from(
-  ".lineTop",
-  {
-    y: -35,
-    ease: "powerOut.4",
-    duration: 0.5,
-  },
-  "<"
-);
-
-master.from(
-  ".lineBottom",
-  {
-    y: 35,
-    ease: "powerOut.4",
-    duration: 0.5,
-  },
-  "<"
-);
-
 master.fromTo(
-  ".category_heading",
+  ".umbrella",
   {
-    y: -20,
     opacity: 0,
+    y: 10,
   },
   {
     opacity: 1,
     y: 0,
-    duration: 0.25,
-  }
-);
-
-master.fromTo(
-  ".category_text",
-  {
-    y: 5,
-    opacity: 0,
   },
-  {
-    opacity: 1,
-    y: 0,
-    duration: 0.25,
-  },
-  "=-0.25"
+  "=+1"
 );
 
 master.to(
-  ".section1, .lineTop",
-  {
-    y: -220,
-    ease: "back.in(1.1)",
-  },
-  "=+2"
-);
-
-master.to(
-  ".lineBottom",
-  {
-    y: -220,
-    ease: "back.in(1.1)",
-  },
-  "<"
-);
-
-master.from(
-  ".buildingThree",
-  {
-    x: -250,
-    ease: "powerOut.4",
-    duration: 0.5,
-  },
-  "=-0.25"
-);
-
-master.from(
-  ".lineTop2",
-  {
-    y: -35,
-    ease: "powerOut.4",
-    duration: 0.5,
-  },
-  "<"
-);
-
-master.from(
-  ".lineBottom2",
-  {
-    y: 35,
-    ease: "powerOut.4",
-    duration: 0.5,
-  },
-  "<"
-);
-
-master.from(
-  ".buildingFour",
-  {
-    x: 250,
-    ease: "powerOut.4",
-    duration: 0.5,
-  },
-  "<"
-);
-
-master.fromTo(
-  ".category_heading2",
-  {
-    y: -20,
-    opacity: 0,
-  },
-  {
-    opacity: 1,
-    y: 0,
-    duration: 0.25,
-  }
-);
-
-master.fromTo(
-  ".category_text2",
-  {
-    y: 5,
-    opacity: 0,
-  },
-  {
-    opacity: 1,
-    y: 0,
-    duration: 0.25,
-  },
-  "=-0.25"
-);
-
-master.to(
-  ".section2, .lineTop2",
-  {
-    y: -220,
-    ease: "back.in(1.1)",
-  },
-  "=+2"
-);
-
-master.to(
-  ".lineBottom2",
-  {
-    y: -220,
-    ease: "back.in(1.1)",
-  },
-  "<"
-);
-
-master.from(
-  ".buildingFive",
-  {
-    x: -250,
-    ease: "powerOut.4",
-    duration: 0.5,
-  },
-  "=-0.25"
-);
-
-master.from(
-  ".lineTop3",
-  {
-    y: -35,
-    ease: "powerOut.4",
-    duration: 0.5,
-  },
-  "<"
-);
-
-master.from(
-  ".lineBottom3",
-  {
-    y: 35,
-    ease: "powerOut.4",
-    duration: 0.5,
-  },
-  "<"
-);
-
-master.from(
-  ".buildingSix",
-  {
-    x: 250,
-    ease: "powerOut.4",
-    duration: 0.5,
-  },
-  "<"
-);
-
-master.fromTo(
-  ".category_heading3",
-  {
-    y: -20,
-    opacity: 0,
-  },
-  {
-    opacity: 1,
-    y: 0,
-    duration: 0.25,
-  }
-);
-
-master.fromTo(
-  ".category_text3",
-  {
-    y: 5,
-    opacity: 0,
-  },
-  {
-    opacity: 1,
-    y: 0,
-    duration: 0.25,
-  },
-  "=-0.25"
-);
-
-master.to(
-  ".section3",
-  {
-    y: -220,
-    ease: "back.in(1.1)",
-  },
-  "=+2"
-);
-
-master.to(
-  ".lineTop3, .lineBottom2, .lineBottom3, .lineBottom",
+  ".rain_main",
   {
     opacity: 0,
-    duration: 0,
+    duration: 0.1,
   },
   "<"
 );
 
 master.to(
-  ".master_logo",
+  ".rain_minor",
   {
     opacity: 1,
+    duration: 0.1,
   },
-  "=+0.25"
-);
-
-master.fromTo(
-  ".invite",
-  {
-    y: -20,
-    opacity: 0,
-  },
-  {
-    opacity: 1,
-    y: 0,
-    duration: 0.25,
-  },
-  "=-0.5"
-);
-
-master.fromTo(
-  ".website",
-  {
-    y: 5,
-    opacity: 0,
-  },
-  {
-    opacity: 1,
-    y: 0,
-    duration: 0.25,
-  },
-  "=-0.25"
+  "<"
 );
 
 // Button code

@@ -1,18 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Gloock&display=swap");
-
-*[x-apple-data-detectors],  /* iOS */
-    .x-gmail-data-detectors,    /* Gmail */
-    .x-gmail-data-detectors *,
-    .aBn {
-  border-bottom: 0 !important;
-  cursor: default !important;
-  color: inherit !important;
-  text-decoration: none !important;
-  font-size: inherit !important;
-  font-family: inherit !important;
-  font-weight: inherit !important;
-  line-height: inherit !important;
-}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;600&display=swap");
 
 html {
   box-sizing: border-box;
@@ -26,209 +12,176 @@ html {
   padding: 0;
 }
 
-body {
-  font-family: "Fjalla One", sans-serif;
-}
-
 .container {
   height: 250px;
   width: 300px;
   position: relative;
   overflow: hidden;
-}
-
-.start {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 250px;
-  width: 300px;
-  overflow: hidden;
-  z-index: 200;
-}
-
-.background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 250px;
-  width: 300px;
-  overflow: hidden;
-}
-
-h1 {
-  position: absolute;
-  top: 10px;
-  left: 20px;
-  color: white;
-  font-family: "Gloock", serif;
-  font-weight: normal;
-  z-index: 100;
-  font-size: 2.4rem;
-  line-height: 2.5rem;
-}
-
-h1 span {
-  color: #4e9dc5;
+  visibility: hidden;
+  background: #0f1a2a;
 }
 
 p {
-  position: absolute;
-  top: 130px;
-  left: 20px;
+  font-family: "Montserrat Alternates", sans-serif;
   color: white;
-  font-family: "Gloock", serif;
-  font-weight: normal;
-  z-index: 100;
-  font-size: 0.75rem;
-  line-height: 0.95rem;
-  letter-spacing: 0.03rem;
-}
-
-.body_text {
-  opacity: 0;
+  font-size: 1.1rem;
+  position: absolute;
+  width: 300px;
+  height: 250px;
 }
 
 .logo {
-  top: 10px;
-  left: 220px;
   position: absolute;
-  width: 20%;
+  height: 250px;
+  width: 300px;
+  top: 0;
+  left: 0;
 }
 
-.cta {
-  position: absolute;
-  top: 200px;
-  left: 20px;
-  color: #4e9dc5;
-  font-family: "Gloock", serif;
-  font-weight: normal;
-  z-index: 100;
-  font-size: 0.7rem;
-  line-height: 1rem;
-  background-color: white;
-  padding: 5px;
-  border-radius: 5px;
+.believe,
+.simplified {
+  opacity: 0;
+  width: 250px;
+  height: 300px;
 }
 
-.cta2 {
-  position: absolute;
-  top: 200px;
-  left: 20px;
-  color: #4e9dc5;
-  font-family: "Gloock", serif;
-  font-weight: normal;
-  z-index: 300;
-  font-size: 0.7rem;
-  line-height: 1rem;
-  background-color: white;
-  padding: 5px;
-  border-radius: 5px;
+.believe {
+  top: 100px;
+  left: 100px;
+  height: 24px;
+  width: 130px;
+}
+
+.simplified {
+  top: 100px;
+  left: 105px;
   opacity: 0;
 }
 
-.circle {
+.business {
+  top: 100px;
+  left: 128px;
   position: absolute;
-  background-color: white;
-  width: 190px;
-  height: 190px;
-  top: 80px;
-  left: 150px;
-  border-radius: 50%;
-  z-index: 50;
+  color: #ec8c34;
 }
 
-/* one */
+.cybersecurity {
+  top: 100px;
+  left: 90px;
+}
 
-.one_text {
-  top: 210px;
-  left: 194px;
-  color: #4e9dc5;
-  position: absolute;
-  text-align: left;
+.available {
+  top: 100px;
+  left: 62px;
+}
+
+.all {
+  top: 123px;
+  left: 79px;
+}
+
+.all span {
+  color: #ec8c34;
 }
 
 .one {
-  top: 60px;
-  left: 170px;
   position: absolute;
-  width: 50%;
-  z-index: 100;
-}
-
-/* two */
-
-.two_text {
-  top: 210px;
-  left: 191px;
-  color: #4e9dc5;
-  position: absolute;
-  text-align: left;
+  top: 0;
+  left: 0;
+  height: 250px;
+  width: 100px;
 }
 
 .two {
-  top: 70px;
-  left: 155px;
   position: absolute;
-  width: 48%;
-  z-index: 100;
-}
-
-/* three */
-
-.three_text {
-  top: 210px;
-  left: 198px;
-  color: #4e9dc5;
-  position: absolute;
-  text-align: left;
+  top: 0;
+  left: 100px;
+  height: 250px;
+  width: 100px;
 }
 
 .three {
-  top: 65px;
-  left: 176px;
   position: absolute;
-  width: 33%;
-  z-index: 100;
+  top: 0;
+  left: 200px;
+  height: 250px;
+  width: 100px;
 }
 
-/* four */
+.protect {
+  top: 20px;
+  left: 195px;
+}
 
-.four_text {
-  top: 165px;
-  left: 160px;
-  color: #4e9dc5;
-  position: absolute;
-  text-align: left;
+.your {
+  top: 42px;
+  left: 195px;
+}
+
+.business2 {
+  top: 64px;
+  left: 195px;
+}
+
+.today {
+  top: 86px;
+  left: 195px;
+  color: #ec8c34;
 }
 
 .four {
-  top: 50px;
-  left: 185px;
   position: absolute;
-  width: 30%;
+  height: 250px;
+  width: 375px;
+  top: 0;
+  left: -375px;
+}
+
+.so {
+  top: 20px;
+  left: 70px;
+  color: black;
+  height: 30px;
+  z-index: 200;
+}
+
+.soBackground {
+  background-color: #ec8c34;
+  height: 30px;
+  width: 180px;
   z-index: 100;
+  position: absolute;
+  top: 17px;
+  left: 0;
 }
 
-/* five */
-
-.five_text {
-  top: 210px;
-  left: 190px;
-  color: #4e9dc5;
-  position: absolute;
-  text-align: left;
+.grow {
+  top: 198px;
+  left: 133px;
+  color: black;
+  z-index: 200;
 }
 
-.five {
-  top: 68px;
-  left: 145px;
-  position: absolute;
-  width: 57%;
+.growBackground {
+  background-color: #ec8c34;
+  height: 30px;
+  width: 180px;
   z-index: 100;
+  position: absolute;
+  top: 195px;
+  right: 0;
 }
 
-/* Button code */
+.company {
+  top: 170px;
+  left: 52px;
+}
+
+.company span {
+  color: #ec8c34;
+}
+
+/* Code below for the button */
 
 .btn {
   height: 30px;

@@ -3,102 +3,234 @@ let selectAll = (e) => document.querySelectoAll(e);
 
 let pause = select("#pause");
 
+gsap.set(".container", { autoAlpha: 1 });
+
 let master = gsap.timeline({
   onComplete: () => (pause.innerHTML = "Play"),
 });
-
 master.pause();
 
-gsap.set(".container", { autoAlpha: 1 });
+// Intro
 
-master.to(".top, .bottom", {
-  opacity: 1,
+master.to(".main, .start, .date", {
+  opacity: 0,
 });
 
-master.to(
-  ".model",
+// One
+
+master.from(".one_heading", {
+  x: -250,
+  ease: "back.out(1)",
+});
+
+master.from(
+  ".paris",
   {
-    opacity: 1,
-    y: -30,
-    ease: "power.out4",
-    duration: 1,
-    repeat: -1,
-    yoyo: true,
+    x: -110,
+    ease: "back.out(1)",
   },
-  "<"
+  "-=0.25"
+);
+
+master.from(
+  ".one_author",
+  {
+    x: 190,
+    ease: "back.out(1)",
+  },
+  ">"
+);
+
+master.from(
+  ".one_body",
+  {
+    x: 190,
+    ease: "back.out(1)",
+  },
+  "-=0.25"
 );
 
 master.to(
-  ".logo",
+  ".one_heading, .paris, .one_author, .one_body ",
   {
-    y: 5,
-    repeat: -1,
-    yoyo: true,
-    ease: "power.out4",
-    duration: 1,
+    opacity: 0,
   },
-  "<"
+  "+=8"
+);
+
+// Two
+
+master.from(".two_heading", {
+  x: -250,
+  ease: "back.out(1)",
+});
+
+master.from(
+  ".extremis",
+  {
+    x: -110,
+    ease: "back.out(1)",
+  },
+  "-=0.25"
+);
+
+master.from(
+  ".two_author",
+  {
+    x: 190,
+    ease: "back.out(1)",
+  },
+  ">"
+);
+
+master.from(
+  ".two_body",
+  {
+    x: 190,
+    ease: "back.out(1)",
+  },
+  "-=0.25"
 );
 
 master.to(
-  ".left",
+  ".two_heading, .extremis, .two_author, .two_body ",
   {
-    scaleY: 1.2,
-    transformOrigin: "bottom bottom",
-    duration: 0.25,
-    stagger: {
-      each: 0.25,
-      repeat: -1,
-      yoyo: true,
-    },
+    opacity: 0,
   },
-  "=-0.5"
+  "+=8"
+);
+
+// Three
+
+master.from(".three_heading", {
+  x: -250,
+  ease: "back.out(1)",
+});
+
+master.from(
+  ".invisible",
+  {
+    x: -110,
+    ease: "back.out(1)",
+  },
+  "-=0.25"
+);
+
+master.from(
+  ".three_author",
+  {
+    x: 190,
+    ease: "back.out(1)",
+  },
+  ">"
+);
+
+master.from(
+  ".three_body",
+  {
+    x: 190,
+    ease: "back.out(1)",
+  },
+  "-=0.25"
 );
 
 master.to(
-  ".left1",
+  ".three_heading, .invisible, .three_author, .three_body ",
   {
-    scaleY: 1.3,
-    transformOrigin: "bottom bottom",
-    duration: 0.25,
-    stagger: {
-      each: 0.15,
-      repeat: -1,
-      yoyo: true,
-    },
+    opacity: 0,
   },
-  "<"
+  "+=8"
+);
+
+// Four
+
+master.from(".four_heading", {
+  x: -250,
+  ease: "back.out(1)",
+});
+
+master.from(
+  ".drinker",
+  {
+    x: -110,
+    ease: "back.out(1)",
+  },
+  "-=0.25"
+);
+
+master.from(
+  ".four_author",
+  {
+    x: 190,
+    ease: "back.out(1)",
+  },
+  ">"
+);
+
+master.from(
+  ".four_body",
+  {
+    x: 190,
+    ease: "back.out(1)",
+  },
+  "-=0.25"
 );
 
 master.to(
-  ".right",
+  ".four_heading, .drinker, .four_author, .four_body ",
   {
-    scaleY: 1.2,
-    transformOrigin: "bottom bottom",
-    duration: 0.25,
-    stagger: {
-      each: 0.35,
-      repeat: -1,
-      yoyo: true,
-    },
+    opacity: 0,
   },
-  "<"
+  "+=8"
 );
 
-master.to(
-  ".right1",
+// Five
+
+master.from(".five_heading", {
+  x: -250,
+  ease: "back.out(1)",
+});
+
+master.from(
+  ".game",
   {
-    scaleY: 1.3,
-    transformOrigin: "bottom bottom",
-    duration: 0.25,
-    stagger: {
-      each: 0.25,
-      repeat: -1,
-      yoyo: true,
-    },
+    x: -110,
+    ease: "back.out(1)",
   },
-  "<"
+  "-=0.25"
 );
+
+master.from(
+  ".five_author",
+  {
+    x: 190,
+    ease: "back.out(1)",
+  },
+  ">"
+);
+
+master.from(
+  ".five_body",
+  {
+    x: 190,
+    ease: "back.out(1)",
+  },
+  "-=0.25"
+);
+
+// end
+
+master.to(
+  ".five_heading, .game, .five_author, .five_body ",
+  {
+    opacity: 0,
+  },
+  "+=8"
+);
+
+master.to(".end, .start, .date", {
+  opacity: 1,
+});
 
 // Button code
 

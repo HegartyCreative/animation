@@ -1,4 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
+*[x-apple-data-detectors],  /* iOS */
+    .x-gmail-data-detectors,    /* Gmail */
+    .x-gmail-data-detectors *,
+    .aBn {
+  border-bottom: 0 !important;
+  cursor: default !important;
+  color: inherit !important;
+  text-decoration: none !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+}
 
 html {
   box-sizing: border-box;
@@ -13,125 +27,92 @@ html {
 }
 
 body {
-  font-family: "Varela Round", sans-serif;
-  /* margin: 100px; */
+  font-family: "Righteous", cursive;
+  font-weight: normal;
 }
 
-.wrapper {
+.container {
   height: 250px;
   width: 300px;
   position: relative;
   overflow: hidden;
-  background-color: green;
-  padding: 60px;
   visibility: hidden;
+  border: 1px solid #007ddf;
 }
 
-.background {
+.logo {
   height: 250px;
   width: 300px;
   position: absolute;
   top: 0;
   left: 0;
-  background: linear-gradient(180deg, #489ab4, #c0e2ee);
+  z-index: 5;
 }
 
-.logo1 {
+h1 {
+  text-align: center;
+  color: #007ddf;
+  font-size: 1.15rem;
+  margin-top: 48px;
+  z-index: 10;
   position: absolute;
-  top: 50px;
+  top: 0;
+  left: 21px;
+  font-weight: normal;
+}
+
+.location {
+  text-align: center;
+  color: #007ddf;
+  font-size: 0.8rem;
+  line-height: 0.9rem;
+  margin-top: 46px;
+  z-index: 10;
+  position: absolute;
+  top: 150px;
+  left: 24px;
+  text-align: center;
+  font-weight: normal;
+}
+
+.date {
+  text-align: center;
+  color: #007ddf;
+  font-size: 0.8rem;
+  line-height: 0.9rem;
+  margin-top: 46px;
+  z-index: 10;
+  position: absolute;
+  top: 150px;
+  left: 230px;
+  text-align: center;
+  font-weight: normal;
+}
+
+.top {
+  height: 250px;
+  width: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.bottom {
+  height: 250px;
+  width: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.model {
+  position: absolute;
+  top: 90px;
   left: 75px;
-  z-index: 10;
-  width: 50%;
-}
-
-.man {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
-}
-
-.large_puddle {
-  position: absolute;
-  top: 0;
-  left: 0;
   z-index: 5;
-}
-
-.small_puddle {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 5;
-}
-
-.rain_main {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 5;
-}
-
-.rain_minor {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 5;
-  opacity: 0;
-}
-
-.umbrella {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
-}
-
-.clouds {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
-}
-
-.logo2 {
-  position: absolute;
-  top: 50px;
-  left: 148px;
-  z-index: 10;
-  width: 40%;
-}
-
-.text {
-  position: absolute;
-  top: 130px;
-  left: 149px;
-  z-index: 10;
-  text-align: center;
-  font-size: 0.6rem;
-  color: white;
-  opacity: 0;
-}
-
-.cta {
-  height: 20px;
-  width: 60px;
-  background-color: rgb(255, 255, 255);
-  position: absolute;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  left: 178px;
-  top: 180px;
-  z-index: 100;
-  color: #489ab4;
-  box-shadow: none;
-  border: none;
-  font-size: 8.5px;
-  border: 1px solid white;
-  text-align: center;
-  padding-top: 0.25rem;
-  opacity: 0;
+  width: 48%;
 }
 
 /* Button code */

@@ -1,7 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,600;1,400;1,600&display=swap");
 
 html {
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: normal;
 }
 
 *,
@@ -12,228 +17,411 @@ html {
   padding: 0;
 }
 
-p {
-  font-family: "Jost", sans-serif;
-  font-weight: 400;
-  color: white;
-  letter-spacing: 0.05rem;
-  font-size: 2rem;
-  text-align: center;
-}
-
 .container {
+  position: relative;
   height: 250px;
   width: 300px;
-  position: relative;
   overflow: hidden;
   visibility: hidden;
+  border: 1px solid lightgrey;
 }
 
-.background {
-  position: relative;
+.start {
+  position: absolute;
+  width: 50%;
+  top: 100px;
+  left: 74px;
+  z-index: 100;
+}
+
+/* Intro */
+
+.blue {
+  position: absolute;
   height: 250px;
   width: 300px;
-  background: #f12711; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #f5af19,
-    #f12711
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #f5af19,
-    #f12711
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  top: 0;
+  left: 0;
+  background-color: #0974f1;
+  padding-top: 50px;
 }
 
-/* Introduction */
+.blue .over {
+  color: white;
+  text-transform: uppercase;
+  font-size: 2.9rem;
+  text-align: center;
+  font-weight: 600;
+  z-index: 10;
+}
 
-.believe,
-.innovation,
-.starts,
-.when,
-.listen,
-.working,
-.with,
-.hiv,
-.decades,
-.used,
-.science,
-.technology,
-.talents,
-.think,
-.every,
-.reduce,
-.people {
+.blue .hundred {
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  font-size: 4.2rem;
+  z-index: 10;
+}
+
+#map {
   position: absolute;
+  height: 250px;
+  width: 300px;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
+
+/* Customers */
 
 .logo {
-  height: 250px;
-  width: 300px;
   position: absolute;
-  z-index: 50;
-  top: 0;
-  left: 0;
+  width: 50%;
+  top: 70px;
+  left: 74px;
+  opacity: 0;
 }
 
-.believe {
-  left: 69px;
-  top: 102px;
-}
-
-.innovation {
-  left: 46px;
-  top: 102px;
+.customers {
+  color: white;
   text-transform: uppercase;
+  font-size: 2.3rem;
+  text-align: center;
   font-weight: 600;
-}
-
-.starts {
-  left: 96px;
-  top: 102px;
-  opacity: 0;
-  text-transform: uppercase;
-}
-
-.when {
-  left: 71px;
-  top: 102px;
-  opacity: 0;
-  text-transform: uppercase;
-}
-
-.listen {
-  left: 98px;
-  top: 102px;
-  opacity: 0;
-  text-transform: uppercase;
-}
-
-/* Working */
-
-.working {
-  left: 72px;
-  top: 102px;
-  opacity: 0;
-}
-
-.with {
-  left: 157px;
-  top: 102px;
-  opacity: 0;
-}
-
-.hiv {
-  left: 37px;
-  top: 102px;
-  opacity: 0;
-}
-
-.hiv span,
-.science,
-.technology,
-.talents span {
-  font-weight: 600;
-}
-
-/* Community */
-
-.community_image {
-  height: 250px;
-  width: 300px;
   position: absolute;
-  z-index: 50;
-  top: 0;
-  left: 0;
-  scale: 1.2;
+  top: 147px;
+  left: 33px;
   opacity: 0;
 }
 
-.square {
-  height: 250px;
-  width: 300px;
+/* Use */
+
+.use {
+  font-size: 3.8rem;
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #0974f1;
   position: absolute;
-  z-index: 100;
-  top: 0;
-  left: 0;
-  scale: 1.2;
-  opacity: 0;
-}
-
-.decades {
-  left: 77px;
-  top: 77px;
-  opacity: 0;
-  line-height: 2.4rem;
-}
-
-.used {
   left: 88px;
-  top: 77px;
+  font-weight: 600;
   opacity: 0;
-  line-height: 2.4rem;
 }
 
-.disease {
-  height: 250px;
-  width: 300px;
-  position: absolute;
-  z-index: 00;
+.use1 {
   top: 0;
-  left: 0;
-  scale: 1.2;
-  opacity: 0;
 }
 
-.science {
-  left: 90px;
+.use2 {
   top: 50px;
 }
 
-.technology {
-  left: 67px;
-  top: 90px;
+.use3 {
+  top: 100px;
+  color: #0974f1;
 }
 
-.talents {
-  left: 71px;
-  top: 130px;
+.use4 {
+  top: 150px;
 }
 
-.think {
-  left: 42px;
-  top: 60px;
-  opacity: 1;
-  line-height: 3rem;
-  opacity: 0;
+.use5 {
+  top: 200px;
 }
 
-.think span {
+/* Yellow */
+
+.yellow {
+  position: absolute;
+  height: 250px;
+  width: 300px;
+  top: 0;
+  left: -300px;
+  background-color: yellow;
+  padding-top: 37px;
+}
+
+.warning {
+  position: absolute;
+  left: 30px;
+  color: #0974f1;
+  text-transform: uppercase;
+  text-align: left;
   font-weight: 600;
-  font-size: 4rem;
+  font-size: 2.8rem;
+  line-height: 3.9rem;
+  z-index: 40;
 }
 
-.every {
-  left: 76px;
+.deposit {
   top: 70px;
-  opacity: 1;
-  font-size: 2rem;
+}
+
+.limits {
+  top: 115px;
+}
+
+.touch {
+  position: absolute;
+  top: 130px;
+  left: 200px;
+  z-index: 40;
+  width: 15%;
+}
+
+/* Black */
+
+.black {
+  position: absolute;
+  height: 250px;
+  width: 300px;
+  top: -250px;
+  left: 0px;
+  background-color: black;
+  padding-top: 37px;
+}
+
+.size {
+  position: absolute;
+  left: 30px;
+  color: white;
+  text-transform: uppercase;
+  text-align: left;
+  font-weight: 600;
+  font-size: 2.8rem;
+  line-height: 3.9rem;
+  z-index: 40;
+}
+
+.enough {
+  top: 70px;
+}
+
+.fill {
+  top: 115px;
+}
+
+.fill span {
+  font-style: italic;
+}
+
+#gamblers {
+  font-size: 6rem;
+  position: absolute;
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  top: 58px;
+  left: 75px;
   opacity: 0;
+}
+
+.park {
+  font-size: 2.5rem;
+  position: absolute;
+  top: 140px;
+  left: 38px;
+  color: white;
+  text-transform: uppercase;
   text-align: center;
-  line-height: 2.4rem;
+  z-index: 100;
 }
 
-.reduce {
-  left: 31px;
-  top: 30px;
-  line-height: 2.4rem;
+/* transition */
+
+.transition {
+  position: absolute;
+  height: 250px;
+  width: 300px;
+  top: 0;
+  left: 0;
+  z-index: 100;
 }
 
-.people {
-  left: 62px;
-  top: 120px;
-  line-height: 2.4rem;
+.one {
+  left: 0px;
+  width: 25px;
+  height: 250px;
+  background-color: black;
+}
+
+.two {
+  left: 25px;
+  width: 25px;
+  height: 250px;
+  background-color: white;
+}
+
+.three {
+  left: 50px;
+  width: 25px;
+  height: 250px;
+  background-color: black;
+}
+
+.four {
+  left: 75px;
+  width: 25px;
+  height: 250px;
+  background-color: white;
+}
+
+.five {
+  left: 100px;
+  width: 25px;
+  height: 250px;
+  background-color: black;
+}
+
+.six {
+  left: 125px;
+  width: 25px;
+  height: 250px;
+  background-color: white;
+}
+
+.seven {
+  left: 150px;
+  width: 25px;
+  height: 250px;
+  background-color: black;
+}
+
+.eight {
+  left: 175px;
+  width: 25px;
+  height: 250px;
+  background-color: white;
+}
+
+.nine {
+  left: 200px;
+  width: 25px;
+  height: 250px;
+  background-color: black;
+}
+
+.ten {
+  left: 225px;
+  width: 25px;
+  height: 250px;
+  background-color: white;
+}
+
+.eleven {
+  left: 250px;
+  width: 25px;
+  height: 250px;
+  background-color: black;
+}
+
+.twelve {
+  left: 275px;
+  width: 25px;
+  height: 250px;
+  background-color: white;
+}
+
+/* End */
+
+.man {
+  position: absolute;
+  height: 250px;
+  width: 300px;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 100;
+}
+
+.end {
+  position: absolute;
+  color: red;
+  text-transform: uppercase;
+  text-align: left;
+  font-weight: 600;
+  font-size: 2.4rem;
+  z-index: 20;
+}
+
+.join {
+  top: 69px;
+  left: 70px;
+  opacity: 0;
+}
+
+.the {
+  top: 69px;
+  left: 165px;
+  opacity: 0;
+}
+
+.million {
+  top: 135px;
+  left: 45px;
+  font-weight: 600;
+  font-size: 3rem;
+  text-align: left;
+  z-index: 50;
+  opacity: 0;
+}
+
+/* Heading */
+
+.red {
+  position: absolute;
+  height: 250px;
+  width: 300px;
+  top: 0;
+  left: -300px;
+  background-color: red;
+  opacity: 1;
+}
+
+.heading {
+  color: white;
+  text-transform: uppercase;
+  font-size: 2rem;
+  line-height: 2.2rem;
+  text-align: left;
+  font-weight: 600;
+  position: absolute;
+  top: 20px;
+  left: 47px;
+  opacity: 0;
+}
+
+.sub {
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  text-align: left;
+  line-height: 1.6rem;
+  font-weight: 600;
+  position: absolute;
+  top: 100px;
+  left: 47px;
+  opacity: 0;
+}
+
+/* Closing */
+
+.endRight {
+  position: absolute;
+  height: 250px;
+  width: 300px;
+  top: 0;
+  left: 0px;
+  background-color: #0974f1;
+}
+
+.logo2 {
+  position: absolute;
+  width: 50%;
+  top: 70px;
+  left: 74px;
+  opacity: 0;
+  z-index: 200;
 }
 
 /* Code below for the button */

@@ -6,179 +6,251 @@ let pause = select("#pause");
 let master = gsap.timeline({
   onComplete: () => (pause.innerHTML = "Play"),
 });
-
 master.pause();
 
-master.to(".start", {
+gsap.set(".container", { autoAlpha: 1 });
+
+master.to(".logo", {
   opacity: 0,
 });
 
-master.from(
-  ".heading",
+master.fromTo(
+  ".believe",
+  { opacity: 0, scale: 15, transformOrigin: "center center" },
   {
-    x: -140,
-    ease: "back.out(1.5)",
+    opacity: 1,
+    scale: 1,
+    ease: "none",
+    duration: 0.25,
+  }
+);
+
+master.fromTo(
+  ".simplified",
+  { opacity: 0 },
+  {
+    opacity: 1,
+    ease: "power4.out",
+    duration: 0.15,
   },
-  "=+0.5"
+  "=+1"
 );
 
 master.to(
-  ".body_text",
+  ".believe",
   {
-    opacity: 1,
-    duration: 0.25,
+    opacity: 0,
+    duration: 0.1,
   },
-  "=-0.25"
+  "<"
 );
 
-// One
+master.from(
+  ".business",
+  { x: 190, ease: "back.out(1.2)", duration: 0.25 },
+  "+=0.5"
+);
+
+master.to(
+  ".simplified",
+  {
+    x: -74,
+    ease: "back.out(1.2)",
+    duration: 0.25,
+  },
+  "-=0.22"
+);
+
+master.to(
+  ".simplified, .business",
+  {
+    y: 150,
+    ease: "back.in(1)",
+    stagger: 0.1,
+    duration: 0.1,
+  },
+  "+=0.5"
+);
+
+master.from(
+  ".cybersecurity",
+  {
+    y: -200,
+    ease: "back.out(1.7)",
+    duration: 0.25,
+  },
+  "+=0.25"
+);
+
+master.from(
+  ".available",
+  {
+    x: -250,
+    ease: "back.out(1.7)",
+    duration: 0.25,
+  },
+  "+=0.25"
+);
+
+master.to(
+  ".cybersecurity",
+  {
+    y: -24,
+    ease: "back.out(1.7)",
+    duration: 0.25,
+  },
+  "<"
+);
+
+master.from(
+  ".all",
+  {
+    x: 220,
+    ease: "back.out(1.7)",
+    duration: 0.25,
+  },
+  "<"
+);
 
 master.from(
   ".one",
   {
-    scale: 0,
-    ease: "back.out(1.5)",
-    duration: 0.5,
-    transformOrigin: "right bottom",
+    y: -250,
   },
-  "=-0.25"
+  "+=1"
 );
 
 master.from(
-  ".one_text",
+  ".two",
   {
-    x: 110,
-    ease: "back.out(1.5)",
-    duration: 0.5,
+    y: 250,
   },
-  "=-0.25"
+  "-=0.35"
+);
+
+master.from(
+  ".three",
+  {
+    y: -250,
+  },
+  "-=0.35"
 );
 
 master.to(
-  ".one, .one_text",
+  ".cybersecurity, .available, .all",
   {
     opacity: 0,
   },
-  "=+1.5"
+  ">"
 );
 
-// Two
-
-master.from(".two", {
-  scale: 0,
-  ease: "back.out(1.5)",
-  duration: 0.5,
-  transformOrigin: "right bottom",
+master.from(".protect", {
+  x: 120,
+  ease: "back.out(1.7)",
 });
 
 master.from(
-  ".two_text",
+  ".your",
   {
-    x: 110,
-    ease: "back.out(1.5)",
-    duration: 0.5,
+    x: 120,
+    ease: "back.out(1.7)",
   },
-  "=-0.25"
+  "-=0.25"
+);
+
+master.from(
+  ".business2",
+  {
+    x: 120,
+    ease: "back.out(1.7)",
+  },
+  "-=0.25"
+);
+
+master.from(
+  ".today",
+  {
+    x: 120,
+    ease: "back.out(1.7)",
+  },
+  "-=0.25"
 );
 
 master.to(
-  ".two, .two_text",
+  ".one, .two, .three, .protect, .your, .business2, .today",
   {
     opacity: 0,
+    duration: 0.75,
   },
-  "=+1.5"
+  "+=1"
 );
 
-// Three
+master.to(".four", {
+  left: 0,
+  duration: 0.25,
+});
 
-master.from(".three", {
-  scale: 0,
-  ease: "back.out(1.5)",
-  duration: 0.5,
-  transformOrigin: "right bottom",
+master.from(".soBackground", {
+  x: -190,
+  ease: "back.out(1)",
 });
 
 master.from(
-  ".three_text",
+  ".so",
   {
-    x: 110,
-    ease: "back.out(1.5)",
-    duration: 0.5,
+    x: -190,
+    ease: "back.out(1)",
   },
-  "=-0.25"
+  "-=0.25"
 );
 
-master.to(
-  ".three, .three_text",
-  {
-    opacity: 0,
-  },
-  "=+1.5"
-);
-
-// Four
-
-master.from(".four", {
-  scale: 0,
-  ease: "back.out(1.5)",
-  duration: 0.5,
-  transformOrigin: "bottom bottom",
+master.from(".growBackground", {
+  x: 180,
+  ease: "back.out(1)",
 });
 
 master.from(
-  ".four_text",
+  ".grow",
   {
-    x: -80,
-    ease: "back.out(1.5)",
-    duration: 0.5,
+    x: 170,
+    ease: "back.out(1)",
   },
-  "=-0.25"
+  "-=0.25"
 );
 
 master.to(
-  ".four, .four_text",
+  ".so, .soBackground, .grow, .growBackground",
   {
     opacity: 0,
   },
-  "=+1.5"
+  "+=1"
 );
 
-// Five
-
-master.from(".five", {
-  scale: 0,
-  ease: "back.out(1.5)",
-  duration: 0.5,
-  transformOrigin: "right bottom",
+master.to(".four", {
+  opacity: 0,
 });
-
-master.from(
-  ".five_text",
-  {
-    x: 110,
-    ease: "back.out(1.5)",
-    duration: 0.5,
-  },
-  "=-0.25"
-);
 
 master.to(
-  ".five, .five_text",
+  ".logo",
   {
-    opacity: 0,
+    opacity: 1,
   },
-  "=+1.5"
+  "-=0.25"
 );
 
-master.set(".start", {
-  opacity: 1,
+master.from(".company", {
+  y: 80,
+  ease: "back.out(1.7)",
 });
 
-master.set(".cta2", {
-  opacity: 1,
-});
-
-// Button code
+master.to(
+  ".logo",
+  {
+    y: -20,
+    ease: "back.out(1.7)",
+  },
+  "<"
+);
 
 pause.addEventListener("click", () => {
   master.paused(!master.paused());
