@@ -28,7 +28,7 @@ retail.from(
 retail.from(
   ".cta",
   {
-    x: -109,
+    x: -120,
     ease: "back.out(1.7)",
   },
   "-=0.25"
@@ -57,7 +57,7 @@ retail.from(".one", { x: 190, duration: 0.5, ease: "back.out(1.5)" }, "=+0.15");
 
 retail.from(
   ".one_text_full",
-  { x: -110, duration: 0.25, ease: "back.out(1.5)" },
+  { x: -115, duration: 0.25, ease: "back.out(1.5)" },
   "=-0.25"
 );
 retail.to(".line1", { opacity: 1, duration: 0.25 }, "=+2");
@@ -74,7 +74,7 @@ retail.to(".one, .one_text_discount", { opacity: 0, duration: 0.25 }, "=+2");
 retail.from(".two", { x: 190, duration: 0.5, ease: "back.out(1.5)" }, "=+0.25");
 retail.from(
   ".two_text_full",
-  { x: -110, duration: 0.25, ease: "back.out(1.5)" },
+  { x: -115, duration: 0.25, ease: "back.out(1.5)" },
   "=-0.25"
 );
 retail.to(".line2", { opacity: 1, duration: 0.25 }, "=+2");
@@ -95,7 +95,7 @@ retail.from(
 );
 retail.from(
   ".three_text_full",
-  { x: -110, duration: 0.25, ease: "back.out(1.5)" },
+  { x: -115, duration: 0.25, ease: "back.out(1.5)" },
   "=-0.25"
 );
 retail.to(".line3", { opacity: 1, duration: 0.25 }, "=+2");
@@ -120,7 +120,7 @@ retail.from(
 );
 retail.from(
   ".four_text_full",
-  { x: -110, duration: 0.25, ease: "back.out(1.5)" },
+  { x: -115, duration: 0.25, ease: "back.out(1.5)" },
   "=-0.25"
 );
 retail.to(".line4", { opacity: 1, duration: 0.25 }, "=+2");
