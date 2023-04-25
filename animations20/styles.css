@@ -23,7 +23,6 @@ body {
   width: 300px;
   overflow: hidden;
   visibility: hidden;
-  border: 1px solid lightgrey;
 }
 
 .start {
